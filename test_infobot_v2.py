@@ -86,9 +86,11 @@ class ClassifierTests(unittest.TestCase):
 
     def test_structured_api_request_and_validated_evidence(self):
         response = {"status": "completed", "output": [{"type": "message", "content": [
-            {"type": "output_text", "text": json.dumps(PUBLISH)}]}]}
+            {"type": "output_text", "text": json.dumps({"decision": "publish", "reason": PUBLISH["reason"], "evidence_ids": [1]})}]}]}
         with patch.object(bot.v1, "read_response", return_value=json.dumps(response).encode()) as call:
-            self.assertEqual(bot.classify(article(), self.config, "fake-private-key"), PUBLISH)
+            result = bot.classify(article(), self.config, "fake-private-key")
+            self.assertEqual(result["decision"], "publish")
+            self.assertIn(result["evidence"][0], TEXT)
         request = call.call_args.args[0]
         payload = json.loads(request.data)
         self.assertEqual(request.full_url, bot.API_URL)
@@ -97,6 +99,24 @@ class ClassifierTests(unittest.TestCase):
         self.assertEqual(payload["instructions"], bot.POLICY)
         self.assertNotIn("fake-private-key", request.data.decode())
         self.assertNotIn("fake-private-key", json.dumps(PUBLISH))
+
+    def test_passages_preserve_the_source_without_model_generated_quotations(self):
+        passages = bot.split_passages(TEXT)
+        self.assertEqual(" ".join(p["text"] for p in passages), TEXT.strip())
+        self.assertTrue(all(len(p["text"]) <= 220 and p["text"] in TEXT for p in passages))
+        result = bot.resolve_evidence({"decision": "publish", "reason": "Relevant.", "evidence_ids": [2, 1, 2]}, passages, TEXT)
+        self.assertEqual(result["evidence"], [passages[1]["text"], passages[0]["text"]])
+
+    def test_invalid_or_missing_evidence_ids_cannot_publish(self):
+        passages = bot.split_passages(TEXT)
+        for ids in ([], [99999], [True], ["1"], [1, 1, 1, 1]):
+            with self.subTest(ids=ids), self.assertRaises(infobot.SetupError):
+                bot.resolve_evidence({"decision": "publish", "reason": "Relevant.", "evidence_ids": ids}, passages, TEXT)
+
+    def test_long_unbroken_text_can_be_split_without_loss(self):
+        text = "x" * 701
+        passages = bot.split_passages(text)
+        self.assertEqual("".join(p["text"] for p in passages), text)
 
     def test_hallucinated_missing_or_overlong_evidence_cannot_publish(self):
         for evidence in ([], ["Invented bribery evidence"], ["x" * 241], [12]):

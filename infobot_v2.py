@@ -43,21 +43,23 @@ subject of the article. Meaning matters; the word 'corruption' is not required.
 Return publish for a clear substantive match, skip for a clear non-match, review
 when context is incomplete or the connection is uncertain. This is a relevance
 decision, not a finding of guilt. Explain the decision briefly in English,
-preserving allegations as allegations. For publish, provide 1-3 short exact
-passages copied from article_text that support the corruption connection. Each
-passage must be at most 240 characters. Never invent evidence. Use an empty
-evidence list for skip or review when no relevant passage exists. If article_text
-is a partial excerpt or truncated, publish only when the supplied passages alone
-establish the connection; otherwise choose review. Reason: at most 500 characters.
+preserving allegations as allegations. The article is split into consecutive
+numbered article_passages. Read them together, and for publish return the IDs of
+1-3 passages that establish the corruption connection. Select existing IDs only;
+the application will copy those passages verbatim. Do not generate quotations.
+Use an empty evidence_ids list for skip or review when no relevant passage
+exists. If the article is partial or truncated, publish only when the supplied
+passages alone establish the connection; otherwise choose review.
+Reason: at most 500 characters.
 """
 SCHEMA = {
     "type": "object", "additionalProperties": False,
     "properties": {
         "decision": {"type": "string", "enum": ["publish", "review", "skip"]},
-        "reason": {"type": "string"},
-        "evidence": {"type": "array", "items": {"type": "string"}},
+        "reason": {"type": "string", "minLength": 1, "maxLength": 500},
+        "evidence_ids": {"type": "array", "maxItems": 3, "items": {"type": "integer"}},
     },
-    "required": ["decision", "reason", "evidence"],
+    "required": ["decision", "reason", "evidence_ids"],
 }
 
 
@@ -240,15 +242,48 @@ def validate_decision(value, text):
     return value
 
 
+def split_passages(text):
+    """Stable, verbatim chunks: the model selects IDs instead of copying text."""
+    passages, start = [], 0
+    while start < len(text):
+        end = min(start + 220, len(text))
+        if end < len(text):
+            boundary = text.rfind(" ", start, end)
+            if boundary > start:
+                end = boundary
+        passage = text[start:end].strip()
+        if passage:
+            passages.append({"id": len(passages) + 1, "text": passage})
+        start = end
+        while start < len(text) and text[start].isspace():
+            start += 1
+    return passages
+
+
+def resolve_evidence(value, passages, text):
+    if (not isinstance(value, dict) or set(value) != {"decision", "reason", "evidence_ids"}
+            or not isinstance(value.get("evidence_ids"), list) or len(value["evidence_ids"]) > 3):
+        raise v1.SetupError("Classifier returned invalid evidence references; held for review.")
+    by_id = {passage["id"]: passage["text"] for passage in passages}
+    ids = value["evidence_ids"]
+    if any(type(key) is not int or key not in by_id for key in ids):
+        raise v1.SetupError("Classifier referenced a nonexistent passage; held for review.")
+    return validate_decision({"decision": value["decision"], "reason": value["reason"],
+                              "evidence": [by_id[key] for key in dict.fromkeys(ids)]}, text)
+
+
 def classify(article, config, api_key):
     text, origin, truncated = article_text(article, config)
+    passages = split_passages(text)
+    schema = deepcopy(SCHEMA)
+    schema["properties"]["evidence_ids"]["items"]["enum"] = [p["id"] for p in passages]
     payload = {"model": config["model"], "store": False, "instructions": POLICY,
                "input": json.dumps({"source": article["source_name"], "title": article["title"],
                                     "url": article["link"], "text_origin": origin,
-                                    "truncated": truncated, "article_text": text}, ensure_ascii=False),
+                                    "truncated": truncated, "article_passages": passages}, ensure_ascii=False),
                "max_output_tokens": 2048,
                "text": {"format": {"type": "json_schema", "name": "corruption_relevance",
-                                    "strict": True, "schema": SCHEMA}}}
+                                    "strict": True, "schema": schema}}}
     if config["model"].startswith("gpt-5"):
         payload["reasoning"] = {"effort": "low"}
     request = Request(API_URL, data=json.dumps(payload).encode("utf-8"), method="POST",
@@ -262,7 +297,7 @@ def classify(article, config, api_key):
         value = json.loads("".join(output))
     except (ValueError, TypeError, KeyError, AttributeError):
         raise v1.SetupError("Classifier refused or returned incomplete/invalid output; held for review.") from None
-    return validate_decision(value, text)
+    return resolve_evidence(value, passages, text)
 
 
 def read_v2_state(path, client):
