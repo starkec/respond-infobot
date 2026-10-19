@@ -1,0 +1,13 @@
+{
+  "feeds": [
+    {"source_name": "OCCRP", "feed_url": "https://www.occrp.org/en/corruption/feed", "language": "en"},
+    {"source_name": "ICIJ", "feed_url": "https://www.icij.org/feed/", "language": "en"},
+    {"source_name": "Bellingcat", "feed_url": "https://www.bellingcat.com/feed/", "language": "en"},
+    {"source_name": "CORRECTIV", "feed_url": "https://correctiv.org/en/feed/", "language": "en"}
+  ],
+  "model": "gpt-5-mini",
+  "max_articles_per_run": 20,
+  "max_posts_per_run": 5,
+  "max_article_chars": 24000,
+  "min_article_chars": 400
+}

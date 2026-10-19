@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+reports/
+data/state-v2.json
+.image-deps/

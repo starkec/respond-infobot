@@ -1,5 +1,12 @@
 # RESPOND Infobot
 
+**Multi-feed v2 trial:** [V2 setup and operation](V2.md) describes the new
+LLM corruption filter and original publisher-image cards for OCCRP, ICIJ,
+Bellingcat and CORRECTIV. V2 posts headlines, sources, images and links without
+generated summaries. The original
+bot below keeps its existing configuration, workflow and history. V2 is opt-in
+and defaults to preview; merging its files does not enable v2 posting.
+
 A small Python bot that shares headlines, source attribution and links from
 OCCRP's corruption RSS feed on a dedicated Bluesky account. It uses Python's
 standard library and GitHub Actions. It does not use an LLM, copy article bodies,
