@@ -20,6 +20,8 @@ PUBLISH = {"decision": "publish", "reason": "The investigation concerns alleged 
            "evidence": ["officials accepted kickbacks for public contracts."]}
 SKIP = {"decision": "skip", "reason": "An unrelated story.", "evidence": []}
 REVIEW = {"decision": "review", "reason": "The connection is uncertain.", "evidence": []}
+CHECKS = {"abuse_of_entrusted_power": True, "private_gain": True,
+          "substantive_corruption_coverage": True}
 
 
 def article(number=1, feed=FEED):
@@ -86,7 +88,7 @@ class ClassifierTests(unittest.TestCase):
 
     def test_structured_api_request_and_validated_evidence(self):
         response = {"status": "completed", "output": [{"type": "message", "content": [
-            {"type": "output_text", "text": json.dumps({"decision": "publish", "reason": PUBLISH["reason"], "evidence_ids": [1]})}]}]}
+            {"type": "output_text", "text": json.dumps({**CHECKS, "decision": "publish", "reason": PUBLISH["reason"], "evidence_ids": [1]})}]}]}
         with patch.object(bot.v1, "read_response", return_value=json.dumps(response).encode()) as call:
             result = bot.classify(article(), self.config, "fake-private-key")
             self.assertEqual(result["decision"], "publish")
@@ -104,14 +106,29 @@ class ClassifierTests(unittest.TestCase):
         passages = bot.split_passages(TEXT)
         self.assertEqual(" ".join(p["text"] for p in passages), TEXT.strip())
         self.assertTrue(all(len(p["text"]) <= 220 and p["text"] in TEXT for p in passages))
-        result = bot.resolve_evidence({"decision": "publish", "reason": "Relevant.", "evidence_ids": [2, 1, 2]}, passages, TEXT)
+        result = bot.resolve_evidence({**CHECKS, "decision": "publish", "reason": "Relevant.", "evidence_ids": [2, 1, 2]}, passages, TEXT)
         self.assertEqual(result["evidence"], [passages[1]["text"], passages[0]["text"]])
 
     def test_invalid_or_missing_evidence_ids_cannot_publish(self):
         passages = bot.split_passages(TEXT)
         for ids in ([], [99999], [True], ["1"], [1, 1, 1, 1]):
             with self.subTest(ids=ids), self.assertRaises(infobot.SetupError):
-                bot.resolve_evidence({"decision": "publish", "reason": "Relevant.", "evidence_ids": ids}, passages, TEXT)
+                bot.resolve_evidence({**CHECKS, "decision": "publish", "reason": "Relevant.", "evidence_ids": ids}, passages, TEXT)
+
+    def test_uncertain_private_gain_role_or_centrality_overrides_publish(self):
+        passages = bot.split_passages(TEXT)
+        for condition in CHECKS:
+            value = {**CHECKS, condition: False, "decision": "publish", "reason": "Possibly related.", "evidence_ids": [1]}
+            with self.subTest(condition=condition):
+                result = bot.resolve_evidence(value, passages, TEXT)
+                self.assertEqual(result["decision"], "review")
+                self.assertIn(condition, result["reason"])
+                self.assertFalse(result["checks"][condition])
+
+    def test_truthy_strings_cannot_bypass_corruption_checks(self):
+        value = {**CHECKS, "private_gain": "true", "decision": "publish", "reason": "Related.", "evidence_ids": [1]}
+        with self.assertRaises(infobot.SetupError):
+            bot.resolve_evidence(value, bot.split_passages(TEXT), TEXT)
 
     def test_long_unbroken_text_can_be_split_without_loss(self):
         text = "x" * 701

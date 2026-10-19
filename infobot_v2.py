@@ -51,6 +51,22 @@ Use an empty evidence_ids list for skip or review when no relevant passage
 exists. If the article is partial or truncated, publish only when the supplied
 passages alone establish the connection; otherwise choose review.
 Reason: at most 500 characters.
+
+Before deciding, independently check all three conditions:
+abuse_of_entrusted_power: a public official or a person entrusted with authority
+in an organisation allegedly abused that role. Being a gang leader, criminal,
+wealthy person or offshore owner alone is NOT an entrusted-role abuse.
+private_gain: the alleged abuse confers an improper private, family, business or
+party benefit. Mere illegality, breaking an environmental/procurement rule,
+ordinary sales revenue, authoritarian policy or a bad government decision is
+NOT enough. Do not infer a corrupt beneficiary from banned purchases alone.
+substantive_corruption_coverage: corruption, its investigation or enforcement
+is central to the story. A long ideological/social essay that mentions a pardon
+scandal in passing does NOT qualify merely because misuse of power is mentioned.
+Money laundering of ordinary criminal proceeds without an identified entrusted
+role being abused is general crime, not automatically corruption. Mark unknown
+conditions false and use review if clarification is needed. Publish requires all
+three conditions to be true, supported by the selected passages.
 """
 SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -58,8 +74,12 @@ SCHEMA = {
         "decision": {"type": "string", "enum": ["publish", "review", "skip"]},
         "reason": {"type": "string", "minLength": 1, "maxLength": 500},
         "evidence_ids": {"type": "array", "maxItems": 3, "items": {"type": "integer"}},
+        "abuse_of_entrusted_power": {"type": "boolean"},
+        "private_gain": {"type": "boolean"},
+        "substantive_corruption_coverage": {"type": "boolean"},
     },
-    "required": ["decision", "reason", "evidence_ids"],
+    "required": ["decision", "reason", "evidence_ids", "abuse_of_entrusted_power",
+                 "private_gain", "substantive_corruption_coverage"],
 }
 
 
@@ -261,15 +281,23 @@ def split_passages(text):
 
 
 def resolve_evidence(value, passages, text):
-    if (not isinstance(value, dict) or set(value) != {"decision", "reason", "evidence_ids"}
+    conditions = ("abuse_of_entrusted_power", "private_gain", "substantive_corruption_coverage")
+    if (not isinstance(value, dict) or set(value) != set(SCHEMA["required"])
+            or any(type(value.get(name)) is not bool for name in conditions)
             or not isinstance(value.get("evidence_ids"), list) or len(value["evidence_ids"]) > 3):
         raise v1.SetupError("Classifier returned invalid evidence references; held for review.")
     by_id = {passage["id"]: passage["text"] for passage in passages}
     ids = value["evidence_ids"]
     if any(type(key) is not int or key not in by_id for key in ids):
         raise v1.SetupError("Classifier referenced a nonexistent passage; held for review.")
-    return validate_decision({"decision": value["decision"], "reason": value["reason"],
-                              "evidence": [by_id[key] for key in dict.fromkeys(ids)]}, text)
+    result = validate_decision({"decision": value["decision"], "reason": value["reason"],
+                                "evidence": [by_id[key] for key in dict.fromkeys(ids)]}, text)
+    result["checks"] = {name: value[name] for name in conditions}
+    missing = [name for name in conditions if not value[name]]
+    if result["decision"] == "publish" and missing:
+        result["decision"] = "review"
+        result["reason"] = ("Corruption criteria not established (" + ", ".join(missing) + "). " + result["reason"])[:500]
+    return result
 
 
 def classify(article, config, api_key):
