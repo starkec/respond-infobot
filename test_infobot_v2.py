@@ -90,12 +90,13 @@ class ClassifierTests(unittest.TestCase):
         self.config = bot.load_config("config-v2.json")
 
     def test_structured_api_request_and_validated_evidence(self):
-        response = {"status": "completed", "output": [{"type": "message", "content": [
+        response = {"status": "completed", "usage": {"input_tokens": 3200, "output_tokens": 700, "total_tokens": 3900}, "output": [{"type": "message", "content": [
             {"type": "output_text", "text": json.dumps({**CHECKS, "decision": "publish", "reason": PUBLISH["reason"], "evidence_ids": [1]})}]}]}
         with patch.object(bot.v1, "read_response", return_value=json.dumps(response).encode()) as call:
             result = bot.classify(article(), self.config, "fake-private-key")
             self.assertEqual(result["decision"], "publish")
             self.assertIn(result["evidence"][0], TEXT)
+            self.assertEqual(result["api_usage"], response["usage"])
         request = call.call_args.args[0]
         payload = json.loads(request.data)
         self.assertEqual(request.full_url, bot.API_URL)

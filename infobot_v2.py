@@ -326,7 +326,12 @@ def classify(article, config, api_key):
         value = json.loads("".join(output))
     except (ValueError, TypeError, KeyError, AttributeError):
         raise v1.SetupError("Classifier refused or returned incomplete/invalid output; held for review.") from None
-    return resolve_evidence(value, passages, text)
+    result = resolve_evidence(value, passages, text)
+    usage = response.get("usage")
+    if isinstance(usage, dict):
+        result["api_usage"] = {name: usage[name] for name in ("input_tokens", "output_tokens", "total_tokens")
+                               if type(usage.get(name)) is int and usage[name] >= 0}
+    return result
 
 
 def read_v2_state(path, client):
@@ -351,6 +356,11 @@ def read_v2_state(path, client):
                 or v1.article_id({"link": decision["url"]}) != key
                 or (decision["decision"] == "publish" and not decision["evidence"])):
             raise v1.SetupError("Saved v2 decisions are invalid. Restore the last valid history.")
+        review = decision.get("manual_review")
+        if review is not None and (not isinstance(review, dict) or review.get("action") not in ("approve", "reject")
+                                   or not all(isinstance(review.get(field), str) and review[field].strip()
+                                              for field in ("by", "at", "note"))):
+            raise v1.SetupError("Saved manual review is invalid. Restore the last valid history.")
     return state
 
 
@@ -398,9 +408,120 @@ def publish_article(client, article, card=None):
     return expected, True
 
 
+def reviewed_article(decision, config):
+    matches = [feed for feed in config["feeds"] if feed["source_name"] == decision.get("source")
+               and same_publisher(decision["url"], feed["feed_url"])]
+    if len(matches) != 1 or not isinstance(decision.get("title"), str) or not decision["title"].strip():
+        raise v1.SetupError("Reviewed story no longer matches one configured publisher. Publication held.")
+    return {**matches[0], "title": decision["title"], "link": decision["url"]}
+
+
+def record_manual_review(state, config, url, action, note, reviewer, state_path, current_feeds=None):
+    if not isinstance(url, str) or not v1.https_url(url):
+        raise v1.SetupError("Review requires the HTTPS article URL from the live review queue.")
+    key = v1.article_id({"link": url})
+    decision = state["decisions"].get(key)
+    if key in state["posted"]:
+        raise v1.SetupError("This story is already published; a review cannot alter an existing post.")
+    if decision is None and current_feeds is not None:
+        matches = [item for item in round_robin(current_feeds) if v1.article_id(item) == key]
+        if matches:
+            item = matches[0]
+            decision = {"decision": "review", "reason": "Manual review of a current-feed story; any original preview reasoning remains in its preview artifact.",
+                        "evidence": [], "url": item["link"], "title": item["title"], "source": item["source_name"],
+                        "review_origin": "current_feed_manual_import", "checked_at": v1.utc_now()}
+    if not decision or not (decision["decision"] == "review" or decision.get("image_error")):
+        raise v1.SetupError("This URL is neither a live review hold nor a current configured-feed article. No decision saved.")
+    if action not in ("approve", "reject") or not 10 <= len(note.strip()) <= 1000 or not reviewer.strip():
+        raise v1.SetupError("Choose approve/reject, provide a 10-1000 character review note, and identify the reviewer.")
+    reviewed_article(decision, config)
+    decision["manual_review"] = {"action": action, "note": note.strip(), "by": reviewer.strip(), "at": v1.utc_now()}
+    state["decisions"][key] = decision
+    # Preserve the original classifier's reasoning and the complete URL history.
+    state["seen"] = sorted(set(state["seen"]) | {key})
+    v1.save_state(state_path, state)
+    print("Review saved: " + action + ". Nothing published by this review action.")
+
+
+def publish_manual_approvals(state, config, client, report, state_path):
+    """Manual approval survives a rolling feed and still requires the publisher image."""
+    report.setdefault("posted", 0)
+    approvals = sorted(state["decisions"].items(),
+                       key=lambda item: item[1].get("manual_review", {}).get("at", ""))
+    label_checked = False
+    for key, decision in approvals:
+        review = decision.get("manual_review", {})
+        if review.get("action") != "approve" or key in state["posted"]:
+            continue
+        if report["posted"] >= config["max_posts_per_run"]:
+            report["limit_reached"] = True
+            break
+        row = {"id": key, "source": decision["source"], "title": decision["title"],
+               "url": decision["url"], "decision": "publish", "manual_review": review}
+        report["articles"].append(row)
+        try:
+            article = reviewed_article(decision, config)
+            card = None
+            if not client.get_record(v1.POST_COLLECTION, v1.record_key(article)):
+                card = prepare_link_card(article)
+                row["link_card"] = publisher_images.card_preview(card)
+        except v1.SetupError as exc:
+            decision["image_error"] = str(exc)
+            row.update(decision="review", reason=str(exc), retryable=True)
+            v1.save_state(state_path, state)
+            print(json.dumps(row, ensure_ascii=False))
+            continue
+        if not label_checked:
+            v1.ensure_bot_label(client)
+            label_checked = True
+        uri, created = publish_article(client, article, card)
+        state["posted"][key] = uri
+        decision.pop("image_error", None)
+        review["applied_at"] = v1.utc_now()
+        row["post_uri"] = uri
+        report["posted"] += 1
+        v1.save_state(state_path, state)
+        print("Manually approved story published." if created else "Approved story already published; duplicate skipped.")
+        print(json.dumps(row, ensure_ascii=False))
+
+
+def write_review_queue(state, path):
+    def escape(value):
+        return re.sub(r"([\\`*{}\[\]<>#])", r"\\\1", v1.clean_text(str(value)))
+
+    lines = ["# Infobot v2 review queue", "", "Use **Actions > Infobot v2 > Run workflow > review** on main.",
+             "Supply the article URL, approve/reject, and a note explaining the decision.",
+             "An approval joins the next live run; this list never approves a story itself.", ""]
+    for key, decision in state["decisions"].items():
+        review = decision.get("manual_review", {})
+        if key in state["posted"] or review.get("action") == "reject":
+            continue
+        if decision["decision"] != "review" and not decision.get("image_error"):
+            continue
+        lines += ["## " + escape(decision.get("title", "Untitled")), "",
+                  "Source: " + escape(decision.get("source", "")), "",
+                  "Article: " + escape(decision["url"]), "",
+                  "Status: " + ("approved, waiting for publication" if review.get("action") == "approve" else "awaiting review"), "",
+                  "Classifier reason: " + escape(decision["reason"]), ""]
+        for name in ("abuse_of_entrusted_power", "private_gain", "substantive_corruption_coverage"):
+            lines.append("- " + name.replace("_", " ") + ": " + str(decision.get(name, "unknown")))
+        lines.append("")
+        for quote in decision["evidence"]:
+            lines += ["> " + escape(quote), ""]
+        if decision.get("image_error"):
+            lines += ["Image/publisher hold: " + escape(decision["image_error"]), ""]
+        if review:
+            lines += ["Manual note (" + escape(review["by"]) + "): " + escape(review["note"]), ""]
+    if len(lines) == 6:
+        lines += ["No articles are currently awaiting review.", ""]
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text("\n".join(lines), encoding="utf-8")
+
+
 def select_and_publish(feeds, config, api_key, report, client=None, state=None, state_path=None):
     preview = state is None
-    report.update(checked=0, posted=0)
+    report.update(checked=0, posted=report.get("posted", 0))
     seen = set() if preview else set(state["seen"])
     if state is not None:
         # Newly added feeds are baselined, never dumped as a backlog.
@@ -410,7 +531,7 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                 state["feeds"].append(url)
                 state["seen"] = sorted(seen)
                 v1.save_state(state_path, state)
-    posted, checked = 0, 0
+    posted, checked = report["posted"], 0
     label_checked = False
     for article in round_robin(feeds, oldest_first=not preview):
         key = v1.article_id(article)
@@ -433,6 +554,10 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
         else:
             try:
                 result = classify(article, config, api_key)
+                totals = report.setdefault("api_usage", {"requests": 0, "input_tokens": 0, "output_tokens": 0})
+                totals["requests"] += 1
+                for name in ("input_tokens", "output_tokens"):
+                    totals[name] += result.get("api_usage", {}).get(name, 0)
             except v1.SetupError as exc:
                 row.update(decision="review", reason=str(exc), evidence=[], retryable=True)
                 report["articles"].append(row)
@@ -508,34 +633,54 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", default="config-v2.json")
-    parser.add_argument("--mode", choices=("preview", "initialise", "run"), default="preview")
+    parser.add_argument("--mode", choices=("preview", "initialise", "run", "review"), default="preview")
     parser.add_argument("--state", default="data/state-v2.json")
     parser.add_argument("--legacy-state", default="data/state.json")
     parser.add_argument("--report", default="reports/latest.json")
+    parser.add_argument("--review-queue", default="data/review-queue.md")
+    parser.add_argument("--article-url", default="")
+    parser.add_argument("--review-action", choices=("approve", "reject"))
+    parser.add_argument("--review-note", default="")
+    parser.add_argument("--reviewer", default=os.environ.get("GITHUB_ACTOR", ""))
+    parser.add_argument("--initialise-if-needed", action="store_true")
     args = parser.parse_args()
     config = load_config(args.config)
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
-    if args.mode != "initialise" and not api_key:
+    if args.mode in ("preview", "run") and not api_key:
         raise v1.SetupError("Add OPENAI_API_KEY to GitHub Actions secrets for v2 classification. Never put it in config or chat.")
     if args.mode != "preview" and os.environ.get("INFOBOT_ENABLED", "").lower() == "true":
         raise v1.SetupError("Pause the original bot (INFOBOT_ENABLED=false) before initialising or running v2.")
-    feeds, errors = fetch_feeds(config)
+    state = None
+    feeds, errors = ({}, []) if args.mode == "review" else fetch_feeds(config)
     report = {"mode": args.mode, "created_at": v1.utc_now(), "model": config["model"],
               "policy_hash": hashlib.sha256(POLICY.encode()).hexdigest(),
               "feed_errors": errors, "articles": [], "posted": 0}
     try:
-        if not feeds:
+        if args.mode == "review":
+            client = v1.login()
+            state = read_v2_state(args.state, client)
+            current_feeds = None
+            if v1.https_url(args.article_url) and v1.article_id({"link": args.article_url}) not in state["decisions"]:
+                current_feeds, review_errors = fetch_feeds(config)
+                report["feed_errors"] = review_errors
+            record_manual_review(state, config, args.article_url, args.review_action,
+                                 args.review_note, args.reviewer, args.state, current_feeds)
+        elif not feeds:
             raise v1.SetupError("No feeds could be downloaded.")
-        if args.mode == "initialise":
+        elif args.mode == "initialise" or (args.mode == "run" and args.initialise_if_needed and not Path(args.state).exists()):
             if errors:
                 raise v1.SetupError("All feeds must download successfully before initialising history.")
-            initialise(args.state, args.legacy_state, v1.login(), feeds)
+            client = v1.login()
+            initialise(args.state, args.legacy_state, client, feeds)
+            state = read_v2_state(args.state, client)
+            report["initialised"] = True
         elif args.mode == "preview":
             select_and_publish(feeds, config, api_key, report)
             print("Preview finished. No posts, profile changes or history writes.")
         else:
             client = v1.login()
             state = read_v2_state(args.state, client)
+            publish_manual_approvals(state, config, client, report, args.state)
             select_and_publish(feeds, config, api_key, report, client, state, args.state)
         if errors:
             raise v1.SetupError("One or more feeds failed; see the report. Other feed results were preserved.")
@@ -544,6 +689,8 @@ def main():
         report.update(status="failed", error=str(exc))
         raise
     finally:
+        if state is not None:
+            write_review_queue(state, args.review_queue)
         v1.save_state(args.report, report)
 
 
