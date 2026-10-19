@@ -1,4 +1,4 @@
-"""Multi-feed corruption selection. Defaults to preview; Python standard library only.
+"""Multi-feed corruption selection. Defaults to preview; install requirements-v2.txt.
 
 The original infobot.py and its state remain usable. No LLM-generated text is
 published: v2 selects stories, then shares the original headline and source.
@@ -20,6 +20,7 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 from xml.etree import ElementTree as ET
 
 import infobot as v1
+import publisher_images
 
 
 API_URL = "https://api.openai.com/v1/responses"
@@ -370,7 +371,11 @@ def initialise(path, legacy_path, client, feeds, legacy_config_path="config.json
     print("V2 history initialised. Existing history preserved; current feed entries baselined. Nothing published.")
 
 
-def publish_article(client, article):
+def prepare_link_card(article):
+    return publisher_images.prepare_card(article, download)
+
+
+def publish_article(client, article, card=None):
     """The v1 absent-record guard and recovery, with the source language set."""
     key = v1.record_key(article)
     existing = client.get_record(v1.POST_COLLECTION, key)
@@ -378,6 +383,8 @@ def publish_article(client, article):
         return v1.existing_post_uri(existing, article, client), False
     record = v1.post_record(article, article["source_name"])
     record["langs"] = [article["language"]]
+    card = card if card is not None else prepare_link_card(article)
+    record["embed"] = publisher_images.embed(article, publisher_images.upload_thumbnail(client, card))
     try:
         result = client.put_record(v1.POST_COLLECTION, key, record)
     except v1.SetupError:
@@ -438,12 +445,23 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                 if isinstance(exc, v1.APIError) or "LLM classification" in str(exc):
                     raise
                 continue
+        # A previous image failure is an operational hold, not a new editorial
+        # decision. Clear it when retrying the already-approved story.
+        result = {name: value for name, value in result.items() if name != "image_error"}
         row.update(result)
         report["articles"].append(row)
-        print(json.dumps(row, ensure_ascii=False))
         if preview:
             if result["decision"] == "publish":
+                try:
+                    row["link_card"] = publisher_images.card_preview(prepare_link_card(article))
+                except v1.SetupError as exc:
+                    row.update(decision="review", reason=str(exc), image_error=True, retryable=True)
+                    print(json.dumps(row, ensure_ascii=False))
+                    continue
+                print(json.dumps(row, ensure_ascii=False))
                 print("PREVIEW (not published): " + json.dumps(v1.preview_text(article, article["source_name"]), ensure_ascii=False))
+            else:
+                print(json.dumps(row, ensure_ascii=False))
             continue
         state["decisions"][key] = {**result, "url": article["link"], "title": article["title"],
                                    "source": article["source_name"], "model": config["model"],
@@ -451,17 +469,31 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                                    "checked_at": v1.utc_now()}
         v1.save_state(state_path, state)
         if result["decision"] == "publish":
+            card = None
+            # Recover previously accepted posts without depending on whether
+            # the publisher still hosts its page or image.
+            if not client.get_record(v1.POST_COLLECTION, v1.record_key(article)):
+                try:
+                    card = prepare_link_card(article)
+                    row["link_card"] = publisher_images.card_preview(card)
+                except v1.SetupError as exc:
+                    row.update(decision="review", reason=str(exc), image_error=True, retryable=True)
+                    state["decisions"][key]["image_error"] = str(exc)
+                    v1.save_state(state_path, state)
+                    print(json.dumps(row, ensure_ascii=False))
+                    continue
             if not label_checked:
                 v1.ensure_bot_label(client)
                 label_checked = True
             # Reuse the original stable record keys and absence guards, so even
             # a lost state commit cannot cause another post of the same URL.
-            uri, created = publish_article(client, article)
+            uri, created = publish_article(client, article, card)
             state["posted"][key] = uri
             posted += 1
             report["posted"] = posted
             row["post_uri"] = uri
             print("Published." if created else "Already published; duplicate skipped.")
+        print(json.dumps(row, ensure_ascii=False))
         if result["decision"] in ("publish", "skip", "review"):
             seen.add(key)
             state["seen"] = sorted(seen)

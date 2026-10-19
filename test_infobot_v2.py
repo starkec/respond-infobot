@@ -22,6 +22,9 @@ SKIP = {"decision": "skip", "reason": "An unrelated story.", "evidence": []}
 REVIEW = {"decision": "review", "reason": "The connection is uncertain.", "evidence": []}
 CHECKS = {"abuse_of_entrusted_power": True, "private_gain": True,
           "substantive_corruption_coverage": True}
+CARD = {"image_url": "https://example.org/original-photo.jpg", "image_bytes": b"fake-image",
+        "mime_type": "image/jpeg", "width": 1200, "height": 630}
+BLOB = {"$type": "blob", "mimeType": "image/jpeg", "size": 10, "ref": {"$link": "fake-blob"}}
 
 
 def article(number=1, feed=FEED):
@@ -184,6 +187,12 @@ class StateAndPublishingTests(unittest.TestCase):
         self.output = patch("sys.stdout", new_callable=io.StringIO)
         self.output.start()
         self.addCleanup(self.output.stop)
+        self.card_patch = patch.object(bot, "prepare_link_card", return_value=CARD)
+        self.card_mock = self.card_patch.start()
+        self.addCleanup(self.card_patch.stop)
+        self.upload_patch = patch.object(bot.publisher_images, "upload_thumbnail", return_value=BLOB)
+        self.upload_mock = self.upload_patch.start()
+        self.addCleanup(self.upload_patch.stop)
 
     def run_bot(self, result=PUBLISH, preview=False):
         report = {"articles": []}
@@ -207,6 +216,8 @@ class StateAndPublishingTests(unittest.TestCase):
         record = self.client.get_record(infobot.POST_COLLECTION, infobot.record_key(article(1)))
         self.assertEqual(record["value"]["langs"], ["de"])
         self.assertIn("Source: Example", record["value"]["text"])
+        self.assertEqual(record["value"]["embed"]["external"]["thumb"], BLOB)
+        self.assertEqual(record["value"]["embed"]["external"]["description"], "")
         self.assertEqual(len(self.state["decisions"]), 3)
         self.assertEqual(len(self.state["seen"]), 3)
 
@@ -328,6 +339,39 @@ class StateAndPublishingTests(unittest.TestCase):
         self.assertTrue(self.state["decisions"][infobot.article_id(article(1))]["retryable"])
         _, classifier = self.run_bot()
         self.assertEqual(classifier.call_count, 2)
+        self.assertEqual(self.client.post_count, 2)
+
+    def test_missing_image_holds_the_story_without_discarding_it_or_writing_profile(self):
+        self.card_mock.side_effect = infobot.SetupError("No publisher sharing image found")
+        report, _ = self.run_bot()
+        self.assertEqual(self.client.write_count, 0)
+        self.assertEqual(self.state["seen"], [])
+        self.assertTrue(all(row["decision"] == "review" and row["image_error"] for row in report["articles"]))
+        self.upload_mock.assert_not_called()
+        self.card_mock.side_effect = None
+        _, classifier = self.run_bot()
+        classifier.assert_not_called()
+        self.assertEqual(self.client.post_count, 2)
+        self.assertNotIn("image_error", self.state["decisions"][infobot.article_id(article(1))])
+
+    def test_preview_exposes_image_url_without_uploading_it(self):
+        report, _ = self.run_bot(preview=True)
+        self.assertEqual(report["articles"][0]["link_card"]["image_url"], CARD["image_url"])
+        self.upload_mock.assert_not_called()
+        json.dumps(report)  # Report must not contain raw image bytes.
+
+    def test_preview_holds_missing_images_without_publication(self):
+        self.card_mock.side_effect = infobot.SetupError("No image")
+        report, _ = self.run_bot(preview=True)
+        self.assertTrue(all(row["decision"] == "review" for row in report["articles"]))
+        self.assertEqual(self.client.write_count, 0)
+
+    def test_existing_posts_can_be_recovered_even_if_the_publisher_image_is_gone(self):
+        before = deepcopy(self.state)
+        self.run_bot()
+        self.state = before
+        self.card_mock.side_effect = infobot.SetupError("Image disappeared")
+        self.run_bot()
         self.assertEqual(self.client.post_count, 2)
 
     def test_initialisation_cannot_bypass_legacy_account_check(self):

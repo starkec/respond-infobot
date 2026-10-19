@@ -1,7 +1,9 @@
 # RESPOND Infobot
 
 **Multi-feed v2 trial:** [V2 setup and operation](V2.md) describes the new
-LLM corruption filter for OCCRP, ICIJ, Bellingcat and CORRECTIV. The original
+LLM corruption filter and original publisher-image cards for OCCRP, ICIJ,
+Bellingcat and CORRECTIV. V2 posts headlines, sources, images and links without
+generated summaries. The original
 bot below keeps its existing configuration, workflow and history. V2 is opt-in
 and defaults to preview; merging its files does not enable v2 posting.
 
