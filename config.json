@@ -1,5 +1,6 @@
 {
   "source_name": "OCCRP",
   "feed_url": "https://www.occrp.org/en/corruption/feed",
-  "preview_count": 3
+  "preview_count": 3,
+  "max_posts_per_run": 5
 }

@@ -1,0 +1,72 @@
+# After uploading, move this file to .github/workflows/infobot-live.yml
+name: Infobot
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'preview = no posts; test-post = one real article; run = new articles'
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - test-post
+          - run
+  schedule:
+    - cron: '17,47 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: respond-infobot-publishing
+  cancel-in-progress: false
+
+jobs:
+  infobot:
+    if: >-
+      github.ref_name == github.event.repository.default_branch &&
+      (github.event_name == 'workflow_dispatch' || vars.INFOBOT_ENABLED == 'true')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Download repository files
+        id: checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+
+      - name: Check the code
+        run: python -m unittest -v
+
+      - name: Run the Infobot
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+          INFOBOT_MODE: ${{ github.event_name == 'schedule' && 'run' || inputs.mode }}
+        run: python infobot.py --mode "$INFOBOT_MODE" --check-login
+
+      - name: Save article history to GitHub
+        if: ${{ always() && steps.checkout.outcome != 'failure' }}
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if [ ! -f data/state.json ]; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/state.json
+          if git diff --cached --quiet; then
+            echo "No article-history changes to save."
+            exit 0
+          fi
+          git commit -m "Update Infobot article history [skip ci]"
+          git pull --rebase origin "$DEFAULT_BRANCH"
+          git push origin "HEAD:$DEFAULT_BRANCH"
