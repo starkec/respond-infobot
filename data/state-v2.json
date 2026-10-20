@@ -1,6 +1,48 @@
 {
   "account_did": "did:plc:lzmlnzqvphebtdx34yt2tn2i",
   "decisions": {
+    "07add2c9a68eb218db1af1ce02fccaccc3d1c02e443a3f6c9be0a84230f7817f": {
+      "api_usage": {
+        "input_tokens": 1081,
+        "output_tokens": 267,
+        "total_tokens": 1348
+      },
+      "checked_at": "2026-10-20T21:40:47Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The article discusses Serbia's foreign policy, alleged foreign funding of NGOs/media, and mentions an anti-corruption movement, but it does not allege that an entrusted official abused power for private gain nor provide substantive reporting on corrupt acts, investigations or prosecutions. No passage establishes corruption as the central subject.",
+      "source": "OCCRP",
+      "title": "Vu\u010di\u0107 Rejects Russia Sanctions, Blames Foreign Powers for Protests",
+      "url": "https://www.occrp.org/en/news/vucic-rejects-russia-sanctions-blames-foreign-powers-for-protests"
+    },
+    "34777dc9749a419a154e576ea4ef9fe3c107a4c303aeedc72ba35d6a05cfe8f4": {
+      "api_usage": {
+        "input_tokens": 1475,
+        "output_tokens": 360,
+        "total_tokens": 1835
+      },
+      "checked_at": "2026-10-20T21:40:43Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "Article centers on protests and police crackdown; it notes demonstrators demand Rama\u2019s resignation over \u201callegations of widespread corruption,\u201d but provides no substantive details, investigations, or examples of corrupt acts or private benefit. Connection to corruption is asserted but not developed in the supplied passages.",
+      "source": "OCCRP",
+      "title": "Albanian PM Offers Dialogue Amid Crackdown on Violent Protests",
+      "url": "https://www.occrp.org/en/news/albanian-pm-offers-dialogue-amid-crackdown-on-violent-protests"
+    },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
         "input_tokens": 1430,
@@ -45,6 +87,7 @@
     "0476b2d2d0e2706e296160eb4b24d8f1fa356bc6ae5e984b0f076d30e9611b0a",
     "049abc7380f4e76668ac9272c730034586e6300096ab4615c56ead8e2b783db9",
     "0667447ac00a975c5c5f9ef37d2af11abbbfb64801dfb771c0f89213e6db84cf",
+    "07add2c9a68eb218db1af1ce02fccaccc3d1c02e443a3f6c9be0a84230f7817f",
     "0ec10dfec00a261169d57a7f7cd13b5345244a05b0201f7bd94d5cbae33fad06",
     "0f75511590469791aded30a5e408f04f519cbb1b81e2e83c75043c58628ff343",
     "101573aa09b177a1f82cff3f2c62e587a839f6bb16c985ff2a91289f0d55182d",
@@ -67,6 +110,7 @@
     "2f9035c46468d5014dac7192fee61c88a2f5c1d5e4b790a06f40e126b3e72dd7",
     "30804fa98bf9965a612a768607a843f70e2820597c503fefadf2f188c32bbad2",
     "32ede1e9f21fdf490ba8681e5edb2cbe93459e6c823a6556c471aca798a4e98b",
+    "34777dc9749a419a154e576ea4ef9fe3c107a4c303aeedc72ba35d6a05cfe8f4",
     "353d05e764c45d7a450be3ee870fbc0486b54434deb36c6400a43c62d4f9636c",
     "39e6b6eec3bcca0a5625309ca0913ea27a69f159d2ddd36cf88a7b222ff45dd8",
     "3b8f25daae542a9208109c17859279e6c7b06c6a3ff2b74928419cf6ca815eea",
