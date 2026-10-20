@@ -1,6 +1,32 @@
 {
   "account_did": "did:plc:lzmlnzqvphebtdx34yt2tn2i",
-  "decisions": {},
+  "decisions": {
+    "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
+      "api_usage": {
+        "input_tokens": 1430,
+        "output_tokens": 369,
+        "total_tokens": 1799
+      },
+      "checked_at": "2026-10-20T13:02:38Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "decision": "publish",
+      "evidence": [
+        "unspecified illness, according to local media and photographs of the funeral posted on social media. Noah Musingku was accused of stealing tens of millions of dollars from victims across the region in a 1990s pyramid",
+        "himself as King David Peii II of the twin kingdoms of Papaala and Me\u2019ekamui, Musingku set up a pseudo-state with its own armed militia, banking system, and local currency known as the Bougainville kina (BVK). The BVK",
+        "was later declared illegal by Papua New Guinea\u2019s government. A 2025 investigation by OCCRP revealed that, in the following decades, Musingku had built a global following among both locals and Western conspiracy"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The article alleges Musingku ran a Ponzi/pyramid scheme that stole tens of millions (passage 2), built a loyal following and set himself up as a de facto ruler with his own banking system and currency (passages 4 and 5), showing abuse of entrusted authority over followers for private gain; corruption/investigation is central to the story.",
+      "source": "OCCRP",
+      "title": "South Pacific Ponzi Scam \u201cKing\u201d Noah Musingku Dies",
+      "url": "https://www.occrp.org/en/news/south-pacific-ponzi-scam-king-noah-musingku-dies"
+    }
+  },
   "feeds": [
     "https://www.occrp.org/en/corruption/feed",
     "https://www.icij.org/feed/",
@@ -9,7 +35,8 @@
   ],
   "last_checked_date": "2026-10-20",
   "posted": {
-    "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5tqahiyq5jfbi"
+    "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5tqahiyq5jfbi",
+    "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/a3m46q3gstrpa"
   },
   "seen": [
     "01a667cb1fd9cfcea2819986f0e5d6c0899b36f5e09c925023f7c07589524010",
@@ -129,6 +156,7 @@
     "dc3e5407d03be9132330b44c323f4f2bb281e63c57c3ee5da6f44072ff234cd2",
     "dc4cc40652de7757c05b103ef051b176e7000d18cbf8cc663b5147d3f301c19b",
     "e03a94b28db3d7eb42b1907564a937cb9f3bc799c34a48dfd0a46d0c2fb85659",
+    "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725",
     "e0fa8a5c7916b70307f6b4461ba60cca8c24b748cc3990629b5c4da55ad77bef",
     "e146157b44a1e87e9fe41dba0dffbfbb271b5ef3a69a6a77baf2a8c670edeef5",
     "e1aae06a6c4326ebcca70f83433cd9cef28114ab91878f46dbbd0206b22dd02c",
