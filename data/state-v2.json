@@ -64,6 +64,27 @@
       "title": "In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes",
       "url": "https://www.occrp.org/en/scoop/in-a-vienna-bakery-a-sweet-scent-of-pastry-and-a-backdoor-for-serbian-votes"
     },
+    "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
+      "api_usage": {
+        "input_tokens": 1406,
+        "output_tokens": 155,
+        "total_tokens": 1561
+      },
+      "checked_at": "2026-10-21T22:48:17Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "Article discusses a new law addressing romance scams and dating platforms' notification obligations. It does not allege abuse of entrusted public or organisational power for private gain, nor substantive investigations into corruption-related conduct.",
+      "source": "ICIJ",
+      "title": "New US law requires dating apps to include warnings on romance scams",
+      "url": "https://www.icij.org/news/2026/10/new-us-law-requires-dating-apps-to-include-warnings-on-romance-scams/"
+    },
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99": {
       "api_usage": {
         "input_tokens": 2990,
@@ -198,6 +219,7 @@
     "87e0d1ce728987a7221a51d0e7a2a9cdace2e6aac29cef6137310fa78df5f428",
     "88596189e1dc1e93eeec3e08daf10906895f94b10f1c0efe02954350390009df",
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
+    "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
     "8fdd554b423facaf68d2038ee280f232f7eafa36ab2ad25b7274ec903553b3c8",
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99",
