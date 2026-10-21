@@ -43,6 +43,48 @@
       "title": "Albanian PM Offers Dialogue Amid Crackdown on Violent Protests",
       "url": "https://www.occrp.org/en/news/albanian-pm-offers-dialogue-amid-crackdown-on-violent-protests"
     },
+    "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b": {
+      "api_usage": {
+        "input_tokens": 3011,
+        "output_tokens": 562,
+        "total_tokens": 3573
+      },
+      "checked_at": "2026-10-21T19:40:37Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The piece alleges an NGO-run operation illegally collecting diaspora voter registrations to favor the ruling party, including recordings and legal experts calling it unlawful. However it\u2019s unclear from the supplied passages whether a public official or other person formally entrusted with authority abused that role or whether state actors colluded \u2014 that connection is asserted but not concretely proven in the text provided.",
+      "source": "OCCRP",
+      "title": "In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes",
+      "url": "https://www.occrp.org/en/scoop/in-a-vienna-bakery-a-sweet-scent-of-pastry-and-a-backdoor-for-serbian-votes"
+    },
+    "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99": {
+      "api_usage": {
+        "input_tokens": 2990,
+        "output_tokens": 451,
+        "total_tokens": 3441
+      },
+      "checked_at": "2026-10-21T19:40:44Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The story documents large-scale money laundering and a Kremlin-backed payments firm (A7) moving billions via cash and state-linked Promsvyazbank, and was sanctioned as a criminal network. It clearly involves private gain and centers on corruption-like activity, but the supplied passages do not explicitly show an entrusted public official abusing their role\u2014this connection is unclear and needs clarification.",
+      "source": "ICIJ",
+      "title": "Kremlin payment firm A7 has been pumping billions in \u2018untraceable\u2019 cash into global financial system",
+      "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/"
+    },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
         "input_tokens": 1430,
@@ -125,6 +167,7 @@
     "54e9eed7436c367cb920d5d6b8feea2b0f6d8ac897b5073bf6b15742ce351ad1",
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
+    "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
@@ -157,6 +200,7 @@
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
     "8fdd554b423facaf68d2038ee280f232f7eafa36ab2ad25b7274ec903553b3c8",
+    "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99",
     "904d611897b8a0f1be427ca2fd92fec4f6bf9a650bd3c4aa904acc08b77e38dc",
     "90c8b82479b25f2a652a96e038e5bbb1c51130c4c07fe4f13d2ca53c7b351903",
     "93842ee99e5b3fccdc0be32cee4325089a91a344934a37ff181f4d8a064fc700",
