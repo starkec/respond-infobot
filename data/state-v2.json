@@ -106,6 +106,52 @@
       "title": "Kremlin payment firm A7 has been pumping billions in \u2018untraceable\u2019 cash into global financial system",
       "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/"
     },
+    "a4f88eec5649e3bf5d4aec14de4e278d38e911bc7b1302ba0605887f003c6779": {
+      "api_usage": {
+        "input_tokens": 2119,
+        "output_tokens": 172,
+        "total_tokens": 2291
+      },
+      "checked_at": "2026-10-22T06:38:21Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The article reports on gaps in local crisis preparedness, funding and staffing shortages, and shelter availability\u2014without alleging that any official abused entrusted power for private gain or describing investigations/prosecutions related to corruption. No passages establish corrupt conduct.",
+      "source": "CORRECTIV",
+      "title": "Disaster Strikes \u2013 Then What? Gaps in Local Crisis Preparedness",
+      "url": "https://correctiv.org/en/europe/2026/10/22/disaster-strikes-then-what-gaps-in-local-crisis-preparedness/"
+    },
+    "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": {
+      "api_usage": {
+        "input_tokens": 1820,
+        "output_tokens": 374,
+        "total_tokens": 2194
+      },
+      "checked_at": "2026-10-22T06:38:15Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "decision": "publish",
+      "evidence": [
+        "who brought a case against the agency\u2019s U.S. corporate entity World Center Group Corp and two of its representatives. The complaint was on five counts, including breach of contract and fraud. The lawsuit accused the",
+        "company of \u201ca calculated and coordinated scheme\u201d to secure substantial payments for promised services despite its worsening financial and operational problems. The judge noted that the decision was a default judgement",
+        "documents. The ruling followed an October 5 hearing that the defendants failed to attend. World Center Group Corp, Star, and Jonas were ordered to recover funds for the couple amounting to $87,415 which they had paid"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The article details civil lawsuits alleging that the agency and its representatives orchestrated a scheme to secure substantial payments for promised services (fraud/breach of contract), resulting in a default judgment ordering recovery of funds. This shows entrusted corporate roles were abused for private financial gain and the piece centers on those allegations and legal enforcement.",
+      "source": "OCCRP",
+      "title": "Collapsed Surrogacy Agency Loses U.S. Civil Case After Court No-Show",
+      "url": "https://www.occrp.org/en/news/collapsed-surrogacy-agency-loses-us-civil-case-after-court-no-show"
+    },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
         "input_tokens": 1430,
@@ -141,6 +187,7 @@
   "last_checked_date": "2026-10-22",
   "posted": {
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5tqahiyq5jfbi",
+    "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/6vyjebrrbozdj",
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/a3m46q3gstrpa"
   },
   "seen": [
@@ -235,6 +282,7 @@
     "9efe7b86b4e57b072e6d2875d4a30a11e648dfa250390ff007436c6a1e2e98dd",
     "a284a2a36a0551751e333beb9fd0c3d9e207da5505804634a3de2b9e920dc2ed",
     "a368545cc94846e126159f5383cdd5a846a7da10e70bdc449d29fbcacf8a26ee",
+    "a4f88eec5649e3bf5d4aec14de4e278d38e911bc7b1302ba0605887f003c6779",
     "a502e639773a64842d6c8103f392c3f6de8cc5025c316d96dc173edea22c605c",
     "a6c22379f6d39115de7cb65acdc64a90f91ff31b1939e7f4befd525a13babe8a",
     "a8dd0137d17b8b26c40df4cde196c047226baf53b9b9450f8ac555d90f39a131",
@@ -255,6 +303,7 @@
     "c713f42f80056e9db262aabfd8f860e3f345f63188dd4de9fc22dea8e4bf4d81",
     "c8fe4c75e56591fa7abea595010b7ad0f0a12165b82f3941a14811aca6517fc2",
     "cd495b1d4d7649376c63dd3d9a579ed1e3fd3c383fcea9c9e29d440922b96566",
+    "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d",
     "ce90d6ab9e3d1dc18fc8c3abbd43c8aaf1e03bd7a2684d69030c6ea722c2ab9d",
     "d07e18c9c694dea7be04bfc372b745120a12ee57392eeb18ec638389b20215e0",
     "d14cc2c4cd08967e112e0a1e5b0debb7a6b836264c13dc4f952795d95de3bce8",
