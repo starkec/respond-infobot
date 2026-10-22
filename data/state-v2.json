@@ -22,6 +22,52 @@
       "title": "Vu\u010di\u0107 Rejects Russia Sanctions, Blames Foreign Powers for Protests",
       "url": "https://www.occrp.org/en/news/vucic-rejects-russia-sanctions-blames-foreign-powers-for-protests"
     },
+    "117a41b85249be893ae2efcd02607c5fbac388e864ca276dbd7defc305ef98c3": {
+      "api_usage": {
+        "input_tokens": 959,
+        "output_tokens": 268,
+        "total_tokens": 1227
+      },
+      "checked_at": "2026-10-22T17:40:08Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "Article reports a large cybercrime enforcement operation and recovered illicit funds, but contains no allegation that a public official or trusted person abused their position for private gain. The story concerns criminal fraud and cyber networks, not corruption tied to entrusted power.",
+      "source": "OCCRP",
+      "title": "Interpol Cybercrime Crackdown Nets 1,400 Arrests and $105M",
+      "url": "https://www.occrp.org/en/news/interpol-cybercrime-crackdown-nets-1400-arrests-and-105m"
+    },
+    "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": {
+      "api_usage": {
+        "input_tokens": 4667,
+        "output_tokens": 433,
+        "total_tokens": 5100
+      },
+      "checked_at": "2026-10-22T17:40:16Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "decision": "publish",
+      "evidence": [
+        "had vouched for in writing two months earlier. The guest was Alexandre Ramagem, a Brazilian congressman and spy chief under former President Jair Bolsonaro. In September, Ramagem had fled Brazil days before being",
+        "member of Brazil\u2019s Congress, had been barred by court order from leaving Brazil and was required to surrender all his passports while on trial. He was charged with using the country\u2019s intelligence agency to help",
+        "show. On Nov. 17, Ramagem\u2019s spouse and daughters joined him in the apartment, according to the wife\u2019s social media posts. Investigators in Brazil allege in the confidential records that the De Mello family played a key"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The article alleges that Alexandre Ramagem, a former head of Brazil\u2019s intelligence agency, abused his official role in a plot to discredit the voting system and overturn the 2022 election; it describes an ongoing Federal Police investigation, his escape and alleged concealment with help from associates. This centers on abuse of entrusted power to obtain political advantage and related investigative/enforcement action.",
+      "source": "ICIJ",
+      "title": "The US is letting a convicted Bolsonaro spy chief stay in Florida. Brazil wants answers.",
+      "url": "https://www.icij.org/news/2026/10/the-us-is-letting-a-convicted-bolsonaro-spy-chief-stay-in-florida-brazil-wants-answers/"
+    },
     "34777dc9749a419a154e576ea4ef9fe3c107a4c303aeedc72ba35d6a05cfe8f4": {
       "api_usage": {
         "input_tokens": 1475,
@@ -42,6 +88,27 @@
       "source": "OCCRP",
       "title": "Albanian PM Offers Dialogue Amid Crackdown on Violent Protests",
       "url": "https://www.occrp.org/en/news/albanian-pm-offers-dialogue-amid-crackdown-on-violent-protests"
+    },
+    "4701bde88fee159962f3bf2a7fe7cc78f9c9f1d8b19b2d870feb356dcf621031": {
+      "api_usage": {
+        "input_tokens": 7433,
+        "output_tokens": 167,
+        "total_tokens": 7600
+      },
+      "checked_at": "2026-10-22T17:40:21Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "Article discusses gaps in disaster and civil protection planning, infrastructure vulnerability and incidents of sabotage, but contains no allegations that officials abused entrusted power for private gain or that resources were diverted for private benefit. No substantive corruption investigation or enforcement is described.",
+      "source": "CORRECTIV",
+      "title": "Katastrophenschutz in Deutschland: Im Ernstfall kommt es auf den Wohnort an",
+      "url": "https://correctiv.org/en/current/2026/10/22/katastrophenschutz-in-deutschland-im-ernstfall-kommt-es-auf-den-wohnort-an/"
     },
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b": {
       "api_usage": {
@@ -84,6 +151,27 @@
       "source": "Bellingcat",
       "title": "Can LLMs Supercharge Geolocations? Our Tests Show Big Improvements But Humans Remain Key",
       "url": "https://www.bellingcat.com/resources/2026/10/22/can-llms-supercharge-geolocations-our-tests-show-big-improvements-but-humans-remain-key/"
+    },
+    "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b": {
+      "api_usage": {
+        "input_tokens": 1079,
+        "output_tokens": 182,
+        "total_tokens": 1261
+      },
+      "checked_at": "2026-10-22T17:40:11Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "Article reports earnings from people-smuggling and death/interception figures. It describes criminal networks profiting but does not allege abuse of an entrusted public or organisational role, nor substantive coverage of public-sector corruption or misuse of authority for private gain.",
+      "source": "OCCRP",
+      "title": "Smugglers Collected Up to $509M on Europe Routes in 2025",
+      "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
       "api_usage": {
@@ -257,6 +345,7 @@
   ],
   "last_checked_date": "2026-10-22",
   "posted": {
+    "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4o3ktf4mquyfo",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5tqahiyq5jfbi",
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/6e25ptvjxwuew",
@@ -275,6 +364,7 @@
     "0f75511590469791aded30a5e408f04f519cbb1b81e2e83c75043c58628ff343",
     "101573aa09b177a1f82cff3f2c62e587a839f6bb16c985ff2a91289f0d55182d",
     "10c8fc9521036b1c3a749ead05643a959e363bb7a3a9e91c752433bf836cf821",
+    "117a41b85249be893ae2efcd02607c5fbac388e864ca276dbd7defc305ef98c3",
     "120863f7a08274db4eb05a59218465b0487abbc771a50ad847a217ae1fc86356",
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
@@ -287,6 +377,7 @@
     "294570f63cd6e493a0b0c105cd2bce3323a87b0085e2f7a44bda4323bb5f7e25",
     "29afecaac4590fe0c96f52174603536cd71ebc84489d9f36fbd476793714b9fa",
     "29bdd0b07201a59c1273112758591e23cbfba3e9edba3808eb49157678a8ee43",
+    "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c",
     "2b9ff46a0d5193c1c5b98f826c26c7b0ff8c30cd6fac65137d8e1b233e0a0d3f",
     "2dce151e180e653c918188e0bd7fb5e67b06efac8b264a23994b5be32f24d28d",
     "2eed5c5afd63e5f5d765615bd54b45c23332925106fcc5ce4585ca49e3b569ac",
@@ -298,6 +389,7 @@
     "39e6b6eec3bcca0a5625309ca0913ea27a69f159d2ddd36cf88a7b222ff45dd8",
     "3b8f25daae542a9208109c17859279e6c7b06c6a3ff2b74928419cf6ca815eea",
     "3b9c91b452af52b0c8db07b8c05fcf92c19feb12b78870c1af80aee8c93c9815",
+    "4701bde88fee159962f3bf2a7fe7cc78f9c9f1d8b19b2d870feb356dcf621031",
     "47bb81b3260f54b5084e93ca32ce68ff9f1b25f9e4a6f050ed75d2f3d051aee0",
     "47e8ee10fb17ee419f7ba820445150f188f776aa24f0dc77c5fbbce50bc436e3",
     "493f0dadcbd9a2c2bf4541c530b1b57724bdb6323e43e1cd62efdec03ea8244b",
@@ -324,6 +416,7 @@
     "6e6c4d096e5f342071f6cabc7bc93b3bda1021a6bba9dc24db99ce3264018a61",
     "70d233665e7711267cb44319baad6671d5963c4b1f0320af0f5785fe1cb6862e",
     "72857455d495984473a2a0700196ab1f9889f59088c452465f982c8853fc1736",
+    "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b",
     "751c8e9d696ff2dd5860f63efd76bf92e69a8809fb0f51d1c97b3701878edf9c",
     "76721ba4df3a18f5c7ef7da7b0c9ae0a8a68aaf3de07e7a48be3ed46c9320162",
     "7722b42a62aaedcb3ce4bbad40daafbaa32231a60fbb0b12faef618273075912",
