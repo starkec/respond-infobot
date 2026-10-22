@@ -64,6 +64,27 @@
       "title": "In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes",
       "url": "https://www.occrp.org/en/scoop/in-a-vienna-bakery-a-sweet-scent-of-pastry-and-a-backdoor-for-serbian-votes"
     },
+    "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801": {
+      "api_usage": {
+        "input_tokens": 5091,
+        "output_tokens": 158,
+        "total_tokens": 5249
+      },
+      "checked_at": "2026-10-22T12:30:45Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The article reports on AI models' geolocation performance and implications for investigative and military use, but contains no allegations or reporting of abuse of entrusted power for private gain, no suggestion of improper benefits, and no substantive coverage of corruption-related investigation or enforcement.",
+      "source": "Bellingcat",
+      "title": "Can LLMs Supercharge Geolocations? Our Tests Show Big Improvements But Humans Remain Key",
+      "url": "https://www.bellingcat.com/resources/2026/10/22/can-llms-supercharge-geolocations-our-tests-show-big-improvements-but-humans-remain-key/"
+    },
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
       "api_usage": {
         "input_tokens": 1406,
@@ -127,6 +148,56 @@
       "title": "Disaster Strikes \u2013 Then What? Gaps in Local Crisis Preparedness",
       "url": "https://correctiv.org/en/europe/2026/10/22/disaster-strikes-then-what-gaps-in-local-crisis-preparedness/"
     },
+    "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": {
+      "api_usage": {
+        "input_tokens": 4888,
+        "output_tokens": 436,
+        "total_tokens": 5324
+      },
+      "checked_at": "2026-10-22T12:30:41Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "decision": "publish",
+      "evidence": [
+        "When senior mining executive Stevi Thomas was convicted alongside an Indonesian governor for bribery in 2024, the ruling was seen as a rare case of accountability for corruption in the Southeast Asian nation. The court",
+        "firm as community leaders, and the military between 2013 and 2023. The planned or approved payments amounted to at least $389,000 and took the form of flights for politicians, \u201cincentives\u201d for the community leaders, and",
+        "government \u201cdecision\u201d permitting the company to store hazardous waste. Although the official government document was to be signed by Bahrain \u2014 the regional official who would later have flights booked by Harita \u2014 it was"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The article documents bribery convictions involving a governor, and leaked company records showing Harita approved payments (flights, incentives, CSR-designated support) to local officials, community leaders and the military to advance company interests and influence permits\u2014supporting an abuse of entrusted power for private gain and substantive corruption coverage.",
+      "source": "OCCRP",
+      "title": "From Flights to \u2018Incentives,\u2019 Indonesian Nickel Giant Harita Approved Payments for Local Politicians and Leaders",
+      "url": "https://www.occrp.org/en/investigation/from-flights-to-incentives-indonesian-nickel-giant-harita-approved-payments-for-local-politicians-and-leaders"
+    },
+    "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da": {
+      "api_usage": {
+        "input_tokens": 895,
+        "output_tokens": 283,
+        "total_tokens": 1178
+      },
+      "checked_at": "2026-10-22T12:30:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "decision": "publish",
+      "evidence": [
+        "In 2023, OCCRP reported that Venezuela\u2019s former head of the treasury under President Hugo Ch\u00e1vez had been under investigation in Liechtenstein for allegedly laundering money using gold bars. Reporters found that",
+        "investigators had also looked into Swiss banker Ronnie Budja, but could not confirm whether he faced any charges. Liechtenstein authorities have since confirmed that an official investigation into Budja was discontinued",
+        "in 2024 due to insufficient grounds to initiate criminal proceedings."
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The passages report a probe into Venezuela\u2019s former head of the treasury over alleged money laundering using gold bars (abuse by an entrusted official for private gain) and note an investigation of a Swiss banker that was discontinued\u2014investigations into alleged laundering are central to the story.",
+      "source": "OCCRP",
+      "title": "Liechtenstein Discontinued Investigation into Swiss Banker",
+      "url": "https://www.occrp.org/en/news/liechtenstein-discontinued-investigation-into-swiss-banker"
+    },
     "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": {
       "api_usage": {
         "input_tokens": 1820,
@@ -186,7 +257,9 @@
   ],
   "last_checked_date": "2026-10-22",
   "posted": {
+    "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5tqahiyq5jfbi",
+    "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/6e25ptvjxwuew",
     "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/6vyjebrrbozdj",
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/a3m46q3gstrpa"
   },
@@ -236,6 +309,7 @@
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b",
+    "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
@@ -287,6 +361,7 @@
     "a6c22379f6d39115de7cb65acdc64a90f91ff31b1939e7f4befd525a13babe8a",
     "a8dd0137d17b8b26c40df4cde196c047226baf53b9b9450f8ac555d90f39a131",
     "ad3b81aafd8434ab6833e6db26c20fb53412ef6562a6c454cf03a3410b0c5ce5",
+    "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7",
     "af641c7c2570a5196954388e0bf6c05ac75ba5fc5af7d0abcee232c8fcf0d306",
     "b3956a7cfd547bf33818603860d618c8ff00fad204feb46c0aabee2201a6b9b6",
     "b6e71687b8e4e6ccb92fd999cbe3cb2c51db27dee2fcf7cd767623f0a7c06e4f",
@@ -298,6 +373,7 @@
     "bf2fa7ae9d1faee61acfbbb94dc97876af33c20163461b9e66555f089e101879",
     "c10ff0220dcd5c128ecaf1e8dcfce97eb179a32ac331aadc09d7ccd2676d2379",
     "c210778bbcc58c75f37d9ef4758df1e53fa458fe7ceab03503ee120c49aebaa3",
+    "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da",
     "c5be85373b075d7e55dbba834558df2f88fd94ee2dc36155b3a1583e6ee706eb",
     "c67dbdb399a9bd4bb30ba8b01bece9cde69d8bbdd2c8fec24b72d00180a12e39",
     "c713f42f80056e9db262aabfd8f860e3f345f63188dd4de9fc22dea8e4bf4d81",
