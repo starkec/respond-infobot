@@ -45,3 +45,17 @@ Classifier reason: The story documents large-scale money laundering and a Kremli
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
+
+## EU Sanctions Envoy Pushes for Action Against Rusal’s Irish Alumina Refinery
+
+Source: OCCRP
+
+Article: https://www.occrp.org/en/news/eu-sanctions-envoy-pushes-for-action-against-rusals-irish-alumina-refinery
+
+Status: awaiting review
+
+Classifier reason: The story documents exports from an Irish alumina refinery to Russian smelters and mentions lobbying by Ireland that kept alumina exports exempt, but the passages do not allege that a public official abused entrusted power for private gain (bribery, kickbacks or similar). The link to corruption is possible but not clearly established in the supplied text, so further clarification or evidence is needed.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown

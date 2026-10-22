@@ -68,6 +68,27 @@
       "title": "The US is letting a convicted Bolsonaro spy chief stay in Florida. Brazil wants answers.",
       "url": "https://www.icij.org/news/2026/10/the-us-is-letting-a-convicted-bolsonaro-spy-chief-stay-in-florida-brazil-wants-answers/"
     },
+    "34711c2647fff79013c96b9e9467801401badb2ed864628a56e60a3de1b921be": {
+      "api_usage": {
+        "input_tokens": 1620,
+        "output_tokens": 369,
+        "total_tokens": 1989
+      },
+      "checked_at": "2026-10-22T20:51:12Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
+      "reason": "The story documents exports from an Irish alumina refinery to Russian smelters and mentions lobbying by Ireland that kept alumina exports exempt, but the passages do not allege that a public official abused entrusted power for private gain (bribery, kickbacks or similar). The link to corruption is possible but not clearly established in the supplied text, so further clarification or evidence is needed.",
+      "source": "OCCRP",
+      "title": "EU Sanctions Envoy Pushes for Action Against Rusal\u2019s Irish Alumina Refinery",
+      "url": "https://www.occrp.org/en/news/eu-sanctions-envoy-pushes-for-action-against-rusals-irish-alumina-refinery"
+    },
     "34777dc9749a419a154e576ea4ef9fe3c107a4c303aeedc72ba35d6a05cfe8f4": {
       "api_usage": {
         "input_tokens": 1475,
@@ -384,6 +405,7 @@
     "2f9035c46468d5014dac7192fee61c88a2f5c1d5e4b790a06f40e126b3e72dd7",
     "30804fa98bf9965a612a768607a843f70e2820597c503fefadf2f188c32bbad2",
     "32ede1e9f21fdf490ba8681e5edb2cbe93459e6c823a6556c471aca798a4e98b",
+    "34711c2647fff79013c96b9e9467801401badb2ed864628a56e60a3de1b921be",
     "34777dc9749a419a154e576ea4ef9fe3c107a4c303aeedc72ba35d6a05cfe8f4",
     "353d05e764c45d7a450be3ee870fbc0486b54434deb36c6400a43c62d4f9636c",
     "39e6b6eec3bcca0a5625309ca0913ea27a69f159d2ddd36cf88a7b222ff45dd8",
