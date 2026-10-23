@@ -14,6 +14,36 @@ at `https://correctiv.org/en/feed/`. CORRECTIV publishes a less frequent selecti
 of English translations rather than every story from its main German feed.
 The parser also supports German feeds if explicitly configured later.
 
+## About RESPOND and this deliverable
+
+The Infobot is Deliverable 9 of RESPOND, developed by researchers at the
+University of Amsterdam's Amsterdam School of Communication Research (ASCoR)
+and Amsterdam Institute for Social Science Research (AISSR), within Work Package 8.
+It provides a public stream of corruption-related reporting and a tool for
+studying the effects of repeated exposure to that reporting over time.
+
+[RESPOND — Rescuing Democracy from Political Corruption in Digital Societies](https://www.eu-respond.eu/)
+is an EU-funded research project running from 2024 to 2029, coordinated by the
+University of Bologna, Italy. Its consortium comprises 14 partners and three
+affiliated entities (17 organisations in total). The project investigates
+political corruption, digital technologies, democratic participation and
+approaches to strengthening integrity.
+
+The bot's public account is [Corruption Bot on Bluesky](https://bsky.app/profile/corruptionbot.bsky.social).
+The three principal investigators of WP8 share responsibility for manual checks
+once a week on a rotating basis. Automatic publication does not require approval
+of every post; uncertain relevance decisions are held for manual review.
+The workflow's automated checks do not independently verify the truth of the
+publisher's reporting.
+
+### Funding acknowledgement
+
+This project has received funding from the European Union’s Horizon Europe research and innovation programme under Grant Agreement No 101132405.
+
+Views and opinions expressed are however those of the author(s) only and do not
+necessarily reflect those of the European Union. Neither the European Union nor
+the granting authority can be held responsible for them.
+
 ## Current files
 
 | File | Purpose |
