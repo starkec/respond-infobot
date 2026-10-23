@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-import infobot as v1
+import bot_common as common
 import infobot_v2 as bot
 from test_infobot_v2 import FEED, REVIEW, PUBLISH, SKIP, CARD, BLOB, article
 from test_publishing import FakeBluesky
@@ -24,12 +24,12 @@ class ManualReviewTests(unittest.TestCase):
         self.client = FakeBluesky()
         self.config = {**bot.load_config("config-v2.json"), "feeds": [FEED], "max_posts_per_run": 1}
         self.item = article()
-        self.key = v1.article_id(self.item)
+        self.key = common.article_id(self.item)
         self.state = {"version": 2, "account_did": self.client.did, "feeds": [FEED["feed_url"]],
                       "seen": [self.key], "posted": {}, "decisions": {
                           self.key: {**REVIEW, "url": self.item["link"], "title": self.item["title"],
                                      "source": FEED["source_name"]}}}
-        v1.save_state(self.path, self.state)
+        common.save_state(self.path, self.state)
         for target, kwargs in (("sys.stdout", {"new_callable": io.StringIO}),
                                ("infobot_v2.prepare_link_card", {"return_value": CARD}),
                                ("publisher_images.upload_thumbnail", {"return_value": BLOB})):
@@ -59,10 +59,10 @@ class ManualReviewTests(unittest.TestCase):
 
     def test_only_known_live_holds_can_be_reviewed(self):
         for url in ("http://example.org/story-1", "https://example.org/unknown"):
-            with self.subTest(url=url), self.assertRaises(v1.SetupError):
+            with self.subTest(url=url), self.assertRaises(common.SetupError):
                 bot.record_manual_review(self.state, self.config, url, "approve", "A sufficient note", "editor", self.path)
         self.state["decisions"][self.key].update(SKIP)
-        with self.assertRaisesRegex(v1.SetupError, "neither a live review"):
+        with self.assertRaisesRegex(common.SetupError, "neither a live review"):
             self.review()
 
     def test_preview_only_article_can_be_imported_from_configured_feed_for_explicit_review(self):
@@ -78,16 +78,16 @@ class ManualReviewTests(unittest.TestCase):
     def test_import_does_not_accept_offsite_or_missing_article(self):
         self.state["decisions"] = {}
         for item in (article(2), {**self.item, "link": "https://other.example/story"}):
-            with self.subTest(item=item), self.assertRaises(v1.SetupError):
+            with self.subTest(item=item), self.assertRaises(common.SetupError):
                 bot.record_manual_review(self.state, self.config, item["link"], "approve", "An editorial note", "editor", self.path,
                                          {FEED["feed_url"]: [self.item]})
         self.assertEqual(self.state["decisions"], {})
 
     def test_invalid_notes_and_published_stories_cannot_be_approved(self):
-        with self.assertRaises(v1.SetupError):
+        with self.assertRaises(common.SetupError):
             bot.record_manual_review(self.state, self.config, self.item["link"], "approve", "", "editor", self.path)
         self.state["posted"][self.key] = "at://already-published"
-        with self.assertRaisesRegex(v1.SetupError, "already published"):
+        with self.assertRaisesRegex(common.SetupError, "already published"):
             self.review()
         self.assertNotIn("manual_review", self.state["decisions"][self.key])
 
@@ -99,7 +99,7 @@ class ManualReviewTests(unittest.TestCase):
         classify.assert_not_called()
         self.assertEqual(report["posted"], 1)
         self.assertEqual(self.client.post_count, 1)
-        record = self.client.get_record(v1.POST_COLLECTION, v1.record_key(self.item))["value"]
+        record = self.client.get_record(common.POST_COLLECTION, common.record_key(self.item))["value"]
         self.assertEqual(record["embed"]["external"]["description"], "")
         self.assertEqual(record["embed"]["external"]["thumb"], BLOB)
         self.assertIn("Source: Example", record["text"])
@@ -110,14 +110,14 @@ class ManualReviewTests(unittest.TestCase):
         self.client.lose_next_post_response = True
         self.publish()
         self.state = before
-        self.card.side_effect = v1.SetupError("Image no longer available")
+        self.card.side_effect = common.SetupError("Image no longer available")
         self.publish()
         self.assertEqual(self.client.post_count, 1)
         self.assertIn(self.key, self.state["posted"])
 
     def test_missing_image_retains_approval_and_retries_without_llm(self):
         self.review()
-        self.card.side_effect = v1.SetupError("No original image")
+        self.card.side_effect = common.SetupError("No original image")
         report = self.publish()
         self.assertEqual(self.client.write_count, 0)
         self.assertEqual(report["articles"][0]["decision"], "review")
@@ -143,7 +143,7 @@ class ManualReviewTests(unittest.TestCase):
                                    self.client, self.state, self.path)
         classify.assert_not_called()
         self.assertEqual(report["posted"], 1)
-        self.assertNotIn(v1.article_id(article(2)), self.state["seen"])
+        self.assertNotIn(common.article_id(article(2)), self.state["seen"])
 
     def test_removing_publisher_holds_previously_approved_story(self):
         self.review()
@@ -170,8 +170,8 @@ class ManualReviewTests(unittest.TestCase):
 
     def test_malformed_saved_manual_approval_is_rejected(self):
         self.state["decisions"][self.key]["manual_review"] = {"action": "approve"}
-        v1.save_state(self.path, self.state)
-        with self.assertRaisesRegex(v1.SetupError, "manual review is invalid"):
+        common.save_state(self.path, self.state)
+        with self.assertRaisesRegex(common.SetupError, "manual review is invalid"):
             bot.read_v2_state(self.path, self.client)
 
     def test_cli_review_uses_no_api_key_or_feed_download_and_never_posts(self):
@@ -181,35 +181,35 @@ class ManualReviewTests(unittest.TestCase):
                 "--review-note", "Read and checked the article."]
         with patch.dict(os.environ, {"GITHUB_ACTOR": "editor"}, clear=True), patch("sys.argv", args), \
                 patch.object(bot, "load_config", return_value=self.config), \
-                patch.object(bot.v1, "login", return_value=self.client), patch.object(bot, "fetch_feeds") as fetch:
+                patch.object(bot.common, "login", return_value=self.client), patch.object(bot, "fetch_feeds") as fetch:
             bot.main()
         fetch.assert_not_called()
         self.assertEqual(self.client.write_count, 0)
         self.assertTrue(self.queue.exists())
 
-    def test_first_live_run_can_initialise_without_llm_or_posts(self):
+    def test_explicit_initialisation_needs_no_api_key_and_never_posts(self):
         self.path.unlink()
-        args = ["infobot_v2.py", "--mode", "run", "--initialise-if-needed", "--state", str(self.path),
+        args = ["infobot_v2.py", "--mode", "initialise", "--state", str(self.path),
                 "--review-queue", str(self.queue), "--report", str(self.queue.with_suffix(".json"))]
         def initialise(*unused):
-            v1.save_state(self.path, self.state)
-        with patch.dict(os.environ, {"OPENAI_API_KEY": "key", "INFOBOT_ENABLED": "false"}), patch("sys.argv", args), \
+            common.save_state(self.path, self.state)
+        with patch.dict(os.environ, {}, clear=True), patch("sys.argv", args), \
                 patch.object(bot, "fetch_feeds", return_value=({FEED["feed_url"]: [self.item]}, [])), \
-                patch.object(bot.v1, "login", return_value=self.client), \
+                patch.object(bot.common, "login", return_value=self.client), \
                 patch.object(bot, "initialise", side_effect=initialise) as init, patch.object(bot, "classify") as classify:
             bot.main()
         init.assert_called_once()
         classify.assert_not_called()
         self.assertEqual(self.client.write_count, 0)
 
-    def test_partial_feed_failure_cannot_baseline_first_live_run(self):
+    def test_partial_feed_failure_cannot_initialise_history(self):
         self.path.unlink()
-        args = ["infobot_v2.py", "--mode", "run", "--initialise-if-needed", "--state", str(self.path),
+        args = ["infobot_v2.py", "--mode", "initialise", "--state", str(self.path),
                 "--report", str(self.queue.with_suffix(".json"))]
-        with patch.dict(os.environ, {"OPENAI_API_KEY": "key", "INFOBOT_ENABLED": "false"}), patch("sys.argv", args), \
+        with patch.dict(os.environ, {}, clear=True), patch("sys.argv", args), \
                 patch.object(bot, "fetch_feeds", return_value=({FEED["feed_url"]: []}, ["Other feed failed"])), \
                 patch.object(bot, "initialise") as init:
-            with self.assertRaisesRegex(v1.SetupError, "All feeds"):
+            with self.assertRaisesRegex(common.SetupError, "All feeds"):
                 bot.main()
         init.assert_not_called()
         self.assertFalse(self.path.exists())

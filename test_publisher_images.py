@@ -7,7 +7,7 @@ import os
 import unittest
 from unittest.mock import patch
 
-import infobot
+import bot_common as common
 import publisher_images as images
 
 
@@ -32,12 +32,12 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(images.image_candidates(markup, ARTICLE["link"]), [])
 
     def test_missing_metadata_holds_instead_of_inventing_a_picture(self):
-        with self.assertRaises(infobot.SetupError):
+        with self.assertRaises(common.SetupError):
             images.prepare_card(ARTICLE, lambda url: b'<html><p>No image</p></html>')
 
     def test_broken_primary_image_can_fall_back_to_another_publisher_image(self):
         markup = b'<meta property="og:image" content="/broken.jpg"><meta name="twitter:image" content="/photo.jpg">'
-        with patch.object(images, "download_image", side_effect=[infobot.SetupError("Unavailable"), b"valid"]), patch.object(images, "thumbnail", return_value=(b"thumbnail", "image/jpeg", 1200, 630)):
+        with patch.object(images, "download_image", side_effect=[common.SetupError("Unavailable"), b"valid"]), patch.object(images, "thumbnail", return_value=(b"thumbnail", "image/jpeg", 1200, 630)):
             card = images.prepare_card(ARTICLE, lambda url: markup)
         self.assertEqual(card["image_url"], "https://example.org/photo.jpg")
         self.assertEqual(card["image_bytes"], b"thumbnail")
@@ -53,7 +53,7 @@ class MetadataTests(unittest.TestCase):
 class DownloadAndUploadTests(unittest.TestCase):
     def test_private_local_unencrypted_and_invalid_port_addresses_rejected(self):
         for url in ("https://localhost/photo", "http://example.org/photo", "https://example.org:123/photo", "https://example.org:bad/photo", "https://127.0.0.1/photo", "https://example.org.evil.example/photo"):
-            with self.subTest(url=url), self.assertRaises(infobot.SetupError):
+            with self.subTest(url=url), self.assertRaises(common.SetupError):
                 images.check_image_address(url, ARTICLE["link"])
 
     def test_publisher_cdn_subdomains_work_without_local_dns_resolution(self):
@@ -61,20 +61,20 @@ class DownloadAndUploadTests(unittest.TestCase):
 
     def test_image_redirects_are_checked_before_the_request(self):
         request = images.Request("https://media.example.org/a.jpg")
-        with patch.object(images, "check_image_address", side_effect=infobot.SetupError("Private")) as check:
-            with self.assertRaises(infobot.SetupError):
+        with patch.object(images, "check_image_address", side_effect=common.SetupError("Private")) as check:
+            with self.assertRaises(common.SetupError):
                 images.ImageRedirect(ARTICLE["link"]).redirect_request(request, None, 302, "", {}, "https://localhost/secret")
         check.assert_called_once_with("https://localhost/secret", ARTICLE["link"])
 
     def test_image_download_size_is_bounded(self):
         with patch.object(images, "MAX_IMAGE_DOWNLOAD", 10), patch.object(images, "check_image_address"), patch.object(images, "build_opener") as opener:
             opener.return_value.open.return_value = BytesIO(b"x" * 11)
-            with self.assertRaises(infobot.SetupError):
+            with self.assertRaises(common.SetupError):
                 images.download_image(CARD["image_url"], ARTICLE["link"])
 
     def test_upload_uses_binary_bytes_and_validates_blob(self):
-        client = infobot.BlueskyClient({"did": "did:plc:example", "handle": "example.bsky.social", "accessJwt": "fake-private-token"})
-        with patch.object(infobot, "read_response", return_value=json.dumps({"blob": BLOB}).encode()) as call:
+        client = common.BlueskyClient({"did": "did:plc:example", "handle": "example.bsky.social", "accessJwt": "fake-private-token"})
+        with patch.object(common, "read_response", return_value=json.dumps({"blob": BLOB}).encode()) as call:
             self.assertEqual(images.upload_thumbnail(client, CARD), BLOB)
         request = call.call_args.args[0]
         self.assertTrue(request.full_url.endswith("/xrpc/com.atproto.repo.uploadBlob"))
@@ -82,10 +82,10 @@ class DownloadAndUploadTests(unittest.TestCase):
         self.assertEqual(request.get_header("Authorization"), "Bearer fake-private-token")
 
     def test_bad_or_oversize_upload_responses_cannot_be_used_in_a_post(self):
-        client = infobot.BlueskyClient({"did": "did:plc:example", "handle": "example.bsky.social", "accessJwt": "fake-token"})
+        client = common.BlueskyClient({"did": "did:plc:example", "handle": "example.bsky.social", "accessJwt": "fake-token"})
         for value in ({}, {"blob": {**BLOB, "size": 1_000_001}}, {"blob": {**BLOB, "mimeType": "image/png"}}, []):
-            with self.subTest(value=value), patch.object(infobot, "read_response", return_value=json.dumps(value).encode()):
-                with self.assertRaises(infobot.SetupError):
+            with self.subTest(value=value), patch.object(common, "read_response", return_value=json.dumps(value).encode()):
+                with self.assertRaises(common.SetupError):
                     images.upload_thumbnail(client, CARD)
 
 
@@ -128,11 +128,11 @@ class ThumbnailTests(unittest.TestCase):
 
     def test_invalid_or_oversize_pixel_images_are_held(self):
         from PIL import Image
-        with self.assertRaises(infobot.SetupError):
+        with self.assertRaises(common.SetupError):
             images.thumbnail(b'<html>Not an image</html>')
         source = BytesIO()
         Image.new("RGB", (40, 20)).save(source, format="PNG")
-        with patch.object(images, "MAX_IMAGE_PIXELS", 10), self.assertRaises(infobot.SetupError):
+        with patch.object(images, "MAX_IMAGE_PIXELS", 10), self.assertRaises(common.SetupError):
             images.thumbnail(source.getvalue())
 
 

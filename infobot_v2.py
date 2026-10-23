@@ -1,7 +1,7 @@
 """Multi-feed corruption selection. Defaults to preview; install requirements-v2.txt.
 
-The original infobot.py and its state remain usable. No LLM-generated text is
-published: v2 selects stories, then shares the original headline and source.
+The bot selects stories, then shares the original headline, source, publisher
+image and article link. No LLM-generated text is published.
 """
 
 import argparse
@@ -19,7 +19,7 @@ from urllib.parse import urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 from xml.etree import ElementTree as ET
 
-import infobot as v1
+import bot_common as common
 import publisher_images
 
 
@@ -88,39 +88,39 @@ def load_config(path):
     try:
         config = json.loads(Path(path).read_text(encoding="utf-8"))
     except (OSError, ValueError):
-        raise v1.SetupError("Cannot read the v2 configuration JSON.") from None
+        raise common.SetupError("Cannot read the v2 configuration JSON.") from None
     if not isinstance(config, dict) or not isinstance(config.get("feeds"), list) or not 1 <= len(config["feeds"]) <= 20:
-        raise v1.SetupError("V2 configuration needs 1-20 feeds.")
+        raise common.SetupError("V2 configuration needs 1-20 feeds.")
     urls = set()
     for feed in config["feeds"]:
         if (not isinstance(feed, dict)
-                or not isinstance(feed.get("source_name"), str) or not v1.clean_text(feed["source_name"])
-                or not isinstance(feed.get("feed_url"), str) or not v1.https_url(feed["feed_url"])
+                or not isinstance(feed.get("source_name"), str) or not common.clean_text(feed["source_name"])
+                or not isinstance(feed.get("feed_url"), str) or not common.https_url(feed["feed_url"])
                 or feed.get("language") not in ("en", "de")):
-            raise v1.SetupError("Each v2 feed needs a source_name, HTTPS feed_url and en/de language.")
+            raise common.SetupError("Each v2 feed needs a source_name, HTTPS feed_url and en/de language.")
         if feed["feed_url"] in urls:
-            raise v1.SetupError("Duplicate feed URL in the v2 configuration.")
+            raise common.SetupError("Duplicate feed URL in the v2 configuration.")
         urls.add(feed["feed_url"])
     for name, lower, upper in (("max_articles_per_run", 1, 100), ("max_posts_per_run", 1, 10),
                                ("max_article_chars", 1000, 50000), ("min_article_chars", 200, 2000)):
         if type(config.get(name)) is not int or not lower <= config[name] <= upper:
-            raise v1.SetupError(f"Invalid v2 setting: {name}.")
+            raise common.SetupError(f"Invalid v2 setting: {name}.")
     if config["min_article_chars"] > config["max_article_chars"]:
-        raise v1.SetupError("The minimum article length exceeds the maximum.")
+        raise common.SetupError("The minimum article length exceeds the maximum.")
     if not isinstance(config.get("model"), str) or not re.fullmatch(r"[A-Za-z0-9._-]{1,100}", config["model"]):
-        raise v1.SetupError("Set a valid classifier model in config-v2.json.")
+        raise common.SetupError("Set a valid classifier model in config-v2.json.")
     return config
 
 
 def same_publisher(url, feed_url):
-    return (v1.https_url(url) and urlsplit(url).hostname.removeprefix("www.")
+    return (common.https_url(url) and urlsplit(url).hostname.removeprefix("www.")
             == urlsplit(feed_url).hostname.removeprefix("www."))
 
 
 class PublisherRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         if not same_publisher(newurl, req.full_url):
-            raise v1.SetupError("Publisher redirected outside its HTTPS domain; held for review.")
+            raise common.SetupError("Publisher redirected outside its HTTPS domain; held for review.")
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
@@ -128,11 +128,11 @@ def download(url):
     request = Request(url, headers={"User-Agent": "RESPOND-Infobot/0.3", "Accept": "application/rss+xml, application/atom+xml, text/html, application/xml"})
     try:
         with build_opener(PublisherRedirect()).open(request, timeout=20) as response:
-            body = response.read(v1.MAX_RESPONSE_BYTES + 1)
+            body = response.read(common.MAX_RESPONSE_BYTES + 1)
     except (HTTPError, URLError, TimeoutError, OSError):
-        raise v1.SetupError("Publisher download failed or timed out.") from None
-    if len(body) > v1.MAX_RESPONSE_BYTES:
-        raise v1.SetupError("Publisher response exceeds the download limit.")
+        raise common.SetupError("Publisher download failed or timed out.") from None
+    if len(body) > common.MAX_RESPONSE_BYTES:
+        raise common.SetupError("Publisher response exceeds the download limit.")
     return body
 
 
@@ -168,7 +168,7 @@ class ArticleHTML(HTMLParser):
     def text(self, fragment=False):
         candidates = ("all",) if fragment else ("article", "main", "p")
         for tag in candidates:
-            text = v1.clean_text(" ".join(self.parts[tag]))
+            text = common.clean_text(" ".join(self.parts[tag]))
             if text:
                 return text
         return ""
@@ -182,21 +182,21 @@ def html_text(markup, fragment=False):
 
 def parse_feed(body, feed):
     if b"<!DOCTYPE" in body.upper() or b"<!ENTITY" in body.upper():
-        raise v1.SetupError("Unsupported declarations in RSS/Atom XML.")
+        raise common.SetupError("Unsupported declarations in RSS/Atom XML.")
     try:
         root = ET.fromstring(body)
     except ET.ParseError:
-        raise v1.SetupError("Publisher did not return valid feed XML.") from None
+        raise common.SetupError("Publisher did not return valid feed XML.") from None
     atom = "{http://www.w3.org/2005/Atom}"
     if root.tag == "rss" and root.find("channel") is not None:
         items, prefix = root.findall("./channel/item"), ""
     elif root.tag == atom + "feed":
         items, prefix = root.findall(atom + "entry"), atom
     else:
-        raise v1.SetupError("Publisher did not return RSS 2.0 or Atom.")
+        raise common.SetupError("Publisher did not return RSS 2.0 or Atom.")
     articles, seen = [], set()
     for item in items:
-        title = v1.clean_text(item.findtext(prefix + "title"))
+        title = common.clean_text(item.findtext(prefix + "title"))
         if prefix:
             links = [node.get("href", "") for node in item.findall(atom + "link") if node.get("rel", "alternate") == "alternate"]
             link = links[0] if links else ""
@@ -206,14 +206,14 @@ def parse_feed(body, feed):
             content = item.findtext("{http://purl.org/rss/1.0/modules/content/}encoded") or ""
         if not title or not same_publisher(link, feed["feed_url"]):
             continue
-        link = v1.canonical_url(link)
+        link = common.canonical_url(link)
         if link not in seen:
             articles.append({"title": title, "link": link, "source_name": feed["source_name"],
                              "feed_url": feed["feed_url"], "language": feed["language"],
                              "feed_content": html_text(content, fragment=True)})
             seen.add(link)
     if items and not articles:
-        raise v1.SetupError("Feed entries have no usable same-publisher article links.")
+        raise common.SetupError("Feed entries have no usable same-publisher article links.")
     return articles
 
 
@@ -223,7 +223,7 @@ def fetch_feeds(config):
         try:
             feeds[feed["feed_url"]] = parse_feed(download(feed["feed_url"]), feed)
             print(f"Feed {json.dumps(feed['source_name'])}: {len(feeds[feed['feed_url']])} usable articles.")
-        except v1.SetupError as exc:
+        except common.SetupError as exc:
             errors.append({"source": feed["source_name"], "error": str(exc)})
     return feeds, errors
 
@@ -233,8 +233,8 @@ def round_robin(feeds, oldest_first=False):
     seen = set()
     for row in zip_longest(*queues):
         for article in row:
-            if article is not None and v1.article_id(article) not in seen:
-                seen.add(v1.article_id(article))
+            if article is not None and common.article_id(article) not in seen:
+                seen.add(common.article_id(article))
                 yield article
 
 
@@ -244,7 +244,7 @@ def article_text(article, config):
         text = html_text(download(article["link"]).decode("utf-8", errors="replace"))
         origin = "extracted article text"
     if len(text) < config["min_article_chars"]:
-        raise v1.SetupError("Insufficient article text; held for review.")
+        raise common.SetupError("Insufficient article text; held for review.")
     truncated = len(text) > config["max_article_chars"]
     return text[:config["max_article_chars"]], origin, truncated
 
@@ -254,12 +254,12 @@ def validate_decision(value, text):
             or value.get("decision") not in ("publish", "review", "skip")
             or not isinstance(value.get("reason"), str) or not 1 <= len(value["reason"].strip()) <= 500
             or not isinstance(value.get("evidence"), list) or len(value["evidence"]) > 3):
-        raise v1.SetupError("Classifier returned an invalid decision; held for review.")
+        raise common.SetupError("Classifier returned an invalid decision; held for review.")
     evidence = value["evidence"]
     if any(not isinstance(quote, str) or not 1 <= len(quote) <= 240 or quote not in text for quote in evidence):
-        raise v1.SetupError("Classifier evidence does not match the article; held for review.")
+        raise common.SetupError("Classifier evidence does not match the article; held for review.")
     if value["decision"] == "publish" and not evidence:
-        raise v1.SetupError("Publish decision lacks supporting passages; held for review.")
+        raise common.SetupError("Publish decision lacks supporting passages; held for review.")
     return value
 
 
@@ -286,11 +286,11 @@ def resolve_evidence(value, passages, text):
     if (not isinstance(value, dict) or set(value) != set(SCHEMA["required"])
             or any(type(value.get(name)) is not bool for name in conditions)
             or not isinstance(value.get("evidence_ids"), list) or len(value["evidence_ids"]) > 3):
-        raise v1.SetupError("Classifier returned invalid evidence references; held for review.")
+        raise common.SetupError("Classifier returned invalid evidence references; held for review.")
     by_id = {passage["id"]: passage["text"] for passage in passages}
     ids = value["evidence_ids"]
     if any(type(key) is not int or key not in by_id for key in ids):
-        raise v1.SetupError("Classifier referenced a nonexistent passage; held for review.")
+        raise common.SetupError("Classifier referenced a nonexistent passage; held for review.")
     result = validate_decision({"decision": value["decision"], "reason": value["reason"],
                                 "evidence": [by_id[key] for key in dict.fromkeys(ids)]}, text)
     result["checks"] = {name: value[name] for name in conditions}
@@ -318,14 +318,14 @@ def classify(article, config, api_key):
     request = Request(API_URL, data=json.dumps(payload).encode("utf-8"), method="POST",
                       headers={"Authorization": "Bearer " + api_key, "Content-Type": "application/json"})
     try:
-        response = json.loads(v1.read_response(request, "LLM classification"))
+        response = json.loads(common.read_response(request, "LLM classification"))
         if response.get("status") != "completed":
             raise ValueError("Incomplete response")
         output = [part["text"] for item in response.get("output", []) if item.get("type") == "message"
                   for part in item.get("content", []) if part.get("type") == "output_text"]
         value = json.loads("".join(output))
     except (ValueError, TypeError, KeyError, AttributeError):
-        raise v1.SetupError("Classifier refused or returned incomplete/invalid output; held for review.") from None
+        raise common.SetupError("Classifier refused or returned incomplete/invalid output; held for review.") from None
     result = resolve_evidence(value, passages, text)
     usage = response.get("usage")
     if isinstance(usage, dict):
@@ -338,13 +338,13 @@ def read_v2_state(path, client):
     try:
         state = json.loads(Path(path).read_text(encoding="utf-8"))
     except (OSError, ValueError):
-        raise v1.SetupError("V2 history is missing or invalid. Use initialise once; never delete history.") from None
+        raise common.SetupError("V2 history is missing or invalid. Restore production history; use initialise only for a new installation.") from None
     if (not isinstance(state, dict) or state.get("version") != 2 or state.get("account_did") != client.did
-            or not isinstance(state.get("feeds"), list) or not all(isinstance(url, str) and v1.https_url(url) for url in state["feeds"])
+            or not isinstance(state.get("feeds"), list) or not all(isinstance(url, str) and common.https_url(url) for url in state["feeds"])
             or not isinstance(state.get("seen"), list)
             or not all(isinstance(key, str) and re.fullmatch(r"[0-9a-f]{64}", key) for key in state["seen"])
             or not isinstance(state.get("posted"), dict) or not isinstance(state.get("decisions"), dict)):
-        raise v1.SetupError("V2 history is invalid or belongs to another account. Publishing stopped.")
+        raise common.SetupError("V2 history is invalid or belongs to another account. Publishing stopped.")
     for key, decision in state["decisions"].items():
         if (not isinstance(key, str) or not re.fullmatch(r"[0-9a-f]{64}", key)
                 or not isinstance(decision, dict)
@@ -352,33 +352,28 @@ def read_v2_state(path, client):
                 or not isinstance(decision.get("reason"), str)
                 or not isinstance(decision.get("evidence"), list)
                 or not all(isinstance(quote, str) for quote in decision["evidence"])
-                or not isinstance(decision.get("url"), str) or not v1.https_url(decision["url"])
-                or v1.article_id({"link": decision["url"]}) != key
+                or not isinstance(decision.get("url"), str) or not common.https_url(decision["url"])
+                or common.article_id({"link": decision["url"]}) != key
                 or (decision["decision"] == "publish" and not decision["evidence"])):
-            raise v1.SetupError("Saved v2 decisions are invalid. Restore the last valid history.")
+            raise common.SetupError("Saved v2 decisions are invalid. Restore the last valid history.")
         review = decision.get("manual_review")
         if review is not None and (not isinstance(review, dict) or review.get("action") not in ("approve", "reject")
                                    or not all(isinstance(review.get(field), str) and review[field].strip()
                                               for field in ("by", "at", "note"))):
-            raise v1.SetupError("Saved manual review is invalid. Restore the last valid history.")
+            raise common.SetupError("Saved manual review is invalid. Restore the last valid history.")
     return state
 
 
-def initialise(path, legacy_path, client, feeds, legacy_config_path="config.json"):
+def initialise(path, client, feeds):
+    """Baseline a new installation; existing production history is never replaced."""
     if Path(path).exists():
-        raise v1.SetupError("V2 history already exists. It will not be overwritten.")
-    legacy_config = v1.load_config(legacy_config_path)
-    legacy = v1.load_state(legacy_path, client, legacy_config)
-    if legacy is None:
-        raise v1.SetupError("The existing bot history is required for the v2 migration.")
-    if legacy["feed_url"] not in feeds:
-        raise v1.SetupError("Include the existing bot feed when initialising v2.")
-    state = {"version": 2, "account_did": client.did, "started_at": v1.utc_now(),
-             "feeds": list(feeds), "seen": sorted(set(legacy["seen"]) | {
-                 v1.article_id(item) for items in feeds.values() for item in items}),
-             "posted": deepcopy(legacy["posted"]), "decisions": {}}
-    v1.save_state(path, state)
-    print("V2 history initialised. Existing history preserved; current feed entries baselined. Nothing published.")
+        raise common.SetupError("V2 history already exists. It will not be overwritten.")
+    state = {"version": 2, "account_did": client.did, "started_at": common.utc_now(),
+             "feeds": list(feeds), "seen": sorted({
+                 common.article_id(item) for items in feeds.values() for item in items}),
+             "posted": {}, "decisions": {}}
+    common.save_state(path, state)
+    print("History initialised. Current feed entries baselined. Nothing published.")
 
 
 def prepare_link_card(article):
@@ -386,25 +381,25 @@ def prepare_link_card(article):
 
 
 def publish_article(client, article, card=None):
-    """The v1 absent-record guard and recovery, with the source language set."""
-    key = v1.record_key(article)
-    existing = client.get_record(v1.POST_COLLECTION, key)
+    """Publish with an absent-record guard, response recovery and source language."""
+    key = common.record_key(article)
+    existing = client.get_record(common.POST_COLLECTION, key)
     if existing:
-        return v1.existing_post_uri(existing, article, client), False
-    record = v1.post_record(article, article["source_name"])
+        return common.existing_post_uri(existing, article, client), False
+    record = common.post_record(article, article["source_name"])
     record["langs"] = [article["language"]]
     card = card if card is not None else prepare_link_card(article)
     record["embed"] = publisher_images.embed(article, publisher_images.upload_thumbnail(client, card))
     try:
-        result = client.put_record(v1.POST_COLLECTION, key, record)
-    except v1.SetupError:
-        recovered = client.get_record(v1.POST_COLLECTION, key)
+        result = client.put_record(common.POST_COLLECTION, key, record)
+    except common.SetupError:
+        recovered = client.get_record(common.POST_COLLECTION, key)
         if recovered:
-            return v1.existing_post_uri(recovered, article, client), False
+            return common.existing_post_uri(recovered, article, client), False
         raise
-    expected = f"at://{client.did}/{v1.POST_COLLECTION}/{key}"
+    expected = f"at://{client.did}/{common.POST_COLLECTION}/{key}"
     if result.get("uri") != expected:
-        raise v1.SetupError("Unexpected publish response. Rerun to reconcile the record.")
+        raise common.SetupError("Unexpected publish response. Rerun to reconcile the record.")
     return expected, True
 
 
@@ -412,34 +407,34 @@ def reviewed_article(decision, config):
     matches = [feed for feed in config["feeds"] if feed["source_name"] == decision.get("source")
                and same_publisher(decision["url"], feed["feed_url"])]
     if len(matches) != 1 or not isinstance(decision.get("title"), str) or not decision["title"].strip():
-        raise v1.SetupError("Reviewed story no longer matches one configured publisher. Publication held.")
+        raise common.SetupError("Reviewed story no longer matches one configured publisher. Publication held.")
     return {**matches[0], "title": decision["title"], "link": decision["url"]}
 
 
 def record_manual_review(state, config, url, action, note, reviewer, state_path, current_feeds=None):
-    if not isinstance(url, str) or not v1.https_url(url):
-        raise v1.SetupError("Review requires the HTTPS article URL from the live review queue.")
-    key = v1.article_id({"link": url})
+    if not isinstance(url, str) or not common.https_url(url):
+        raise common.SetupError("Review requires the HTTPS article URL from the live review queue.")
+    key = common.article_id({"link": url})
     decision = state["decisions"].get(key)
     if key in state["posted"]:
-        raise v1.SetupError("This story is already published; a review cannot alter an existing post.")
+        raise common.SetupError("This story is already published; a review cannot alter an existing post.")
     if decision is None and current_feeds is not None:
-        matches = [item for item in round_robin(current_feeds) if v1.article_id(item) == key]
+        matches = [item for item in round_robin(current_feeds) if common.article_id(item) == key]
         if matches:
             item = matches[0]
             decision = {"decision": "review", "reason": "Manual review of a current-feed story; any original preview reasoning remains in its preview artifact.",
                         "evidence": [], "url": item["link"], "title": item["title"], "source": item["source_name"],
-                        "review_origin": "current_feed_manual_import", "checked_at": v1.utc_now()}
+                        "review_origin": "current_feed_manual_import", "checked_at": common.utc_now()}
     if not decision or not (decision["decision"] == "review" or decision.get("image_error")):
-        raise v1.SetupError("This URL is neither a live review hold nor a current configured-feed article. No decision saved.")
+        raise common.SetupError("This URL is neither a live review hold nor a current configured-feed article. No decision saved.")
     if action not in ("approve", "reject") or not 10 <= len(note.strip()) <= 1000 or not reviewer.strip():
-        raise v1.SetupError("Choose approve/reject, provide a 10-1000 character review note, and identify the reviewer.")
+        raise common.SetupError("Choose approve/reject, provide a 10-1000 character review note, and identify the reviewer.")
     reviewed_article(decision, config)
-    decision["manual_review"] = {"action": action, "note": note.strip(), "by": reviewer.strip(), "at": v1.utc_now()}
+    decision["manual_review"] = {"action": action, "note": note.strip(), "by": reviewer.strip(), "at": common.utc_now()}
     state["decisions"][key] = decision
     # Preserve the original classifier's reasoning and the complete URL history.
     state["seen"] = sorted(set(state["seen"]) | {key})
-    v1.save_state(state_path, state)
+    common.save_state(state_path, state)
     print("Review saved: " + action + ". Nothing published by this review action.")
 
 
@@ -462,32 +457,32 @@ def publish_manual_approvals(state, config, client, report, state_path):
         try:
             article = reviewed_article(decision, config)
             card = None
-            if not client.get_record(v1.POST_COLLECTION, v1.record_key(article)):
+            if not client.get_record(common.POST_COLLECTION, common.record_key(article)):
                 card = prepare_link_card(article)
                 row["link_card"] = publisher_images.card_preview(card)
-        except v1.SetupError as exc:
+        except common.SetupError as exc:
             decision["image_error"] = str(exc)
             row.update(decision="review", reason=str(exc), retryable=True)
-            v1.save_state(state_path, state)
+            common.save_state(state_path, state)
             print(json.dumps(row, ensure_ascii=False))
             continue
         if not label_checked:
-            v1.ensure_bot_label(client)
+            common.ensure_bot_label(client)
             label_checked = True
         uri, created = publish_article(client, article, card)
         state["posted"][key] = uri
         decision.pop("image_error", None)
-        review["applied_at"] = v1.utc_now()
+        review["applied_at"] = common.utc_now()
         row["post_uri"] = uri
         report["posted"] += 1
-        v1.save_state(state_path, state)
+        common.save_state(state_path, state)
         print("Manually approved story published." if created else "Approved story already published; duplicate skipped.")
         print(json.dumps(row, ensure_ascii=False))
 
 
 def write_review_queue(state, path):
     def escape(value):
-        return re.sub(r"([\\`*{}\[\]<>#])", r"\\\1", v1.clean_text(str(value)))
+        return re.sub(r"([\\`*{}\[\]<>#])", r"\\\1", common.clean_text(str(value)))
 
     lines = ["# Infobot v2 review queue", "", "Use **Actions > Infobot v2 > Run workflow > review** on main.",
              "Supply the article URL, approve/reject, and a note explaining the decision.",
@@ -527,14 +522,14 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
         # Newly added feeds are baselined, never dumped as a backlog.
         for url, items in feeds.items():
             if url not in state["feeds"]:
-                seen.update(v1.article_id(item) for item in items)
+                seen.update(common.article_id(item) for item in items)
                 state["feeds"].append(url)
                 state["seen"] = sorted(seen)
-                v1.save_state(state_path, state)
+                common.save_state(state_path, state)
     posted, checked = report["posted"], 0
     label_checked = False
     for article in round_robin(feeds, oldest_first=not preview):
-        key = v1.article_id(article)
+        key = common.article_id(article)
         if key in seen:
             continue
         if checked >= config["max_articles_per_run"] or (not preview and posted >= config["max_posts_per_run"]):
@@ -558,16 +553,16 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                 totals["requests"] += 1
                 for name in ("input_tokens", "output_tokens"):
                     totals[name] += result.get("api_usage", {}).get(name, 0)
-            except v1.SetupError as exc:
+            except common.SetupError as exc:
                 row.update(decision="review", reason=str(exc), evidence=[], retryable=True)
                 report["articles"].append(row)
                 print(json.dumps(row, ensure_ascii=False))
                 if not preview:
-                    state["decisions"][key] = {**row, "checked_at": v1.utc_now()}
-                    v1.save_state(state_path, state)
+                    state["decisions"][key] = {**row, "checked_at": common.utc_now()}
+                    common.save_state(state_path, state)
                 # Provider failures should be visible, not silently reported as
                 # a successful empty check. No unfiltered publication fallback.
-                if isinstance(exc, v1.APIError) or "LLM classification" in str(exc):
+                if isinstance(exc, common.APIError) or "LLM classification" in str(exc):
                     raise
                 continue
         # A previous image failure is an operational hold, not a new editorial
@@ -579,36 +574,36 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
             if result["decision"] == "publish":
                 try:
                     row["link_card"] = publisher_images.card_preview(prepare_link_card(article))
-                except v1.SetupError as exc:
+                except common.SetupError as exc:
                     row.update(decision="review", reason=str(exc), image_error=True, retryable=True)
                     print(json.dumps(row, ensure_ascii=False))
                     continue
                 print(json.dumps(row, ensure_ascii=False))
-                print("PREVIEW (not published): " + json.dumps(v1.preview_text(article, article["source_name"]), ensure_ascii=False))
+                print("PREVIEW (not published): " + json.dumps(common.preview_text(article, article["source_name"]), ensure_ascii=False))
             else:
                 print(json.dumps(row, ensure_ascii=False))
             continue
         state["decisions"][key] = {**result, "url": article["link"], "title": article["title"],
                                    "source": article["source_name"], "model": config["model"],
                                    "policy_hash": hashlib.sha256(POLICY.encode()).hexdigest(),
-                                   "checked_at": v1.utc_now()}
-        v1.save_state(state_path, state)
+                                   "checked_at": common.utc_now()}
+        common.save_state(state_path, state)
         if result["decision"] == "publish":
             card = None
             # Recover previously accepted posts without depending on whether
             # the publisher still hosts its page or image.
-            if not client.get_record(v1.POST_COLLECTION, v1.record_key(article)):
+            if not client.get_record(common.POST_COLLECTION, common.record_key(article)):
                 try:
                     card = prepare_link_card(article)
                     row["link_card"] = publisher_images.card_preview(card)
-                except v1.SetupError as exc:
+                except common.SetupError as exc:
                     row.update(decision="review", reason=str(exc), image_error=True, retryable=True)
                     state["decisions"][key]["image_error"] = str(exc)
-                    v1.save_state(state_path, state)
+                    common.save_state(state_path, state)
                     print(json.dumps(row, ensure_ascii=False))
                     continue
             if not label_checked:
-                v1.ensure_bot_label(client)
+                common.ensure_bot_label(client)
                 label_checked = True
             # Reuse the original stable record keys and absence guards, so even
             # a lost state commit cannot cause another post of the same URL.
@@ -622,10 +617,10 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
         if result["decision"] in ("publish", "skip", "review"):
             seen.add(key)
             state["seen"] = sorted(seen)
-        v1.save_state(state_path, state)
+        common.save_state(state_path, state)
     if state is not None:
-        state["last_checked_date"] = v1.utc_now()[:10]
-        v1.save_state(state_path, state)
+        state["last_checked_date"] = common.utc_now()[:10]
+        common.save_state(state_path, state)
     report["checked"] = checked
     report["posted"] = posted
 
@@ -635,68 +630,64 @@ def main():
     parser.add_argument("--config", default="config-v2.json")
     parser.add_argument("--mode", choices=("preview", "initialise", "run", "review"), default="preview")
     parser.add_argument("--state", default="data/state-v2.json")
-    parser.add_argument("--legacy-state", default="data/state.json")
     parser.add_argument("--report", default="reports/latest.json")
     parser.add_argument("--review-queue", default="data/review-queue.md")
     parser.add_argument("--article-url", default="")
     parser.add_argument("--review-action", choices=("approve", "reject"))
     parser.add_argument("--review-note", default="")
     parser.add_argument("--reviewer", default=os.environ.get("GITHUB_ACTOR", ""))
-    parser.add_argument("--initialise-if-needed", action="store_true")
     args = parser.parse_args()
     config = load_config(args.config)
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if args.mode in ("preview", "run") and not api_key:
-        raise v1.SetupError("Add OPENAI_API_KEY to GitHub Actions secrets for v2 classification. Never put it in config or chat.")
-    if args.mode != "preview" and os.environ.get("INFOBOT_ENABLED", "").lower() == "true":
-        raise v1.SetupError("Pause the original bot (INFOBOT_ENABLED=false) before initialising or running v2.")
+        raise common.SetupError("Add OPENAI_API_KEY to GitHub Actions secrets for v2 classification. Never put it in config or chat.")
     state = None
     feeds, errors = ({}, []) if args.mode == "review" else fetch_feeds(config)
-    report = {"mode": args.mode, "created_at": v1.utc_now(), "model": config["model"],
+    report = {"mode": args.mode, "created_at": common.utc_now(), "model": config["model"],
               "policy_hash": hashlib.sha256(POLICY.encode()).hexdigest(),
               "feed_errors": errors, "articles": [], "posted": 0}
     try:
         if args.mode == "review":
-            client = v1.login()
+            client = common.login()
             state = read_v2_state(args.state, client)
             current_feeds = None
-            if v1.https_url(args.article_url) and v1.article_id({"link": args.article_url}) not in state["decisions"]:
+            if common.https_url(args.article_url) and common.article_id({"link": args.article_url}) not in state["decisions"]:
                 current_feeds, review_errors = fetch_feeds(config)
                 report["feed_errors"] = review_errors
             record_manual_review(state, config, args.article_url, args.review_action,
                                  args.review_note, args.reviewer, args.state, current_feeds)
         elif not feeds:
-            raise v1.SetupError("No feeds could be downloaded.")
-        elif args.mode == "initialise" or (args.mode == "run" and args.initialise_if_needed and not Path(args.state).exists()):
+            raise common.SetupError("No feeds could be downloaded.")
+        elif args.mode == "initialise":
             if errors:
-                raise v1.SetupError("All feeds must download successfully before initialising history.")
-            client = v1.login()
-            initialise(args.state, args.legacy_state, client, feeds)
+                raise common.SetupError("All feeds must download successfully before initialising history.")
+            client = common.login()
+            initialise(args.state, client, feeds)
             state = read_v2_state(args.state, client)
             report["initialised"] = True
         elif args.mode == "preview":
             select_and_publish(feeds, config, api_key, report)
             print("Preview finished. No posts, profile changes or history writes.")
         else:
-            client = v1.login()
+            client = common.login()
             state = read_v2_state(args.state, client)
             publish_manual_approvals(state, config, client, report, args.state)
             select_and_publish(feeds, config, api_key, report, client, state, args.state)
         if errors:
-            raise v1.SetupError("One or more feeds failed; see the report. Other feed results were preserved.")
+            raise common.SetupError("One or more feeds failed; see the report. Other feed results were preserved.")
         report["status"] = "completed"
-    except v1.SetupError as exc:
+    except common.SetupError as exc:
         report.update(status="failed", error=str(exc))
         raise
     finally:
         if state is not None:
             write_review_queue(state, args.review_queue)
-        v1.save_state(args.report, report)
+        common.save_state(args.report, report)
 
 
 if __name__ == "__main__":
     try:
         main()
-    except v1.SetupError as exc:
+    except common.SetupError as exc:
         print(f"V2 check failed: {exc}", file=sys.stderr)
         sys.exit(1)

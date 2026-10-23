@@ -9,7 +9,7 @@ from urllib.parse import urljoin, urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 import warnings
 
-import infobot as v1
+import bot_common as common
 
 
 MAX_IMAGE_DOWNLOAD = 10_000_000
@@ -38,29 +38,29 @@ def image_candidates(markup, article_url):
     for values in metadata.images.values():
         for value in values:
             url = urljoin(article_url, value)
-            if v1.https_url(url) and url not in candidates:
+            if common.https_url(url) and url not in candidates:
                 candidates.append(url)
     return candidates[:6]
 
 
 def check_image_address(url, publisher_url):
     try:
-        if not v1.https_url(url) or urlsplit(url).port not in (None, 443):
-            raise v1.SetupError("Publisher image must use a public HTTPS address.")
+        if not common.https_url(url) or urlsplit(url).port not in (None, 443):
+            raise common.SetupError("Publisher image must use a public HTTPS address.")
         host = urlsplit(url).hostname
         publisher = urlsplit(publisher_url).hostname.removeprefix("www.")
         if host != publisher and not host.endswith("." + publisher):
-            raise v1.SetupError("Image host is outside the publisher's domain.")
+            raise common.SetupError("Image host is outside the publisher's domain.")
     except (AttributeError, ValueError):
-        raise v1.SetupError("Publisher image address is invalid.") from None
+        raise common.SetupError("Publisher image address is invalid.") from None
     try:
         address = ipaddress.ip_address(host)
     except ValueError:
         if "." not in host or host.endswith((".localhost", ".local", ".internal")):
-            raise v1.SetupError("Publisher image address is not public.")
+            raise common.SetupError("Publisher image address is not public.")
     else:
         if not address.is_global:
-            raise v1.SetupError("Publisher image address is not public.")
+            raise common.SetupError("Publisher image address is not public.")
 
 
 class ImageRedirect(HTTPRedirectHandler):
@@ -80,9 +80,9 @@ def download_image(url, publisher_url):
         with build_opener(ImageRedirect(publisher_url)).open(request, timeout=20) as response:
             data = response.read(MAX_IMAGE_DOWNLOAD + 1)
     except (HTTPError, URLError, TimeoutError, OSError):
-        raise v1.SetupError("Publisher image download failed or timed out.") from None
+        raise common.SetupError("Publisher image download failed or timed out.") from None
     if not data or len(data) > MAX_IMAGE_DOWNLOAD:
-        raise v1.SetupError("Publisher image is empty or exceeds the download limit.")
+        raise common.SetupError("Publisher image is empty or exceeds the download limit.")
     return data
 
 
@@ -91,13 +91,13 @@ def thumbnail(data):
     try:
         from PIL import Image, ImageOps, UnidentifiedImageError
     except ImportError:
-        raise v1.SetupError("Install requirements-v2.txt to prepare publisher images.") from None
+        raise common.SetupError("Install requirements-v2.txt to prepare publisher images.") from None
     try:
         with warnings.catch_warnings():
             warnings.simplefilter("error", Image.DecompressionBombWarning)
             with Image.open(BytesIO(data), formats=("JPEG", "PNG", "WEBP")) as original:
                 if original.width * original.height > MAX_IMAGE_PIXELS:
-                    raise v1.SetupError("Publisher image dimensions exceed the processing limit.")
+                    raise common.SetupError("Publisher image dimensions exceed the processing limit.")
                 original.load()
                 image = ImageOps.exif_transpose(original).copy()
         image.thumbnail((1600, 1600), Image.Resampling.LANCZOS)
@@ -123,23 +123,23 @@ def thumbnail(data):
                     return output.getvalue(), "image/jpeg", image.width, image.height
             image = image.resize((max(1, image.width * 3 // 4), max(1, image.height * 3 // 4)), Image.Resampling.LANCZOS)
     except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError, Image.DecompressionBombWarning):
-        raise v1.SetupError("Publisher image is unsupported, invalid or too large to decode.") from None
-    raise v1.SetupError("Publisher image cannot fit Bluesky's thumbnail limit.")
+        raise common.SetupError("Publisher image is unsupported, invalid or too large to decode.") from None
+    raise common.SetupError("Publisher image cannot fit Bluesky's thumbnail limit.")
 
 
 def prepare_card(article, download_html):
     markup = download_html(article["link"]).decode("utf-8", errors="replace")
     urls = image_candidates(markup, article["link"])
     if not urls:
-        raise v1.SetupError("No publisher sharing image found; article held for review.")
+        raise common.SetupError("No publisher sharing image found; article held for review.")
     for url in urls:
         try:
             data, mime, width, height = thumbnail(download_image(url, article["link"]))
             return {"image_url": url, "image_bytes": data, "mime_type": mime,
                     "width": width, "height": height}
-        except v1.SetupError:
+        except common.SetupError:
             continue
-    raise v1.SetupError("Publisher sharing images could not be prepared; article held for review.")
+    raise common.SetupError("Publisher sharing images could not be prepared; article held for review.")
 
 
 def card_preview(card):
@@ -152,14 +152,14 @@ def upload_thumbnail(client, card):
                       headers={"Authorization": "Bearer " + client.token,
                                "Content-Type": card["mime_type"], "User-Agent": "RESPOND-Infobot/0.4"})
     try:
-        response = json.loads(v1.read_response(request, "Bluesky image upload"))
+        response = json.loads(common.read_response(request, "Bluesky image upload"))
         blob = response["blob"]
         if (blob.get("$type") != "blob" or blob.get("mimeType") != card["mime_type"]
                 or type(blob.get("size")) is not int or not 0 < blob["size"] <= MAX_THUMB_BYTES
                 or not isinstance(blob.get("ref"), dict) or not blob["ref"].get("$link")):
             raise ValueError("Invalid blob")
     except (ValueError, TypeError, KeyError, AttributeError):
-        raise v1.SetupError("Bluesky returned an invalid image-upload response.") from None
+        raise common.SetupError("Bluesky returned an invalid image-upload response.") from None
     return blob
 
 

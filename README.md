@@ -1,198 +1,253 @@
 # RESPOND Infobot
 
-**Multi-feed v2 trial:** [V2 setup and operation](V2.md) describes the new
-LLM corruption filter and original publisher-image cards for OCCRP, ICIJ,
-Bellingcat and CORRECTIV. V2 posts headlines, sources, images and links without
-generated summaries. The original
-bot below keeps its existing configuration, workflow and history. V2 is opt-in
-and defaults to preview; merging its files does not enable v2 posting.
+The currently running bot shares corruption-related news on Bluesky for WP8 of
+the RESPOND project. The repository contains this version only. Its existing
+v2 filenames and history format are retained so scheduled operation continues
+with the same configuration and posting history.
 
-A small Python bot that shares headlines, source attribution and links from
-OCCRP's corruption RSS feed on a dedicated Bluesky account. It uses Python's
-standard library and GitHub Actions. It does not use an LLM, copy article bodies,
-or automatically reply to, message, mention or follow other users.
+The bot reads OCCRP, ICIJ, Bellingcat and CORRECTIV, with an LLM deciding whether
+each article substantially concerns corruption. It shares the original
+headline, source, publisher image and article link. The picture appears in a
+clickable Bluesky link card. There is no generated summary or description text.
+All four configured feeds are English, including CORRECTIV's English-only feed
+at `https://correctiv.org/en/feed/`. CORRECTIV publishes a less frequent selection
+of English translations rather than every story from its main German feed.
+The parser also supports German feeds if explicitly configured later.
 
-This update adds real publishing and persistent article history. The first
-guided action is a single test post. Scheduled publishing stays off until the
-repository variable `INFOBOT_ENABLED` is set to the exact value `true`.
+## Current files
 
-## Upgrade from the preview
-
-1. Extract `respond-infobot-live.zip`. In the existing GitHub repository, use
-   **Add file > Upload files** to upload its six files, directly alongside the
-   current README. Replace the earlier `infobot.py`, `config.json`,
-   `test_infobot.py`, and `README.md`, and add `test_publishing.py` and
-   `infobot-live.yml`. Commit to the default branch, usually `main`.
-2. Open the new `infobot-live.yml`, click the pencil icon, and change its path
-   in the filename field to `.github/workflows/infobot-live.yml`. Keep its
-   contents unchanged and commit. This path must be the actual file location,
-   not just a comment inside the file.
-
-The earlier `.github/workflows/infobot-preview.yml` can stay in place. It is
-manual only and still works with this version. It never runs the publishing
-modes. The new workflow appears in Actions as **Infobot**.
-
-## Publish the first test article
-
-Your existing GitHub Actions secrets remain the same:
-
-| Name | Value |
+| File | Purpose |
 | --- | --- |
-| `BSKY_HANDLE` | The full account handle, without `@` |
-| `BSKY_APP_PASSWORD` | A Bluesky app password for that account |
+| `infobot_v2.py` | Feed collection, corruption classification, review and publishing |
+| `bot_common.py` | Shared text, URL identity, history and Bluesky API helpers |
+| `publisher_images.py` | Original publisher images and Bluesky link cards |
+| `config-v2.json` | Four feeds, model and processing limits |
+| `requirements-v2.txt` | Pinned image-processing dependency |
+| `.github/workflows/infobot-v2.yml` | Checks, manual actions and scheduled posting |
+| `data/state-v2.json` | Production article, publication and review history; do not delete or reset |
+| `data/review-queue.md` | Current stories held for manual review |
+| `test_*.py` | Offline regression tests using mocked services |
 
-Open **Actions > Infobot > Run workflow**. Select the default branch and choose
-`test-post` for the mode, then click **Run workflow**. This action:
+## Operation in GitHub Actions
 
-- records the articles currently in the feed as the initial baseline;
-- adds Bluesky's bot self-label while preserving your existing profile fields;
-- publishes the first (most recent) article in the feed, or recognises an
-  existing post of that same article without creating a duplicate;
-- saves progress in `data/state.json` in the repository.
+Open **Actions > Infobot v2**. The workflow checks twice an hour, at 17 and
+47 minutes past the hour UTC, when the repository variable
+`INFOBOT_V2_ENABLED` is exactly `true`. GitHub may delay or miss scheduled runs;
+the next check processes unseen articles that remain available in the feeds.
+When posting is enabled, code changes on `main` also trigger a live check. Pull requests run
+offline tests without publishing. Publishing jobs share a concurrency group.
 
-Open the run's **infobot** job and check **Run the Infobot** and
-**Save article history to GitHub**. Both should be green. The log includes a
-direct Post URL. Check the visible post on Bluesky: readable headline,
-`Source: OCCRP`, and a clickable article link. There is no image or preview
-card in this simple version.
+The existing repository secrets remain `OPENAI_API_KEY`, `BSKY_HANDLE` and
+`BSKY_APP_PASSWORD`. Keep credentials out of files, variables and logs.
 
-If you select `test-post` again while the same story remains first in the feed,
-it should report **Already published; duplicate skipped**. If a different
-article has become first, another manual test can publish that article.
+Use **Run workflow** on `main` to choose:
 
-`preview` remains the default mode in the manual workflow form. It displays
-sample posts, checks the login and makes no profile or post changes.
-
-## Enable automatic posting after the test succeeds
-
-In the repository, open **Settings > Secrets and variables > Actions > Variables**.
-Click **New repository variable**, set the name to `INFOBOT_ENABLED` and the
-value to `true`, then save. This is an ordinary configuration variable, not a
-password or secret.
-
-The workflow is scheduled twice an hour, at 17 and 47 minutes past each hour
-(UTC). Each successful check publishes up to `max_posts_per_run` unseen items,
-oldest first among the feed's currently returned entries. No approval is needed
-for individual automatic posts. GitHub may delay or occasionally miss a
-scheduled run; the next check catches up with entries still in the feed.
-
-To verify activation, wait for a scheduled run and check that the **infobot**
-job actually runs. **No new articles. Nothing published.** is a normal successful
-result. A skipped scheduled job means the enable variable or branch needs
-checking. A manual `run` can also check for new articles immediately; it can
-publish unseen articles even while the automatic enable variable is off.
-
-## Pause the bot
-
-Change `INFOBOT_ENABLED` to `false` to skip future scheduled jobs. Manual modes
-remain available. An already running job can finish; cancel it from Actions if
-you need an immediate stop. Disabling the **Infobot** workflow in Actions also
-stops future manual and scheduled runs until it is re-enabled.
-
-## How duplicate protection works
-
-- `data/state.json` records the account, feed, article IDs and published post
-  URIs. No password or API token is written there. Do not delete or edit it.
-- An article ID comes from its HTTPS link after removing tracking parameters
-  and fragments. The bot keeps the full non-tracking article URL in the post.
-- Each article gets a stable post record key in AT Protocol TID syntax. Its
-  encoded timestamp is not a publication date; the post's `createdAt` is the
-  actual time of posting. Stable keys let a rerun recognise a post even when
-  an earlier response was lost or saving history to GitHub failed.
-- Writes require the post record to be absent. If a key belongs to different
-  content, publishing stops rather than overwriting it.
-- After each successful post, progress is saved locally. The workflow commits
-  history even if a later article fails. Publishing jobs cannot overlap.
-
-The guarantee applies to this bot's account, keys and URL identity. It cannot
-recognise manually posted copies, aliases with entirely different URLs, or
-stories separately published by other outlets. Deleting both a public post
-and its matching saved history can allow the article to be posted again.
-
-## Monitoring and maintenance
-
-Check the Actions page periodically and keep GitHub notifications for failed
-runs enabled. Posting on schedule is unattended, but account credentials,
-publisher feeds, GitHub service behaviour and API rules can change.
-
-The history includes `last_checked_date` (UTC), updated after successful checks.
-It changes at most once per day when there are no new articles. These saved
-checks also create repository activity; GitHub can disable public-repository
-schedules after 60 days without activity. Avoid relying on a bot with no owner
-to review failures, and re-enable the workflow if GitHub disables it.
-
-The corruption RSS endpoint currently returns a small rolling list (ten items
-when checked during setup). During a long outage, stories may disappear from
-the feed before the bot sees them. RSS alone does not provide a complete
-historical archive. The first baseline intentionally suppresses existing
-stories, apart from the one explicitly selected by `test-post`.
-
-## Troubleshooting
-
-| Symptom | What to check |
+| Mode | Behavior |
 | --- | --- |
-| Login rejected | Check the two secrets; replace a revoked app password. |
-| New workflow missing | Confirm `.github/workflows/infobot-live.yml` is on the default branch. |
-| Scheduled job skipped | Set the Actions repository **variable** `INFOBOT_ENABLED` to `true`; use the default branch. |
-| No article history | Run `test-post` before using `run` or enabling the schedule. |
-| GitHub cannot save history | Check Actions write permissions and branch protection. The token needs permission to commit `data/state.json`. Rerun after fixing this; stable record keys avoid reposting already accepted stories. |
-| Wrong account/feed in history | Stop and review the configuration. Do not delete history to bypass the check. |
-| Invalid history | Restore the last valid `data/state.json` from GitHub history. |
-| API or feed unavailable | Check the failure message and retry later. Successful earlier posts remain recorded. |
+| `preview` (default) | Classify current feed articles without publishing or changing posting history |
+| `run` | Publish eligible unseen articles and pending manual approvals; save history |
+| `review` | Approve or reject a known held story or a current-feed article; this action publishes nothing |
+| `initialise` | Baseline feeds for a new installation only; refuses to overwrite existing history |
 
-The workflow requests `contents: write` only to save article history. On an
-organisation repository, its policies may require an administrator's help.
-If branch rules require reviews or signed commits, this simple default-branch
-state storage needs a separate design before enabling unattended operation.
+The running account is already initialised. Do not initialise it again or delete
+its history. Live runs stop if history is missing or invalid; restore the latest
+valid `data/state-v2.json` from Git history. The history already contains the
+previous bot's seen article IDs and published post IDs, preserving duplicate
+protection after cleanup.
 
-## Configuration and future feeds
+To pause scheduled and push-triggered posting, set `INFOBOT_V2_ENABLED=false`.
+Manual `run` can still publish. A current run may finish; cancel it in Actions
+when an immediate stop is needed. Disabling the workflow also stops future
+manual and scheduled runs until it is re-enabled.
 
-`config.json` contains `source_name`, `feed_url`, `preview_count` (1–10), and
-`max_posts_per_run` (1–10). The default maximum is five new articles per run.
-This version supports one RSS 2.0 feed. Adding more feeds and optional corruption
-classification is a later extension; other outlets' broad feeds should not be
-swapped in without adding the relevance-filtering step and a state migration.
+## Preview and classification reports
 
-The headline is shortened when needed to keep the source and full link within
-a conservative 300-code-point limit. The URL is linked through a UTF-8 byte
-facet. Posts identify English as their language. Only the title and source
-link are shared; source publisher and platform conditions still apply.
+Preview checks up to 20 articles, sampled across sources in feed order, and
+shows publish/review/skip decisions with short reasons and supporting excerpts.
+Selected articles include a `link_card` entry with the original image URL and
+prepared thumbnail dimensions. Preview downloads and validates those images but
+does not upload them to Bluesky. Missing or unusable pictures create retryable
+review holds; these stories will not be posted without their publisher image.
+It does not log into Bluesky, change the profile, publish posts or write posting
+history. It writes only `reports/latest.json`, uploaded as an Actions artifact
+retained for 14 days. That report includes article metadata, model, policy hash
+and decisions, not full article bodies or API keys. Repeating preview repeats
+the LLM requests; it deliberately evaluates current articles afresh.
 
-## Local commands (optional)
+The checked-in default model is `gpt-5-mini`, configurable in `config-v2.json`.
+The integration uses the OpenAI Responses API with a strict JSON schema and
+`store: false`. Article content is sent to the API for classification. This
+setting controls response storage; it is not a claim of zero data retention.
+Image preparation uses Pillow, pinned in `requirements-v2.txt`; the v2 workflow
+installs it automatically. The LLM is used only for corruption selection.
+Exact API spend depends on model and article length; inspect usage and set an
+API project budget during operation.
 
-Python 3.12 or newer is sufficient. There are no external packages to install.
+## What qualifies
+
+The policy in `infobot_v2.py` defines corruption as abuse of entrusted power for
+private gain. It includes bribery, kickbacks, embezzlement, public procurement
+rigging, nepotism, illicit enrichment and corrupt political financing, in public
+or private institutions. Investigations, allegations, prosecutions and convictions
+can all be relevant; a publish decision is not a finding of guilt.
+
+Money laundering, offshore secrecy, influence buying and corporate misconduct
+qualify only when the text establishes a concrete corruption connection.
+General crime, war reporting, disinformation, ordinary legal lobbying or tax
+planning, organisational news and training do not qualify automatically.
+
+Every source, including OCCRP's corruption feed, passes the same classifier.
+There is no keyword-only exclusion: investigations need not use the word
+"corruption". Publisher text is supplied as untrusted data without tools.
+The model must separately establish abuse of entrusted power, improper private
+gain, and substantive coverage of corruption. The code holds an attempted
+publish decision if any of these conditions is false or unknown. Those checks
+are included in the report. They are still model judgments, not verified facts.
+
+For a publish decision the model must select 1-3 numbered supporting passages
+from the supplied article. The application copies their text verbatim and
+checks that each is an exact substring of the supplied text. The model never
+writes the quotations itself. This prevents invented quotations; it does not
+prove that the model interpreted a real passage correctly. Inspect a labelled sample across all four sources
+before trusting unattended selection. False positives and missed stories
+remain possible. `review` never publishes automatically.
+
+## Fetching and limits
+
+`config-v2.json` lists HTTPS RSS/Atom URLs, source names and post languages.
+RSS content fields are used when sufficiently substantial; short feeds trigger
+an article-page download. The HTML reader prefers article/main text and otherwise
+paragraphs, excluding navigation, scripts and sidebars. It is intentionally a
+conservative extractor: paywalls, changed markup, short pages and JavaScript-only
+pages may be held rather than classified. It does not bypass access restrictions.
+
+RSS summaries alone are not treated as full articles. The classifier is told
+when the supplied content comes from an RSS content field and may be partial,
+and when text is truncated. The default minimum is 400 characters and maximum
+24,000 characters per story. Downloads are limited to 2 MB and same-publisher
+HTTPS URLs/redirects; a publisher's offsite syndication links are skipped.
+
+There are at most 20 classification attempts and five publication attempts
+per run, with sources interleaved so a high-volume feed does not monopolise a
+check. Entries are visited oldest-first within each feed during publishing,
+not globally sorted across publishers. A URL repeated across feeds is considered
+once. Different publishers' articles about the same investigation remain
+separate stories; cross-outlet story clustering is not implemented.
+
+## History, review holds and failures
+
+V2 records seen URLs, posted URIs and editorial decisions in `data/state-v2.json`.
+Publish/skip decisions and model review holds are not reclassified automatically.
+An editorial review hold enters history without a post. The persistent,
+human-readable list is **[data/review-queue.md](data/review-queue.md)**, created
+after initialisation. It includes each original URL, the model's reason,
+three corruption criteria, supporting excerpts when available, and image errors.
+The same list appears in each live workflow's job summary. Reports are available
+under **Actions > Infobot v2 > completed run > infobot-v2-decisions** for 14 days.
+
+### Review and approve or reject a held story
+
+1. Open the original article from `data/review-queue.md` and read it. Check who
+   allegedly abused an entrusted role, who gained improperly, and whether this
+   connection is a substantial subject of the story. Check the publisher's
+   headline, image, date, any corrections and the model's excerpts. A model
+   excerpt is evidence of what the source said, not independent fact verification.
+2. Open **Actions > Infobot v2 > Run workflow**, select **main**, and choose
+   **review**. Copy the exact article URL, choose **approve** or **reject**,
+   and write a 10-1000 character note explaining the editorial judgment. Leave
+   a story pending if the available evidence is insufficient.
+3. Click **Run workflow** and wait for the history-saving step to succeed.
+   GitHub records the reviewing account, time and note. This action changes only
+   the review history; it publishes nothing and makes no OpenAI request.
+4. Approved stories join the next enabled live run, ahead of new feed entries.
+   They are still processed if they have disappeared from the rolling RSS feed.
+   The existing publisher-image, account and duplicate guards still apply, and
+   approvals share the five-post run limit with automatic selections. An image
+   failure keeps the approval pending for a later retry. To process sooner,
+   dispatch **run** on `main` after reviewing; this can also publish other newly
+   eligible articles. A rejected story stays unposted and is not reclassified.
+
+Approvals explicitly override the classifier's relevance judgment; they do not
+rewrite its original decision or reason. A pending approval can be changed to
+reject before publication. Published posts cannot be edited or removed through
+this workflow. Manual review accepts known live holds from a currently configured
+publisher. A **preview-only** article can also be explicitly reviewed using the
+same action while it is still present in its configured RSS feed: its original
+title and source are imported from that feed, the reviewer supplies the editorial
+decision, and the action still publishes nothing. The original preview reasoning
+remains in its downloadable artifact. An arbitrary URL outside the configured
+feeds is rejected. A live hold already saved in history remains reviewable after
+leaving the feed; an unsaved preview-only story must still be in the feed.
+Initialisation baselines existing feed articles, including previously previewed
+stories, without posting them automatically. A manual approval explicitly releases
+the selected story from that baseline.
+There is no need to edit `seen`, `posted` or the JSON history manually.
+
+Download failures, insufficient text or invalid model output are retryable review
+holds, stored with `retryable: true` without marking the article seen. These are
+retried while the article is still in the feed. API connection, authentication,
+quota and rate-limit failures stop the run visibly. An unavailable feed is
+reported as a failed check while successful sources can still be processed.
+Unprocessed articles are not marked seen. Saved decisions make failed publication
+retries economical; changes to model or policy invalidate a pending cached
+decision. Already processed stories are not automatically reconsidered.
+
+The workflow saves partial state even when a later operation fails. Stable post
+keys and absent-record guards allow recovery after lost responses or failed
+history commits. Existing posts are never overwritten.
+Reports contain short publisher excerpts, so they should remain operational
+records rather than be used as a republication feed.
+
+## Publisher image cards
+
+The bot reads the source article's Open Graph sharing image (`og:image`, with
+`og:image:secure_url` preferred), then the publisher's Twitter-card image as a
+fallback. It never invents a picture, substitutes an unrelated page image or
+asks an LLM to write post text. The full article URL stays clickable in the post
+and in the card. The card description is empty. Long headlines are shortened
+only where Bluesky's text/title limits require it.
+
+The picture content and aspect ratio are preserved, with downscaling/compression
+when required for Bluesky's 1 MB card-thumbnail limit. JPEG, PNG and WebP source
+images are supported; embedded metadata is stripped and EXIF orientation is
+applied. Downloads are capped at 10 MB and decoded images at 40 million pixels.
+Publisher-hosted image CDNs (such as `media.icij.org`) are supported through
+HTTPS URLs on the publisher's own domain or subdomains; redirects are validated.
+Third-party image-hosting domains are held rather than followed automatically.
+
+If all publisher image candidates fail, the story remains unposted and is
+retried while it is in the feed. Its LLM decision stays cached, avoiding repeated
+classification charges just because an image was temporarily unavailable.
+Previously accepted posts are recovered by their stable record key even if the
+publisher's image has subsequently disappeared. Existing text-only posts are not
+rewritten retroactively. A real upload and visible card should be checked when
+live posting is deliberately enabled; preview itself never uploads a blob.
+
+## Local verification
 
 ```bash
+python -m pip install -r requirements-v2.txt
 python -m unittest -v
-python infobot.py
-python infobot.py --check-login
-python infobot.py --mode test-post
-python infobot.py --mode run
+python infobot_v2.py --help
+python infobot_v2.py --mode preview
 ```
 
-The last two commands can publish real posts and update history. Credential
-values come from `BSKY_HANDLE` and `BSKY_APP_PASSWORD` environment variables;
-for the guided setup, use the existing GitHub secrets instead. Local runs and
-GitHub runs must not use separate unsynchronised histories at the same time.
+Tests mock the LLM, publishers and Bluesky; they do not establish live model
+classification accuracy. A real preview needs `OPENAI_API_KEY` in the environment
+and API connectivity. Repeated previews classify current articles afresh and
+incur API usage. Reports include token counts for successful new classifications;
+consult the API usage dashboard for actual billing and configure a project budget.
 
-## Documentation status
+Initialisation, live publishing and review also need the Bluesky credentials.
+For a new installation only, run `python infobot_v2.py --mode initialise` once
+before the first live run. Initialisation baselines all currently returned
+articles without posting them; every configured feed must download successfully.
+Production history belongs to its recorded Bluesky account and must stay
+synchronised. Avoid running independent local publishing copies alongside Actions.
 
-This README documents the implementation. The final installation and operating
-guide PDF will follow after a real post and the automatic schedule have been
-verified, so that it describes the tested delivered version. The project's
-code licence and any required funding acknowledgement remain to be supplied
-by the project before its final release.
+## References
 
-## Official references
-
-- OCCRP RSS directory: https://www.occrp.org/en/rss-listing
-- Bluesky bot tutorial: https://atproto.com/guides/bot-tutorial
-- SDK password authentication: https://atproto.com/guides/sdk-auth
-- Record keys: https://atproto.com/specs/record-key
-- TID syntax: https://atproto.com/specs/tid
-- Put-record API definition: https://github.com/bluesky-social/atproto/blob/main/lexicons/com/atproto/repo/putRecord.json
-- GitHub manual workflows: https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow
-- GitHub scheduled workflows: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule
-- GitHub Actions variables: https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/store-information-in-variables
-
-Prepared for the guided RESPOND Infobot setup, 19 October 2026.
+- [Structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs)
+- [Configured model](https://developers.openai.com/api/docs/models/gpt-5-mini)
+- [API usage](https://platform.openai.com/usage)
+- [Model deprecations](https://developers.openai.com/api/docs/deprecations)
