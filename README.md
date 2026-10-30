@@ -1,9 +1,20 @@
 # RESPOND Infobot
 
-The currently running bot shares corruption-related news on Bluesky for WP8 of
-the RESPOND project. The repository contains this version only. Its existing
-v2 filenames and history format are retained so scheduled operation continues
-with the same configuration and posting history.
+The Infobot is a proof of concept for sharing corruption-related news on Bluesky
+within WP8 of the RESPOND project. The repository contains this version only.
+Its existing v2 filenames and history format are retained to preserve the
+configuration and posting history.
+
+**Status as of 30 October 2026.** Proof-of-concept posting began on 19 October
+2026 and ran successfully for three days. The account remains operational, but
+public posting is currently paused while source permissions are resolved.
+The UvA research team will restart public posting no later than 10 November
+2026, using sources that have granted permission and additional sources offering
+content under suitable open licences. "Openly licensed content" refers to
+material reusable under stated conditions, such as attribution; it does not
+mean that all text or images can be reused without checking their terms.
+Unresolved sources will not be included in the restart. The restart date is an
+operating commitment, not an automatic change to the pause setting.
 
 The bot reads OCCRP, ICIJ, Bellingcat and CORRECTIV, with an LLM deciding whether
 each article substantially concerns corruption. It shares the original
@@ -16,7 +27,7 @@ The parser also supports German feeds if explicitly configured later.
 
 ## About RESPOND and this deliverable
 
-The Infobot is Deliverable 9 of RESPOND, developed by researchers at the
+The Infobot is Deliverable 8.1 of RESPOND, developed by researchers at the
 University of Amsterdam's Amsterdam School of Communication Research (ASCoR)
 and Amsterdam Institute for Social Science Research (AISSR), within Work Package 8.
 It provides a public stream of corruption-related reporting and a tool for
@@ -30,8 +41,10 @@ political corruption, digital technologies, democratic participation and
 approaches to strengthening integrity.
 
 The bot's public account is [Corruption Bot on Bluesky](https://bsky.app/profile/corruptionbot.bsky.social).
-The three principal investigators of WP8 share responsibility for manual checks
-once a week on a rotating basis. Automatic publication does not require approval
+Members of RESPOND's UvA research team working on Subtask 8.3.2 share
+responsibility for manual checks once a week on a rotating basis. The assigned
+researcher reviews uncertain articles and checks the wider output, failed runs
+and persistent technical holds. Automatic publication does not require approval
 of every post; uncertain relevance decisions are held for manual review.
 The workflow's automated checks do not independently verify the truth of the
 publisher's reporting.
@@ -43,6 +56,35 @@ This project has received funding from the European Union’s Horizon Europe res
 Views and opinions expressed are however those of the author(s) only and do not
 necessarily reflect those of the European Union. Neither the European Union nor
 the granting authority can be held responsible for them.
+
+## Visibility and project links
+
+The Infobot's profile will link to [RESPOND's website](https://www.eu-respond.eu/)
+and [RESPOND on Bluesky (@respondeu.bsky.social)](https://bsky.app/profile/respondeu.bsky.social).
+The aim is to reach **250 followers in the first year**.
+
+S-COM will coordinate promotion through RESPOND's communication channels and
+website, with further outreach through the
+[Interdisciplinary Corruption Research Network (ICRN)](https://www.icrnetwork.org/)
+and the researchers' professional networks. Planned outreach includes an
+introduction to the bot, links inviting readers to follow it and follow-up
+updates. These are planned communication activities, not claims that posts
+have already been published.
+
+| Channel | RESPOND account or address |
+| --- | --- |
+| Bluesky | [@respondeu.bsky.social](https://bsky.app/profile/respondeu.bsky.social) |
+| LinkedIn | [RESPOND_EU (company/respond-eu)](https://www.linkedin.com/company/respond-eu) |
+| X | [@RESPOND_EU](https://x.com/RESPOND_EU) |
+| YouTube | [@RESPOND_EU](https://www.youtube.com/@RESPOND_EU) |
+| Project website | [eu-respond.eu](https://www.eu-respond.eu/) |
+
+RESPOND's [Communication, Dissemination and Exploitation Plan, pp. 14-16](https://www.eu-respond.eu/wp-content/uploads/2025/06/RESPOND_Deliverable-12.2.pdf)
+documents the LinkedIn, X and YouTube accounts and S-COM/Tele Radio City's role
+in managing project channels. It also names Facebook as RESPOND-EU and Mastodon
+as RESPOND_EU, but does not give a complete Mastodon address. Confirm the
+current Facebook URL and Mastodon server with S-COM before publishing direct
+links. The Instagram strategy in that plan uses partners' accounts.
 
 ## Current files
 
@@ -141,6 +183,53 @@ writes the quotations itself. This prevents invented quotations; it does not
 prove that the model interpreted a real passage correctly. Inspect a labelled sample across all four sources
 before trusting unattended selection. False positives and missed stories
 remain possible. `review` never publishes automatically.
+
+## Classifier development and checks
+
+The Infobot builds on a political-corruption classification approach developed
+for another WP8 task. In that earlier task, researchers used a zero-shot
+LLAMA3-70B classifier to remove irrelevant articles retrieved by a keyword
+search. "Zero-shot" means applying written classification instructions without
+providing labelled examples in the prompt. The prompt was iteratively refined
+and evaluated against 201 manually annotated articles. The project team reports
+F1 = 0.87, precision = 0.87 and recall = 0.87, with manual inspection showing
+strong alignment between model decisions/rationales and human judgment.
+
+The related project's [repository](https://github.com/annekroon/RESPOND-victims-of-corruption)
+and [political-corruption annotation instructions](https://github.com/annekroon/RESPOND-victims-of-corruption/blob/main/political_classifier/scripts/_impl/label_silver_batch.py)
+document the narrower focus on political decision-makers. The reported
+LLAMA3-70B evaluation belongs to that earlier WP8 task; the linked script alone
+does not reproduce the evaluation or establish which historical prompt/model
+revision was scored.
+
+Using explicit classification criteria, refining instructions and comparing
+outputs with human annotations is a standard approach to LLM-assisted text
+classification. See, for example, [Gilardi, Alizadeh and Kubli (2023)](https://doi.org/10.1073/pnas.2305016120)
+for zero-shot text annotation evaluated against human-coded data. The
+Infobot-specific instructions remain a task-specific adaptation rather than
+a universally validated Infobot template.
+
+For the Infobot, the scope is deliberately broader. We use Transparency
+International's definition of corruption as ["the abuse of entrusted power
+for private gain"](https://www.transparency.org/en/what-is-corruption), including
+political, administrative, judicial and private-sector corruption. Restricting
+the feed to political officeholders would exclude many articles relevant to
+the awareness, fatigue and trust outcomes studied in Subtask 8.3.2. The
+three relevance checks and the requirement to treat allegations as allegations
+remain in place.
+
+| Stage | Work undertaken | What the evidence establishes |
+| --- | --- | --- |
+| Earlier WP8 political-corruption classifier | Zero-shot LLAMA3-70B instructions were iteratively refined and evaluated on 201 manually annotated articles. | The earlier task's reported F1, precision and recall were each 0.87. |
+| Infobot adaptation | The political-only scope was broadened to Transparency International's definition, with publish/skip/review decisions and supporting article passages. | The selection rules cover corruption in public and private institutions while excluding unrelated crime or misconduct. |
+| Three-day proof of concept beginning 19 October 2026 | Researchers inspected the adapted classifier's decisions to check that it worked as intended during operation. | This provides qualitative development and operational checks, not a new numerical accuracy estimate. |
+| Scope clarification on 30 October 2026 | The prompt now explicitly names political, administrative, judicial and private-sector corruption and relevant non-political entrusted roles. | The wording makes the intended scope explicit; it does not transfer the earlier classifier's validation scores to this version. |
+
+The earlier F1 score must not be reported as the Infobot's accuracy. Changes
+to the scope, model and article sources mean that the adapted classifier needs
+its own assessment before accuracy claims can be made. Software regression
+tests check program behaviour, not whether the model interprets articles
+correctly.
 
 ## Fetching and limits
 
