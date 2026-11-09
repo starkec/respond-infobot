@@ -374,7 +374,7 @@ class StateAndPublishingTests(unittest.TestCase):
 class CLITests(unittest.TestCase):
     def test_missing_api_key_fails_without_network_or_posts(self):
         with patch.dict(os.environ, {}, clear=True), patch("sys.argv", ["infobot_v2.py"]), patch.object(bot, "fetch_feeds") as fetch:
-            with self.assertRaisesRegex(common.SetupError, "OPENAI_API_KEY"):
+            with self.assertRaisesRegex(common.SetupError, "UVAAI_API_KEY"):
                 bot.main()
             fetch.assert_not_called()
 
@@ -384,7 +384,7 @@ class CLITests(unittest.TestCase):
             args = ["infobot_v2.py", "--mode", "run", "--state", str(path),
                     "--report", str(Path(directory) / "report.json")]
             client = FakeBluesky()
-            with patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}), patch("sys.argv", args), \
+            with patch.dict(os.environ, {"UVAAI_API_KEY": "fake-key"}), patch("sys.argv", args), \
                     patch.object(bot, "fetch_feeds", return_value=({FEED["feed_url"]: [article()]}, [])), \
                     patch.object(bot.common, "login", return_value=client), patch.object(bot, "initialise") as init:
                 with self.assertRaisesRegex(common.SetupError, "Restore production history"):
@@ -396,7 +396,7 @@ class CLITests(unittest.TestCase):
     def test_preview_writes_report_without_login_or_history(self):
         with tempfile.TemporaryDirectory() as directory:
             report_path = Path(directory) / "decisions.json"
-            with patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}), patch("sys.argv", ["infobot_v2.py", "--report", str(report_path)]), patch.object(bot, "fetch_feeds", return_value=({FEED["feed_url"]: [article()]}, [])), patch.object(bot, "classify", return_value=SKIP), patch.object(bot.common, "login") as login, patch("sys.stdout", new_callable=io.StringIO):
+            with patch.dict(os.environ, {"UVAAI_API_KEY": "fake-key"}), patch("sys.argv", ["infobot_v2.py", "--report", str(report_path)]), patch.object(bot, "fetch_feeds", return_value=({FEED["feed_url"]: [article()]}, [])), patch.object(bot, "classify", return_value=SKIP), patch.object(bot.common, "login") as login, patch("sys.stdout", new_callable=io.StringIO):
                 bot.main()
             login.assert_not_called()
             self.assertEqual(json.loads(report_path.read_text())["articles"][0]["decision"], "skip")

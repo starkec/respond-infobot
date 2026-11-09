@@ -1,13 +1,53 @@
 {
   "feeds": [
-    {"source_name": "OCCRP", "feed_url": "https://www.occrp.org/en/corruption/feed", "language": "en"},
-    {"source_name": "ICIJ", "feed_url": "https://www.icij.org/feed/", "language": "en"},
-    {"source_name": "Bellingcat", "feed_url": "https://www.bellingcat.com/feed/", "language": "en"},
-    {"source_name": "CORRECTIV", "feed_url": "https://correctiv.org/en/feed/", "language": "en"}
+    {
+      "source_name": "ICIJ",
+      "feed_url": "https://www.icij.org/feed/",
+      "language": "en"
+    },
+    {
+      "source_name": "Bellingcat",
+      "feed_url": "https://www.bellingcat.com/feed/",
+      "language": "en"
+    },
+    {
+      "source_name": "CORRECTIV",
+      "feed_url": "https://correctiv.org/en/feed/",
+      "language": "en"
+    },
+    {
+      "source_name": "EDJNet",
+      "feed_url": "https://www.europeandatajournalism.eu/feed/?post_type=cp_data_news",
+      "language": "en",
+      "image_policy": "omit",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_name": "CC BY 4.0"
+    },
+    {
+      "source_name": "Mongabay",
+      "feed_url": "https://news.mongabay.com/feed/",
+      "language": "en",
+      "image_policy": "omit",
+      "license_url": "https://creativecommons.org/licenses/by-nd/4.0/",
+      "license_name": "CC BY-ND 4.0"
+    },
+    {
+      "source_name": "Global Voices",
+      "feed_url": "https://globalvoices.org/feed/",
+      "language": "en",
+      "image_policy": "omit",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "license_name": "CC BY 3.0"
+    }
   ],
   "model": "gpt-5-mini",
   "max_articles_per_run": 20,
   "max_posts_per_run": 5,
   "max_article_chars": 24000,
-  "min_article_chars": 400
+  "min_article_chars": 400,
+  "provider": "uva",
+  "api_url": "https://llmproxy.uva.nl/v1/responses",
+  "api_timeout_seconds": 180,
+  "max_output_tokens": 4096,
+  "reasoning_effort": "low"
 }

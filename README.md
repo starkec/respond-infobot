@@ -5,25 +5,46 @@ within WP8 of the RESPOND project. The repository contains this version only.
 Its existing v2 filenames and history format are retained to preserve the
 configuration and posting history.
 
-**Status as of 30 October 2026.** Proof-of-concept posting began on 19 October
-2026 and ran successfully for three days. The account remains operational, but
-public posting is currently paused while source permissions are resolved.
-The UvA research team will restart public posting no later than 10 November
-2026, using sources that have granted permission and additional sources offering
-content under suitable open licences. "Openly licensed content" refers to
-material reusable under stated conditions, such as attribution; it does not
-mean that all text or images can be reused without checking their terms.
-Unresolved sources will not be included in the restart. The restart date is an
-operating commitment, not an automatic change to the pause setting.
+**Status as of 9 November 2026.** The UvA gateway and English source update
+is prepared while public posting remains paused. Reactivation is a separate
+operator action (`INFOBOT_V2_ENABLED=true`). Code pushes run read-only checks,
+never a publication run. Proof-of-concept posting began on 19 October 2026 and
+ran successfully for three days. Existing publication history is retained.
 
-The bot reads OCCRP, ICIJ, Bellingcat and CORRECTIV, with an LLM deciding whether
-each article substantially concerns corruption. It shares the original
-headline, source, publisher image and article link. The picture appears in a
-clickable Bluesky link card. There is no generated summary or description text.
-All four configured feeds are English, including CORRECTIV's English-only feed
-at `https://correctiv.org/en/feed/`. CORRECTIV publishes a less frequent selection
-of English translations rather than every story from its main German feed.
-The parser also supports German feeds if explicitly configured later.
+The bot reads ICIJ, Bellingcat, CORRECTIV (English), EDJNet, Mongabay and
+Global Voices. OCCRP has been removed because permission was not granted.
+Historical OCCRP records remain solely for audit and duplicate protection;
+pending OCCRP approvals cannot pass the configured-publisher check.
+
+An LLM selects articles substantially concerning corruption. Public posts contain
+the original headline (shortened only if needed), attribution and article link;
+no LLM-generated summary is published. EDJNet, Mongabay and Global Voices get
+text-only link cards with author, publisher and licence credits, not uploaded
+photographs. The existing image behaviour for the three retained sources is
+unchanged; their permissions are managed by the research team.
+All six configured feeds are English. CORRECTIV's English feed is a less frequent
+selection of translations, rather than the full German feed.
+
+### Added sources and reuse terms
+
+| Source | English feed | Text reuse | Image handling |
+| --- | --- | --- | --- |
+| EDJNet | https://www.europeandatajournalism.eu/feed/?post_type=cp_data_news | CC BY 4.0 by default; credit the originating outlet and EDJNet; article-specific alternatives are held | No thumbnails |
+| Mongabay | https://news.mongabay.com/feed/ | Default article-text licence CC BY-ND 4.0; credit author and Mongabay; explicit republication restrictions are held | No thumbnails; photo-caption licences do not license the article text |
+| Global Voices | https://globalvoices.org/feed/ | CC BY 3.0 by default; author, source, original link and licence credit; require a licence signal on the page | No thumbnails |
+
+Licence labels in post text are clickable links. Link-card descriptions preserve
+full credits and, for EDJNet, the original publisher link. Credits are never
+removed to fit a headline; incomplete or overlong credits create review holds.
+Mongabay's new template does not repeat its default text licence on every article;
+the bot uses its published default policy and checks for explicit exceptions.
+Open licensing is not blanket permission for third-party material. Operational
+checks cannot independently establish rights ownership or reporting accuracy.
+
+Policies checked for this update:
+- https://www.europeandatajournalism.eu/about/licence/
+- https://news.mongabay.com/copyright/creative-commons/
+- https://globalvoices.org/about/global-voices-attribution-policy/
 
 ## About RESPOND and this deliverable
 
@@ -93,7 +114,9 @@ links. The Instagram strategy in that plan uses partners' accounts.
 | `infobot_v2.py` | Feed collection, corruption classification, review and publishing |
 | `bot_common.py` | Shared text, URL identity, history and Bluesky API helpers |
 | `publisher_images.py` | Original publisher images and Bluesky link cards |
-| `config-v2.json` | Four feeds, model and processing limits |
+| `config-v2.json` | Six English feeds, UvA endpoint/model and processing limits |
+| `publication.py` | Attribution, licence checks and cards without photographs |
+| `check_setup.py` | Read-only live feed and UvA integration checks |
 | `requirements-v2.txt` | Pinned image-processing dependency |
 | `.github/workflows/infobot-v2.yml` | Checks, manual actions and scheduled posting |
 | `data/state-v2.json` | Production article, publication and review history; do not delete or reset |
@@ -106,11 +129,13 @@ Open **Actions > Infobot v2**. The workflow checks twice an hour, at 17 and
 47 minutes past the hour UTC, when the repository variable
 `INFOBOT_V2_ENABLED` is exactly `true`. GitHub may delay or miss scheduled runs;
 the next check processes unseen articles that remain available in the feeds.
-When posting is enabled, code changes on `main` also trigger a live check. Pull requests run
-offline tests without publishing. Publishing jobs share a concurrency group.
+Code changes on `main` run offline tests plus read-only integration checks. Pull
+requests run offline tests only and have no API credentials. Publishing jobs
+share a concurrency group.
 
-The existing repository secrets remain `OPENAI_API_KEY`, `BSKY_HANDLE` and
-`BSKY_APP_PASSWORD`. Keep credentials out of files, variables and logs.
+The repository secrets are `UVAAI_API_KEY`, `BSKY_HANDLE` and
+`BSKY_APP_PASSWORD`. `OPENAI_API_KEY` is no longer read or passed to any job.
+Keep credentials out of files, variables and logs.
 
 Use **Run workflow** on `main` to choose:
 
@@ -127,7 +152,7 @@ valid `data/state-v2.json` from Git history. The history already contains the
 previous bot's seen article IDs and published post IDs, preserving duplicate
 protection after cleanup.
 
-To pause scheduled and push-triggered posting, set `INFOBOT_V2_ENABLED=false`.
+To pause scheduled posting, set `INFOBOT_V2_ENABLED=false`.
 Manual `run` can still publish. A current run may finish; cancel it in Actions
 when an immediate stop is needed. Disabling the workflow also stops future
 manual and scheduled runs until it is re-enabled.
@@ -136,24 +161,33 @@ manual and scheduled runs until it is re-enabled.
 
 Preview checks up to 20 articles, sampled across sources in feed order, and
 shows publish/review/skip decisions with short reasons and supporting excerpts.
-Selected articles include a `link_card` entry with the original image URL and
-prepared thumbnail dimensions. Preview downloads and validates those images but
-does not upload them to Bluesky. Missing or unusable pictures create retryable
-review holds; these stories will not be posted without their publisher image.
+Selected articles include a `link_card` entry. For the three added sources it
+contains attribution and `image_policy: omit`. For retained sources it contains
+the publisher image URL and thumbnail dimensions; image failures hold those
+stories. Preview never uploads a photograph.
 It does not log into Bluesky, change the profile, publish posts or write posting
 history. It writes only `reports/latest.json`, uploaded as an Actions artifact
 retained for 14 days. That report includes article metadata, model, policy hash
 and decisions, not full article bodies or API keys. Repeating preview repeats
 the LLM requests; it deliberately evaluates current articles afresh.
 
-The checked-in default model is `gpt-5-mini`, configurable in `config-v2.json`.
-The integration uses the OpenAI Responses API with a strict JSON schema and
-`store: false`. Article content is sent to the API for classification. This
-setting controls response storage; it is not a claim of zero data retention.
-Image preparation uses Pillow, pinned in `requirements-v2.txt`; the v2 workflow
-installs it automatically. The LLM is used only for corruption selection.
-Exact API spend depends on model and article length; inspect usage and set an
-API project budget during operation.
+The configured model remains `gpt-5-mini`. Requests now go exclusively to
+`https://llmproxy.uva.nl/v1/responses` using `UVAAI_API_KEY`, Bearer authentication,
+strict JSON schema output and `store: false`. No direct OpenAI endpoint or
+commercial-provider fallback is used. The UvA gateway may route to external
+model infrastructure; this change is not a claim of university-only hosting or
+zero data retention. Confirm the selected backend and terms with UvA.
+
+The UvA key must have access to the exact configured model ID. Read-only checks
+query `/v1/models`, submit a synthetic corruption example and classify one
+current story from each added source. A missing key, unavailable model or invalid
+structured output fails visibly. No automatic model substitution occurs.
+
+LLM requests have a separate 180-second timeout, a 4,096-token output ceiling
+(including reasoning) and low reasoning effort for GPT-5 models. The endpoint,
+provider, model, schema and reasoning configuration form a cache identity.
+Authenticated API redirects are refused. Keys, headers and response bodies are
+never logged. Provider/endpoint/model metadata and token counts are reported.
 
 ## What qualifies
 
@@ -168,7 +202,7 @@ qualify only when the text establishes a concrete corruption connection.
 General crime, war reporting, disinformation, ordinary legal lobbying or tax
 planning, organisational news and training do not qualify automatically.
 
-Every source, including OCCRP's corruption feed, passes the same classifier.
+Every configured source passes the same classifier.
 There is no keyword-only exclusion: investigations need not use the word
 "corruption". Publisher text is supplied as untrusted data without tools.
 The model must separately establish abuse of entrusted power, improper private
@@ -180,8 +214,8 @@ For a publish decision the model must select 1-3 numbered supporting passages
 from the supplied article. The application copies their text verbatim and
 checks that each is an exact substring of the supplied text. The model never
 writes the quotations itself. This prevents invented quotations; it does not
-prove that the model interpreted a real passage correctly. Inspect a labelled sample across all four sources
-before trusting unattended selection. False positives and missed stories
+prove that the model interpreted a real passage correctly. The research team already inspected the adaptation during the proof of concept.
+No new numerical accuracy estimate is claimed by this software migration. False positives and missed stories
 remain possible. `review` never publishes automatically.
 
 ## Classifier development and checks
@@ -277,10 +311,10 @@ under **Actions > Infobot v2 > completed run > infobot-v2-decisions** for 14 day
    a story pending if the available evidence is insufficient.
 3. Click **Run workflow** and wait for the history-saving step to succeed.
    GitHub records the reviewing account, time and note. This action changes only
-   the review history; it publishes nothing and makes no OpenAI request.
+   the review history; it publishes nothing and makes no LLM request.
 4. Approved stories join the next enabled live run, ahead of new feed entries.
    They are still processed if they have disappeared from the rolling RSS feed.
-   The existing publisher-image, account and duplicate guards still apply, and
+   The current source-specific rights, image, account and duplicate guards apply, and
    approvals share the five-post run limit with automatic selections. An image
    failure keeps the approval pending for a later retry. To process sooner,
    dispatch **run** on `main` after reviewing; this can also publish other newly
@@ -308,7 +342,7 @@ retried while the article is still in the feed. API connection, authentication,
 quota and rate-limit failures stop the run visibly. An unavailable feed is
 reported as a failed check while successful sources can still be processed.
 Unprocessed articles are not marked seen. Saved decisions make failed publication
-retries economical; changes to model or policy invalidate a pending cached
+retries economical; changes to provider, endpoint, model, schema or policy invalidate a pending cached
 decision. Already processed stories are not automatically reconsidered.
 
 The workflow saves partial state even when a later operation fails. Stable post
@@ -318,6 +352,9 @@ Reports contain short publisher excerpts, so they should remain operational
 records rather than be used as a republication feed.
 
 ## Publisher image cards
+
+This section applies to the retained image-enabled sources only. The three added
+sources deliberately use cards without thumbnails, as described above.
 
 The bot reads the source article's Open Graph sharing image (`og:image`, with
 `og:image:secure_url` preferred), then the publisher's Twitter-card image as a
@@ -348,14 +385,17 @@ live posting is deliberately enabled; preview itself never uploads a blob.
 python -m pip install -r requirements-v2.txt
 python -m unittest -v
 python infobot_v2.py --help
+python check_setup.py --feeds-only
+# UVAAI_API_KEY must be set securely for the next two commands:
+python check_setup.py
 python infobot_v2.py --mode preview
 ```
 
 Tests mock the LLM, publishers and Bluesky; they do not establish live model
-classification accuracy. A real preview needs `OPENAI_API_KEY` in the environment
+classification accuracy. A real preview needs `UVAAI_API_KEY` in the environment
 and API connectivity. Repeated previews classify current articles afresh and
 incur API usage. Reports include token counts for successful new classifications;
-consult the API usage dashboard for actual billing and configure a project budget.
+consult the UvA proxy administrators for quotas, access and billing.
 
 Initialisation, live publishing and review also need the Bluesky credentials.
 For a new installation only, run `python infobot_v2.py --mode initialise` once
@@ -368,5 +408,21 @@ synchronised. Avoid running independent local publishing copies alongside Action
 
 - [Structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs)
 - [Configured model](https://developers.openai.com/api/docs/models/gpt-5-mini)
-- [API usage](https://platform.openai.com/usage)
+- [UvA gateway setup and endpoints](https://github.com/uva/UvA-HvA-Agentic-Tools)
 - [Model deprecations](https://developers.openai.com/api/docs/deprecations)
+
+## Reactivation after migration
+
+1. Check **Actions > Infobot v2** for the latest code commit. Both **checks** and
+   **Read-only UvA and feed checks** should succeed. Download `infobot-setup-check`
+   for individual feed, attribution and live API results. No Bluesky credentials
+   are available to the read-only integration job.
+2. If the workflow itself was disabled, re-enable it while keeping
+   `INFOBOT_V2_ENABLED=false`, then dispatch `preview`. A manual preview uses the
+   UvA key and never posts.
+3. Once satisfied, set `INFOBOT_V2_ENABLED=true`. Do not delete history or run
+   `initialise`: the first live run baselines the three added feeds without
+   dumping their current backlog. New stories are eligible on subsequent runs.
+
+The integration check is a connectivity/schema/software check, not a new manual
+validation study or a measurement of the classifier's accuracy.

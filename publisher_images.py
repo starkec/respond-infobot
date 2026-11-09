@@ -143,6 +143,8 @@ def prepare_card(article, download_html):
 
 
 def card_preview(card):
+    if card.get("image_policy") == "omit":
+        return {"image_policy": "omit", "description": card.get("description", "")}
     return {key: card[key] for key in ("image_url", "mime_type", "width", "height")}
 
 
@@ -163,9 +165,11 @@ def upload_thumbnail(client, card):
     return blob
 
 
-def embed(article, thumb):
+def embed(article, thumb=None, description=""):
     title = article["title"]
     if len(title) > 300:
         title = title[:299].rstrip() + "…"
-    return {"$type": "app.bsky.embed.external", "external": {
-        "uri": article["link"], "title": title, "description": "", "thumb": thumb}}
+    external = {"uri": article["link"], "title": title, "description": description}
+    if thumb is not None:
+        external["thumb"] = thumb
+    return {"$type": "app.bsky.embed.external", "external": external}

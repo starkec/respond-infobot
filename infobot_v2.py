@@ -1,7 +1,7 @@
 """Multi-feed corruption selection. Defaults to preview; install requirements-v2.txt.
 
 The bot selects stories, then shares the original headline, source, publisher
-image and article link. No LLM-generated text is published.
+image when permitted, and article link. No LLM-generated text is published.
 """
 
 import argparse
@@ -21,9 +21,10 @@ from xml.etree import ElementTree as ET
 
 import bot_common as common
 import publisher_images
+import publication
 
 
-API_URL = "https://api.openai.com/v1/responses"
+API_URL = "https://llmproxy.uva.nl/v1/responses"
 # Scope adaptation informed by RESPOND's related WP8 political-corruption classifier:
 # https://github.com/annekroon/RESPOND-victims-of-corruption/blob/main/political_classifier/scripts/_impl/label_silver_batch.py
 # The Infobot's broader scope does not inherit that classifier's evaluation scores.
@@ -143,7 +144,23 @@ def load_config(path):
         raise common.SetupError("The minimum article length exceeds the maximum.")
     if not isinstance(config.get("model"), str) or not re.fullmatch(r"[A-Za-z0-9._-]{1,100}", config["model"]):
         raise common.SetupError("Set a valid classifier model in config-v2.json.")
+    if config.get("provider") != "uva" or config.get("api_url") != API_URL:
+        raise common.SetupError("Configure the approved UvA Responses endpoint; direct commercial API fallback is disabled.")
+    if type(config.get("api_timeout_seconds")) is not int or not 25 <= config["api_timeout_seconds"] <= 300:
+        raise common.SetupError("Set api_timeout_seconds between 25 and 300.")
+    if type(config.get("max_output_tokens")) is not int or not 2048 <= config["max_output_tokens"] <= 16000:
+        raise common.SetupError("Set max_output_tokens between 2048 and 16000.")
+    if config.get("reasoning_effort") not in ("minimal", "low", "medium", "high"):
+        raise common.SetupError("Invalid reasoning_effort.")
+    for feed in config["feeds"]:
+        publication.validate_feed_policy(feed)
     return config
+
+
+def classifier_id(config):
+    settings = {name: config[name] for name in ("provider", "api_url", "model", "reasoning_effort", "max_output_tokens")}
+    settings.update(policy=POLICY, schema=SCHEMA)
+    return hashlib.sha256(json.dumps(settings, sort_keys=True).encode()).hexdigest()
 
 
 def same_publisher(url, feed_url):
@@ -242,7 +259,9 @@ def parse_feed(body, feed):
             continue
         link = common.canonical_url(link)
         if link not in seen:
-            articles.append({"title": title, "link": link, "source_name": feed["source_name"],
+            author = common.clean_text(item.findtext("{http://purl.org/dc/elements/1.1/}creator")
+                                       or item.findtext(atom + "author/" + atom + "name"))
+            articles.append({**feed, "author": author, "title": title, "link": link, "source_name": feed["source_name"],
                              "feed_url": feed["feed_url"], "language": feed["language"],
                              "feed_content": html_text(content, fragment=True)})
             seen.add(link)
@@ -344,15 +363,15 @@ def classify(article, config, api_key):
                "input": json.dumps({"source": article["source_name"], "title": article["title"],
                                     "url": article["link"], "text_origin": origin,
                                     "truncated": truncated, "article_passages": passages}, ensure_ascii=False),
-               "max_output_tokens": 2048,
+               "max_output_tokens": config["max_output_tokens"],
                "text": {"format": {"type": "json_schema", "name": "corruption_relevance",
                                     "strict": True, "schema": schema}}}
     if config["model"].startswith("gpt-5"):
-        payload["reasoning"] = {"effort": "low"}
-    request = Request(API_URL, data=json.dumps(payload).encode("utf-8"), method="POST",
+        payload["reasoning"] = {"effort": config["reasoning_effort"]}
+    request = Request(config["api_url"], data=json.dumps(payload).encode("utf-8"), method="POST",
                       headers={"Authorization": "Bearer " + api_key, "Content-Type": "application/json"})
     try:
-        response = json.loads(common.read_response(request, "LLM classification"))
+        response = json.loads(common.read_response(request, "LLM classification", timeout=config["api_timeout_seconds"], allow_redirects=False))
         if response.get("status") != "completed":
             raise ValueError("Incomplete response")
         output = [part["text"] for item in response.get("output", []) if item.get("type") == "message"
@@ -411,6 +430,8 @@ def initialise(path, client, feeds):
 
 
 def prepare_link_card(article):
+    if article.get("image_policy") == "omit":
+        return publication.prepare_attributed_card(article, download)
     return publisher_images.prepare_card(article, download)
 
 
@@ -420,10 +441,13 @@ def publish_article(client, article, card=None):
     existing = client.get_record(common.POST_COLLECTION, key)
     if existing:
         return common.existing_post_uri(existing, article, client), False
+    card = card if card is not None else prepare_link_card(article)
     record = common.post_record(article, article["source_name"])
     record["langs"] = [article["language"]]
-    card = card if card is not None else prepare_link_card(article)
-    record["embed"] = publisher_images.embed(article, publisher_images.upload_thumbnail(client, card))
+    if card.get("image_policy") == "omit":
+        record["embed"] = publisher_images.embed(article, description=card["description"])
+    else:
+        record["embed"] = publisher_images.embed(article, publisher_images.upload_thumbnail(client, card))
     try:
         result = client.put_record(common.POST_COLLECTION, key, record)
     except common.SetupError:
@@ -442,7 +466,8 @@ def reviewed_article(decision, config):
                and same_publisher(decision["url"], feed["feed_url"])]
     if len(matches) != 1 or not isinstance(decision.get("title"), str) or not decision["title"].strip():
         raise common.SetupError("Reviewed story no longer matches one configured publisher. Publication held.")
-    return {**matches[0], "title": decision["title"], "link": decision["url"]}
+    return {**matches[0], "title": decision["title"], "link": decision["url"],
+            "author": decision.get("author", "")}
 
 
 def record_manual_review(state, config, url, action, note, reviewer, state_path, current_feeds=None):
@@ -458,6 +483,7 @@ def record_manual_review(state, config, url, action, note, reviewer, state_path,
             item = matches[0]
             decision = {"decision": "review", "reason": "Manual review of a current-feed story; any original preview reasoning remains in its preview artifact.",
                         "evidence": [], "url": item["link"], "title": item["title"], "source": item["source_name"],
+                        "author": item.get("author", ""),
                         "review_origin": "current_feed_manual_import", "checked_at": common.utc_now()}
     if not decision or not (decision["decision"] == "review" or decision.get("image_error")):
         raise common.SetupError("This URL is neither a live review hold nor a current configured-feed article. No decision saved.")
@@ -473,7 +499,7 @@ def record_manual_review(state, config, url, action, note, reviewer, state_path,
 
 
 def publish_manual_approvals(state, config, client, report, state_path):
-    """Manual approval survives a rolling feed and still requires the publisher image."""
+    """Manual approval survives a rolling feed and still respects source rights."""
     report.setdefault("posted", 0)
     approvals = sorted(state["decisions"].items(),
                        key=lambda item: item[1].get("manual_review", {}).get("at", ""))
@@ -576,7 +602,8 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
         # have vanished from a rolling feed. Review holds are never auto-published.
         cached = None if preview else state["decisions"].get(key)
         if cached and (cached.get("retryable") or cached.get("model") != config["model"]
-                       or cached.get("policy_hash") != hashlib.sha256(POLICY.encode()).hexdigest()):
+                       or cached.get("policy_hash") != hashlib.sha256(POLICY.encode()).hexdigest()
+                       or cached.get("classifier_id") != classifier_id(config)):
             cached = None
         if cached is not None:
             result = cached
@@ -618,7 +645,8 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                 print(json.dumps(row, ensure_ascii=False))
             continue
         state["decisions"][key] = {**result, "url": article["link"], "title": article["title"],
-                                   "source": article["source_name"], "model": config["model"],
+                                   "source": article["source_name"], "model": config["model"], "author": article.get("author", ""),
+                                   "provider": config["provider"], "classifier_id": classifier_id(config),
                                    "policy_hash": hashlib.sha256(POLICY.encode()).hexdigest(),
                                    "checked_at": common.utc_now()}
         common.save_state(state_path, state)
@@ -672,12 +700,12 @@ def main():
     parser.add_argument("--reviewer", default=os.environ.get("GITHUB_ACTOR", ""))
     args = parser.parse_args()
     config = load_config(args.config)
-    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+    api_key = os.environ.get("UVAAI_API_KEY", "").strip()
     if args.mode in ("preview", "run") and not api_key:
-        raise common.SetupError("Add OPENAI_API_KEY to GitHub Actions secrets for v2 classification. Never put it in config or chat.")
+        raise common.SetupError("Add UVAAI_API_KEY to GitHub Actions secrets for v2 classification. Never put it in config or chat.")
     state = None
     feeds, errors = ({}, []) if args.mode == "review" else fetch_feeds(config)
-    report = {"mode": args.mode, "created_at": common.utc_now(), "model": config["model"],
+    report = {"provider": config["provider"], "api_url": config["api_url"], "classifier_id": classifier_id(config), "mode": args.mode, "created_at": common.utc_now(), "model": config["model"],
               "policy_hash": hashlib.sha256(POLICY.encode()).hexdigest(),
               "feed_errors": errors, "articles": [], "posted": 0}
     try:

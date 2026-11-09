@@ -11,7 +11,7 @@ import re
 import unicodedata
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
-from urllib.request import Request, urlopen
+from urllib.request import HTTPRedirectHandler, Request, build_opener, urlopen
 
 
 MAX_RESPONSE_BYTES = 2_000_000
@@ -59,9 +59,15 @@ def https_url(value):
         return False
 
 
-def read_response(request, description):
+class NoRedirect(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise SetupError("Authenticated API redirected; request stopped without forwarding credentials.")
+
+
+def read_response(request, description, *, timeout=TIMEOUT_SECONDS, allow_redirects=True):
     try:
-        with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
+        open_request = urlopen if allow_redirects else build_opener(NoRedirect()).open
+        with open_request(request, timeout=timeout) as response:
             body = response.read(MAX_RESPONSE_BYTES + 1)
     except HTTPError as exc:
         # Do not print response bodies or request headers: login data is private.
@@ -72,6 +78,8 @@ def read_response(request, description):
             ) from None
         try:
             code = json.loads(exc.read(4096)).get("error", "RequestFailed")
+            if isinstance(code, dict):
+                code = code.get("code") or code.get("type") or "RequestFailed"
         except (ValueError, AttributeError):
             code = "RequestFailed"
         if not isinstance(code, str) or not re.fullmatch(r"[A-Za-z0-9_]{1,60}", code):
@@ -112,7 +120,13 @@ def record_key(article):
 
 
 def preview_text(article, source):
-    suffix = f"\n\nSource: {source}\n{article['link']}"
+    source = article.get("credit_source", source)
+    credit = f"Source: {source}"
+    if article.get("author"):
+        credit += "\nBy: " + article["author"]
+    if article.get("license_name"):
+        credit += "\n" + article["license_name"]
+    suffix = f"\n\n{credit}\n{article['link']}"
     available = 300 - len(suffix)
     if available < 2:
         raise SetupError("The source name and article link are too long for a preview post.")
@@ -127,7 +141,7 @@ def post_record(article, source):
     text = preview_text(article, source)
     start = len(text[: text.rfind(article["link"])].encode("utf-8"))
     end = start + len(article["link"].encode("utf-8"))
-    return {
+    record = {
         "$type": POST_COLLECTION,
         "text": text,
         "createdAt": utc_now(),
@@ -137,6 +151,14 @@ def post_record(article, source):
             "features": [{"$type": "app.bsky.richtext.facet#link", "uri": article["link"]}],
         }],
     }
+    if article.get("license_name") and article.get("license_url"):
+        offset = text.rfind(article["license_name"])
+        record["facets"].append({
+            "index": {"byteStart": len(text[:offset].encode("utf-8")),
+                      "byteEnd": len(text[:offset + len(article["license_name"])].encode("utf-8"))},
+            "features": [{"$type": "app.bsky.richtext.facet#link", "uri": article["license_url"]}],
+        })
+    return record
 
 
 class BlueskyClient:
