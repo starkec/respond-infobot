@@ -208,6 +208,8 @@ class BlueskyClient:
         return result
 
     def put_record(self, collection, key, value, previous_cid=None):
+        if collection == POST_COLLECTION and "embed" in value:
+            raise SetupError("Text-only posting does not allow media or link-card embeds.")
         return self.call("com.atproto.repo.putRecord", payload={
             "repo": self.did, "collection": collection, "rkey": key,
             "record": value, "validate": True,

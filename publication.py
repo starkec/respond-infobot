@@ -1,8 +1,7 @@
-"""Publisher attribution and text-only cards for openly licensed sources.
+"""Publisher attribution and licence checks for plain-text headline/link posts.
 
-An Open Graph image is not a permission to upload that photograph. The three
-new sources therefore get cards without thumbnails. Article-specific licence
-exceptions or missing credits create review holds instead of incomplete posts.
+No image is downloaded, uploaded or embedded, regardless of publisher policy.
+Article-specific licence exceptions or missing credits create review holds.
 """
 
 from html.parser import HTMLParser
@@ -21,16 +20,14 @@ POLICIES = {
 
 
 def validate_feed_policy(feed):
-    policy = feed.get("image_policy", "publisher")
-    if policy not in ("publisher", "omit"):
-        raise common.SetupError("Invalid publisher image policy.")
+    policy = feed.get("image_policy", "omit")
+    if policy != "omit":
+        raise common.SetupError("Images are disabled for every publisher.")
     if feed["source_name"] in POLICIES:
         name, url = POLICIES[feed["source_name"]]
         if (policy != "omit" or feed.get("license_name") != name
                 or feed.get("license_url") != url or feed.get("language") != "en"):
             raise common.SetupError("Openly licensed sources require English, full credits and no automatic photo reuse.")
-    elif policy == "omit":
-        raise common.SetupError("No attribution policy is configured for this publisher.")
 
 
 class Metadata(HTMLParser):
@@ -90,7 +87,7 @@ def labelled_value(parts, label):
     return ""
 
 
-def prepare_attributed_card(article, download):
+def prepare_attribution(article, download):
     validate_feed_policy(article)
     metadata = Metadata()
     metadata.feed(download(article["link"]).decode("utf-8", errors="replace"))
@@ -127,9 +124,8 @@ def prepare_attributed_card(article, download):
         raise common.SetupError("EDJNet producing-outlet credit is missing; held for review.")
     # Verify that the public post fits without dropping any attribution.
     common.preview_text(article, article["source_name"])
-    description = ("By " + author + ". Source: " + article.get("credit_source", article["source_name"])
-                   + ". " + article["license_name"] + ": " + expected
-                   + " Headline may be shortened to fit Bluesky; article text is not republished.")
+    result = {"format": "text-only", "source": article.get("credit_source", article["source_name"]),
+              "author": author, "license_name": article["license_name"], "license_url": expected}
     if original:
-        description += " Original publisher: " + original
-    return {"image_policy": "omit", "description": description}
+        result["original_publisher_url"] = original
+    return result

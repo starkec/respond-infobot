@@ -1,7 +1,7 @@
 """Multi-feed corruption selection. Defaults to preview; install requirements-v2.txt.
 
-The bot selects stories, then shares the original headline, source, publisher
-image when permitted, and article link. No LLM-generated text is published.
+The bot selects stories, then shares the original headline, source credits
+and article link as plain text. No images, link cards or generated summaries.
 """
 
 import argparse
@@ -20,7 +20,6 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 from xml.etree import ElementTree as ET
 
 import bot_common as common
-import publisher_images
 import publication
 
 
@@ -429,25 +428,28 @@ def initialise(path, client, feeds):
     print("History initialised. Current feed entries baselined. Nothing published.")
 
 
-def prepare_link_card(article):
-    if article.get("image_policy") == "omit":
-        return publication.prepare_attributed_card(article, download)
-    return publisher_images.prepare_card(article, download)
+def prepare_publication(article):
+    if article["source_name"] in publication.POLICIES:
+        return publication.prepare_attribution(article, download)
+    common.preview_text(article, article["source_name"])
+    return {"format": "text-only", "source": article["source_name"]}
 
 
-def publish_article(client, article, card=None):
+def publication_hold(decision):
+    # Keep historical image holds reviewable without requiring any image again.
+    return decision.get("publication_error") or decision.get("image_error")
+
+
+def publish_article(client, article, prepared=None):
     """Publish with an absent-record guard, response recovery and source language."""
     key = common.record_key(article)
     existing = client.get_record(common.POST_COLLECTION, key)
     if existing:
         return common.existing_post_uri(existing, article, client), False
-    card = card if card is not None else prepare_link_card(article)
+    if prepared is None:
+        prepare_publication(article)
     record = common.post_record(article, article["source_name"])
     record["langs"] = [article["language"]]
-    if card.get("image_policy") == "omit":
-        record["embed"] = publisher_images.embed(article, description=card["description"])
-    else:
-        record["embed"] = publisher_images.embed(article, publisher_images.upload_thumbnail(client, card))
     try:
         result = client.put_record(common.POST_COLLECTION, key, record)
     except common.SetupError:
@@ -485,7 +487,7 @@ def record_manual_review(state, config, url, action, note, reviewer, state_path,
                         "evidence": [], "url": item["link"], "title": item["title"], "source": item["source_name"],
                         "author": item.get("author", ""),
                         "review_origin": "current_feed_manual_import", "checked_at": common.utc_now()}
-    if not decision or not (decision["decision"] == "review" or decision.get("image_error")):
+    if not decision or not (decision["decision"] == "review" or publication_hold(decision)):
         raise common.SetupError("This URL is neither a live review hold nor a current configured-feed article. No decision saved.")
     if action not in ("approve", "reject") or not 10 <= len(note.strip()) <= 1000 or not reviewer.strip():
         raise common.SetupError("Choose approve/reject, provide a 10-1000 character review note, and identify the reviewer.")
@@ -516,12 +518,12 @@ def publish_manual_approvals(state, config, client, report, state_path):
         report["articles"].append(row)
         try:
             article = reviewed_article(decision, config)
-            card = None
+            prepared = None
             if not client.get_record(common.POST_COLLECTION, common.record_key(article)):
-                card = prepare_link_card(article)
-                row["link_card"] = publisher_images.card_preview(card)
+                prepared = prepare_publication(article)
+                row["publication"] = prepared
         except common.SetupError as exc:
-            decision["image_error"] = str(exc)
+            decision["publication_error"] = str(exc)
             row.update(decision="review", reason=str(exc), retryable=True)
             common.save_state(state_path, state)
             print(json.dumps(row, ensure_ascii=False))
@@ -529,9 +531,10 @@ def publish_manual_approvals(state, config, client, report, state_path):
         if not label_checked:
             common.ensure_bot_label(client)
             label_checked = True
-        uri, created = publish_article(client, article, card)
+        uri, created = publish_article(client, article, prepared)
         state["posted"][key] = uri
         decision.pop("image_error", None)
+        decision.pop("publication_error", None)
         review["applied_at"] = common.utc_now()
         row["post_uri"] = uri
         report["posted"] += 1
@@ -551,7 +554,7 @@ def write_review_queue(state, path):
         review = decision.get("manual_review", {})
         if key in state["posted"] or review.get("action") == "reject":
             continue
-        if decision["decision"] != "review" and not decision.get("image_error"):
+        if decision["decision"] != "review" and not publication_hold(decision):
             continue
         lines += ["## " + escape(decision.get("title", "Untitled")), "",
                   "Source: " + escape(decision.get("source", "")), "",
@@ -563,8 +566,8 @@ def write_review_queue(state, path):
         lines.append("")
         for quote in decision["evidence"]:
             lines += ["> " + escape(quote), ""]
-        if decision.get("image_error"):
-            lines += ["Image/publisher hold: " + escape(decision["image_error"]), ""]
+        if publication_hold(decision):
+            lines += ["Publication hold: " + escape(str(publication_hold(decision))), ""]
         if review:
             lines += ["Manual note (" + escape(review["by"]) + "): " + escape(review["note"]), ""]
     if len(lines) == 6:
@@ -626,17 +629,16 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                 if isinstance(exc, common.APIError) or "LLM classification" in str(exc):
                     raise
                 continue
-        # A previous image failure is an operational hold, not a new editorial
-        # decision. Clear it when retrying the already-approved story.
-        result = {name: value for name, value in result.items() if name != "image_error"}
+        # Clear old operational holds before retrying; rights checks still apply.
+        result = {name: value for name, value in result.items() if name not in ("image_error", "publication_error")}
         row.update(result)
         report["articles"].append(row)
         if preview:
             if result["decision"] == "publish":
                 try:
-                    row["link_card"] = publisher_images.card_preview(prepare_link_card(article))
+                    row["publication"] = prepare_publication(article)
                 except common.SetupError as exc:
-                    row.update(decision="review", reason=str(exc), image_error=True, retryable=True)
+                    row.update(decision="review", reason=str(exc), publication_error=True, retryable=True)
                     print(json.dumps(row, ensure_ascii=False))
                     continue
                 print(json.dumps(row, ensure_ascii=False))
@@ -651,16 +653,16 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                                    "checked_at": common.utc_now()}
         common.save_state(state_path, state)
         if result["decision"] == "publish":
-            card = None
+            prepared = None
             # Recover previously accepted posts without depending on whether
-            # the publisher still hosts its page or image.
+            # the publisher still hosts its page.
             if not client.get_record(common.POST_COLLECTION, common.record_key(article)):
                 try:
-                    card = prepare_link_card(article)
-                    row["link_card"] = publisher_images.card_preview(card)
+                    prepared = prepare_publication(article)
+                    row["publication"] = prepared
                 except common.SetupError as exc:
-                    row.update(decision="review", reason=str(exc), image_error=True, retryable=True)
-                    state["decisions"][key]["image_error"] = str(exc)
+                    row.update(decision="review", reason=str(exc), publication_error=True, retryable=True)
+                    state["decisions"][key]["publication_error"] = str(exc)
                     common.save_state(state_path, state)
                     print(json.dumps(row, ensure_ascii=False))
                     continue
@@ -669,7 +671,7 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
                 label_checked = True
             # Reuse the original stable record keys and absence guards, so even
             # a lost state commit cannot cause another post of the same URL.
-            uri, created = publish_article(client, article, card)
+            uri, created = publish_article(client, article, prepared)
             state["posted"][key] = uri
             posted += 1
             report["posted"] = posted

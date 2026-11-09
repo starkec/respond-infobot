@@ -11,7 +11,7 @@ from unittest.mock import patch
 
 import bot_common as common
 import infobot_v2 as bot
-from test_infobot_v2 import FEED, REVIEW, PUBLISH, SKIP, CARD, BLOB, article
+from test_infobot_v2 import FEED, REVIEW, PUBLISH, SKIP, PUBLICATION, article
 from test_publishing import FakeBluesky
 
 
@@ -31,13 +31,12 @@ class ManualReviewTests(unittest.TestCase):
                                      "source": FEED["source_name"]}}}
         common.save_state(self.path, self.state)
         for target, kwargs in (("sys.stdout", {"new_callable": io.StringIO}),
-                               ("infobot_v2.prepare_link_card", {"return_value": CARD}),
-                               ("publisher_images.upload_thumbnail", {"return_value": BLOB})):
+                               ("infobot_v2.prepare_publication", {"return_value": PUBLICATION})):
             mock = patch(target, **kwargs)
             started = mock.start()
             self.addCleanup(mock.stop)
-            if target.endswith("prepare_link_card"):
-                self.card = started
+            if target.endswith("prepare_publication"):
+                self.preparation = started
 
     def review(self, action="approve"):
         bot.record_manual_review(self.state, self.config, self.item["link"], action,
@@ -100,8 +99,7 @@ class ManualReviewTests(unittest.TestCase):
         self.assertEqual(report["posted"], 1)
         self.assertEqual(self.client.post_count, 1)
         record = self.client.get_record(common.POST_COLLECTION, common.record_key(self.item))["value"]
-        self.assertEqual(record["embed"]["external"]["description"], "")
-        self.assertEqual(record["embed"]["external"]["thumb"], BLOB)
+        self.assertNotIn("embed", record)
         self.assertIn("Source: Example", record["text"])
 
     def test_lost_response_and_lost_state_commit_recover_without_duplicate(self):
@@ -110,19 +108,19 @@ class ManualReviewTests(unittest.TestCase):
         self.client.lose_next_post_response = True
         self.publish()
         self.state = before
-        self.card.side_effect = common.SetupError("Image no longer available")
+        self.preparation.side_effect = common.SetupError("Publisher page no longer available")
         self.publish()
         self.assertEqual(self.client.post_count, 1)
         self.assertIn(self.key, self.state["posted"])
 
-    def test_missing_image_retains_approval_and_retries_without_llm(self):
+    def test_missing_credits_retain_approval_and_retry_without_llm(self):
         self.review()
-        self.card.side_effect = common.SetupError("No original image")
+        self.preparation.side_effect = common.SetupError("Missing required credit")
         report = self.publish()
         self.assertEqual(self.client.write_count, 0)
         self.assertEqual(report["articles"][0]["decision"], "review")
         self.assertEqual(self.state["decisions"][self.key]["manual_review"]["action"], "approve")
-        self.card.side_effect = None
+        self.preparation.side_effect = None
         self.publish()
         self.assertEqual(self.client.post_count, 1)
 

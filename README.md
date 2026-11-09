@@ -17,11 +17,11 @@ Historical OCCRP records remain solely for audit and duplicate protection;
 pending OCCRP approvals cannot pass the configured-publisher check.
 
 An LLM selects articles substantially concerning corruption. Public posts contain
-the original headline (shortened only if needed), attribution and article link;
-no LLM-generated summary is published. EDJNet, Mongabay and Global Voices get
-text-only link cards with author, publisher and licence credits, not uploaded
-photographs. The existing image behaviour for the three retained sources is
-unchanged; their permissions are managed by the research team.
+the original headline (shortened only if needed), required attribution and article
+link as plain text. No article body or LLM-generated summary is published.
+Images and link-preview cards are disabled for ALL publishers, including ICIJ,
+Bellingcat and CORRECTIV. The image download, processing and upload module has
+been removed; the runtime now uses only the Python standard library.
 All six configured feeds are English. CORRECTIV's English feed is a less frequent
 selection of translations, rather than the full German feed.
 
@@ -33,8 +33,9 @@ selection of translations, rather than the full German feed.
 | Mongabay | https://news.mongabay.com/feed/ | Default article-text licence CC BY-ND 4.0; credit author and Mongabay; explicit republication restrictions are held | No thumbnails; photo-caption licences do not license the article text |
 | Global Voices | https://globalvoices.org/feed/ | CC BY 3.0 by default; author, source, original link and licence credit; require a licence signal on the page | No thumbnails |
 
-Licence labels in post text are clickable links. Link-card descriptions preserve
-full credits and, for EDJNet, the original publisher link. Credits are never
+Licence labels in post text are clickable links. EDJNet posts credit the
+originating publisher alongside EDJNet; its original publisher URL is retained
+in operational attribution metadata. Credits are never
 removed to fit a headline; incomplete or overlong credits create review holds.
 Mongabay's new template does not repeat its default text licence on every article;
 the bot uses its published default policy and checks for explicit exceptions.
@@ -113,11 +114,10 @@ links. The Instagram strategy in that plan uses partners' accounts.
 | --- | --- |
 | `infobot_v2.py` | Feed collection, corruption classification, review and publishing |
 | `bot_common.py` | Shared text, URL identity, history and Bluesky API helpers |
-| `publisher_images.py` | Original publisher images and Bluesky link cards |
 | `config-v2.json` | Six English feeds, UvA endpoint/model and processing limits |
-| `publication.py` | Attribution, licence checks and cards without photographs |
+| `publication.py` | Attribution and licence checks for plain-text posts |
 | `check_setup.py` | Read-only live feed and UvA integration checks |
-| `requirements-v2.txt` | Pinned image-processing dependency |
+| `requirements-v2.txt` | Standard-library-only runtime; no third-party packages |
 | `.github/workflows/infobot-v2.yml` | Checks, manual actions and scheduled posting |
 | `data/state-v2.json` | Production article, publication and review history; do not delete or reset |
 | `data/review-queue.md` | Current stories held for manual review |
@@ -161,10 +161,10 @@ manual and scheduled runs until it is re-enabled.
 
 Preview checks up to 20 articles, sampled across sources in feed order, and
 shows publish/review/skip decisions with short reasons and supporting excerpts.
-Selected articles include a `link_card` entry. For the three added sources it
-contains attribution and `image_policy: omit`. For retained sources it contains
-the publisher image URL and thumbnail dimensions; image failures hold those
-stories. Preview never uploads a photograph.
+Selected articles include a `publication` entry with `format: text-only` and
+applicable attribution metadata. No preview or publishing path downloads images,
+uploads blobs or attaches link-preview cards. Missing required credits or
+article-specific licence restrictions create review holds.
 It does not log into Bluesky, change the profile, publish posts or write posting
 history. It writes only `reports/latest.json`, uploaded as an Actions artifact
 retained for 14 days. That report includes article metadata, model, policy hash
@@ -294,7 +294,7 @@ Publish/skip decisions and model review holds are not reclassified automatically
 An editorial review hold enters history without a post. The persistent,
 human-readable list is **[data/review-queue.md](data/review-queue.md)**, created
 after initialisation. It includes each original URL, the model's reason,
-three corruption criteria, supporting excerpts when available, and image errors.
+three corruption criteria, supporting excerpts when available, and publication/attribution errors.
 The same list appears in each live workflow's job summary. Reports are available
 under **Actions > Infobot v2 > completed run > infobot-v2-decisions** for 14 days.
 
@@ -303,7 +303,7 @@ under **Actions > Infobot v2 > completed run > infobot-v2-decisions** for 14 day
 1. Open the original article from `data/review-queue.md` and read it. Check who
    allegedly abused an entrusted role, who gained improperly, and whether this
    connection is a substantial subject of the story. Check the publisher's
-   headline, image, date, any corrections and the model's excerpts. A model
+   headline, date, credits, any corrections and the model's excerpts. A model
    excerpt is evidence of what the source said, not independent fact verification.
 2. Open **Actions > Infobot v2 > Run workflow**, select **main**, and choose
    **review**. Copy the exact article URL, choose **approve** or **reject**,
@@ -314,8 +314,8 @@ under **Actions > Infobot v2 > completed run > infobot-v2-decisions** for 14 day
    the review history; it publishes nothing and makes no LLM request.
 4. Approved stories join the next enabled live run, ahead of new feed entries.
    They are still processed if they have disappeared from the rolling RSS feed.
-   The current source-specific rights, image, account and duplicate guards apply, and
-   approvals share the five-post run limit with automatic selections. An image
+   The current source-specific rights, account and duplicate guards apply, and
+   approvals share the five-post run limit with automatic selections. An attribution
    failure keeps the approval pending for a later retry. To process sooner,
    dispatch **run** on `main` after reviewing; this can also publish other newly
    eligible articles. A rejected story stays unposted and is not reclassified.
@@ -351,33 +351,34 @@ history commits. Existing posts are never overwritten.
 Reports contain short publisher excerpts, so they should remain operational
 records rather than be used as a republication feed.
 
-## Publisher image cards
+## Plain-text publication format
 
-This section applies to the retained image-enabled sources only. The three added
-sources deliberately use cards without thumbnails, as described above.
+Every future post uses the same simple layout:
 
-The bot reads the source article's Open Graph sharing image (`og:image`, with
-`og:image:secure_url` preferred), then the publisher's Twitter-card image as a
-fallback. It never invents a picture, substitutes an unrelated page image or
-asks an LLM to write post text. The full article URL stays clickable in the post
-and in the card. The card description is empty. Long headlines are shortened
-only where Bluesky's text/title limits require it.
+```text
+Original publisher headline
 
-The picture content and aspect ratio are preserved, with downscaling/compression
-when required for Bluesky's 1 MB card-thumbnail limit. JPEG, PNG and WebP source
-images are supported; embedded metadata is stripped and EXIF orientation is
-applied. Downloads are capped at 10 MB and decoded images at 40 million pixels.
-Publisher-hosted image CDNs (such as `media.icij.org`) are supported through
-HTTPS URLs on the publisher's own domain or subdomains; redirects are validated.
-Third-party image-hosting domains are held rather than followed automatically.
+Source: Publisher
+By: Author, when available or required
+CC licence, when applicable (clickable)
+https://publisher.example/original-article
+```
 
-If all publisher image candidates fail, the story remains unposted and is
-retried while it is in the feed. Its LLM decision stays cached, avoiding repeated
-classification charges just because an image was temporarily unavailable.
-Previously accepted posts are recovered by their stable record key even if the
-publisher's image has subsequently disappeared. Existing text-only posts are not
-rewritten retroactively. A real upload and visible card should be checked when
-live posting is deliberately enabled; preview itself never uploads a blob.
+The bot deliberately omits the `embed` field from post records. There are no
+uploaded photos, screenshots, graphics, external preview cards or generated
+summaries. The low-level post writer rejects any attempted media/card embed,
+even if a caller or old feed metadata supplies one. Setting an image-enabled
+publisher policy is rejected during configuration validation.
+
+The full original article URL stays clickable through a rich-text link facet.
+Required credits are preserved; the headline is shortened only if needed for
+Bluesky's 300-character limit. Missing or overlong required credits hold the
+story for review. No copyrighted article body is publicly republished.
+
+Historical posts and duplicate-protection records are not rewritten or deleted.
+Old `image_error` holds remain readable for audit and manual review, but future
+publication does not require images. Copyright and publisher terms still apply
+to text and attribution; omitting images does not waive those requirements.
 
 ## Local verification
 

@@ -82,16 +82,15 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(item["image_policy"], "omit")
         self.assertEqual(item["license_name"], "CC BY 4.0")
 
-    def test_attributed_card_publishes_without_photo_or_image_upload(self):
+    def test_attributed_post_contains_no_embed_or_image_download(self):
         client = FakeBluesky()
-        with patch.object(bot, "download", return_value=self.html), patch.object(bot.publisher_images, "upload_thumbnail") as upload:
+        with patch.object(bot, "download", return_value=self.html) as download:
             bot.publish_article(client, self.item)
-        upload.assert_not_called()
+        download.assert_called_once_with(self.item["link"])
         record = client.get_record(common.POST_COLLECTION, common.record_key(self.item))["value"]
-        self.assertNotIn("thumb", record["embed"]["external"])
+        self.assertNotIn("embed", record)
         self.assertIn("By: Jane Reporter", record["text"])
         self.assertIn("example.org | EDJNet", record["text"])
-        self.assertIn("https://example.org/original", record["embed"]["external"]["description"])
         for facet in record["facets"]:
             bounds = facet["index"]
             label = record["text"].encode()[bounds["byteStart"]:bounds["byteEnd"]].decode()
@@ -114,23 +113,61 @@ class SourceTests(unittest.TestCase):
         feed = next(f for f in self.config["feeds"] if f["source_name"] == "Mongabay")
         item = {**self.item, **feed, "link": "https://news.mongabay.com/2026/11/a/"}
         photo_credit = b'<article>Story</article><figcaption>Photo <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a></figcaption>'
-        card = publication.prepare_attributed_card(item, lambda _: photo_credit)
-        self.assertEqual(card["image_policy"], "omit")
+        metadata = publication.prepare_attribution(item, lambda _: photo_credit)
+        self.assertEqual(metadata["format"], "text-only")
         self.assertEqual(item["license_name"], "CC BY-ND 4.0")
 
     def test_wordpress_editor_metadata_does_not_replace_the_feed_byline(self):
         item = deepcopy(self.item)
-        publication.prepare_attributed_card(item, lambda _: b'<meta name="author" content="Website uploader">' + self.html)
+        publication.prepare_attribution(item, lambda _: b'<meta name="author" content="Website uploader">' + self.html)
         self.assertEqual(item["author"], "Jane Reporter")
 
     def test_explicit_republication_restriction_holds(self):
         with self.assertRaises(common.SetupError):
-            publication.prepare_attributed_card(self.item, lambda _: self.html + b'<p>This article may not be republished.</p>')
+            publication.prepare_attribution(self.item, lambda _: self.html + b'<p>This article may not be republished.</p>')
 
     def test_missing_global_voices_licence_cannot_post(self):
         feed = next(f for f in self.config["feeds"] if f["source_name"] == "Global Voices")
         with self.assertRaises(common.SetupError):
-            publication.prepare_attributed_card({**self.item, **feed}, lambda _: b'<article>Story</article>')
+            publication.prepare_attribution({**self.item, **feed}, lambda _: b'<article>Story</article>')
+
+    def test_every_configured_publisher_posts_without_embeds_or_image_requests(self):
+        for feed in self.config["feeds"]:
+            with self.subTest(source=feed["source_name"]):
+                html = self.html if feed["source_name"] == "EDJNet" else b'<article>Story</article>'
+                html += b'<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a><meta property="og:image" content="https://images.example/photo.jpg">'
+                item = {**feed, "author": "Jane Reporter", "title": "Original headline",
+                        "link": feed["feed_url"].split("?")[0].rstrip("/") + "/story",
+                        "embed": {"image": "untrusted-feed-image"}, "image_url": "https://images.example/photo.jpg"}
+                client = FakeBluesky()
+                with patch.object(bot, "download", return_value=html) as download:
+                    bot.publish_article(client, item)
+                if feed["source_name"] in publication.POLICIES:
+                    download.assert_called_once_with(item["link"])
+                else:
+                    download.assert_not_called()
+                record = client.get_record(common.POST_COLLECTION, common.record_key(item))["value"]
+                self.assertNotIn("embed", record)
+                self.assertNotIn("images.example", json.dumps(record))
+                self.assertTrue(record["text"].endswith(item["link"]))
+
+    def test_configuration_cannot_reenable_images_for_any_source(self):
+        for index in range(len(self.config["feeds"])):
+            config = deepcopy(self.config)
+            config["feeds"][index]["image_policy"] = "publisher"
+            with tempfile.TemporaryDirectory() as d:
+                path = Path(d) / "config.json"
+                path.write_text(json.dumps(config))
+                with self.assertRaisesRegex(common.SetupError, "Images are disabled"):
+                    bot.load_config(path)
+
+    def test_low_level_post_writer_rejects_images_and_external_preview_cards(self):
+        client = common.BlueskyClient({"did": "did:plc:example", "handle": "example.bsky.social", "accessJwt": "fake"})
+        with patch.object(client, "call") as request:
+            for kind in ("app.bsky.embed.images", "app.bsky.embed.external"):
+                with self.assertRaisesRegex(common.SetupError, "Text-only"):
+                    client.put_record(common.POST_COLLECTION, "example", {"text": "Headline", "embed": {"$type": kind}})
+        request.assert_not_called()
 
 
 if __name__ == "__main__":

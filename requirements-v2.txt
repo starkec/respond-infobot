@@ -1,1 +1,1 @@
-Pillow==13.0.0
+# Standard library only; no image-processing packages are used.

@@ -21,10 +21,8 @@ def check_feeds(config):
             sample = articles[0]
             text, origin, truncated = bot.article_text(sample, config)
             row.update(sample_url=sample["link"], text_chars=len(text), text_origin=origin, truncated=truncated)
-            if feed.get("image_policy") == "omit":
-                card = bot.prepare_link_card(sample)
-                row["post_preview"] = common.preview_text(sample, sample["source_name"])
-                row["link_card"] = bot.publisher_images.card_preview(card)
+            row["publication"] = bot.prepare_publication(sample)
+            row["post_preview"] = common.preview_text(sample, sample["source_name"])
             return row, sample
         except common.SetupError as exc:
             return {"source": feed["source_name"], "status": "failed", "error": str(exc)}, None
@@ -52,7 +50,7 @@ def check_uva(config, key, samples):
         raise common.SetupError("UvA structured-output smoke check did not recognise the explicit synthetic corruption case.")
     results = [{"source": "Synthetic integration test", "decision": decision["decision"], "status": "passed"}]
     for sample in samples:
-        if sample and sample.get("image_policy") == "omit":
+        if sample and sample["source_name"] in bot.publication.POLICIES:
             decision = bot.classify(sample, config, key)
             results.append({"source": sample["source_name"], "url": sample["link"], "decision": decision["decision"],
                             "checks": decision["checks"], "api_usage": decision.get("api_usage", {}), "status": "passed"})
