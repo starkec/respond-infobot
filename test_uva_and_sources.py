@@ -91,10 +91,14 @@ class SourceTests(unittest.TestCase):
         self.assertNotIn("embed", record)
         self.assertIn("By: Jane Reporter", record["text"])
         self.assertIn("example.org | EDJNet", record["text"])
+        self.assertEqual(self.item["license_name"], "CC BY 4.0")
+        self.assertNotIn("CC BY", record["text"])
+        self.assertEqual(len(record["facets"]), 1)
         for facet in record["facets"]:
             bounds = facet["index"]
             label = record["text"].encode()[bounds["byteStart"]:bounds["byteEnd"]].decode()
-            self.assertIn(label, (self.item["link"], "CC BY 4.0"))
+            self.assertEqual(label, self.item["link"])
+            self.assertEqual(facet["features"][0]["uri"], self.item["link"])
         self.assertLessEqual(len(record["text"]), 300)
 
     def test_nonstandard_edjnet_licence_and_missing_author_hold_before_writes(self):
@@ -149,7 +153,11 @@ class SourceTests(unittest.TestCase):
                 record = client.get_record(common.POST_COLLECTION, common.record_key(item))["value"]
                 self.assertNotIn("embed", record)
                 self.assertNotIn("images.example", json.dumps(record))
-                self.assertTrue(record["text"].endswith(item["link"]))
+                self.assertNotIn("creativecommons.org", json.dumps(record))
+                self.assertEqual(len(record["facets"]), 1)
+                source = item.get("credit_source", feed["source_name"])
+                self.assertEqual(record["text"], "Original headline\n\nSource: " + source
+                                 + "\nBy: Jane Reporter\n" + item["link"])
 
     def test_configuration_cannot_reenable_images_for_any_source(self):
         for index in range(len(self.config["feeds"])):

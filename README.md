@@ -31,7 +31,7 @@ selection of translations, rather than the full German feed.
 | --- | --- | --- | --- |
 | EDJNet | https://www.europeandatajournalism.eu/feed/?post_type=cp_data_news | CC BY 4.0 by default; credit the originating outlet and EDJNet; article-specific alternatives are held | No thumbnails |
 | Mongabay | https://news.mongabay.com/feed/ | Default article-text licence CC BY-ND 4.0; credit author and Mongabay; explicit republication restrictions are held | No thumbnails; photo-caption licences do not license the article text |
-| Global Voices | https://globalvoices.org/feed/ | CC BY 3.0 by default; author, source, original link and licence credit; require a licence signal on the page | No thumbnails |
+| Global Voices | https://globalvoices.org/feed/ | CC BY 3.0 by default; credit author and source; require a licence signal on the page | No thumbnails |
 
 Licence labels in post text are clickable links. EDJNet posts credit the
 originating publisher alongside EDJNet; its original publisher URL is retained
@@ -360,7 +360,6 @@ Original publisher headline
 
 Source: Publisher
 By: Author, when available or required
-CC licence, when applicable (clickable)
 https://publisher.example/original-article
 ```
 
@@ -371,6 +370,8 @@ even if a caller or old feed metadata supplies one. Setting an image-enabled
 publisher policy is rejected during configuration validation.
 
 The full original article URL stays clickable through a rich-text link facet.
+Licence metadata remains in configuration and internal publication records;
+it is not displayed in the post text or added as a separate link facet.
 Required credits are preserved; the headline is shortened only if needed for
 Bluesky's 300-character limit. Missing or overlong required credits hold the
 story for review. No copyrighted article body is publicly republished.

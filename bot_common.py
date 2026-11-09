@@ -124,8 +124,6 @@ def preview_text(article, source):
     credit = f"Source: {source}"
     if article.get("author"):
         credit += "\nBy: " + article["author"]
-    if article.get("license_name"):
-        credit += "\n" + article["license_name"]
     suffix = f"\n\n{credit}\n{article['link']}"
     available = 300 - len(suffix)
     if available < 2:
@@ -151,13 +149,6 @@ def post_record(article, source):
             "features": [{"$type": "app.bsky.richtext.facet#link", "uri": article["link"]}],
         }],
     }
-    if article.get("license_name") and article.get("license_url"):
-        offset = text.rfind(article["license_name"])
-        record["facets"].append({
-            "index": {"byteStart": len(text[:offset].encode("utf-8")),
-                      "byteEnd": len(text[:offset + len(article["license_name"])].encode("utf-8"))},
-            "features": [{"$type": "app.bsky.richtext.facet#link", "uri": article["license_url"]}],
-        })
     return record
 
 
