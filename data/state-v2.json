@@ -407,6 +407,30 @@
       "title": "How we invented the Pancake Index",
       "url": "https://correctiv.org/en/europe/2026/11/09/how-we-invented-the-pancake-index/"
     },
+    "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287": {
+      "api_usage": {
+        "input_tokens": 1504,
+        "output_tokens": 218,
+        "total_tokens": 1722
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-10T18:53:04Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on Greta Thunberg\u2019s climate advocacy and criticism of profits, power and \u2018greenwashing\u2019; it does not allege or describe an abuse of entrusted power for private gain, nor substantive reporting on corruption investigations or enforcement.",
+      "source": "Mongabay",
+      "title": "Greta Thunberg arrives at UN climate talks saying \u2018everything we love is at stake\u2019",
+      "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
+    },
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b": {
       "api_usage": {
         "input_tokens": 3011,
@@ -451,6 +475,30 @@
       "source": "CORRECTIV",
       "title": "Pancake Index",
       "url": "https://correctiv.org/en/europe/2026/11/10/pancake-index/"
+    },
+    "5e6a1b2573be0c6a1ce9630822a7af4323ff0fbc3b17983b8cc15198f8d1c472": {
+      "api_usage": {
+        "input_tokens": 1498,
+        "output_tokens": 147,
+        "total_tokens": 1645
+      },
+      "author": "David Brown",
+      "checked_at": "2026-11-10T18:53:07Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on drought impacts, livelihoods and food/water insecurity among Daasanach pastoralists; it contains no allegations or substantive coverage of abuse of entrusted power or improper private gain.",
+      "source": "Mongabay",
+      "title": "Drought reshapes livelihoods of Kenya\u2019s Daasanach pastoralists, study finds",
+      "url": "https://news.mongabay.com/short-article/2026/11/drought-reshapes-livelihoods-of-kenyas-daasanach-pastoralists-study-finds/"
     },
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801": {
       "api_usage": {
@@ -586,6 +634,30 @@
       "source": "Mongabay",
       "title": "California\u2019s Wolf Divide",
       "url": "https://news.mongabay.com/specials/2026/11/californias-wolf-divide/"
+    },
+    "8f23c9d7945300f1be3380d66a9400794dcab8916ee614804908dd0cdc40f2fb": {
+      "api_usage": {
+        "input_tokens": 1475,
+        "output_tokens": 153,
+        "total_tokens": 1628
+      },
+      "author": "Anne NzouankeuWill Mbuyu",
+      "checked_at": "2026-11-10T18:53:01Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports residents suing a Chinese-controlled mining company over alleged environmental pollution and health impacts; it does not allege abuse of entrusted public or organisational power for private gain or discuss corruption investigations.",
+      "source": "Mongabay",
+      "title": "DRC residents sue Chinese mining company over alleged pollution in Kolwezi",
+      "url": "https://news.mongabay.com/2026/11/drc-residents-sue-chinese-mining-company-over-alleged-pollution-in-kolwezi/"
     },
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99": {
       "api_usage": {
@@ -1096,11 +1168,13 @@
     "52680ab1aa8ef9ae86b6eaa23c46a49dad72dd7585200d4a0c1a900f2bf2481e",
     "5366bddbbf744d8bd15e22755c0e7dabc0bd6a02957687b1d2c409014ea7d533",
     "54e9eed7436c367cb920d5d6b8feea2b0f6d8ac897b5073bf6b15742ce351ad1",
+    "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287",
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b",
     "5c8e56482e9e27d537a0ed3fbe488c0d65cc341f9a0815f2fa0cc53b519dde95",
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
+    "5e6a1b2573be0c6a1ce9630822a7af4323ff0fbc3b17983b8cc15198f8d1c472",
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
@@ -1144,6 +1218,7 @@
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
     "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
+    "8f23c9d7945300f1be3380d66a9400794dcab8916ee614804908dd0cdc40f2fb",
     "8fdd554b423facaf68d2038ee280f232f7eafa36ab2ad25b7274ec903553b3c8",
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99",
     "904d611897b8a0f1be427ca2fd92fec4f6bf9a650bd3c4aa904acc08b77e38dc",
