@@ -359,6 +359,30 @@
       "title": "Katastrophenschutz in Deutschland: Im Ernstfall kommt es auf den Wohnort an",
       "url": "https://correctiv.org/en/current/2026/10/22/katastrophenschutz-in-deutschland-im-ernstfall-kommt-es-auf-den-wohnort-an/"
     },
+    "4a132d1169f022ec0362aa9ab1d77ff7dd978777fdf4988c9a4bd87368fb4f5c": {
+      "api_usage": {
+        "input_tokens": 1517,
+        "output_tokens": 140,
+        "total_tokens": 1657
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-10T11:18:32Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on firefly conservation, captive-breeding and habitat restoration in Bali; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "A plan to save Bali\u2019s vanishing fireflies takes root in organic farming",
+      "url": "https://news.mongabay.com/short-article/2026/11/a-plan-to-save-balis-vanishing-fireflies-takes-root-in-organic-farming/"
+    },
     "514f7793f80048d694356ebb0bb158c75aaaebb437b761c65ae0fb56b672e9e7": {
       "api_usage": {
         "input_tokens": 4380,
@@ -515,6 +539,54 @@
       "title": "New US law requires dating apps to include warnings on romance scams",
       "url": "https://www.icij.org/news/2026/10/new-us-law-requires-dating-apps-to-include-warnings-on-romance-scams/"
     },
+    "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259": {
+      "api_usage": {
+        "input_tokens": 1542,
+        "output_tokens": 186,
+        "total_tokens": 1728
+      },
+      "author": "Pippo Carmona",
+      "checked_at": "2026-11-10T11:18:27Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article describes an industrial wastewater spill and environmental harm by a corporation, but contains no allegations of abuse of entrusted power, improper private gain, or investigation/prosecution of corruption.",
+      "source": "Mongabay",
+      "title": "A year after a wastewater spill in the Philippines, communities fight to save a dying sea",
+      "url": "https://news.mongabay.com/2026/11/a-year-after-a-wastewater-spill-in-the-philippines-communities-fight-to-save-a-dying-sea/"
+    },
+    "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f": {
+      "api_usage": {
+        "input_tokens": 1183,
+        "output_tokens": 148,
+        "total_tokens": 1331
+      },
+      "author": "",
+      "checked_at": "2026-11-10T11:18:38Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses ecological and social responses to gray wolves recolonizing California; it contains no allegations or substantive reporting of abuse of power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "California\u2019s Wolf Divide",
+      "url": "https://news.mongabay.com/specials/2026/11/californias-wolf-divide/"
+    },
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99": {
       "api_usage": {
         "input_tokens": 2990,
@@ -535,6 +607,30 @@
       "source": "ICIJ",
       "title": "Kremlin payment firm A7 has been pumping billions in \u2018untraceable\u2019 cash into global financial system",
       "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/"
+    },
+    "9839f615dc45cdfb081fa94337a887a53f14afbc834902454537ad528f368dbc": {
+      "api_usage": {
+        "input_tokens": 2886,
+        "output_tokens": 407,
+        "total_tokens": 3293
+      },
+      "author": "Global Voices East Asia",
+      "checked_at": "2026-11-10T11:18:24Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports a politically charged prosecution and closed-door conviction under Macau\u2019s national security law, alleging abuse of state power, but it contains no allegation that officials sought improper private, family, business, or party gain. It does not substantively cover corruption.",
+      "source": "Global Voices",
+      "title": "Ex-lawmaker sentenced to 12.5 years in prison in closed-door trial in Macau",
+      "url": "https://globalvoices.org/2026/11/10/ex-lawmaker-sentenced-to-12-5-years-in-prison-in-closed-door-trial-in-macau/"
     },
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": {
       "api_usage": {
@@ -690,6 +786,30 @@
       "title": "Pharma giants pay millions to Russian distributor entangled in corruption allegations to win cancer drug business",
       "url": "https://www.icij.org/investigations/cancer-calculus/pharma-giants-pay-millions-to-russian-distributor-entangled-in-corruption-allegations-to-win-cancer-drug-business/"
     },
+    "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15": {
+      "api_usage": {
+        "input_tokens": 1163,
+        "output_tokens": 134,
+        "total_tokens": 1297
+      },
+      "author": "Sandy Watt",
+      "checked_at": "2026-11-10T11:18:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses Shinto shrine guardian forests and tsunami resilience; it does not mention abuse of entrusted power, improper private gain, investigations, or alleged corruption.",
+      "source": "Mongabay",
+      "title": "How did these shrines survive a tsunami?",
+      "url": "https://news.mongabay.com/short-article/2026/11/how-did-these-shrines-survive-a-tsunami/"
+    },
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da": {
       "api_usage": {
         "input_tokens": 895,
@@ -792,6 +912,30 @@
       "source": "OCCRP",
       "title": "South Pacific Ponzi Scam \u201cKing\u201d Noah Musingku Dies",
       "url": "https://www.occrp.org/en/news/south-pacific-ponzi-scam-king-noah-musingku-dies"
+    },
+    "e35ff155a7cedb0641bd3a8d3078c4983838858783d7df06b7a143c5fffeab47": {
+      "api_usage": {
+        "input_tokens": 1490,
+        "output_tokens": 142,
+        "total_tokens": 1632
+      },
+      "author": "Shreya Dasgupta",
+      "checked_at": "2026-11-10T11:18:30Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a conservation rescue of orchids threatened by road development; it contains no allegations or discussion of abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "Tens of thousands of orchids saved from road development in southern India",
+      "url": "https://news.mongabay.com/short-article/2026/11/tens-of-thousands-of-orchids-saved-from-road-development-in-southern-india/"
     },
     "f67e25f5cf95b35d17b2022ce960c81af0dbef5591e5947e9cb44ddd2afe218b": {
       "api_usage": {
@@ -943,6 +1087,7 @@
     "47e8ee10fb17ee419f7ba820445150f188f776aa24f0dc77c5fbbce50bc436e3",
     "490d63fb47530eabcb97b67da155a5794264c48e360aaf8e8d7cf3021efce5cc",
     "493f0dadcbd9a2c2bf4541c530b1b57724bdb6323e43e1cd62efdec03ea8244b",
+    "4a132d1169f022ec0362aa9ab1d77ff7dd978777fdf4988c9a4bd87368fb4f5c",
     "4c8c54bffa8d3402b43a2cd4e375a94d8f7eb33322f994f476e10e7c839d10d7",
     "4d206a4d6516585e30a9a0b7754b75b6470ce7be29ee115e9471d35046ddf845",
     "50e81e4e4ba9ddfc7d0c35564e74dbd89381da7290bd13dea606bbab8a7b0679",
@@ -996,6 +1141,8 @@
     "88596189e1dc1e93eeec3e08daf10906895f94b10f1c0efe02954350390009df",
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005",
+    "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
+    "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
     "8fdd554b423facaf68d2038ee280f232f7eafa36ab2ad25b7274ec903553b3c8",
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99",
@@ -1004,6 +1151,7 @@
     "93842ee99e5b3fccdc0be32cee4325089a91a344934a37ff181f4d8a064fc700",
     "96b37c9b71c024dc4f04fd78a3df8eb1688a1c992db10674a33ab58ac39cb791",
     "97120f26cae028120e881d78ab4443c549a1dbef4cf1f8558fe30924c9e050a6",
+    "9839f615dc45cdfb081fa94337a887a53f14afbc834902454537ad528f368dbc",
     "994b6b3d9dc91f85b906e2e97692d7f817647c0471f00ad847ab55f5c81e5764",
     "9a3f1d31ca6d843e90c0d2b79ca3a486fe9cad0105826eb88ae664ce8e45293e",
     "9bc3fe4a67a00351b3ae60a45aad7a790e8ff27d61b9d050e9d73d6d23b5fdcc",
@@ -1045,6 +1193,7 @@
     "c056fce9d2fa72315ca3a196eab9acd6df91afbcbc0b91fbc9f756a0f75758ea",
     "c10ff0220dcd5c128ecaf1e8dcfce97eb179a32ac331aadc09d7ccd2676d2379",
     "c210778bbcc58c75f37d9ef4758df1e53fa458fe7ceab03503ee120c49aebaa3",
+    "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15",
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da",
     "c5be85373b075d7e55dbba834558df2f88fd94ee2dc36155b3a1583e6ee706eb",
     "c67dbdb399a9bd4bb30ba8b01bece9cde69d8bbdd2c8fec24b72d00180a12e39",
@@ -1078,6 +1227,7 @@
     "e0fa8a5c7916b70307f6b4461ba60cca8c24b748cc3990629b5c4da55ad77bef",
     "e146157b44a1e87e9fe41dba0dffbfbb271b5ef3a69a6a77baf2a8c670edeef5",
     "e1aae06a6c4326ebcca70f83433cd9cef28114ab91878f46dbbd0206b22dd02c",
+    "e35ff155a7cedb0641bd3a8d3078c4983838858783d7df06b7a143c5fffeab47",
     "e58a7148f74faa5523c686bb702dd2892b61917ade84670d2d0449f7b04fb9d9",
     "e5c08647d572e95a85f2417c092765588d031066a2d758137c8e4694a3117137",
     "e64217509b7a416959bbee28778ddb00d81b6eeef6f1069cf7b9b9c8ab96b933",
