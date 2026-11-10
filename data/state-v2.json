@@ -71,6 +71,58 @@
       "title": "How Beijing\u2019s Africa ambitions, financed by China\u2019s mega banks, triggered a crisis in Zambia",
       "url": "https://www.icij.org/investigations/china-capital/how-beijings-africa-ambitions-financed-by-chinas-mega-banks-triggered-a-crisis-in-zambia/"
     },
+    "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671": {
+      "api_usage": {
+        "input_tokens": 1463,
+        "output_tokens": 140,
+        "total_tokens": 1603
+      },
+      "author": "Madhu RaoNik Sekhran",
+      "checked_at": "2026-11-10T02:59:36Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses rangers and conservation workforce at COP17; it does not allege abuse of entrusted power, improper private gain, or substantive corruption investigations or allegations.",
+      "source": "Mongabay",
+      "title": "Rangers\u2019 role must be built into biodiversity conservation commitments (commentary)",
+      "url": "https://news.mongabay.com/2026/11/rangers-role-must-be-built-into-biodiversity-conservation-commitments-commentary/"
+    },
+    "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": {
+      "api_usage": {
+        "input_tokens": 3964,
+        "output_tokens": 320,
+        "total_tokens": 4284
+      },
+      "author": "Viera Zuborova",
+      "checked_at": "2026-11-10T02:59:51Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "neutrality no party outlet can buy, and are funded by law rather than by a market. That makes them hard to out-compete and easy to control through the board or the budget. Hungary shows the captured version. After 2010,",
+        "Slovakia\u2019s broadcasting law, passed in June 2024 , rewired the council that appoints the director. According to Denn\u00edk N\u2019s Filip Struh\u00e1rik and Lucia Osvaldov\u00e1, that council has since been chaired by people who also work",
+        "funding model was built to protect the broadcaster: in 2023 the license fee was replaced by a fixed 0.17 percent of GDP to keep the executive\u2019s hands off the money. Robert Fico\u2019s government rewrote the number, cutting"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article documents systematic efforts by political actors to change appointment rules, cut funding and purge staff at public broadcasters\u2014actions that describe alleged abuses of entrusted public power to secure partisan advantage and are the main subject of the piece.",
+      "source": "CORRECTIV",
+      "title": "First the Broadcaster: Why Autocrats Target Broadcasting",
+      "url": "https://correctiv.org/en/europe/2026/11/02/first-the-broadcaster-why-autocrats-target-broadcasting/"
+    },
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d": {
       "api_usage": {
         "input_tokens": 1722,
@@ -214,6 +266,30 @@
       "title": "Albanian PM Offers Dialogue Amid Crackdown on Violent Protests",
       "url": "https://www.occrp.org/en/news/albanian-pm-offers-dialogue-amid-crackdown-on-violent-protests"
     },
+    "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02": {
+      "api_usage": {
+        "input_tokens": 1481,
+        "output_tokens": 141,
+        "total_tokens": 1622
+      },
+      "author": "Matthew Burkhart",
+      "checked_at": "2026-11-10T02:59:39Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports ecological research on tree mortality following the El Ni\u00f1o drought in Papua New Guinea. It contains no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption or related investigations.",
+      "source": "Mongabay",
+      "title": "El Ni\u00f1o\u2019s hidden toll on trees emerges years later in Papua New Guinea rainforest",
+      "url": "https://news.mongabay.com/2026/11/el-ninos-hidden-toll-on-trees-emerges-years-later-in-papua-new-guinea-rainforest/"
+    },
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990": {
       "api_usage": {
         "input_tokens": 4710,
@@ -283,6 +359,30 @@
       "title": "Katastrophenschutz in Deutschland: Im Ernstfall kommt es auf den Wohnort an",
       "url": "https://correctiv.org/en/current/2026/10/22/katastrophenschutz-in-deutschland-im-ernstfall-kommt-es-auf-den-wohnort-an/"
     },
+    "514f7793f80048d694356ebb0bb158c75aaaebb437b761c65ae0fb56b672e9e7": {
+      "api_usage": {
+        "input_tokens": 4380,
+        "output_tokens": 146,
+        "total_tokens": 4526
+      },
+      "author": "Frida Thurm",
+      "checked_at": "2026-11-10T03:00:01Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article explains methodology and data sources for a \u2018Pancake Index\u2019 measuring food affordability; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or investigations related to corruption.",
+      "source": "CORRECTIV",
+      "title": "How we invented the Pancake Index",
+      "url": "https://correctiv.org/en/europe/2026/11/09/how-we-invented-the-pancake-index/"
+    },
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b": {
       "api_usage": {
         "input_tokens": 3011,
@@ -303,6 +403,30 @@
       "source": "OCCRP",
       "title": "In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes",
       "url": "https://www.occrp.org/en/scoop/in-a-vienna-bakery-a-sweet-scent-of-pastry-and-a-backdoor-for-serbian-votes"
+    },
+    "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59": {
+      "api_usage": {
+        "input_tokens": 4633,
+        "output_tokens": 178,
+        "total_tokens": 4811
+      },
+      "author": "Frida Thurm",
+      "checked_at": "2026-11-10T02:59:58Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article analyses food price inflation and affordability across Europe, mentioning retailer profit margins and market factors but it does not describe abuse of entrusted power, improper private gain through misuse of authority, or substantive allegations/investigations of corruption.",
+      "source": "CORRECTIV",
+      "title": "Pancake Index",
+      "url": "https://correctiv.org/en/europe/2026/11/10/pancake-index/"
     },
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801": {
       "api_usage": {
@@ -346,6 +470,30 @@
       "title": "Smugglers Collected Up to $509M on Europe Routes in 2025",
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
+    "7d32d56b8063265c78ca9c889aa6a35330c81f28e3c53ab62cdb69a29013bcd7": {
+      "api_usage": {
+        "input_tokens": 5611,
+        "output_tokens": 256,
+        "total_tokens": 5867
+      },
+      "author": "Viera Zuborova",
+      "checked_at": "2026-11-10T02:59:46Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article documents state abuse of power (foreign agent laws) to suppress civil society, but does not allege officials abused their roles for private, family, business or party gain. It focuses on political repression and legal mechanisms rather than corruption as defined (abuse for private gain).",
+      "source": "CORRECTIV",
+      "title": "Made in Moscow: The Foreign Agent Law as a Blueprint for Autocrats",
+      "url": "https://correctiv.org/en/latest-stories/international-en/2026/05/07/made-in-moscow-the-foreign-agent-law-as-a-blueprint-for-autocrats/"
+    },
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
       "api_usage": {
         "input_tokens": 1406,
@@ -387,6 +535,34 @@
       "source": "ICIJ",
       "title": "Kremlin payment firm A7 has been pumping billions in \u2018untraceable\u2019 cash into global financial system",
       "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/"
+    },
+    "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": {
+      "api_usage": {
+        "input_tokens": 1489,
+        "output_tokens": 283,
+        "total_tokens": 1772
+      },
+      "author": "Aimee Gabay",
+      "checked_at": "2026-11-10T02:59:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "Bacaja\u00ed), which allows private landowners to build homes and raise livestock in the area. However, the federal government maintains that the state law is invalid since the APA Bacaja\u00ed completely overlaps with the",
+        "camps inside. A Mongabay investigation published in October reveals how the fast-tracked law helped legitimize and encourage hundreds of people to invade the territory. A coordinated social media campaign involving",
+        "federally protected Indigenous land in Par\u00e1 state. In the weeks after the law was approved, hundreds of people invaded the Indigenous land, smashing through security gates, tearing down warning signs and setting up"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a fast-tracked state law overlapping federally protected Indigenous land that enabled private land use and an investigation finding a coordinated social media campaign involving politicians and agribusiness figures that helped legitimize and encourage the invasion, indicating abuse of power for private gain and substantive coverage.",
+      "source": "Mongabay",
+      "title": "Brazil deploys national security force to Indigenous territory following invasion",
+      "url": "https://news.mongabay.com/short-article/2026/11/brazil-deploys-national-security-force-to-indigenous-territory-following-invasion/"
     },
     "a4f88eec5649e3bf5d4aec14de4e278d38e911bc7b1302ba0605887f003c6779": {
       "api_usage": {
@@ -433,6 +609,30 @@
       "source": "OCCRP",
       "title": "From Flights to \u2018Incentives,\u2019 Indonesian Nickel Giant Harita Approved Payments for Local Politicians and Leaders",
       "url": "https://www.occrp.org/en/investigation/from-flights-to-incentives-indonesian-nickel-giant-harita-approved-payments-for-local-politicians-and-leaders"
+    },
+    "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce": {
+      "api_usage": {
+        "input_tokens": 6842,
+        "output_tokens": 157,
+        "total_tokens": 6999
+      },
+      "author": "Mohamed Anwar",
+      "checked_at": "2026-11-10T02:59:55Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article is an investigation of disaster preparedness, emergency planning and civil protection in Germany; it contains no allegations of abuse of entrusted power or improper private gain and does not substantively cover corruption.",
+      "source": "CORRECTIV",
+      "title": "Disaster Preparedness in Germany: In an Emergency, Where You Live Matters",
+      "url": "https://correctiv.org/en/latest-stories/2026/10/22/disaster-management-in-germany-in-an-emergency-it-depends-on-where-you-live/"
     },
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf": {
       "api_usage": {
@@ -655,10 +855,12 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-09",
+  "last_checked_date": "2026-11-10",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
+    "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4o3ktf4mquyfo",
+    "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/46vlsbpj6gvur",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5csomgosh5b3z",
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5tqahiyq5jfbi",
@@ -691,7 +893,9 @@
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b",
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
+    "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671",
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
+    "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
     "216133e36ed70a4e58a9d56eb4d48fe8a4001f26a16ef1bf2374c7d4f0c29e15",
@@ -727,6 +931,7 @@
     "3b8f25daae542a9208109c17859279e6c7b06c6a3ff2b74928419cf6ca815eea",
     "3b9c91b452af52b0c8db07b8c05fcf92c19feb12b78870c1af80aee8c93c9815",
     "3cf58729cfc0917a3ec800b6565126fa6cdbf5fa95212d94112a27b10eb939bf",
+    "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02",
     "3f29401a5421f43d53dd722dfc7e24dcedb860eaa4d4c8ec662c2f08a77b6d00",
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990",
     "44ff3c862d5d759a555fd5c4353384fa105bb915f2bdaec3b903d04f00b63754",
@@ -741,6 +946,7 @@
     "4c8c54bffa8d3402b43a2cd4e375a94d8f7eb33322f994f476e10e7c839d10d7",
     "4d206a4d6516585e30a9a0b7754b75b6470ce7be29ee115e9471d35046ddf845",
     "50e81e4e4ba9ddfc7d0c35564e74dbd89381da7290bd13dea606bbab8a7b0679",
+    "514f7793f80048d694356ebb0bb158c75aaaebb437b761c65ae0fb56b672e9e7",
     "517345c3038162d346d016951e703091d2fde552f8d2fcbe8a4ea9f7fa45164d",
     "52680ab1aa8ef9ae86b6eaa23c46a49dad72dd7585200d4a0c1a900f2bf2481e",
     "5366bddbbf744d8bd15e22755c0e7dabc0bd6a02957687b1d2c409014ea7d533",
@@ -749,6 +955,7 @@
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b",
     "5c8e56482e9e27d537a0ed3fbe488c0d65cc341f9a0815f2fa0cc53b519dde95",
+    "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
@@ -777,6 +984,7 @@
     "79006c1053c8ac21f07139a92f01b09ba2bde226b31e592e60b3a53df0df78c0",
     "7a4e232949ce130b31ea8aef31c6538ac496d2a9f34b081ae5aea3bc6fd767bb",
     "7d149e884630ea9f5d319ae6c7609bbac736709d7dbd439533e059013e8dd27a",
+    "7d32d56b8063265c78ca9c889aa6a35330c81f28e3c53ab62cdb69a29013bcd7",
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
     "812d62b831c2296e2414e9f052a8b3e4eb91ef999e69627230ff7cbc408765fe",
@@ -804,6 +1012,7 @@
     "9efe7b86b4e57b072e6d2875d4a30a11e648dfa250390ff007436c6a1e2e98dd",
     "9ffcb854e8accf95e47445974da14afed69957400aa13d292b195bed8a29bad7",
     "a0a25a74fe009be699b76227f1831de476cacc282d954d91e065228b41a3a328",
+    "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800",
     "a284a2a36a0551751e333beb9fd0c3d9e207da5505804634a3de2b9e920dc2ed",
     "a368545cc94846e126159f5383cdd5a846a7da10e70bdc449d29fbcacf8a26ee",
     "a37f6a59e7ef68bddb31dfeae5606edfaf835d130b4b5c9941da403de6428582",
@@ -819,6 +1028,7 @@
     "af641c7c2570a5196954388e0bf6c05ac75ba5fc5af7d0abcee232c8fcf0d306",
     "b2a995b333e04194386fa0240cbfb5268844723642cc7aad353352083afb7ab7",
     "b3956a7cfd547bf33818603860d618c8ff00fad204feb46c0aabee2201a6b9b6",
+    "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce",
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf",
     "b6e71687b8e4e6ccb92fd999cbe3cb2c51db27dee2fcf7cd767623f0a7c06e4f",
     "b7b56bab430c463403384885b5b210cb15989e33394dfb575b129d4eabb0d8da",

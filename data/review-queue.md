@@ -4,6 +4,40 @@ Use **Actions > Infobot v2 > Run workflow > review** on main.
 Supply the article URL, approve/reject, and a note explaining the decision.
 An approval joins the next live run; this list never approves a story itself.
 
+## Inside the Secretive, Contradictory World of Campaign Ads Funded by AI Super PACs
+
+Source: Bellingcat
+
+Article: https://www.bellingcat.com/news/2026/11/02/ai-super-pacs-political-advertising/
+
+Status: awaiting review
+
+Classifier reason: The article documents alleged concealment of Super PAC spending via shell LLCs and a formal FEC complaint alleging evasion of reporting, showing substantive coverage of potentially corrupt campaign-finance practices and private benefit to donors. However it does not clearly describe an abuse of entrusted public power by an official, so the abuse criterion is uncertain.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
+> PACs in its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC
+
+> by the non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big’s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had “unlawfully evaded federal reporting
+
+> if this was indeed the same entity referred to in Think Big’s filings – began receiving payments from the Super PACs within two to three months of their business registrations. Saurav Ghosh, CLC’s Director of Federal
+
+## Amazon mining boss wanted by Brazil for sheltering Jair Bolsonaro’s spy chief has businesses, properties in Florida
+
+Source: ICIJ
+
+Article: https://www.icij.org/news/2026/10/amazon-mining-boss-wanted-by-brazil-for-sheltering-jair-bolsonaros-spy-chief-has-businesses-properties-in-florida/
+
+Status: awaiting review
+
+Classifier reason: Article reports investigations and allegations about sheltering a former intelligence director and mentions money-laundering probes, but the text does not establish an alleged abuse of entrusted power for private gain or provide substantive corruption details.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
 ## EU Sanctions Envoy Pushes for Action Against Rusal’s Irish Alumina Refinery
 
 Source: OCCRP
@@ -59,37 +93,3 @@ Classifier reason: The story documents large-scale money laundering and a Kremli
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
-
-## Amazon mining boss wanted by Brazil for sheltering Jair Bolsonaro’s spy chief has businesses, properties in Florida
-
-Source: ICIJ
-
-Article: https://www.icij.org/news/2026/10/amazon-mining-boss-wanted-by-brazil-for-sheltering-jair-bolsonaros-spy-chief-has-businesses-properties-in-florida/
-
-Status: awaiting review
-
-Classifier reason: Article reports investigations and allegations about sheltering a former intelligence director and mentions money-laundering probes, but the text does not establish an alleged abuse of entrusted power for private gain or provide substantive corruption details.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
-## Inside the Secretive, Contradictory World of Campaign Ads Funded by AI Super PACs
-
-Source: Bellingcat
-
-Article: https://www.bellingcat.com/news/2026/11/02/ai-super-pacs-political-advertising/
-
-Status: awaiting review
-
-Classifier reason: The article documents alleged concealment of Super PAC spending via shell LLCs and a formal FEC complaint alleging evasion of reporting, showing substantive coverage of potentially corrupt campaign-finance practices and private benefit to donors. However it does not clearly describe an abuse of entrusted public power by an official, so the abuse criterion is uncertain.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
-> PACs in its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC
-
-> by the non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big’s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had “unlawfully evaded federal reporting
-
-> if this was indeed the same entity referred to in Think Big’s filings – began receiving payments from the Super PACs within two to three months of their business registrations. Saurav Ghosh, CLC’s Director of Federal
