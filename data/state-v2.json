@@ -143,6 +143,30 @@
       "title": "Rangers\u2019 role must be built into biodiversity conservation commitments (commentary)",
       "url": "https://news.mongabay.com/2026/11/rangers-role-must-be-built-into-biodiversity-conservation-commitments-commentary/"
     },
+    "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a": {
+      "api_usage": {
+        "input_tokens": 1475,
+        "output_tokens": 143,
+        "total_tokens": 1618
+      },
+      "author": "Abhishyant Kidangoor",
+      "checked_at": "2026-11-11T14:44:36Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses an XPRIZE wildfire technology competition and testing of detection/suppression technologies. It contains no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Testing the next generation of wildfire tech: Interview with XPRIZE Foundation\u2019s Andrea Santy",
+      "url": "https://news.mongabay.com/2026/11/testing-the-next-generation-of-wildfire-tech-interview-with-xprize-foundations-andrea-santy/"
+    },
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": {
       "api_usage": {
         "input_tokens": 3964,
@@ -222,6 +246,30 @@
       "source": "Bellingcat",
       "title": "Inside the Secretive, Contradictory World of Campaign Ads Funded by AI Super PACs",
       "url": "https://www.bellingcat.com/news/2026/11/02/ai-super-pacs-political-advertising/"
+    },
+    "272fee4229bf2095f9f24003c975f589390b61e7e7e97f33bf4062e1af171ed9": {
+      "api_usage": {
+        "input_tokens": 1628,
+        "output_tokens": 263,
+        "total_tokens": 1891
+      },
+      "author": "Alexej Hock",
+      "checked_at": "2026-11-11T14:44:48Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a leaked Russian influence operation, payments and intelligence involvement, but it documents state-directed political interference, not the abuse of entrusted power for improper private gain as defined by Transparency International.",
+      "source": "CORRECTIV",
+      "title": "Hack Exposes Inner Workings of Russian Influence Operation \u201eStorm-1516\u201c",
+      "url": "https://correctiv.org/en/latest-stories/2026/11/11/hack-exposes-inner-workings-of-russian-influence-operation-storm-1516/"
     },
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": {
       "api_usage": {
@@ -338,6 +386,30 @@
       "title": "El Ni\u00f1o\u2019s hidden toll on trees emerges years later in Papua New Guinea rainforest",
       "url": "https://news.mongabay.com/2026/11/el-ninos-hidden-toll-on-trees-emerges-years-later-in-papua-new-guinea-rainforest/"
     },
+    "40ef8bfc039894121e1451a3d1f0b15cafa204a7a94fb31ef8dfb26142a8dcd8": {
+      "api_usage": {
+        "input_tokens": 1489,
+        "output_tokens": 145,
+        "total_tokens": 1634
+      },
+      "author": "Ryan Truscott",
+      "checked_at": "2026-11-11T14:44:43Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes community-driven wildlife stewardship and local enforcement of traditional hunting rules; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Angolan hunters protect Southern Africa\u2019s internationally important wetland",
+      "url": "https://news.mongabay.com/2026/11/angolan-hunters-protect-southern-africas-internationally-important-wetland/"
+    },
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990": {
       "api_usage": {
         "input_tokens": 4710,
@@ -430,6 +502,30 @@
       "source": "Mongabay",
       "title": "A plan to save Bali\u2019s vanishing fireflies takes root in organic farming",
       "url": "https://news.mongabay.com/short-article/2026/11/a-plan-to-save-balis-vanishing-fireflies-takes-root-in-organic-farming/"
+    },
+    "4b5820e35b60ab0eeff40fc88150309090db155b15634ccb61160e81c9cd546d": {
+      "api_usage": {
+        "input_tokens": 1484,
+        "output_tokens": 131,
+        "total_tokens": 1615
+      },
+      "author": "Shanna Hanbury",
+      "checked_at": "2026-11-11T14:44:45Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article is a photography feature about Andrew Zuckerman\u2019s images and creative process; it does not describe abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "What do a bean and a flamingo have in common? Finding the unexpected in nature photos",
+      "url": "https://news.mongabay.com/short-article/2026/11/what-do-a-bean-and-a-flamingo-have-in-common-finding-the-unexpected-in-nature-photos/"
     },
     "514f7793f80048d694356ebb0bb158c75aaaebb437b761c65ae0fb56b672e9e7": {
       "api_usage": {
@@ -547,6 +643,30 @@
       "source": "Mongabay",
       "title": "Drought reshapes livelihoods of Kenya\u2019s Daasanach pastoralists, study finds",
       "url": "https://news.mongabay.com/short-article/2026/11/drought-reshapes-livelihoods-of-kenyas-daasanach-pastoralists-study-finds/"
+    },
+    "5f6ccdf0a7614ee50ea2368790e6031338b299a4b963d4a8de3d381d848b629b": {
+      "api_usage": {
+        "input_tokens": 1511,
+        "output_tokens": 314,
+        "total_tokens": 1825
+      },
+      "author": "Anggita Raissa",
+      "checked_at": "2026-11-11T14:44:22Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports wildlife trafficking and a criminal conviction but does not describe abuse of entrusted power or corruption; it focuses on smuggling and law enforcement actions, not corruption allegations.",
+      "source": "Mongabay",
+      "title": "Investigation continues in Indonesia after first conviction in 3-ton pangolin trafficking case",
+      "url": "https://news.mongabay.com/2026/11/investigation-continues-in-indonesia-after-first-conviction-in-3-ton-pangolin-trafficking-case/"
     },
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801": {
       "api_usage": {
@@ -707,6 +827,30 @@
       "title": "Investigation: Fungus may have killed Atlantic Forest amphibians in the 1970s and \u201980s",
       "url": "https://news.mongabay.com/2026/11/investigation-fungus-may-have-killed-atlantic-forest-amphibians-in-the-1979s-and-80s/"
     },
+    "8ab2e38e412fee2e269363d1cc4a0217dcc59bbe05a78441fa267ef0b66e03c4": {
+      "api_usage": {
+        "input_tokens": 1495,
+        "output_tokens": 149,
+        "total_tokens": 1644
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-11T14:44:39Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on conservation funding shortfalls and search efforts for the saola; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Funding shortages threaten search for critically endangered \u2018Asian unicorn\u2019",
+      "url": "https://news.mongabay.com/short-article/2026/11/funding-shortages-threaten-search-for-critically-endangered-asian-unicorn/"
+    },
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259": {
       "api_usage": {
         "input_tokens": 1542,
@@ -823,6 +967,102 @@
       "source": "Global Voices",
       "title": "Ex-lawmaker sentenced to 12.5 years in prison in closed-door trial in Macau",
       "url": "https://globalvoices.org/2026/11/10/ex-lawmaker-sentenced-to-12-5-years-in-prison-in-closed-door-trial-in-macau/"
+    },
+    "9cbb3aced155e6ed25fad231d04e02599b2954edd4ca73917616fce70b7283fc": {
+      "api_usage": {
+        "input_tokens": 3500,
+        "output_tokens": 177,
+        "total_tokens": 3677
+      },
+      "author": "Guest Contributor",
+      "checked_at": "2026-11-11T14:44:14Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses access to justice and justice systems as infrastructure, but contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption investigations. It addresses systemic justice needs rather than corruption.",
+      "source": "Global Voices",
+      "title": "Justice is the infrastructure the world keeps forgetting",
+      "url": "https://globalvoices.org/2026/11/11/justice-is-the-infrastructure-the-world-keeps-forgetting/"
+    },
+    "9e66b50629e3387029ecf3f7fa6f81920e62203992e39ef212f2763ed91395ee": {
+      "api_usage": {
+        "input_tokens": 1480,
+        "output_tokens": 138,
+        "total_tokens": 1618
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-11T14:44:25Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes traditional beekeeping and conservation by women in Uttarakhand; it does not allege abuse of entrusted power, improper private gain, or substantive coverage of corruption or related investigations.",
+      "source": "Mongabay",
+      "title": "In north India, women protect native bees in traditional home walls",
+      "url": "https://news.mongabay.com/short-article/2026/11/in-north-india-women-protect-native-bees-in-traditional-home-walls/"
+    },
+    "9ff06fd68d37c32e2a6bc54eba436f57bcd52f63577de8bc6a3f63b5ed38a3c3": {
+      "api_usage": {
+        "input_tokens": 1477,
+        "output_tokens": 163,
+        "total_tokens": 1640
+      },
+      "author": "Philip M. Fearnside",
+      "checked_at": "2026-11-11T14:44:41Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article is an environmental commentary on post-election Amazon protection and climate threats; it does not allege or discuss abuse of entrusted power, improper private gain, or substantive corruption investigations.",
+      "source": "Mongabay",
+      "title": "Brazil\u2019s post-election challenge: What President Lula needs to change to keep the Amazon forest standing (commentary)",
+      "url": "https://news.mongabay.com/2026/11/brazils-post-election-challenge-what-president-lula-needs-to-change-to-keep-the-amazon-forest-standing/"
+    },
+    "a061a626161f44e19159282a60450fd4afc16a4c4df26abd5744bc4cb592efb2": {
+      "api_usage": {
+        "input_tokens": 1601,
+        "output_tokens": 149,
+        "total_tokens": 1750
+      },
+      "author": "Eung Sea",
+      "checked_at": "2026-11-11T14:44:17Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports ecological research on Cambodia\u2019s mangrove wildlife and species trends; it contains no allegations or discussion of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Cambodia\u2019s mangrove forests offer vital refuge for threatened wildlife, 7-year study finds",
+      "url": "https://news.mongabay.com/short-article/2026/11/cambodias-mangrove-forests-offer-vital-refuge-for-threatened-wildlife-7-year-study-finds/"
     },
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": {
       "api_usage": {
@@ -949,6 +1189,30 @@
       "source": "ICIJ",
       "title": "\u2018Bought-off, corrupt\u2019: Argentine president attacks ICIJ member Hugo Alconada Mon",
       "url": "https://www.icij.org/news/2026/10/bought-off-corrupt-argentine-president-attacks-icij-member-hugo-alconada-mon/"
+    },
+    "b98e8414c71f99a1de10ccc10f01a438ef296fd24ae589e5ba9abe78d7bd1b61": {
+      "api_usage": {
+        "input_tokens": 1151,
+        "output_tokens": 149,
+        "total_tokens": 1300
+      },
+      "author": "Sandy Watt",
+      "checked_at": "2026-11-11T14:44:28Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a wildlife camera-trap study and conservation threats (hunting, tree loss) with no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Weird and wonderful wildlife revealed in underexplored mountains",
+      "url": "https://news.mongabay.com/short-article/2026/11/weird-and-wonderful-wildlife-revealed-in-underexplored-mountains/"
     },
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac": {
       "api_usage": {
@@ -1152,6 +1416,30 @@
       "title": "A reclusive billionaire, a \u2018fearless\u2019 dealer and a globe-spanning feud over priceless art",
       "url": "https://www.icij.org/investigations/hidden-treasures/a-reclusive-billionaire-a-fearless-dealer-and-a-globe-spanning-feud-over-priceless-art/"
     },
+    "d8c04bcd696e326d2c177ea05391c45c39b6032bd4d8eb1a15b6e19029090e16": {
+      "api_usage": {
+        "input_tokens": 1512,
+        "output_tokens": 478,
+        "total_tokens": 1990
+      },
+      "author": "Basten Gokkon",
+      "checked_at": "2026-11-11T14:44:32Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article alleges forced labor and supply-chain abuses by vessels supplying StarKist, but it does not explicitly describe abuse of entrusted power for improper private gain or frame the wrongdoing as corruption. Additional context is needed to establish a concrete corruption connection.",
+      "source": "Mongabay",
+      "title": "US brand StarKist suspends tuna sourcing from vessels accused of exploiting Indonesian fishers",
+      "url": "https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourcing-from-vessels-accused-of-exploiting-indonesian-fishers/"
+    },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
         "input_tokens": 1430,
@@ -1305,6 +1593,7 @@
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671",
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
+    "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
@@ -1314,6 +1603,7 @@
     "250b48593eb86ab206d04acafc0e70051ce5fd76ee47ec31881a195d2992e370",
     "252624f88b56db4d806c5090b1b5d4aeec533e8c23ae23574ff2ff99be4666fd",
     "2680a9c0b7f0af78f2d0e0b284d08c1426c33687e8972c8a4c925963a49bdfc6",
+    "272fee4229bf2095f9f24003c975f589390b61e7e7e97f33bf4062e1af171ed9",
     "28ccbc04fc48ef89e6aa1c4f03780bb94b3b19df1945e13f366c725f1f8288fa",
     "291116e5b8aecba9bdfc66baf3d21398dfb69d04f3cdce37d085b8575ba5fb9a",
     "292d7fad868a6817fdbae613f8192200fe02d302fb9b63575b3f7b63a19d7913",
@@ -1343,6 +1633,7 @@
     "3cf58729cfc0917a3ec800b6565126fa6cdbf5fa95212d94112a27b10eb939bf",
     "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02",
     "3f29401a5421f43d53dd722dfc7e24dcedb860eaa4d4c8ec662c2f08a77b6d00",
+    "40ef8bfc039894121e1451a3d1f0b15cafa204a7a94fb31ef8dfb26142a8dcd8",
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990",
     "44ff3c862d5d759a555fd5c4353384fa105bb915f2bdaec3b903d04f00b63754",
     "45c3d3327f58d875b0605d0c8a2175e0c2efd0528968f4ca5b275308276fad20",
@@ -1354,6 +1645,7 @@
     "490d63fb47530eabcb97b67da155a5794264c48e360aaf8e8d7cf3021efce5cc",
     "493f0dadcbd9a2c2bf4541c530b1b57724bdb6323e43e1cd62efdec03ea8244b",
     "4a132d1169f022ec0362aa9ab1d77ff7dd978777fdf4988c9a4bd87368fb4f5c",
+    "4b5820e35b60ab0eeff40fc88150309090db155b15634ccb61160e81c9cd546d",
     "4c8c54bffa8d3402b43a2cd4e375a94d8f7eb33322f994f476e10e7c839d10d7",
     "4d206a4d6516585e30a9a0b7754b75b6470ce7be29ee115e9471d35046ddf845",
     "50e81e4e4ba9ddfc7d0c35564e74dbd89381da7290bd13dea606bbab8a7b0679",
@@ -1369,6 +1661,7 @@
     "5c8e56482e9e27d537a0ed3fbe488c0d65cc341f9a0815f2fa0cc53b519dde95",
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
     "5e6a1b2573be0c6a1ce9630822a7af4323ff0fbc3b17983b8cc15198f8d1c472",
+    "5f6ccdf0a7614ee50ea2368790e6031338b299a4b963d4a8de3d381d848b629b",
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801",
     "609280de9a94fda74157943c5b873b75e888b40c6fe5b78453fd5b2a275456e2",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
@@ -1412,6 +1705,7 @@
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005",
     "8a2ff82ae85935354d70f2e41e7f9de511d659124813bc5029b21ac0b135968b",
+    "8ab2e38e412fee2e269363d1cc4a0217dcc59bbe05a78441fa267ef0b66e03c4",
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
     "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
@@ -1429,8 +1723,12 @@
     "9bc3fe4a67a00351b3ae60a45aad7a790e8ff27d61b9d050e9d73d6d23b5fdcc",
     "9be84e6c81b114b5ff156932b1e53914da17d3670b1bb33064c93796d76c2901",
     "9cb8e8fe0d24271bca9832a934c6ea2f1bed498180a667968c652ed62e7b9e07",
+    "9cbb3aced155e6ed25fad231d04e02599b2954edd4ca73917616fce70b7283fc",
+    "9e66b50629e3387029ecf3f7fa6f81920e62203992e39ef212f2763ed91395ee",
     "9efe7b86b4e57b072e6d2875d4a30a11e648dfa250390ff007436c6a1e2e98dd",
+    "9ff06fd68d37c32e2a6bc54eba436f57bcd52f63577de8bc6a3f63b5ed38a3c3",
     "9ffcb854e8accf95e47445974da14afed69957400aa13d292b195bed8a29bad7",
+    "a061a626161f44e19159282a60450fd4afc16a4c4df26abd5744bc4cb592efb2",
     "a0a25a74fe009be699b76227f1831de476cacc282d954d91e065228b41a3a328",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800",
     "a284a2a36a0551751e333beb9fd0c3d9e207da5505804634a3de2b9e920dc2ed",
@@ -1454,6 +1752,7 @@
     "b7b56bab430c463403384885b5b210cb15989e33394dfb575b129d4eabb0d8da",
     "b8850b9424f6121a0cac966f89cb1139651245804414e5a02abc6705332ceff8",
     "b9682fef22139c9a4a12e451d5419cd1edf8cb042056e3054258a512e212b2bc",
+    "b98e8414c71f99a1de10ccc10f01a438ef296fd24ae589e5ba9abe78d7bd1b61",
     "bc1b2cbae2aca30271f874edc4ebbcdd5a4dce6cb0c990e31454b300449ced0d",
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc",
     "bd1fe13cb999c4be165cc229a14be0070ec7f8765eecb760d1ab0afe35869bcd",
@@ -1486,6 +1785,7 @@
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
     "d7e4cdbe4f8272f0db94d2eb5019430c20769f26ff9c7440cf75007ce711eaef",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb",
+    "d8c04bcd696e326d2c177ea05391c45c39b6032bd4d8eb1a15b6e19029090e16",
     "d8d373dad3e2fc7d728b95c754214d902f0957e7f6b16d52807c8eb7984cdc32",
     "d8d8b095f3b58c07698ef228ed05b6a7405edf8093f6dfb52dbc3f78462afa13",
     "d91b555839c22525da0c4d16d12aa2a94ce1527931e92e0c5cb80fd1e6a21d35",
