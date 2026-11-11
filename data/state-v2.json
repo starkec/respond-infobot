@@ -95,6 +95,30 @@
       "title": "How Beijing\u2019s Africa ambitions, financed by China\u2019s mega banks, triggered a crisis in Zambia",
       "url": "https://www.icij.org/investigations/china-capital/how-beijings-africa-ambitions-financed-by-chinas-mega-banks-triggered-a-crisis-in-zambia/"
     },
+    "17075e2c26cbdb9730625976ea6bfd86b4ec5a1caff5c7912437d713ba9a3a53": {
+      "api_usage": {
+        "input_tokens": 1496,
+        "output_tokens": 138,
+        "total_tokens": 1634
+      },
+      "author": "Carolyn Cowan",
+      "checked_at": "2026-11-11T06:31:31Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses sea level rise and impacts on terrestrial vertebrate habitats; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "Rising seas could reshape habitats for more than 40% of world\u2019s land vertebrates",
+      "url": "https://news.mongabay.com/2026/11/rising-seas-could-reshape-habitats-for-more-than-40-of-worlds-land-vertebrates/"
+    },
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671": {
       "api_usage": {
         "input_tokens": 1463,
@@ -1027,6 +1051,30 @@
       "title": "In Ukraine, youth are finding their voices in the digital democracy",
       "url": "https://globalvoices.org/2026/11/10/in-ukraine-youth-are-finding-their-voices-in-the-digital-democracy/"
     },
+    "cbc943f9a9de0625a18d2ab6520da76ce675e7cd952b26174453b9e8312a6ca7": {
+      "api_usage": {
+        "input_tokens": 3014,
+        "output_tokens": 306,
+        "total_tokens": 3320
+      },
+      "author": "Laura",
+      "checked_at": "2026-11-11T06:31:28Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on government-imposed social media suspension, regulatory changes, and tech-company cooperation raising free expression/privacy concerns, but it does not allege abuse of power for improper private, family, business, or party gain or substantively discuss corruption investigations or corrupt transactions.",
+      "source": "Global Voices",
+      "title": "Restoring social media access comes at a cost in Gabon",
+      "url": "https://globalvoices.org/2026/11/11/estoring-social-media-access-comes-at-a-cost-in-gabon/"
+    },
     "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": {
       "api_usage": {
         "input_tokens": 1820,
@@ -1253,6 +1301,7 @@
     "120863f7a08274db4eb05a59218465b0487abbc771a50ad847a217ae1fc86356",
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b",
+    "17075e2c26cbdb9730625976ea6bfd86b4ec5a1caff5c7912437d713ba9a3a53",
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671",
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
@@ -1423,6 +1472,7 @@
     "c71221afdd9ea8fb2eea23f98e9fe2fef475c9ce4b3d32d0c8b927e0bf63b85c",
     "c713f42f80056e9db262aabfd8f860e3f345f63188dd4de9fc22dea8e4bf4d81",
     "c8fe4c75e56591fa7abea595010b7ad0f0a12165b82f3941a14811aca6517fc2",
+    "cbc943f9a9de0625a18d2ab6520da76ce675e7cd952b26174453b9e8312a6ca7",
     "cd2ffb662cd32b2d7e96ceb4f5f09495c671d2d1f443d746840ac058d7b82bd1",
     "cd495b1d4d7649376c63dd3d9a579ed1e3fd3c383fcea9c9e29d440922b96566",
     "cd4b16d86069a8181c5a35942891fc682a02852f356101d8932431af92ca3763",
