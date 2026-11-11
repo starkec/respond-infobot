@@ -734,6 +734,30 @@
       "title": "Smugglers Collected Up to $509M on Europe Routes in 2025",
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
+    "7ca63eb503b7f2412a1a88318387b11f92ab87ad5b60fbc7d2674c97fd0a250f": {
+      "api_usage": {
+        "input_tokens": 1479,
+        "output_tokens": 145,
+        "total_tokens": 1624
+      },
+      "author": "Latoya Abulu",
+      "checked_at": "2026-11-11T21:46:02Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on biodiversity finance negotiations and DRC\u2019s calls for increased funding; it does not allege or describe abuse of entrusted power, improper private gain, or substantive coverage of corruption investigations.",
+      "source": "Mongabay",
+      "title": "\u2018Developed nations are not honoring their commitments\u2019: DRC negotiator on biodiversity finance",
+      "url": "https://news.mongabay.com/2026/11/developed-nations-are-not-honoring-their-commitments-drc-negotiator-on-biodiversity-finance/"
+    },
     "7d32d56b8063265c78ca9c889aa6a35330c81f28e3c53ab62cdb69a29013bcd7": {
       "api_usage": {
         "input_tokens": 5611,
@@ -943,6 +967,54 @@
       "source": "ICIJ",
       "title": "Kremlin payment firm A7 has been pumping billions in \u2018untraceable\u2019 cash into global financial system",
       "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/"
+    },
+    "961deab99c06c297cff017fa28265bd751c990977c96254843485a5f0e551053": {
+      "api_usage": {
+        "input_tokens": 1497,
+        "output_tokens": 143,
+        "total_tokens": 1640
+      },
+      "author": "Matthew Burkhart",
+      "checked_at": "2026-11-11T21:45:59Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on genetic research describing new howler monkey species; it contains no allegations or discussion of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Genetic study describes two new species of Amazonian howler monkeys",
+      "url": "https://news.mongabay.com/short-article/2026/11/genetic-study-describes-two-new-species-of-amazonian-howler-monkeys/"
+    },
+    "96fc5fea4175cdfdb36a167622dc552e693f06b4cefe86f0dacdd22fb9343b13": {
+      "api_usage": {
+        "input_tokens": 1507,
+        "output_tokens": 198,
+        "total_tokens": 1705
+      },
+      "author": "Edward Carver",
+      "checked_at": "2026-11-11T21:45:51Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports an audit finding MPAs lack effective protection and enforcement and notes destructive fishing, but it does not allege abuse of entrusted power for private gain or describe corrupt officials, investigations, or improper benefits. Coverage is policy/environmental rather than corruption-specific.",
+      "source": "Mongabay",
+      "title": "Audit says Europe\u2019s marine protected areas failing as 2030 deadline looms",
+      "url": "https://news.mongabay.com/2026/11/audit-says-europes-marine-protected-areas-failing-as-2030-deadline-looms/"
     },
     "9839f615dc45cdfb081fa94337a887a53f14afbc834902454537ad528f368dbc": {
       "api_usage": {
@@ -1190,6 +1262,30 @@
       "title": "\u2018Bought-off, corrupt\u2019: Argentine president attacks ICIJ member Hugo Alconada Mon",
       "url": "https://www.icij.org/news/2026/10/bought-off-corrupt-argentine-president-attacks-icij-member-hugo-alconada-mon/"
     },
+    "b5bdbd885c73b3da78f8b7db7b6cfcabab4553283e4f43767d9f8fe3e30bd237": {
+      "api_usage": {
+        "input_tokens": 1543,
+        "output_tokens": 282,
+        "total_tokens": 1825
+      },
+      "author": "Elizabeth Claire Alberts",
+      "checked_at": "2026-11-11T21:45:48Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article details controversial seabed-mining applications and a U.S. permitting process that bypasses a U.N. regulator, but it does not allege specific abuse of entrusted power or improper private gain by officials or companies. Context is uncertain for a corruption finding.",
+      "source": "Mongabay",
+      "title": "US companies apply to explore deep-sea mining in area bordering Pacific island states",
+      "url": "https://news.mongabay.com/2026/11/us-companies-apply-to-explore-deep-sea-mining-in-area-bordering-pacific-island-states/"
+    },
     "b98e8414c71f99a1de10ccc10f01a438ef296fd24ae589e5ba9abe78d7bd1b61": {
       "api_usage": {
         "input_tokens": 1151,
@@ -1364,6 +1460,30 @@
       "title": "Collapsed Surrogacy Agency Loses U.S. Civil Case After Court No-Show",
       "url": "https://www.occrp.org/en/news/collapsed-surrogacy-agency-loses-us-civil-case-after-court-no-show"
     },
+    "cfffa6b159022e3f22295050abe3d48ebebb1f226db8a88075c762025633e087": {
+      "api_usage": {
+        "input_tokens": 1511,
+        "output_tokens": 132,
+        "total_tokens": 1643
+      },
+      "author": "Lu\u00eds Patriani",
+      "checked_at": "2026-11-11T21:45:57Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article describes a long-term ecological drought experiment in the Amazon and contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption-related investigation or enforcement.",
+      "source": "Mongabay",
+      "title": "How would the Amazon react if it dried up? A 25-year-old field study has the answer",
+      "url": "https://news.mongabay.com/2026/11/how-would-the-amazon-react-if-it-dried-up-a-25-year-old-field-study-has-the-answer/"
+    },
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a": {
       "api_usage": {
         "input_tokens": 1503,
@@ -1387,6 +1507,34 @@
       "source": "Mongabay",
       "title": "\u2018You need strong willpower\u2019: IUCN\u2019s Kazi Zenifar Azmiri on being a woman wildlife biologist",
       "url": "https://news.mongabay.com/2026/11/you-need-strong-willpower-iucns-kazi-zenifar-azmiri-on-being-a-woman-wildlife-biologist/"
+    },
+    "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e": {
+      "api_usage": {
+        "input_tokens": 2994,
+        "output_tokens": 357,
+        "total_tokens": 3351
+      },
+      "author": "Daria Dergacheva",
+      "checked_at": "2026-11-11T21:45:43Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "interference. Reuters, citing anonymous Western intelligence officials and documents, reported covert Russian efforts to undermine Pashinyan and support pro-Russian candidates, including through disinformation",
+        "outlets. According to the US-based disinformation monitoring organization NewsGuard, a Russia-linked campaign circulated 31 fabricated stories about Pashinyan in just one week. The stories accused him of election fraud",
+        "and of trying to drag Armenia into a war with Russia. Some of this material imitated international media outlets such as France 24 and Politico . Other stories impersonated Armenian news outlets, including Armenpress"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article documents covert Russia-linked efforts to undermine Armenia\u2019s PM and support pro-Russian candidates via disinformation\u2014an abuse of state authority to secure political benefit\u2014 and provides substantive reporting on those campaigns and their methods.",
+      "source": "Global Voices",
+      "title": "While Russia tries to manipulate information, local civil society is teaching Armenians media literacy",
+      "url": "https://globalvoices.org/2026/11/11/while-russia-tries-to-manipulate-information-local-civil-society-is-teaching-armenians-media-literacy/"
     },
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb": {
       "api_usage": {
@@ -1489,6 +1637,30 @@
       "title": "Tens of thousands of orchids saved from road development in southern India",
       "url": "https://news.mongabay.com/short-article/2026/11/tens-of-thousands-of-orchids-saved-from-road-development-in-southern-india/"
     },
+    "e3c0bb2c35f6bf550b50c4f7a292595d4c0d5591e53d3eabc84f611d416c9d4f": {
+      "api_usage": {
+        "input_tokens": 1495,
+        "output_tokens": 147,
+        "total_tokens": 1642
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-11T21:45:53Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports on an epidemiologist joining Mongabay\u2019s board and pandemic/forest conservation topics; it contains no allegations or discussion of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Epidemiologist Neil Vora joins Mongabay\u2019s board as it expands global reach and planetary health coverage",
+      "url": "https://news.mongabay.com/2026/11/epidemiologist-neil-vora-joins-mongabays-board-as-it-expands-global-reach-and-planetary-health-coverage/"
+    },
     "f67e25f5cf95b35d17b2022ce960c81af0dbef5591e5947e9cb44ddd2afe218b": {
       "api_usage": {
         "input_tokens": 3423,
@@ -1563,6 +1735,7 @@
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/62avbly4xrzto",
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/6e25ptvjxwuew",
     "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/6vyjebrrbozdj",
+    "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7jdswzij6z5xy",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7kyc74gr72xd4",
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/a3m46q3gstrpa",
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/biepgtmnztuav"
@@ -1690,6 +1863,7 @@
     "78524d1ce41bc2124daa3c1720729f316832b66654307cb55889c6af7ff08436",
     "79006c1053c8ac21f07139a92f01b09ba2bde226b31e592e60b3a53df0df78c0",
     "7a4e232949ce130b31ea8aef31c6538ac496d2a9f34b081ae5aea3bc6fd767bb",
+    "7ca63eb503b7f2412a1a88318387b11f92ab87ad5b60fbc7d2674c97fd0a250f",
     "7d149e884630ea9f5d319ae6c7609bbac736709d7dbd439533e059013e8dd27a",
     "7d32d56b8063265c78ca9c889aa6a35330c81f28e3c53ab62cdb69a29013bcd7",
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
@@ -1715,7 +1889,9 @@
     "904d611897b8a0f1be427ca2fd92fec4f6bf9a650bd3c4aa904acc08b77e38dc",
     "90c8b82479b25f2a652a96e038e5bbb1c51130c4c07fe4f13d2ca53c7b351903",
     "93842ee99e5b3fccdc0be32cee4325089a91a344934a37ff181f4d8a064fc700",
+    "961deab99c06c297cff017fa28265bd751c990977c96254843485a5f0e551053",
     "96b37c9b71c024dc4f04fd78a3df8eb1688a1c992db10674a33ab58ac39cb791",
+    "96fc5fea4175cdfdb36a167622dc552e693f06b4cefe86f0dacdd22fb9343b13",
     "97120f26cae028120e881d78ab4443c549a1dbef4cf1f8558fe30924c9e050a6",
     "9839f615dc45cdfb081fa94337a887a53f14afbc834902454537ad528f368dbc",
     "994b6b3d9dc91f85b906e2e97692d7f817647c0471f00ad847ab55f5c81e5764",
@@ -1748,6 +1924,7 @@
     "b3956a7cfd547bf33818603860d618c8ff00fad204feb46c0aabee2201a6b9b6",
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce",
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf",
+    "b5bdbd885c73b3da78f8b7db7b6cfcabab4553283e4f43767d9f8fe3e30bd237",
     "b6e71687b8e4e6ccb92fd999cbe3cb2c51db27dee2fcf7cd767623f0a7c06e4f",
     "b7b56bab430c463403384885b5b210cb15989e33394dfb575b129d4eabb0d8da",
     "b8850b9424f6121a0cac966f89cb1139651245804414e5a02abc6705332ceff8",
@@ -1778,11 +1955,13 @@
     "cdb54425c9228617cd693f37b7d82d594ea0cf289b4d1809460f787ba946f467",
     "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d",
     "ce90d6ab9e3d1dc18fc8c3abbd43c8aaf1e03bd7a2684d69030c6ea722c2ab9d",
+    "cfffa6b159022e3f22295050abe3d48ebebb1f226db8a88075c762025633e087",
     "d07e18c9c694dea7be04bfc372b745120a12ee57392eeb18ec638389b20215e0",
     "d08d6c0a0b796c95181c318b74cd7163d5cfae904905cf652d16bd5359660a70",
     "d14cc2c4cd08967e112e0a1e5b0debb7a6b836264c13dc4f952795d95de3bce8",
     "d189043fe2fd6300a0449eaa95576f71a21c5b4011fbcf2234cb86c27b6011ea",
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
+    "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e",
     "d7e4cdbe4f8272f0db94d2eb5019430c20769f26ff9c7440cf75007ce711eaef",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb",
     "d8c04bcd696e326d2c177ea05391c45c39b6032bd4d8eb1a15b6e19029090e16",
@@ -1803,6 +1982,7 @@
     "e146157b44a1e87e9fe41dba0dffbfbb271b5ef3a69a6a77baf2a8c670edeef5",
     "e1aae06a6c4326ebcca70f83433cd9cef28114ab91878f46dbbd0206b22dd02c",
     "e35ff155a7cedb0641bd3a8d3078c4983838858783d7df06b7a143c5fffeab47",
+    "e3c0bb2c35f6bf550b50c4f7a292595d4c0d5591e53d3eabc84f611d416c9d4f",
     "e58a7148f74faa5523c686bb702dd2892b61917ade84670d2d0449f7b04fb9d9",
     "e5c08647d572e95a85f2417c092765588d031066a2d758137c8e4694a3117137",
     "e64217509b7a416959bbee28778ddb00d81b6eeef6f1069cf7b9b9c8ab96b933",

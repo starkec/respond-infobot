@@ -107,3 +107,17 @@ Classifier reason: Article alleges forced labor and supply-chain abuses by vesse
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
+
+## US companies apply to explore deep-sea mining in area bordering Pacific island states
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/2026/11/us-companies-apply-to-explore-deep-sea-mining-in-area-bordering-pacific-island-states/
+
+Status: awaiting review
+
+Classifier reason: Article details controversial seabed-mining applications and a U.S. permitting process that bypasses a U.N. regulator, but it does not allege specific abuse of entrusted power or improper private gain by officials or companies. Context is uncertain for a corruption finding.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
