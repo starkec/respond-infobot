@@ -1,6 +1,30 @@
 {
   "account_did": "did:plc:lzmlnzqvphebtdx34yt2tn2i",
   "decisions": {
+    "00e3fc8f729f3598d44e5083cca439c4621d34cbed293810b52101cabe1a8e1f": {
+      "api_usage": {
+        "input_tokens": 1471,
+        "output_tokens": 155,
+        "total_tokens": 1626
+      },
+      "author": "Ouma Elvine Tina",
+      "checked_at": "2026-11-11T00:04:54Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses Kenya\u2019s fitness boom, activewear and health trends; it contains no allegations or reporting about abuse of entrusted power, private gain from official acts, investigations or corruption-related enforcement.",
+      "source": "Mongabay",
+      "title": "Is your gym attire setting you up for health problems?",
+      "url": "https://news.mongabay.com/2026/11/is-your-gym-attire-setting-you-up-for-health-problems/"
+    },
     "07add2c9a68eb218db1af1ce02fccaccc3d1c02e443a3f6c9be0a84230f7817f": {
       "api_usage": {
         "input_tokens": 1081,
@@ -521,6 +545,30 @@
       "title": "Can LLMs Supercharge Geolocations? Our Tests Show Big Improvements But Humans Remain Key",
       "url": "https://www.bellingcat.com/resources/2026/10/22/can-llms-supercharge-geolocations-our-tests-show-big-improvements-but-humans-remain-key/"
     },
+    "609280de9a94fda74157943c5b873b75e888b40c6fe5b78453fd5b2a275456e2": {
+      "api_usage": {
+        "input_tokens": 1489,
+        "output_tokens": 143,
+        "total_tokens": 1632
+      },
+      "author": "Mike DiGirolamo",
+      "checked_at": "2026-11-11T00:04:52Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses legal and jurisdictional disputes over seabed mining claims and international law, but contains no allegations of abuse of entrusted power or improper private gain, nor substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "US stakes competing claims to Pacific seabed mining areas, challenging UN authority",
+      "url": "https://news.mongabay.com/podcast/2026/11/us-stakes-competing-claims-to-pacific-seabed-mining-areas-challenging-un-authority/"
+    },
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b": {
       "api_usage": {
         "input_tokens": 1079,
@@ -566,6 +614,30 @@
       "title": "Made in Moscow: The Foreign Agent Law as a Blueprint for Autocrats",
       "url": "https://correctiv.org/en/latest-stories/international-en/2026/05/07/made-in-moscow-the-foreign-agent-law-as-a-blueprint-for-autocrats/"
     },
+    "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2": {
+      "api_usage": {
+        "input_tokens": 1481,
+        "output_tokens": 152,
+        "total_tokens": 1633
+      },
+      "author": "Bernard Chiguvare",
+      "checked_at": "2026-11-11T00:04:56Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses human\u2013elephant conflict, farming methods and land history; it contains no allegations of abuse of entrusted power, improper private gain, or substantive reporting on corruption or investigations.",
+      "source": "Mongabay",
+      "title": "Beat it: Den Staat farmers in South Africa use drumming and fire to deter elephants",
+      "url": "https://news.mongabay.com/2026/11/beat-it-den-staat-farmers-in-south-africa-use-drumming-and-fire-to-deter-elephants/"
+    },
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
       "api_usage": {
         "input_tokens": 1406,
@@ -586,6 +658,30 @@
       "source": "ICIJ",
       "title": "New US law requires dating apps to include warnings on romance scams",
       "url": "https://www.icij.org/news/2026/10/new-us-law-requires-dating-apps-to-include-warnings-on-romance-scams/"
+    },
+    "8a2ff82ae85935354d70f2e41e7f9de511d659124813bc5029b21ac0b135968b": {
+      "api_usage": {
+        "input_tokens": 1528,
+        "output_tokens": 134,
+        "total_tokens": 1662
+      },
+      "author": "Sean Mowbray",
+      "checked_at": "2026-11-11T00:04:58Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports scientific investigation into a fungal pathogen causing amphibian declines; it does not describe abuse of entrusted power, improper private gain, or substantive corruption investigation or enforcement.",
+      "source": "Mongabay",
+      "title": "Investigation: Fungus may have killed Atlantic Forest amphibians in the 1970s and \u201980s",
+      "url": "https://news.mongabay.com/2026/11/investigation-fungus-may-have-killed-atlantic-forest-amphibians-in-the-1979s-and-80s/"
     },
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259": {
       "api_usage": {
@@ -907,6 +1003,30 @@
       "title": "Liechtenstein Discontinued Investigation into Swiss Banker",
       "url": "https://www.occrp.org/en/news/liechtenstein-discontinued-investigation-into-swiss-banker"
     },
+    "c71221afdd9ea8fb2eea23f98e9fe2fef475c9ce4b3d32d0c8b927e0bf63b85c": {
+      "api_usage": {
+        "input_tokens": 2994,
+        "output_tokens": 152,
+        "total_tokens": 3146
+      },
+      "author": "Nurbek Bekmurzaev",
+      "checked_at": "2026-11-11T00:04:48Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article describes an NGO project teaching digital democracy and civic participation for youth in Ukraine; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Global Voices",
+      "title": "In Ukraine, youth are finding their voices in the digital democracy",
+      "url": "https://globalvoices.org/2026/11/10/in-ukraine-youth-are-finding-their-voices-in-the-digital-democracy/"
+    },
     "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": {
       "api_usage": {
         "input_tokens": 1820,
@@ -931,6 +1051,30 @@
       "source": "OCCRP",
       "title": "Collapsed Surrogacy Agency Loses U.S. Civil Case After Court No-Show",
       "url": "https://www.occrp.org/en/news/collapsed-surrogacy-agency-loses-us-civil-case-after-court-no-show"
+    },
+    "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a": {
+      "api_usage": {
+        "input_tokens": 1503,
+        "output_tokens": 170,
+        "total_tokens": 1673
+      },
+      "author": "Usraat Fahmidah",
+      "checked_at": "2026-11-11T00:04:50Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article profiles a wildlife biologist and conservation work (vulture rescue, tracking, field challenges). It contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption or related investigations.",
+      "source": "Mongabay",
+      "title": "\u2018You need strong willpower\u2019: IUCN\u2019s Kazi Zenifar Azmiri on being a woman wildlife biologist",
+      "url": "https://news.mongabay.com/2026/11/you-need-strong-willpower-iucns-kazi-zenifar-azmiri-on-being-a-woman-wildlife-biologist/"
     },
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb": {
       "api_usage": {
@@ -1071,7 +1215,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-10",
+  "last_checked_date": "2026-11-11",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -1088,6 +1232,7 @@
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/biepgtmnztuav"
   },
   "seen": [
+    "00e3fc8f729f3598d44e5083cca439c4621d34cbed293810b52101cabe1a8e1f",
     "01a667cb1fd9cfcea2819986f0e5d6c0899b36f5e09c925023f7c07589524010",
     "0253322edf9859751fb374929fbfca13f17b3fa10a7e7ed1e3e3ccbfc11b0d32",
     "03fe4a1f14be2af2dd8caea190b0d943de172489be0592a11d8e0571b827792b",
@@ -1176,6 +1321,7 @@
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
     "5e6a1b2573be0c6a1ce9630822a7af4323ff0fbc3b17983b8cc15198f8d1c472",
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801",
+    "609280de9a94fda74157943c5b873b75e888b40c6fe5b78453fd5b2a275456e2",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
@@ -1206,6 +1352,7 @@
     "7d32d56b8063265c78ca9c889aa6a35330c81f28e3c53ab62cdb69a29013bcd7",
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
+    "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2",
     "812d62b831c2296e2414e9f052a8b3e4eb91ef999e69627230ff7cbc408765fe",
     "8173a8f14fa4db9cea809a17328ee5929949217836244585bffd51c8ab9585b7",
     "84065038687d9a853229bcf4223d03d9360ee044cba7ddd6d20ca94eba6c3f2e",
@@ -1215,6 +1362,7 @@
     "88596189e1dc1e93eeec3e08daf10906895f94b10f1c0efe02954350390009df",
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005",
+    "8a2ff82ae85935354d70f2e41e7f9de511d659124813bc5029b21ac0b135968b",
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
     "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
@@ -1272,6 +1420,7 @@
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da",
     "c5be85373b075d7e55dbba834558df2f88fd94ee2dc36155b3a1583e6ee706eb",
     "c67dbdb399a9bd4bb30ba8b01bece9cde69d8bbdd2c8fec24b72d00180a12e39",
+    "c71221afdd9ea8fb2eea23f98e9fe2fef475c9ce4b3d32d0c8b927e0bf63b85c",
     "c713f42f80056e9db262aabfd8f860e3f345f63188dd4de9fc22dea8e4bf4d81",
     "c8fe4c75e56591fa7abea595010b7ad0f0a12165b82f3941a14811aca6517fc2",
     "cd2ffb662cd32b2d7e96ceb4f5f09495c671d2d1f443d746840ac058d7b82bd1",
@@ -1284,6 +1433,7 @@
     "d08d6c0a0b796c95181c318b74cd7163d5cfae904905cf652d16bd5359660a70",
     "d14cc2c4cd08967e112e0a1e5b0debb7a6b836264c13dc4f952795d95de3bce8",
     "d189043fe2fd6300a0449eaa95576f71a21c5b4011fbcf2234cb86c27b6011ea",
+    "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
     "d7e4cdbe4f8272f0db94d2eb5019430c20769f26ff9c7440cf75007ce711eaef",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb",
     "d8d373dad3e2fc7d728b95c754214d902f0957e7f6b16d52807c8eb7984cdc32",
