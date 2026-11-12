@@ -119,6 +119,30 @@
       "title": "Rising seas could reshape habitats for more than 40% of world\u2019s land vertebrates",
       "url": "https://news.mongabay.com/2026/11/rising-seas-could-reshape-habitats-for-more-than-40-of-worlds-land-vertebrates/"
     },
+    "188e708e4f83f2f1d8a41ab3afc2a1ef899cf50d146822d0b76f7e34a03da5ad": {
+      "api_usage": {
+        "input_tokens": 3255,
+        "output_tokens": 269,
+        "total_tokens": 3524
+      },
+      "author": "Gina Yauri",
+      "checked_at": "2026-11-12T18:37:36Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports protests, police violence and state repression but does not allege the abuse of entrusted power for improper private gain or discuss corruption investigations. It focuses on public services, budget cuts and rights abuses rather than corrupt enrichment or bribery.",
+      "source": "Global Voices",
+      "title": "Ecuadorian youth unite against neoliberal models and state violence",
+      "url": "https://globalvoices.org/2026/11/12/ecuadorian-youth-unite-against-neoliberal-models-and-state-violence/"
+    },
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671": {
       "api_usage": {
         "input_tokens": 1463,
@@ -785,6 +809,34 @@
       "title": "US stakes competing claims to Pacific seabed mining areas, challenging UN authority",
       "url": "https://news.mongabay.com/podcast/2026/11/us-stakes-competing-claims-to-pacific-seabed-mining-areas-challenging-un-authority/"
     },
+    "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": {
+      "api_usage": {
+        "input_tokens": 1490,
+        "output_tokens": 262,
+        "total_tokens": 1752
+      },
+      "author": "Ashoka Mukpo",
+      "checked_at": "2026-11-12T18:37:43Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "York University-based group reviewed media reports, court documents and other sources to compile the 193-page report, which analyzed the Canadian government\u2019s response to allegations of corruption and human rights",
+        "abuses against 23 firms since 1996. The report said that Canadian officials repeatedly lent diplomatic support to companies accused of serious human rights abuses or lapses in worker safety. In 2017, for example,",
+        "Canada\u2019s High Commissioner to Tanzania met with the country\u2019s Minister of Mines to advocate for Barrick Mining Corporation\u2019s local subsidiary during a dispute over taxes and export policy, per the report. The meeting"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article substantively reports on allegations that Canadian officials intervened diplomatically to support extractive firms accused of corruption and human rights abuses, suggesting abuse of entrusted power to benefit companies.",
+      "source": "Mongabay",
+      "title": "Canadian extractive firms displaced 300,000 in Africa since 1996, report says",
+      "url": "https://news.mongabay.com/short-article/2026/11/canadian-extractive-firms-displaced-300000-in-africa-since-1996-report-says/"
+    },
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c": {
       "api_usage": {
         "input_tokens": 3765,
@@ -1064,6 +1116,30 @@
       "title": "Kremlin payment firm A7 has been pumping billions in \u2018untraceable\u2019 cash into global financial system",
       "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/"
     },
+    "948401d17cd51c8ba62947c783afe6db9c1783c62f66cb6d203b04d601aab3d2": {
+      "api_usage": {
+        "input_tokens": 1518,
+        "output_tokens": 251,
+        "total_tokens": 1769
+      },
+      "author": "Maxwell Radwin",
+      "checked_at": "2026-11-12T18:37:48Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports eviction and contested agricultural plans and mentions land transfers and a public\u2013private partnership, but does not allege or substantively describe abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "After years of speculation, Suriname evicts Mennonites farming in the Amazon",
+      "url": "https://news.mongabay.com/short-article/2026/11/after-years-of-speculation-suriname-evicts-mennonites-farming-in-the-amazon/"
+    },
     "961deab99c06c297cff017fa28265bd751c990977c96254843485a5f0e551053": {
       "api_usage": {
         "input_tokens": 1497,
@@ -1280,6 +1356,30 @@
       "source": "CORRECTIV",
       "title": "Disaster Strikes \u2013 Then What? Gaps in Local Crisis Preparedness",
       "url": "https://correctiv.org/en/europe/2026/10/22/disaster-strikes-then-what-gaps-in-local-crisis-preparedness/"
+    },
+    "a6aa128b712cdfe8c77266431d875075ed07d360b85675cec317974cbd5550e4": {
+      "api_usage": {
+        "input_tokens": 1460,
+        "output_tokens": 146,
+        "total_tokens": 1606
+      },
+      "author": "Sean Mowbray",
+      "checked_at": "2026-11-12T18:37:46Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses climate-driven food security impacts of El Ni\u00f1o and government emergency declarations; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or substantive corruption coverage.",
+      "source": "Mongabay",
+      "title": "Smallholder farmers struggle on El Ni\u00f1o frontline; will the world help?",
+      "url": "https://news.mongabay.com/2026/11/smallholder-farmers-struggle-on-el-nino-frontline-will-the-world-help/"
     },
     "aac139561d3365105a3cebe6a5c96744722544c48404d3f1d02532169dc08f9a": {
       "api_usage": {
@@ -1531,6 +1631,30 @@
       "title": "In Ukraine, youth are finding their voices in the digital democracy",
       "url": "https://globalvoices.org/2026/11/10/in-ukraine-youth-are-finding-their-voices-in-the-digital-democracy/"
     },
+    "ca3b0c0126629d0d8f34ee258863a062b2a638ff4ecc2dbf3fe8ed90751c6c05": {
+      "api_usage": {
+        "input_tokens": 1472,
+        "output_tokens": 159,
+        "total_tokens": 1631
+      },
+      "author": "Dan Yessa",
+      "checked_at": "2026-11-12T18:37:38Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses conservation tensions and community livelihoods near Upemba National Park but contains no allegations of officials abusing entrusted power for private gain or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Communities around DRC\u2019s Upemba National Park say conservation comes at a cost",
+      "url": "https://news.mongabay.com/2026/11/communities-around-drcs-upemba-national-park-say-conservation-comes-at-a-cost/"
+    },
     "cbc943f9a9de0625a18d2ab6520da76ce675e7cd952b26174453b9e8312a6ca7": {
       "api_usage": {
         "input_tokens": 3014,
@@ -1708,6 +1832,30 @@
       "title": "US brand StarKist suspends tuna sourcing from vessels accused of exploiting Indonesian fishers",
       "url": "https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourcing-from-vessels-accused-of-exploiting-indonesian-fishers/"
     },
+    "da9c59073d839dc41ca098efd7625967d8af62b5646e9aa069235d7c1c00889f": {
+      "api_usage": {
+        "input_tokens": 1506,
+        "output_tokens": 141,
+        "total_tokens": 1647
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-12T18:37:40Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses climate impacts and farming practices of tea growers, with no allegations or reporting of abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "Taiwan\u2019s tea growers adapt to climate change by letting nature take control",
+      "url": "https://news.mongabay.com/short-article/2026/11/taiwans-tea-growers-adapt-to-climate-change-by-letting-nature-take-control/"
+    },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
         "input_tokens": 1430,
@@ -1848,6 +1996,7 @@
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4o3ktf4mquyfo",
+    "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/aqtuzhmnsax24",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/46vlsbpj6gvur",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5csomgosh5b3z",
@@ -1884,6 +2033,7 @@
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b",
     "17075e2c26cbdb9730625976ea6bfd86b4ec5a1caff5c7912437d713ba9a3a53",
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
+    "188e708e4f83f2f1d8a41ab3afc2a1ef899cf50d146822d0b76f7e34a03da5ad",
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671",
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
@@ -1966,6 +2116,7 @@
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
     "68dcdcf5d8bfcac2122ad08ba5884c1fe403a147b718fe03cb07f1b8bd370046",
+    "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88",
     "6cbb82d8d9758f61dc4711050702c406c3f1c89debf4fbd42b76ca7747a0983c",
     "6d047b0e5c130f511892afc11717de9fcddca27913f944eb8cfc0cc29b642a0f",
     "6d2df1fe03d6087b21c0b8bfb6192dc4d73dc9d0757e6e1643a6ac9b00610be0",
@@ -2013,6 +2164,7 @@
     "904d611897b8a0f1be427ca2fd92fec4f6bf9a650bd3c4aa904acc08b77e38dc",
     "90c8b82479b25f2a652a96e038e5bbb1c51130c4c07fe4f13d2ca53c7b351903",
     "93842ee99e5b3fccdc0be32cee4325089a91a344934a37ff181f4d8a064fc700",
+    "948401d17cd51c8ba62947c783afe6db9c1783c62f66cb6d203b04d601aab3d2",
     "961deab99c06c297cff017fa28265bd751c990977c96254843485a5f0e551053",
     "96b37c9b71c024dc4f04fd78a3df8eb1688a1c992db10674a33ab58ac39cb791",
     "96fc5fea4175cdfdb36a167622dc552e693f06b4cefe86f0dacdd22fb9343b13",
@@ -2037,6 +2189,7 @@
     "a44866f1afe4f053a13bf6b9dc753c674b050ffbaf117ffc660ec5a899211dd2",
     "a4f88eec5649e3bf5d4aec14de4e278d38e911bc7b1302ba0605887f003c6779",
     "a502e639773a64842d6c8103f392c3f6de8cc5025c316d96dc173edea22c605c",
+    "a6aa128b712cdfe8c77266431d875075ed07d360b85675cec317974cbd5550e4",
     "a6c22379f6d39115de7cb65acdc64a90f91ff31b1939e7f4befd525a13babe8a",
     "a8dd0137d17b8b26c40df4cde196c047226baf53b9b9450f8ac555d90f39a131",
     "aac139561d3365105a3cebe6a5c96744722544c48404d3f1d02532169dc08f9a",
@@ -2073,6 +2226,7 @@
     "c71221afdd9ea8fb2eea23f98e9fe2fef475c9ce4b3d32d0c8b927e0bf63b85c",
     "c713f42f80056e9db262aabfd8f860e3f345f63188dd4de9fc22dea8e4bf4d81",
     "c8fe4c75e56591fa7abea595010b7ad0f0a12165b82f3941a14811aca6517fc2",
+    "ca3b0c0126629d0d8f34ee258863a062b2a638ff4ecc2dbf3fe8ed90751c6c05",
     "cbc943f9a9de0625a18d2ab6520da76ce675e7cd952b26174453b9e8312a6ca7",
     "cd2ffb662cd32b2d7e96ceb4f5f09495c671d2d1f443d746840ac058d7b82bd1",
     "cd495b1d4d7649376c63dd3d9a579ed1e3fd3c383fcea9c9e29d440922b96566",
@@ -2096,6 +2250,7 @@
     "d9b3c01a3c179832813e18c12ff9562a0f6a03049fd6894d63b20adac0cb3bb8",
     "d9e8e89b59b94a3d76e3f1f80c1fc232a61c8f7d5c5ece47b069ac52b8a42128",
     "da208b86985d64c4a1977f1f511507be5493a92d195591934466a1b2b241de99",
+    "da9c59073d839dc41ca098efd7625967d8af62b5646e9aa069235d7c1c00889f",
     "dc2ea624d2380288f14a144e902199025ded04d22599549a77f108b459ffa2de",
     "dc3e5407d03be9132330b44c323f4f2bb281e63c57c3ee5da6f44072ff234cd2",
     "dc4cc40652de7757c05b103ef051b176e7000d18cbf8cc663b5147d3f301c19b",
