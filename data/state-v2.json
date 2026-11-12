@@ -861,6 +861,30 @@
       "title": "Can regenerative school gardens strengthen food security in Cameroon?",
       "url": "https://globalvoices.org/2026/11/12/can-regenerative-school-gardens-strengthen-food-security-in-cameroon/"
     },
+    "7320a48302f8bcb0386acb7c7d83e83079047cd52105dbb951b6958dc6f39f8c": {
+      "api_usage": {
+        "input_tokens": 1483,
+        "output_tokens": 182,
+        "total_tokens": 1665
+      },
+      "author": "Elizabeth Claire Alberts",
+      "checked_at": "2026-11-12T23:54:02Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a government policy proposal to open fishing in a marine reserve; it discusses environmental and cultural concerns and prior directives but contains no allegations of abuse of entrusted power, improper private gain, or substantive corruption investigations.",
+      "source": "Mongabay",
+      "title": "US renews push to open Pacific marine protected area to fishing",
+      "url": "https://news.mongabay.com/short-article/2026/11/us-renews-push-to-open-pacific-marine-protected-area-to-fishing/"
+    },
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b": {
       "api_usage": {
         "input_tokens": 1079,
@@ -1881,6 +1905,30 @@
       "title": "South Pacific Ponzi Scam \u201cKing\u201d Noah Musingku Dies",
       "url": "https://www.occrp.org/en/news/south-pacific-ponzi-scam-king-noah-musingku-dies"
     },
+    "e2a5fc68ea3bfea7c90a3f7a95ced2011df8e90d964af9224f9de590aeef561d": {
+      "api_usage": {
+        "input_tokens": 1497,
+        "output_tokens": 139,
+        "total_tokens": 1636
+      },
+      "author": "Bobby Bascomb",
+      "checked_at": "2026-11-12T23:54:04Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article is about jaguar social behavior and ecological research in the Pantanal; it contains no allegations or discussion of abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "In Brazil\u2019s prey-rich Pantanal, jaguars reveal a surprisingly social side",
+      "url": "https://news.mongabay.com/short-article/2026/11/in-brazils-prey-rich-pantanal-jaguars-reveal-a-surprisingly-social-side/"
+    },
     "e35ff155a7cedb0641bd3a8d3078c4983838858783d7df06b7a143c5fffeab47": {
       "api_usage": {
         "input_tokens": 1490,
@@ -1928,6 +1976,30 @@
       "source": "Mongabay",
       "title": "Epidemiologist Neil Vora joins Mongabay\u2019s board as it expands global reach and planetary health coverage",
       "url": "https://news.mongabay.com/2026/11/epidemiologist-neil-vora-joins-mongabays-board-as-it-expands-global-reach-and-planetary-health-coverage/"
+    },
+    "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c": {
+      "api_usage": {
+        "input_tokens": 2348,
+        "output_tokens": 147,
+        "total_tokens": 2495
+      },
+      "author": "Janine Mendes-Franco",
+      "checked_at": "2026-11-12T23:54:00Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a landmark legal decision on decriminalising consensual sexual acts and LGBTQ+ rights; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption or related investigations.",
+      "source": "Global Voices",
+      "title": "Trinbagonian Jason Jones wins landmark Privy Council judgement deeming \u2018buggery laws\u2019 unconstitutional",
+      "url": "https://globalvoices.org/2026/11/12/trinbagonian-jason-jones-wins-landmark-privy-council-judgement-deeming-buggery-laws-unconstitutional/"
     },
     "f67e25f5cf95b35d17b2022ce960c81af0dbef5591e5947e9cb44ddd2afe218b": {
       "api_usage": {
@@ -2129,6 +2201,7 @@
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c",
     "71d6b19e04252a506608a733253e47d81b63d4d57b92a077ee6731eb46ceec97",
     "72857455d495984473a2a0700196ab1f9889f59088c452465f982c8853fc1736",
+    "7320a48302f8bcb0386acb7c7d83e83079047cd52105dbb951b6958dc6f39f8c",
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b",
     "751c8e9d696ff2dd5860f63efd76bf92e69a8809fb0f51d1c97b3701878edf9c",
     "76721ba4df3a18f5c7ef7da7b0c9ae0a8a68aaf3de07e7a48be3ed46c9320162",
@@ -2261,6 +2334,7 @@
     "e0fa8a5c7916b70307f6b4461ba60cca8c24b748cc3990629b5c4da55ad77bef",
     "e146157b44a1e87e9fe41dba0dffbfbb271b5ef3a69a6a77baf2a8c670edeef5",
     "e1aae06a6c4326ebcca70f83433cd9cef28114ab91878f46dbbd0206b22dd02c",
+    "e2a5fc68ea3bfea7c90a3f7a95ced2011df8e90d964af9224f9de590aeef561d",
     "e35ff155a7cedb0641bd3a8d3078c4983838858783d7df06b7a143c5fffeab47",
     "e3c0bb2c35f6bf550b50c4f7a292595d4c0d5591e53d3eabc84f611d416c9d4f",
     "e58a7148f74faa5523c686bb702dd2892b61917ade84670d2d0449f7b04fb9d9",
@@ -2271,6 +2345,7 @@
     "ec8e8dee0454417924be7160a7cb353f9bef50b2bc7bf9686bbfdb87b626aa10",
     "f11b5c403c62c8db2153a6ff7516f268b7f9ddccf1bd3a5bfe2ba2497177af5f",
     "f175129e200f41dff0406a5dcb924fe19733c1d8da177a916247160895f6ada7",
+    "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c",
     "f2a8d44a67763bff7f304f682f9397ee025bc322a892ee2e86fdf7f61489691c",
     "f3ef4a7336023e694cf65be4e38aa0ba244c355859cbdc301f11f9c390cea26d",
     "f522985ab89ca730ceed793a1ed161464cce664afca869af94067ed0ba0cc052",
