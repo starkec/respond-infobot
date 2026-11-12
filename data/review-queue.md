@@ -94,20 +94,6 @@ Classifier reason: The story documents large-scale money laundering and a Kremli
 - private gain: unknown
 - substantive corruption coverage: unknown
 
-## US brand StarKist suspends tuna sourcing from vessels accused of exploiting Indonesian fishers
-
-Source: Mongabay
-
-Article: https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourcing-from-vessels-accused-of-exploiting-indonesian-fishers/
-
-Status: awaiting review
-
-Classifier reason: Article alleges forced labor and supply-chain abuses by vessels supplying StarKist, but it does not explicitly describe abuse of entrusted power for improper private gain or frame the wrongdoing as corruption. Additional context is needed to establish a concrete corruption connection.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
 ## US companies apply to explore deep-sea mining in area bordering Pacific island states
 
 Source: Mongabay
@@ -117,6 +103,20 @@ Article: https://news.mongabay.com/2026/11/us-companies-apply-to-explore-deep-se
 Status: awaiting review
 
 Classifier reason: Article details controversial seabed-mining applications and a U.S. permitting process that bypasses a U.N. regulator, but it does not allege specific abuse of entrusted power or improper private gain by officials or companies. Context is uncertain for a corruption finding.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
+## US brand StarKist suspends tuna sourcing from vessels accused of exploiting Indonesian fishers
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourcing-from-vessels-accused-of-exploiting-indonesian-fishers/
+
+Status: awaiting review
+
+Classifier reason: Article alleges forced labor and supply-chain abuses by vessels supplying StarKist, but it does not explicitly describe abuse of entrusted power for improper private gain or frame the wrongdoing as corruption. Additional context is needed to establish a concrete corruption connection.
 
 - abuse of entrusted power: unknown
 - private gain: unknown

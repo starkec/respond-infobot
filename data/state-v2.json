@@ -551,6 +551,30 @@
       "title": "How we invented the Pancake Index",
       "url": "https://correctiv.org/en/europe/2026/11/09/how-we-invented-the-pancake-index/"
     },
+    "52e6bd61c2486d3c208bceb4f3a2e26fdee3e9053c21da3662a09c6e3fbf48dd": {
+      "api_usage": {
+        "input_tokens": 1329,
+        "output_tokens": 156,
+        "total_tokens": 1485
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-12T02:33:06Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on sinking the SS United States to create an artificial reef and tourism/fishing benefits. It contains no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption or investigations.",
+      "source": "Mongabay",
+      "title": "This ocean liner was the world\u2019s fastest. It\u2019s being sunk to make the largest artificial reef",
+      "url": "https://news.mongabay.com/short-article/2026/11/this-ocean-liner-was-the-worlds-fastest-its-being-sunk-to-make-the-largest-artificial-reef/"
+    },
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287": {
       "api_usage": {
         "input_tokens": 1504,
@@ -1185,6 +1209,30 @@
       "title": "Disaster Strikes \u2013 Then What? Gaps in Local Crisis Preparedness",
       "url": "https://correctiv.org/en/europe/2026/10/22/disaster-strikes-then-what-gaps-in-local-crisis-preparedness/"
     },
+    "aac139561d3365105a3cebe6a5c96744722544c48404d3f1d02532169dc08f9a": {
+      "api_usage": {
+        "input_tokens": 1500,
+        "output_tokens": 126,
+        "total_tokens": 1626
+      },
+      "author": "Helen WalneSwati Thiyagarajan",
+      "checked_at": "2026-11-12T02:33:09Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article is an environmental commentary about kelp forests and biodiversity, with no allegations or discussion of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "To boost conservation of kelp forests, start by naming them (commentary)",
+      "url": "https://news.mongabay.com/2026/11/to-boost-conservation-of-kelp-forests-start-by-naming-them-commentary/"
+    },
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": {
       "api_usage": {
         "input_tokens": 4888,
@@ -1723,7 +1771,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-11",
+  "last_checked_date": "2026-11-12",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -1825,6 +1873,7 @@
     "514f7793f80048d694356ebb0bb158c75aaaebb437b761c65ae0fb56b672e9e7",
     "517345c3038162d346d016951e703091d2fde552f8d2fcbe8a4ea9f7fa45164d",
     "52680ab1aa8ef9ae86b6eaa23c46a49dad72dd7585200d4a0c1a900f2bf2481e",
+    "52e6bd61c2486d3c208bceb4f3a2e26fdee3e9053c21da3662a09c6e3fbf48dd",
     "5366bddbbf744d8bd15e22755c0e7dabc0bd6a02957687b1d2c409014ea7d533",
     "54e9eed7436c367cb920d5d6b8feea2b0f6d8ac897b5073bf6b15742ce351ad1",
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287",
@@ -1915,6 +1964,7 @@
     "a502e639773a64842d6c8103f392c3f6de8cc5025c316d96dc173edea22c605c",
     "a6c22379f6d39115de7cb65acdc64a90f91ff31b1939e7f4befd525a13babe8a",
     "a8dd0137d17b8b26c40df4cde196c047226baf53b9b9450f8ac555d90f39a131",
+    "aac139561d3365105a3cebe6a5c96744722544c48404d3f1d02532169dc08f9a",
     "abbe566fe3e2cac0f61685c0a48c62f8fc8f7404e8c469d47b3893471aeddf9d",
     "ad3b81aafd8434ab6833e6db26c20fb53412ef6562a6c454cf03a3410b0c5ce5",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7",
