@@ -195,6 +195,30 @@
       "title": "First the Broadcaster: Why Autocrats Target Broadcasting",
       "url": "https://correctiv.org/en/europe/2026/11/02/first-the-broadcaster-why-autocrats-target-broadcasting/"
     },
+    "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be": {
+      "api_usage": {
+        "input_tokens": 1503,
+        "output_tokens": 187,
+        "total_tokens": 1690
+      },
+      "author": "Nguyen Tra My",
+      "checked_at": "2026-11-12T10:22:33Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes environmental and social impacts of a sluice gate and farmer-authority conflicts but contains no allegations or reporting of abuse of entrusted power for private gain, investigations, or corrupt enrichment. It focuses on ecological effects and local tensions, not corruption.",
+      "source": "Mongabay",
+      "title": "Vietnam\u2019s freshwater obsession leaves decades-long scars for Mekong Delta farmers",
+      "url": "https://news.mongabay.com/2026/11/vietnams-freshwater-obsession-leaves-decades-long-scars-for-mekong-delta-farmers/"
+    },
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d": {
       "api_usage": {
         "input_tokens": 1722,
@@ -457,6 +481,30 @@
       "source": "ICIJ",
       "title": "Egyptian court orders closure of news site Mada Masr and fines editor Lina Attalah, sparking international outcry",
       "url": "https://www.icij.org/news/2026/10/egyptian-court-orders-closure-of-news-site-mada-masr-and-fines-editor-lina-attalah-sparking-international-outcry/"
+    },
+    "466515a4e1c2a54ee912f7973b9d4054c314bf73e519a3a1ca76955263173a43": {
+      "api_usage": {
+        "input_tokens": 1505,
+        "output_tokens": 273,
+        "total_tokens": 1778
+      },
+      "author": "Gerald Flynn",
+      "checked_at": "2026-11-12T10:22:30Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports lifting CITES sanctions and illegal wildlife trade activity but does not allege abuse of entrusted power by officials or show public- or corporate-authority being used for private gain; corruption/investigation coverage is incidental to conservation enforcement, not substantive corruption reporting.",
+      "source": "Mongabay",
+      "title": "Wildlife trade regulator CITES lifts sanctions against Laos, prompting conservation concerns",
+      "url": "https://news.mongabay.com/2026/11/wildlife-trade-regulator-cites-lifts-sanctions-against-laos-prompting-conservation-concerns/"
     },
     "4701bde88fee159962f3bf2a7fe7cc78f9c9f1d8b19b2d870feb356dcf621031": {
       "api_usage": {
@@ -736,6 +784,30 @@
       "source": "Mongabay",
       "title": "US stakes competing claims to Pacific seabed mining areas, challenging UN authority",
       "url": "https://news.mongabay.com/podcast/2026/11/us-stakes-competing-claims-to-pacific-seabed-mining-areas-challenging-un-authority/"
+    },
+    "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c": {
+      "api_usage": {
+        "input_tokens": 3765,
+        "output_tokens": 151,
+        "total_tokens": 3916
+      },
+      "author": "Sandra Tuombouh",
+      "checked_at": "2026-11-12T10:22:24Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on school gardens, food security and education programs in Cameroon. It contains no allegations or reporting of abuse of entrusted power, improper private gain, investigations, or other substantive corruption content.",
+      "source": "Global Voices",
+      "title": "Can regenerative school gardens strengthen food security in Cameroon?",
+      "url": "https://globalvoices.org/2026/11/12/can-regenerative-school-gardens-strengthen-food-security-in-cameroon/"
     },
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b": {
       "api_usage": {
@@ -1816,6 +1888,7 @@
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
+    "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be",
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
     "216133e36ed70a4e58a9d56eb4d48fe8a4001f26a16ef1bf2374c7d4f0c29e15",
@@ -1858,6 +1931,7 @@
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990",
     "44ff3c862d5d759a555fd5c4353384fa105bb915f2bdaec3b903d04f00b63754",
     "45c3d3327f58d875b0605d0c8a2175e0c2efd0528968f4ca5b275308276fad20",
+    "466515a4e1c2a54ee912f7973b9d4054c314bf73e519a3a1ca76955263173a43",
     "4701bde88fee159962f3bf2a7fe7cc78f9c9f1d8b19b2d870feb356dcf621031",
     "4713b1827831de6743e94d7d395a7730d9e337b85d0c4f8b4ce4bf926fe07f44",
     "473098c43d99aa6a105ae5a5ee8338443d2b87e747b8b49c42f673548b8b8ba2",
@@ -1901,6 +1975,7 @@
     "6e51fe1ebaa3d1b67e70b34a7436bf9ba1fc1c1def11303ca3f2ad7520edfc36",
     "6e6c4d096e5f342071f6cabc7bc93b3bda1021a6bba9dc24db99ce3264018a61",
     "70d233665e7711267cb44319baad6671d5963c4b1f0320af0f5785fe1cb6862e",
+    "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c",
     "71d6b19e04252a506608a733253e47d81b63d4d57b92a077ee6731eb46ceec97",
     "72857455d495984473a2a0700196ab1f9889f59088c452465f982c8853fc1736",
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b",
