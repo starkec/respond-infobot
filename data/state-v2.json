@@ -506,6 +506,30 @@
       "title": "Egyptian court orders closure of news site Mada Masr and fines editor Lina Attalah, sparking international outcry",
       "url": "https://www.icij.org/news/2026/10/egyptian-court-orders-closure-of-news-site-mada-masr-and-fines-editor-lina-attalah-sparking-international-outcry/"
     },
+    "4524c9f9358089d4774acbf38fd8914235e455b41b7ec23b80079d748e2b9845": {
+      "api_usage": {
+        "input_tokens": 1511,
+        "output_tokens": 134,
+        "total_tokens": 1645
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-13T06:50:52Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses environmental and military planning for Poland\u2019s border and conservation proposals; it does not allege abuse of entrusted power, improper private gain, or substantive corruption-related investigation or enforcement.",
+      "source": "Mongabay",
+      "title": "Can an ancient European forest be saved while securing Poland\u2019s border?",
+      "url": "https://news.mongabay.com/short-article/2026/11/can-an-ancient-european-forest-be-saved-while-securing-polands-border/"
+    },
     "466515a4e1c2a54ee912f7973b9d4054c314bf73e519a3a1ca76955263173a43": {
       "api_usage": {
         "input_tokens": 1505,
@@ -953,6 +977,30 @@
       "source": "CORRECTIV",
       "title": "Made in Moscow: The Foreign Agent Law as a Blueprint for Autocrats",
       "url": "https://correctiv.org/en/latest-stories/international-en/2026/05/07/made-in-moscow-the-foreign-agent-law-as-a-blueprint-for-autocrats/"
+    },
+    "7db86dc389cdd80a8cae9a37b1ec918a1364266049bdfdab9d47f83be3775411": {
+      "api_usage": {
+        "input_tokens": 3002,
+        "output_tokens": 338,
+        "total_tokens": 3340
+      },
+      "author": "Luis Carlos Diaz",
+      "checked_at": "2026-11-13T06:50:50Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article documents abuse of state authority and deaths in custody\u2014an abuse of entrusted power\u2014but it presents human rights violations and medical neglect without any allegation that officials gained privately. The piece is substantive about repression and neglect, not corruption as defined (abuse for private gain).",
+      "source": "Global Voices",
+      "title": "How medical neglect killed Alfredo D\u00edaz in a Venezuelan cell",
+      "url": "https://globalvoices.org/2026/11/13/how-medical-neglect-killed-alfredo-diaz-in-a-venezuelan-cell/"
     },
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2": {
       "api_usage": {
@@ -2063,7 +2111,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-12",
+  "last_checked_date": "2026-11-13",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -2152,6 +2200,7 @@
     "40ef8bfc039894121e1451a3d1f0b15cafa204a7a94fb31ef8dfb26142a8dcd8",
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990",
     "44ff3c862d5d759a555fd5c4353384fa105bb915f2bdaec3b903d04f00b63754",
+    "4524c9f9358089d4774acbf38fd8914235e455b41b7ec23b80079d748e2b9845",
     "45c3d3327f58d875b0605d0c8a2175e0c2efd0528968f4ca5b275308276fad20",
     "466515a4e1c2a54ee912f7973b9d4054c314bf73e519a3a1ca76955263173a43",
     "4701bde88fee159962f3bf2a7fe7cc78f9c9f1d8b19b2d870feb356dcf621031",
@@ -2214,6 +2263,7 @@
     "7ca63eb503b7f2412a1a88318387b11f92ab87ad5b60fbc7d2674c97fd0a250f",
     "7d149e884630ea9f5d319ae6c7609bbac736709d7dbd439533e059013e8dd27a",
     "7d32d56b8063265c78ca9c889aa6a35330c81f28e3c53ab62cdb69a29013bcd7",
+    "7db86dc389cdd80a8cae9a37b1ec918a1364266049bdfdab9d47f83be3775411",
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2",
