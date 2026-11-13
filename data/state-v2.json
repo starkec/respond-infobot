@@ -46,6 +46,30 @@
       "title": "Vu\u010di\u0107 Rejects Russia Sanctions, Blames Foreign Powers for Protests",
       "url": "https://www.occrp.org/en/news/vucic-rejects-russia-sanctions-blames-foreign-powers-for-protests"
     },
+    "0f97381b848f020e989af3bb68ac6b91dd7027fbbdfec103392989b937e946e1": {
+      "api_usage": {
+        "input_tokens": 1496,
+        "output_tokens": 149,
+        "total_tokens": 1645
+      },
+      "author": "Malaka Rodrigo",
+      "checked_at": "2026-11-13T15:26:28Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports wildlife protection operations and arrests for illegal poaching and snares; it does not describe abuse of entrusted power for private gain, corruption allegations, investigations or enforcement of corrupt conduct.",
+      "source": "Mongabay",
+      "title": "As incidents spike, Sri Lanka identifies 17 tuskers considered at high risk",
+      "url": "https://news.mongabay.com/2026/11/as-incidents-spike-sri-lanka-identifies-17-tuskers-considered-at-high-risk/"
+    },
     "117a41b85249be893ae2efcd02607c5fbac388e864ca276dbd7defc305ef98c3": {
       "api_usage": {
         "input_tokens": 959,
@@ -368,6 +392,30 @@
       "title": "Amazon mining boss wanted by Brazil for sheltering Jair Bolsonaro\u2019s spy chief has businesses, properties in Florida",
       "url": "https://www.icij.org/news/2026/10/amazon-mining-boss-wanted-by-brazil-for-sheltering-jair-bolsonaros-spy-chief-has-businesses-properties-in-florida/"
     },
+    "319938c7a7d56a11948d8f8b6bb284b84e18b8741a0cbf508068042ac8bcef6f": {
+      "api_usage": {
+        "input_tokens": 1482,
+        "output_tokens": 120,
+        "total_tokens": 1602
+      },
+      "author": "Sib\u00e9lia Zanon",
+      "checked_at": "2026-11-13T15:26:37Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses ecological role of fruit bats in forest restoration; contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Fruit bats emerge as unlikely allies in the Atlantic Forest restoration",
+      "url": "https://news.mongabay.com/2026/11/fruit-bats-emerge-as-unlikely-allies-in-the-atlantic-forest-restoration/"
+    },
     "34711c2647fff79013c96b9e9467801401badb2ed864628a56e60a3de1b921be": {
       "api_usage": {
         "input_tokens": 1620,
@@ -409,6 +457,30 @@
       "source": "OCCRP",
       "title": "Albanian PM Offers Dialogue Amid Crackdown on Violent Protests",
       "url": "https://www.occrp.org/en/news/albanian-pm-offers-dialogue-amid-crackdown-on-violent-protests"
+    },
+    "3aa6ff99eafada414d21693627caddfd1d7fae450106e88b0009bb00116b1231": {
+      "api_usage": {
+        "input_tokens": 1489,
+        "output_tokens": 147,
+        "total_tokens": 1636
+      },
+      "author": "Arathi Menon",
+      "checked_at": "2026-11-13T15:26:33Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses zoonotic disease risks from wildlife trade and exotic pet handling, not allegations of abuse of entrusted power or improper private gain; no substantive coverage of corruption or related investigations.",
+      "source": "Mongabay",
+      "title": "Animal cafes and exotic pet trade bring wildlife disease risks into public spaces",
+      "url": "https://news.mongabay.com/2026/11/animal-cafes-and-exotic-pet-trade-bring-wildlife-disease-risks-into-public-spaces/"
     },
     "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02": {
       "api_usage": {
@@ -1602,6 +1674,30 @@
       "title": "Weird and wonderful wildlife revealed in underexplored mountains",
       "url": "https://news.mongabay.com/short-article/2026/11/weird-and-wonderful-wildlife-revealed-in-underexplored-mountains/"
     },
+    "bee3c44f0370be6560544454cac95c0a99f28d9ccbe5c6cc68cacd9508594a9c": {
+      "api_usage": {
+        "input_tokens": 1481,
+        "output_tokens": 148,
+        "total_tokens": 1629
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-13T15:26:30Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes citizen tree-mapping and advocacy against a riverfront development project; it does not allege abuse of entrusted power, improper private gain, or substantive coverage of corruption or investigations.",
+      "source": "Mongabay",
+      "title": "In India, volunteers map riverside trees to make a case for urban conservation",
+      "url": "https://news.mongabay.com/short-article/2026/11/in-india-volunteers-map-riverside-trees-to-make-a-case-for-urban-conservation/"
+    },
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac": {
       "api_usage": {
         "input_tokens": 6949,
@@ -1824,6 +1920,30 @@
       "title": "\u2018You need strong willpower\u2019: IUCN\u2019s Kazi Zenifar Azmiri on being a woman wildlife biologist",
       "url": "https://news.mongabay.com/2026/11/you-need-strong-willpower-iucns-kazi-zenifar-azmiri-on-being-a-woman-wildlife-biologist/"
     },
+    "d3aedc238ffe003b2aa3bcdc98865cec5009bb6c2cff532b3dd445cb8702de36": {
+      "api_usage": {
+        "input_tokens": 1513,
+        "output_tokens": 140,
+        "total_tokens": 1653
+      },
+      "author": "Naina Rao",
+      "checked_at": "2026-11-13T15:26:36Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on climate change and El Ni\u00f1o causing drought and fires in Indonesia; it does not allege abuse of entrusted power, improper private gain, or substantive coverage of corruption or related investigations.",
+      "source": "Mongabay",
+      "title": "El Ni\u00f1o drove drought, but climate change intensified Indonesia\u2019s fire crisis: Study",
+      "url": "https://news.mongabay.com/short-article/2026/11/el-nino-drove-drought-but-climate-change-intensified-indonesias-fire-crisis-study/"
+    },
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e": {
       "api_usage": {
         "input_tokens": 2994,
@@ -1927,6 +2047,34 @@
       "source": "Mongabay",
       "title": "Taiwan\u2019s tea growers adapt to climate change by letting nature take control",
       "url": "https://news.mongabay.com/short-article/2026/11/taiwans-tea-growers-adapt-to-climate-change-by-letting-nature-take-control/"
+    },
+    "dc3e2fbbd0b8bb9a5fe147b1bbaf33f48a1c86826a46e9b3ba67dd0ff3e9b5f2": {
+      "api_usage": {
+        "input_tokens": 6647,
+        "output_tokens": 364,
+        "total_tokens": 7011
+      },
+      "author": "Team CORRECTIV.Exile",
+      "checked_at": "2026-11-13T15:26:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "before legal becomes irreversible, before democracy becomes memory. Three weeks before he will swear the oath of office for the third time, designated Czech prime minister Andrej Babi\u0161\u2019s company buys a port. Not a whole",
+        "Agricultural Intervention Fund in Prague, the agency that distributes EU and national farm money to every Czech farmer. It answers to the agriculture minister, who answers to the prime minister. And every crown it pays",
+        "nothing could be recovered. The paying agency: In 2025 the agriculture ministry announced it would reclaim the subsidies paid to Agrofert during his first premiership \u2014 first 5.1 billion crowns, then \u201cmore than seven"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article substantively documents alleged abuse of entrusted power by Andrej Babi\u0161 as prime minister (state agencies answering to the PM approving payments), describes concrete private benefits (dividend, port purchase, trusts benefiting his children and company subsidies), and focuses on investigations, legal steps and institutional failures around these allegations.",
+      "source": "CORRECTIV",
+      "title": "The State as a Private Bank Account",
+      "url": "https://correctiv.org/en/europe/2026/11/13/the-state-as-a-private-bank-account/"
     },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
@@ -2126,6 +2274,7 @@
     "cdf9ea3dee7a7d2fdab4882abcdb7b79db0f6cc100b110c9513dd789123f408d": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/6vyjebrrbozdj",
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7jdswzij6z5xy",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7kyc74gr72xd4",
+    "dc3e2fbbd0b8bb9a5fe147b1bbaf33f48a1c86826a46e9b3ba67dd0ff3e9b5f2": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7sjljrjcfliwu",
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/a3m46q3gstrpa",
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/biepgtmnztuav"
   },
@@ -2143,6 +2292,7 @@
     "0e23ee23fcefa1a960d740e0b9c7d5c06ec38f1fc07d47fb6238c402791d7455",
     "0ec10dfec00a261169d57a7f7cd13b5345244a05b0201f7bd94d5cbae33fad06",
     "0f75511590469791aded30a5e408f04f519cbb1b81e2e83c75043c58628ff343",
+    "0f97381b848f020e989af3bb68ac6b91dd7027fbbdfec103392989b937e946e1",
     "101573aa09b177a1f82cff3f2c62e587a839f6bb16c985ff2a91289f0d55182d",
     "10c8fc9521036b1c3a749ead05643a959e363bb7a3a9e91c752433bf836cf821",
     "10fdbfd9e020b7a28d7dca9e94e7edb50ab1703b1bafe60b77f8cd9701e4411b",
@@ -2182,6 +2332,7 @@
     "2eed5c5afd63e5f5d765615bd54b45c23332925106fcc5ce4585ca49e3b569ac",
     "2f9035c46468d5014dac7192fee61c88a2f5c1d5e4b790a06f40e126b3e72dd7",
     "30804fa98bf9965a612a768607a843f70e2820597c503fefadf2f188c32bbad2",
+    "319938c7a7d56a11948d8f8b6bb284b84e18b8741a0cbf508068042ac8bcef6f",
     "3205e9b96345b7511cf0632973f27022798f72d965ff7c413910a89684814bb8",
     "32372d315d5d21da8f59e4686bc7c4c25bcc8d41cf61d4b0f6eace60f27c8965",
     "32ede1e9f21fdf490ba8681e5edb2cbe93459e6c823a6556c471aca798a4e98b",
@@ -2192,6 +2343,7 @@
     "39e6b6eec3bcca0a5625309ca0913ea27a69f159d2ddd36cf88a7b222ff45dd8",
     "3a1c6210703ea550ec5c4177d02deaf4bf9c7f740d83ad5ade4ce154312c1aa3",
     "3a68a3a519982a6ed18f1cf2e245c6380474061c53723c461b477221ab57b85a",
+    "3aa6ff99eafada414d21693627caddfd1d7fae450106e88b0009bb00116b1231",
     "3b8f25daae542a9208109c17859279e6c7b06c6a3ff2b74928419cf6ca815eea",
     "3b9c91b452af52b0c8db07b8c05fcf92c19feb12b78870c1af80aee8c93c9815",
     "3cf58729cfc0917a3ec800b6565126fa6cdbf5fa95212d94112a27b10eb939bf",
@@ -2336,6 +2488,7 @@
     "bd1fe13cb999c4be165cc229a14be0070ec7f8765eecb760d1ab0afe35869bcd",
     "bde37555f86293342febed08319bfcf81fdea04b30b20ffda3f1dbf8d290d880",
     "be1e4839c2610b94a6201ab0b1214d85efbf79fcb15a33d9acd51373eb613f82",
+    "bee3c44f0370be6560544454cac95c0a99f28d9ccbe5c6cc68cacd9508594a9c",
     "bf2f0b47723b0cff4b9f2b83b8583ee6c29a7cd5df635f0a9252e21fc92e30d7",
     "bf2fa7ae9d1faee61acfbbb94dc97876af33c20163461b9e66555f089e101879",
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac",
@@ -2363,6 +2516,7 @@
     "d14cc2c4cd08967e112e0a1e5b0debb7a6b836264c13dc4f952795d95de3bce8",
     "d189043fe2fd6300a0449eaa95576f71a21c5b4011fbcf2234cb86c27b6011ea",
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
+    "d3aedc238ffe003b2aa3bcdc98865cec5009bb6c2cff532b3dd445cb8702de36",
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e",
     "d7e4cdbe4f8272f0db94d2eb5019430c20769f26ff9c7440cf75007ce711eaef",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb",
@@ -2375,6 +2529,7 @@
     "da208b86985d64c4a1977f1f511507be5493a92d195591934466a1b2b241de99",
     "da9c59073d839dc41ca098efd7625967d8af62b5646e9aa069235d7c1c00889f",
     "dc2ea624d2380288f14a144e902199025ded04d22599549a77f108b459ffa2de",
+    "dc3e2fbbd0b8bb9a5fe147b1bbaf33f48a1c86826a46e9b3ba67dd0ff3e9b5f2",
     "dc3e5407d03be9132330b44c323f4f2bb281e63c57c3ee5da6f44072ff234cd2",
     "dc4cc40652de7757c05b103ef051b176e7000d18cbf8cc663b5147d3f301c19b",
     "dcefcd6523989618b4dc6d5a13c33e72d378624028400e61b12438c3fe85421a",
