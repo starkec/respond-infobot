@@ -25,6 +25,30 @@
       "title": "Is your gym attire setting you up for health problems?",
       "url": "https://news.mongabay.com/2026/11/is-your-gym-attire-setting-you-up-for-health-problems/"
     },
+    "01f3ceea2a743a1b31402a17f5cfa5632463aa3e71ca90dc0e7c9030f682e79f": {
+      "api_usage": {
+        "input_tokens": 2997,
+        "output_tokens": 404,
+        "total_tokens": 3401
+      },
+      "author": "Daria Dergacheva",
+      "checked_at": "2026-11-13T21:40:53Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on media literacy and disinformation; mentions alleged Russian interference in elections but does not substantively cover corruption, abuse of entrusted power, or improper private/party gain within the supplied text.",
+      "source": "Global Voices",
+      "title": "While Russia tries to manipulate information, local civil society is teaching Armenians media literacy",
+      "url": "https://globalvoices.org/2026/11/13/while-russia-tries-to-manipulate-information-local-civil-society-is-teaching-armenians-media-literacy/"
+    },
     "07add2c9a68eb218db1af1ce02fccaccc3d1c02e443a3f6c9be0a84230f7817f": {
       "api_usage": {
         "input_tokens": 1081,
@@ -45,6 +69,30 @@
       "source": "OCCRP",
       "title": "Vu\u010di\u0107 Rejects Russia Sanctions, Blames Foreign Powers for Protests",
       "url": "https://www.occrp.org/en/news/vucic-rejects-russia-sanctions-blames-foreign-powers-for-protests"
+    },
+    "0f5c8ac6fdd5b86f068569256b61335047be2dd1874f716d28609228cc42fb00": {
+      "api_usage": {
+        "input_tokens": 1464,
+        "output_tokens": 134,
+        "total_tokens": 1598
+      },
+      "author": "Don Lyman",
+      "checked_at": "2026-11-13T21:40:59Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses outdoor ecology teaching and a garter snake encounter; it contains no allegations or substantive coverage of abuse of entrusted power, private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "There\u2019s no substitute for getting out of the classroom and into nature (analysis)",
+      "url": "https://news.mongabay.com/2026/11/theres-no-substitute-for-getting-out-of-the-classroom-and-into-nature-analysis/"
     },
     "0f97381b848f020e989af3bb68ac6b91dd7027fbbdfec103392989b937e946e1": {
       "api_usage": {
@@ -788,6 +836,30 @@
       "title": "In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes",
       "url": "https://www.occrp.org/en/scoop/in-a-vienna-bakery-a-sweet-scent-of-pastry-and-a-backdoor-for-serbian-votes"
     },
+    "5b1df8d0f7df9ada3bc955d5b3b21cfbe359ae2de5cf655a103593e3ab9a9b80": {
+      "api_usage": {
+        "input_tokens": 1970,
+        "output_tokens": 275,
+        "total_tokens": 2245
+      },
+      "author": "Brenda Medina",
+      "checked_at": "2026-11-13T21:40:49Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses drugmakers using patents to delay competition and proposed legislation to curb 'patent abuse', but it does not allege abuse of entrusted public power or describe corruption investigations by officials. The piece is policy/industry reporting, not substantiated public\u2011power-for\u2011private\u2011gain corruption.",
+      "source": "ICIJ",
+      "title": "With the new shift in the U.S. Congress, time is running out on bills targeting drug patents",
+      "url": "https://www.icij.org/investigations/cancer-calculus/with-the-new-shift-in-the-u-s-congress-time-is-running-out-on-bills-targeting-drug-patents/"
+    },
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59": {
       "api_usage": {
         "input_tokens": 4633,
@@ -904,6 +976,30 @@
       "source": "Mongabay",
       "title": "US stakes competing claims to Pacific seabed mining areas, challenging UN authority",
       "url": "https://news.mongabay.com/podcast/2026/11/us-stakes-competing-claims-to-pacific-seabed-mining-areas-challenging-un-authority/"
+    },
+    "62b5d88a70778541be986ba38ba7254f727c96cb8ec29d480ac081daef089580": {
+      "api_usage": {
+        "input_tokens": 1351,
+        "output_tokens": 140,
+        "total_tokens": 1491
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-13T21:41:01Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses wildfires' impacts on watersheds and drinking water contamination; it contains no allegations of abuse of entrusted power, improper private gain, or substantive reporting on corruption or investigations.",
+      "source": "Mongabay",
+      "title": "Bigger and more-frequent wildfires threaten water supplies across the US",
+      "url": "https://news.mongabay.com/short-article/2026/11/bigger-and-more-frequent-wildfires-threaten-water-supplies-across-the-us/"
     },
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": {
       "api_usage": {
@@ -1500,6 +1596,30 @@
       "source": "CORRECTIV",
       "title": "Disaster Strikes \u2013 Then What? Gaps in Local Crisis Preparedness",
       "url": "https://correctiv.org/en/europe/2026/10/22/disaster-strikes-then-what-gaps-in-local-crisis-preparedness/"
+    },
+    "a5bf88b212fc0c64ac5895ef908236e75cd0ddf02b1ae18f19a7faf081a7892d": {
+      "api_usage": {
+        "input_tokens": 1478,
+        "output_tokens": 428,
+        "total_tokens": 1906
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-13T21:40:57Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports an investigation into large-scale government procurements of shark meat and transparency concerns, but it does not allege or describe an abuse of entrusted power for improper private gain. The corruption connection is therefore unclear from the supplied text.",
+      "source": "Mongabay",
+      "title": "Mongabay shark meat investigation shortlisted for two journalism awards in Brazil",
+      "url": "https://news.mongabay.com/short-article/2026/11/mongabay-shark-meat-investigation-shortlisted-for-two-journalism-awards-in-brazil/"
     },
     "a6aa128b712cdfe8c77266431d875075ed07d360b85675cec317974cbd5550e4": {
       "api_usage": {
@@ -2197,6 +2317,30 @@
       "title": "Trinbagonian Jason Jones wins landmark Privy Council judgement deeming \u2018buggery laws\u2019 unconstitutional",
       "url": "https://globalvoices.org/2026/11/12/trinbagonian-jason-jones-wins-landmark-privy-council-judgement-deeming-buggery-laws-unconstitutional/"
     },
+    "f4112d64d50ca03da2e6df131b6d97381ec0623f1323b4acce19c334dc88cb01": {
+      "api_usage": {
+        "input_tokens": 1538,
+        "output_tokens": 226,
+        "total_tokens": 1764
+      },
+      "author": "Maxwell Radwin",
+      "checked_at": "2026-11-13T21:41:03Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports illegal activities (deforestation, drug trafficking, gold mining) and organized crime threats to a reserve but does not allege abuse of entrusted power or describe corruption investigations or misuse of office for private gain. It substantiates environmental emergency response, not corruption.",
+      "source": "Mongabay",
+      "title": "Honduras declares \u2018environmental emergency\u2019 in R\u00edo Pl\u00e1tano Biosphere Reserve",
+      "url": "https://news.mongabay.com/short-article/2026/11/honduras-declares-environmental-emergency-in-rio-platano-biosphere-reserve/"
+    },
     "f67e25f5cf95b35d17b2022ce960c81af0dbef5591e5947e9cb44ddd2afe218b": {
       "api_usage": {
         "input_tokens": 3423,
@@ -2281,6 +2425,7 @@
   "seen": [
     "00e3fc8f729f3598d44e5083cca439c4621d34cbed293810b52101cabe1a8e1f",
     "01a667cb1fd9cfcea2819986f0e5d6c0899b36f5e09c925023f7c07589524010",
+    "01f3ceea2a743a1b31402a17f5cfa5632463aa3e71ca90dc0e7c9030f682e79f",
     "0253322edf9859751fb374929fbfca13f17b3fa10a7e7ed1e3e3ccbfc11b0d32",
     "03fe4a1f14be2af2dd8caea190b0d943de172489be0592a11d8e0571b827792b",
     "0476b2d2d0e2706e296160eb4b24d8f1fa356bc6ae5e984b0f076d30e9611b0a",
@@ -2291,6 +2436,7 @@
     "082eaaed314a5b79813d3e503fc74b56b018979fe87a08c76e479c0578c2178b",
     "0e23ee23fcefa1a960d740e0b9c7d5c06ec38f1fc07d47fb6238c402791d7455",
     "0ec10dfec00a261169d57a7f7cd13b5345244a05b0201f7bd94d5cbae33fad06",
+    "0f5c8ac6fdd5b86f068569256b61335047be2dd1874f716d28609228cc42fb00",
     "0f75511590469791aded30a5e408f04f519cbb1b81e2e83c75043c58628ff343",
     "0f97381b848f020e989af3bb68ac6b91dd7027fbbdfec103392989b937e946e1",
     "101573aa09b177a1f82cff3f2c62e587a839f6bb16c985ff2a91289f0d55182d",
@@ -2377,6 +2523,7 @@
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b",
+    "5b1df8d0f7df9ada3bc955d5b3b21cfbe359ae2de5cf655a103593e3ab9a9b80",
     "5c8e56482e9e27d537a0ed3fbe488c0d65cc341f9a0815f2fa0cc53b519dde95",
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
     "5e6a1b2573be0c6a1ce9630822a7af4323ff0fbc3b17983b8cc15198f8d1c472",
@@ -2385,6 +2532,7 @@
     "609280de9a94fda74157943c5b873b75e888b40c6fe5b78453fd5b2a275456e2",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
+    "62b5d88a70778541be986ba38ba7254f727c96cb8ec29d480ac081daef089580",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
@@ -2464,6 +2612,7 @@
     "a44866f1afe4f053a13bf6b9dc753c674b050ffbaf117ffc660ec5a899211dd2",
     "a4f88eec5649e3bf5d4aec14de4e278d38e911bc7b1302ba0605887f003c6779",
     "a502e639773a64842d6c8103f392c3f6de8cc5025c316d96dc173edea22c605c",
+    "a5bf88b212fc0c64ac5895ef908236e75cd0ddf02b1ae18f19a7faf081a7892d",
     "a6aa128b712cdfe8c77266431d875075ed07d360b85675cec317974cbd5550e4",
     "a6c22379f6d39115de7cb65acdc64a90f91ff31b1939e7f4befd525a13babe8a",
     "a8dd0137d17b8b26c40df4cde196c047226baf53b9b9450f8ac555d90f39a131",
@@ -2553,6 +2702,7 @@
     "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c",
     "f2a8d44a67763bff7f304f682f9397ee025bc322a892ee2e86fdf7f61489691c",
     "f3ef4a7336023e694cf65be4e38aa0ba244c355859cbdc301f11f9c390cea26d",
+    "f4112d64d50ca03da2e6df131b6d97381ec0623f1323b4acce19c334dc88cb01",
     "f522985ab89ca730ceed793a1ed161464cce664afca869af94067ed0ba0cc052",
     "f5d347b1cecaec1e949d925ff9baac9f15999259747c50ad708bd3f2cde4f428",
     "f67e25f5cf95b35d17b2022ce960c81af0dbef5591e5947e9cb44ddd2afe218b",

@@ -121,3 +121,17 @@ Classifier reason: Article alleges forced labor and supply-chain abuses by vesse
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
+
+## Mongabay shark meat investigation shortlisted for two journalism awards in Brazil
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/short-article/2026/11/mongabay-shark-meat-investigation-shortlisted-for-two-journalism-awards-in-brazil/
+
+Status: awaiting review
+
+Classifier reason: The article reports an investigation into large-scale government procurements of shark meat and transparency concerns, but it does not allege or describe an abuse of entrusted power for improper private gain. The corruption connection is therefore unclear from the supplied text.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
