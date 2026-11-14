@@ -1263,6 +1263,30 @@
       "title": "Investigation: Fungus may have killed Atlantic Forest amphibians in the 1970s and \u201980s",
       "url": "https://news.mongabay.com/2026/11/investigation-fungus-may-have-killed-atlantic-forest-amphibians-in-the-1979s-and-80s/"
     },
+    "8a973ac7da5d37d5b69fe6bb45c0572b333e0458d3c583e5694928eb219cdc9f": {
+      "api_usage": {
+        "input_tokens": 2344,
+        "output_tokens": 156,
+        "total_tokens": 2500
+      },
+      "author": "Masudul Zarif",
+      "checked_at": "2026-11-14T20:45:09Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses education, infrastructure, AI access, language and inequality in Mozambique but contains no allegations or descriptions of abuse of entrusted power, improper private gain, or investigations/prosecutions related to corruption.",
+      "source": "Global Voices",
+      "title": "Learning under trees in the era of AI: The paradox of education in Mozambique",
+      "url": "https://globalvoices.org/2026/11/14/learning-under-trees-in-the-era-of-ai-the-paradox-of-education-in-mozambique/"
+    },
     "8ab2e38e412fee2e269363d1cc4a0217dcc59bbe05a78441fa267ef0b66e03c4": {
       "api_usage": {
         "input_tokens": 1495,
@@ -2650,6 +2674,7 @@
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005",
     "8a2ff82ae85935354d70f2e41e7f9de511d659124813bc5029b21ac0b135968b",
+    "8a973ac7da5d37d5b69fe6bb45c0572b333e0458d3c583e5694928eb219cdc9f",
     "8ab2e38e412fee2e269363d1cc4a0217dcc59bbe05a78441fa267ef0b66e03c4",
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
     "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f",
