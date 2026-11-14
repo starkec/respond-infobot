@@ -94,6 +94,20 @@ Classifier reason: The story documents large-scale money laundering and a Kremli
 - private gain: unknown
 - substantive corruption coverage: unknown
 
+## Mongabay shark meat investigation shortlisted for two journalism awards in Brazil
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/short-article/2026/11/mongabay-shark-meat-investigation-shortlisted-for-two-journalism-awards-in-brazil/
+
+Status: awaiting review
+
+Classifier reason: The article reports an investigation into large-scale government procurements of shark meat and transparency concerns, but it does not allege or describe an abuse of entrusted power for improper private gain. The corruption connection is therefore unclear from the supplied text.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
 ## US companies apply to explore deep-sea mining in area bordering Pacific island states
 
 Source: Mongabay
@@ -117,20 +131,6 @@ Article: https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourc
 Status: awaiting review
 
 Classifier reason: Article alleges forced labor and supply-chain abuses by vessels supplying StarKist, but it does not explicitly describe abuse of entrusted power for improper private gain or frame the wrongdoing as corruption. Additional context is needed to establish a concrete corruption connection.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
-## Mongabay shark meat investigation shortlisted for two journalism awards in Brazil
-
-Source: Mongabay
-
-Article: https://news.mongabay.com/short-article/2026/11/mongabay-shark-meat-investigation-shortlisted-for-two-journalism-awards-in-brazil/
-
-Status: awaiting review
-
-Classifier reason: The article reports an investigation into large-scale government procurements of shark meat and transparency concerns, but it does not allege or describe an abuse of entrusted power for improper private gain. The corruption connection is therefore unclear from the supplied text.
 
 - abuse of entrusted power: unknown
 - private gain: unknown

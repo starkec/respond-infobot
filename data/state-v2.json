@@ -1029,6 +1029,30 @@
       "title": "Canadian extractive firms displaced 300,000 in Africa since 1996, report says",
       "url": "https://news.mongabay.com/short-article/2026/11/canadian-extractive-firms-displaced-300000-in-africa-since-1996-report-says/"
     },
+    "6c6dfc09f1902698490b6088a1d87e632605d5ab442f2057443a1fbce1138101": {
+      "api_usage": {
+        "input_tokens": 1464,
+        "output_tokens": 158,
+        "total_tokens": 1622
+      },
+      "author": "David Brown",
+      "checked_at": "2026-11-14T01:51:28Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a legal decision about coal-fired power and constitutional environmental rights; it contains no allegations of abuse of entrusted power, improper private gain, or investigations into corrupt conduct.",
+      "source": "Mongabay",
+      "title": "South African court dismisses appeal over planned coal-fired power plants",
+      "url": "https://news.mongabay.com/short-article/2026/11/south-african-court-dismisses-appeal-over-planned-coal-fired-power-plants/"
+    },
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c": {
       "api_usage": {
         "input_tokens": 3765,
@@ -2403,7 +2427,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-13",
+  "last_checked_date": "2026-11-14",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -2538,6 +2562,7 @@
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
     "68dcdcf5d8bfcac2122ad08ba5884c1fe403a147b718fe03cb07f1b8bd370046",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88",
+    "6c6dfc09f1902698490b6088a1d87e632605d5ab442f2057443a1fbce1138101",
     "6cbb82d8d9758f61dc4711050702c406c3f1c89debf4fbd42b76ca7747a0983c",
     "6d047b0e5c130f511892afc11717de9fcddca27913f944eb8cfc0cc29b642a0f",
     "6d2df1fe03d6087b21c0b8bfb6192dc4d73dc9d0757e6e1643a6ac9b00610be0",
