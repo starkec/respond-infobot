@@ -1742,6 +1742,30 @@
       "title": "Disaster Preparedness in Germany: In an Emergency, Where You Live Matters",
       "url": "https://correctiv.org/en/latest-stories/2026/10/22/disaster-management-in-germany-in-an-emergency-it-depends-on-where-you-live/"
     },
+    "b3f2a72d93dad8d0ce7dc68d256e8eb3c75bc59cc0ecbf2a3f418ffacb047bb1": {
+      "api_usage": {
+        "input_tokens": 2810,
+        "output_tokens": 240,
+        "total_tokens": 3050
+      },
+      "author": "Global Voices Eurasia",
+      "checked_at": "2026-11-14T09:01:37Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on political repression and human rights abuses (detention and sentencing of a political prisoner) but does not allege abuse of power for improper private gain or substantively cover corruption investigations, prosecutions, or corrupt transactions.",
+      "source": "Global Voices",
+      "title": "Letter from a jailed Azerbaijani political prisoner reveals deadly consequences of silence",
+      "url": "https://globalvoices.org/2026/11/14/letter-from-a-jailed-azerbaijani-political-prisoner-reveals-deadly-consequences-of-silence/"
+    },
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf": {
       "api_usage": {
         "input_tokens": 1725,
@@ -2650,6 +2674,7 @@
     "b2a995b333e04194386fa0240cbfb5268844723642cc7aad353352083afb7ab7",
     "b3956a7cfd547bf33818603860d618c8ff00fad204feb46c0aabee2201a6b9b6",
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce",
+    "b3f2a72d93dad8d0ce7dc68d256e8eb3c75bc59cc0ecbf2a3f418ffacb047bb1",
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf",
     "b5bdbd885c73b3da78f8b7db7b6cfcabab4553283e4f43767d9f8fe3e30bd237",
     "b6e71687b8e4e6ccb92fd999cbe3cb2c51db27dee2fcf7cd767623f0a7c06e4f",
