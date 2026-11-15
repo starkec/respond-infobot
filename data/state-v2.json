@@ -239,6 +239,30 @@
       "title": "Rangers\u2019 role must be built into biodiversity conservation commitments (commentary)",
       "url": "https://news.mongabay.com/2026/11/rangers-role-must-be-built-into-biodiversity-conservation-commitments-commentary/"
     },
+    "1b0542aa6c8f6e33697329ac042a6ee28e411043bddbf581d3d14cb9d65730cd": {
+      "api_usage": {
+        "input_tokens": 1502,
+        "output_tokens": 161,
+        "total_tokens": 1663
+      },
+      "author": "Anita Makri",
+      "checked_at": "2026-11-15T07:15:09Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article profiles an environmental defender and threats she faces; it discusses opposition to industrial fishing and mining but contains no allegations that officials abused entrusted power for private gain or substantive coverage of corruption investigations.",
+      "source": "Mongabay",
+      "title": "Targeted by al-Shabaab for defending Kenya\u2019s ecosystems: Foundation founder gets award",
+      "url": "https://news.mongabay.com/2026/11/targeted-by-al-shabaab-for-defending-kenyas-ecosystems-foundation-founder-gets-award/"
+    },
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a": {
       "api_usage": {
         "input_tokens": 1475,
@@ -2548,6 +2572,7 @@
     "188e708e4f83f2f1d8a41ab3afc2a1ef899cf50d146822d0b76f7e34a03da5ad",
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671",
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
+    "1b0542aa6c8f6e33697329ac042a6ee28e411043bddbf581d3d14cb9d65730cd",
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
     "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be",
