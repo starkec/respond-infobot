@@ -2184,6 +2184,30 @@
       "title": "El Ni\u00f1o drove drought, but climate change intensified Indonesia\u2019s fire crisis: Study",
       "url": "https://news.mongabay.com/short-article/2026/11/el-nino-drove-drought-but-climate-change-intensified-indonesias-fire-crisis-study/"
     },
+    "d5d04040527d6b170f46ef927374a3f3e250dd64d74977cefe5f75c66e156f97": {
+      "api_usage": {
+        "input_tokens": 3755,
+        "output_tokens": 154,
+        "total_tokens": 3909
+      },
+      "author": "Rebecca Cluett",
+      "checked_at": "2026-11-15T14:50:39Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses biodiversity conservation, protected areas, and funding distribution to local communities but contains no allegations or descriptions of abuse of entrusted power, improper private gain, or investigations into corruption; thus it does not substantively concern corruption.",
+      "source": "Global Voices",
+      "title": "Madagascar aims to support biodiversity by protecting marine areas",
+      "url": "https://globalvoices.org/2026/11/15/madagascar-aims-to-support-biodiversity-by-protecting-marine-areas/"
+    },
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e": {
       "api_usage": {
         "input_tokens": 2994,
@@ -2791,6 +2815,7 @@
     "d189043fe2fd6300a0449eaa95576f71a21c5b4011fbcf2234cb86c27b6011ea",
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
     "d3aedc238ffe003b2aa3bcdc98865cec5009bb6c2cff532b3dd445cb8702de36",
+    "d5d04040527d6b170f46ef927374a3f3e250dd64d74977cefe5f75c66e156f97",
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e",
     "d7e4cdbe4f8272f0db94d2eb5019430c20769f26ff9c7440cf75007ce711eaef",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb",
