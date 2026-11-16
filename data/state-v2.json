@@ -70,6 +70,30 @@
       "title": "Vu\u010di\u0107 Rejects Russia Sanctions, Blames Foreign Powers for Protests",
       "url": "https://www.occrp.org/en/news/vucic-rejects-russia-sanctions-blames-foreign-powers-for-protests"
     },
+    "07b0accd751b1e6f32796377284732ef67eea2c5bbadc07f723a7ff70cbffc4d": {
+      "api_usage": {
+        "input_tokens": 1314,
+        "output_tokens": 162,
+        "total_tokens": 1476
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-16T17:29:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports the Pope demanding justice for environmental defenders and notes illegal exploitation and logging, but contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption or investigations.",
+      "source": "Mongabay",
+      "title": "Pope in Peruvian rainforest demands justice for environmental defenders killed for protecting Amazon",
+      "url": "https://news.mongabay.com/short-article/2026/11/pope-in-peruvian-rainforest-demands-justice-for-environmental-defenders-killed-for-protecting-amazon/"
+    },
     "0f5c8ac6fdd5b86f068569256b61335047be2dd1874f716d28609228cc42fb00": {
       "api_usage": {
         "input_tokens": 1464,
@@ -1025,6 +1049,30 @@
       "title": "Bigger and more-frequent wildfires threaten water supplies across the US",
       "url": "https://news.mongabay.com/short-article/2026/11/bigger-and-more-frequent-wildfires-threaten-water-supplies-across-the-us/"
     },
+    "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6": {
+      "api_usage": {
+        "input_tokens": 1498,
+        "output_tokens": 156,
+        "total_tokens": 1654
+      },
+      "author": "Spoorthy Raman",
+      "checked_at": "2026-11-16T17:29:33Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports on endangered North Atlantic right whale population and a scientific meeting; it contains no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption or investigations.",
+      "source": "Mongabay",
+      "title": "Drowned in fishing gear, struck by boats, North Atlantic right whales in serious trouble",
+      "url": "https://news.mongabay.com/2026/11/drowned-in-fishing-gear-struck-by-boats-north-atlantic-right-whales-in-serious-trouble/"
+    },
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": {
       "api_usage": {
         "input_tokens": 1490,
@@ -1668,6 +1716,30 @@
       "title": "Cambodia\u2019s mangrove forests offer vital refuge for threatened wildlife, 7-year study finds",
       "url": "https://news.mongabay.com/short-article/2026/11/cambodias-mangrove-forests-offer-vital-refuge-for-threatened-wildlife-7-year-study-finds/"
     },
+    "a253e38b9bc13aef980211dc4d486e7e72ba396060d36104556ee6207c440bea": {
+      "api_usage": {
+        "input_tokens": 1474,
+        "output_tokens": 135,
+        "total_tokens": 1609
+      },
+      "author": "Liz Kimbrough",
+      "checked_at": "2026-11-16T17:29:27Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports on the rediscovery of a firefly species and habitat observations; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or investigations of corruption.",
+      "source": "Mongabay",
+      "title": "A \u2018lost\u2019 firefly species flashes back into view in the US",
+      "url": "https://news.mongabay.com/2026/11/a-lost-firefly-species-flashes-back-into-view-in-the-us/"
+    },
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": {
       "api_usage": {
         "input_tokens": 1489,
@@ -1937,6 +2009,78 @@
       "source": "Mongabay",
       "title": "Weird and wonderful wildlife revealed in underexplored mountains",
       "url": "https://news.mongabay.com/short-article/2026/11/weird-and-wonderful-wildlife-revealed-in-underexplored-mountains/"
+    },
+    "b99938b14c0286f0e5eff63990b34cef3b75eba41f625df932d96841895a7c41": {
+      "api_usage": {
+        "input_tokens": 1507,
+        "output_tokens": 128,
+        "total_tokens": 1635
+      },
+      "author": "Naina Rao",
+      "checked_at": "2026-11-16T17:29:24Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a paleontological discovery of an extinct giant bird species; it contains no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Fossil of extinct giant bird discovered in Flores cave, Indonesia",
+      "url": "https://news.mongabay.com/short-article/2026/11/fossil-of-extinct-giant-bird-discovered-in-flores-cave-indonesia/"
+    },
+    "ba2c5537be419ede2417146dcee35157f447dec87c2e51ae3eb0e060c0428290": {
+      "api_usage": {
+        "input_tokens": 1490,
+        "output_tokens": 134,
+        "total_tokens": 1624
+      },
+      "author": "Sadiqur Rahman",
+      "checked_at": "2026-11-16T17:29:26Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses rising preterm births linked to extreme heat and healthcare conditions; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Rising preterm births in Bangladesh linked to extreme heat, research suggests",
+      "url": "https://news.mongabay.com/2026/11/rising-preterm-births-in-bangladesh-linked-to-extreme-heat-research-suggests/"
+    },
+    "bc1c5767fa50effee15933b9762c3fc0a4e6099e803c6a2a14b433295bfdf0e2": {
+      "api_usage": {
+        "input_tokens": 1491,
+        "output_tokens": 198,
+        "total_tokens": 1689
+      },
+      "author": "Phil Robertson",
+      "checked_at": "2026-11-16T17:29:30Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on jailed environmental activists and political repression; it documents activism and alleged unjust convictions but does not describe abuse of entrusted power for improper private gain or substantive corruption allegations.",
+      "source": "Mongabay",
+      "title": "Francophone leaders must support jailed Mother Nature Cambodia activists (commentary)",
+      "url": "https://news.mongabay.com/2026/11/francophone-leaders-must-support-jailed-mother-nature-cambodia-activists-commentary/"
     },
     "bee3c44f0370be6560544454cac95c0a99f28d9ccbe5c6cc68cacd9508594a9c": {
       "api_usage": {
@@ -2632,6 +2776,30 @@
       "source": "ICIJ",
       "title": "How banking giant ICBC helped Chinese firms gain a foothold in Europe\u2019s wind market",
       "url": "https://www.icij.org/investigations/china-capital/how-banking-giant-icbc-helped-chinese-firms-gain-a-foothold-in-europes-wind-market/"
+    },
+    "fdda3fc0daf66cf9386657abbae287bab0ab70a74b551749faec8ffb62cf6b31": {
+      "api_usage": {
+        "input_tokens": 3285,
+        "output_tokens": 331,
+        "total_tokens": 3616
+      },
+      "author": "Masudul Zarif",
+      "checked_at": "2026-11-16T17:29:22Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses government powers to suspend telecommunications and civil society concerns about rights and possible abuse of authority, but it does not allege abuse of entrusted power for improper private, family, business or party gain or substantively cover corruption investigations. Therefore it is not corruption-relevant per the definition.",
+      "source": "Global Voices",
+      "title": "Civil society questions decree that could block access to telecommunications networks in Mozambique",
+      "url": "https://globalvoices.org/2026/11/16/civil-society-questions-decree-that-could-block-access-to-telecommunications-networks-in-mozambique/"
     }
   },
   "feeds": [
@@ -2672,6 +2840,7 @@
     "049abc7380f4e76668ac9272c730034586e6300096ab4615c56ead8e2b783db9",
     "0667447ac00a975c5c5f9ef37d2af11abbbfb64801dfb771c0f89213e6db84cf",
     "07add2c9a68eb218db1af1ce02fccaccc3d1c02e443a3f6c9be0a84230f7817f",
+    "07b0accd751b1e6f32796377284732ef67eea2c5bbadc07f723a7ff70cbffc4d",
     "080e5034c58cbf234a34be54f90563f6eb9a7245637c3c5893b02da3ddd95f5a",
     "082eaaed314a5b79813d3e503fc74b56b018979fe87a08c76e479c0578c2178b",
     "0e23ee23fcefa1a960d740e0b9c7d5c06ec38f1fc07d47fb6238c402791d7455",
@@ -2776,6 +2945,7 @@
     "62b5d88a70778541be986ba38ba7254f727c96cb8ec29d480ac081daef089580",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
+    "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6",
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
     "68dcdcf5d8bfcac2122ad08ba5884c1fe403a147b718fe03cb07f1b8bd370046",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88",
@@ -2850,6 +3020,7 @@
     "9ffcb854e8accf95e47445974da14afed69957400aa13d292b195bed8a29bad7",
     "a061a626161f44e19159282a60450fd4afc16a4c4df26abd5744bc4cb592efb2",
     "a0a25a74fe009be699b76227f1831de476cacc282d954d91e065228b41a3a328",
+    "a253e38b9bc13aef980211dc4d486e7e72ba396060d36104556ee6207c440bea",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800",
     "a284a2a36a0551751e333beb9fd0c3d9e207da5505804634a3de2b9e920dc2ed",
     "a368545cc94846e126159f5383cdd5a846a7da10e70bdc449d29fbcacf8a26ee",
@@ -2878,7 +3049,10 @@
     "b8850b9424f6121a0cac966f89cb1139651245804414e5a02abc6705332ceff8",
     "b9682fef22139c9a4a12e451d5419cd1edf8cb042056e3054258a512e212b2bc",
     "b98e8414c71f99a1de10ccc10f01a438ef296fd24ae589e5ba9abe78d7bd1b61",
+    "b99938b14c0286f0e5eff63990b34cef3b75eba41f625df932d96841895a7c41",
+    "ba2c5537be419ede2417146dcee35157f447dec87c2e51ae3eb0e060c0428290",
     "bc1b2cbae2aca30271f874edc4ebbcdd5a4dce6cb0c990e31454b300449ced0d",
+    "bc1c5767fa50effee15933b9762c3fc0a4e6099e803c6a2a14b433295bfdf0e2",
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc",
     "bd1fe13cb999c4be165cc229a14be0070ec7f8765eecb760d1ab0afe35869bcd",
     "bde37555f86293342febed08319bfcf81fdea04b30b20ffda3f1dbf8d290d880",
@@ -2961,7 +3135,8 @@
     "f6ee257376ba9db610bb90ca9a1547250f28737a7886b2bd866351473a423e38",
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38",
     "f7f4a3be81defe27f822c6d26ab6359e4832b598ab041a751f39b935cf48e04f",
-    "f952bc60b150bb192486b868ae33b3b26438d3ff7737ea562380c6001fb343ca"
+    "f952bc60b150bb192486b868ae33b3b26438d3ff7737ea562380c6001fb343ca",
+    "fdda3fc0daf66cf9386657abbae287bab0ab70a74b551749faec8ffb62cf6b31"
   ],
   "started_at": "2026-10-19T14:20:39Z",
   "version": 2
