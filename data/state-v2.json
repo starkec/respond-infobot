@@ -1125,6 +1125,30 @@
       "title": "US renews push to open Pacific marine protected area to fishing",
       "url": "https://news.mongabay.com/short-article/2026/11/us-renews-push-to-open-pacific-marine-protected-area-to-fishing/"
     },
+    "743af9b4f39e90fb8e679a31bdefd3338f3a95f7d4660762af6d70049a5075f5": {
+      "api_usage": {
+        "input_tokens": 1512,
+        "output_tokens": 145,
+        "total_tokens": 1657
+      },
+      "author": "Naina Rao",
+      "checked_at": "2026-11-16T07:21:21Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports a wildlife camera-trap study of the endangered flat-headed cat and habitat findings. It contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption or related investigations.",
+      "source": "Mongabay",
+      "title": "Rare flat-headed cat prefers elevated palms in Malaysian forest, says study",
+      "url": "https://news.mongabay.com/short-article/2026/11/rare-flat-headed-cat-prefers-elevated-palms-in-malaysian-forest-says-study/"
+    },
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b": {
       "api_usage": {
         "input_tokens": 1079,
@@ -1145,6 +1169,30 @@
       "source": "OCCRP",
       "title": "Smugglers Collected Up to $509M on Europe Routes in 2025",
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
+    },
+    "775d4042fcf55132e00e9e83f0e35194e9e188f0c36923d3277d098aafcdd6f5": {
+      "api_usage": {
+        "input_tokens": 1485,
+        "output_tokens": 133,
+        "total_tokens": 1618
+      },
+      "author": "Hans Nicholas Jong",
+      "checked_at": "2026-11-16T07:21:23Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses palm oil production, domestic consumption and deforestation exposure, not allegations of abuse of entrusted power or improper private gain; corruption is not substantively covered.",
+      "source": "Mongabay",
+      "title": "Indonesia\u2019s domestic palm oil market carries the biggest deforestation footprint",
+      "url": "https://news.mongabay.com/2026/11/indonesias-domestic-palm-oil-market-carries-the-biggest-deforestation-footprint/"
     },
     "7ca63eb503b7f2412a1a88318387b11f92ab87ad5b60fbc7d2674c97fd0a250f": {
       "api_usage": {
@@ -2208,6 +2256,30 @@
       "title": "Madagascar aims to support biodiversity by protecting marine areas",
       "url": "https://globalvoices.org/2026/11/15/madagascar-aims-to-support-biodiversity-by-protecting-marine-areas/"
     },
+    "d677be0704b3638f836af29de55a739489b0a17de2c37cf9c9f09f95f810f92d": {
+      "api_usage": {
+        "input_tokens": 1524,
+        "output_tokens": 132,
+        "total_tokens": 1656
+      },
+      "author": "Philip Jacobson",
+      "checked_at": "2026-11-16T07:21:17Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article is a profile of a marine biologist searching for rare sharks and contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "Indiana Jones at the fish market: David Ebert on a life spent searching for \u2018lost sharks\u2019",
+      "url": "https://news.mongabay.com/2026/11/indiana-jones-at-the-fish-market-david-ebert-on-a-life-spent-searching-for-lost-sharks/"
+    },
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e": {
       "api_usage": {
         "input_tokens": 2994,
@@ -2339,6 +2411,30 @@
       "source": "CORRECTIV",
       "title": "The State as a Private Bank Account",
       "url": "https://correctiv.org/en/europe/2026/11/13/the-state-as-a-private-bank-account/"
+    },
+    "decbbfa10e0cbb2d2ceac50209a6e813eaa58a7aff86c75fda1acb69ba491b49": {
+      "api_usage": {
+        "input_tokens": 1515,
+        "output_tokens": 132,
+        "total_tokens": 1647
+      },
+      "author": "Malaka Rodrigo",
+      "checked_at": "2026-11-16T07:21:19Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on butterfly movements and climate-linked range shifts in Sri Lanka; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "As butterflies sweep Sri Lanka, global study finds expanding ranges linked to climate change",
+      "url": "https://news.mongabay.com/2026/11/as-butterflies-sweep-sri-lanka-global-study-finds-expanding-ranges-linked-to-climate-change/"
     },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
@@ -2697,10 +2793,12 @@
     "71d6b19e04252a506608a733253e47d81b63d4d57b92a077ee6731eb46ceec97",
     "72857455d495984473a2a0700196ab1f9889f59088c452465f982c8853fc1736",
     "7320a48302f8bcb0386acb7c7d83e83079047cd52105dbb951b6958dc6f39f8c",
+    "743af9b4f39e90fb8e679a31bdefd3338f3a95f7d4660762af6d70049a5075f5",
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b",
     "751c8e9d696ff2dd5860f63efd76bf92e69a8809fb0f51d1c97b3701878edf9c",
     "76721ba4df3a18f5c7ef7da7b0c9ae0a8a68aaf3de07e7a48be3ed46c9320162",
     "7722b42a62aaedcb3ce4bbad40daafbaa32231a60fbb0b12faef618273075912",
+    "775d4042fcf55132e00e9e83f0e35194e9e188f0c36923d3277d098aafcdd6f5",
     "776b4148d2c2cdf3ea107c8af51f0110b8a1f26760aa0cc60896d6f4a5977186",
     "77c9077e14bc68721659a82769f1de9d017fcaa0b1a68796dbd587059d61f54b",
     "78524d1ce41bc2124daa3c1720729f316832b66654307cb55889c6af7ff08436",
@@ -2816,6 +2914,7 @@
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
     "d3aedc238ffe003b2aa3bcdc98865cec5009bb6c2cff532b3dd445cb8702de36",
     "d5d04040527d6b170f46ef927374a3f3e250dd64d74977cefe5f75c66e156f97",
+    "d677be0704b3638f836af29de55a739489b0a17de2c37cf9c9f09f95f810f92d",
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e",
     "d7e4cdbe4f8272f0db94d2eb5019430c20769f26ff9c7440cf75007ce711eaef",
     "d87905132e507522ecbfc073813b7dde5e9bde4960621febfd9f68f1282bfceb",
@@ -2832,6 +2931,7 @@
     "dc3e5407d03be9132330b44c323f4f2bb281e63c57c3ee5da6f44072ff234cd2",
     "dc4cc40652de7757c05b103ef051b176e7000d18cbf8cc663b5147d3f301c19b",
     "dcefcd6523989618b4dc6d5a13c33e72d378624028400e61b12438c3fe85421a",
+    "decbbfa10e0cbb2d2ceac50209a6e813eaa58a7aff86c75fda1acb69ba491b49",
     "e03a94b28db3d7eb42b1907564a937cb9f3bc799c34a48dfd0a46d0c2fb85659",
     "e07429d72368e8550c8ba412ee3fe55e3b300096b07a257b0a5ad3268f6e2651",
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725",
