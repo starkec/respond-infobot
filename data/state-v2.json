@@ -187,6 +187,54 @@
       "title": "Interpol Cybercrime Crackdown Nets 1,400 Arrests and $105M",
       "url": "https://www.occrp.org/en/news/interpol-cybercrime-crackdown-nets-1400-arrests-and-105m"
     },
+    "11a3d114f7c704f244437815ff03623ba9f25a08f6af91a6d4e3344f4f21dc86": {
+      "api_usage": {
+        "input_tokens": 1463,
+        "output_tokens": 149,
+        "total_tokens": 1612
+      },
+      "author": "Joseph Lee",
+      "checked_at": "2026-11-17T18:39:52Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses Indigenous participation, rights, funding delays and implementation at COP31 but contains no allegations or substantive reporting of abuse of entrusted power for private gain or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "In final stretch of climate summit, Indigenous leaders call for lasting action",
+      "url": "https://news.mongabay.com/2026/11/in-final-stretch-of-climate-summit-indigenous-leaders-call-for-lasting-action/"
+    },
+    "13d200c5fb7d8ad05478bfe99bfda4d692316bc15ba56fbfb6cbf55153d0e148": {
+      "api_usage": {
+        "input_tokens": 1258,
+        "output_tokens": 156,
+        "total_tokens": 1414
+      },
+      "author": "Juan Maza",
+      "checked_at": "2026-11-17T18:39:54Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article is about wildlife reintroduction and conservation outcomes; it does not describe alleged abuse of entrusted power, improper private gain, or substantive reporting on corruption, investigations or enforcement.",
+      "source": "Mongabay",
+      "title": "The scimitar-horned oryx is back in Chad",
+      "url": "https://news.mongabay.com/short-article/2026/11/the-scimitar-horned-oryx-is-back-in-chad/"
+    },
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": {
       "api_usage": {
         "input_tokens": 7218,
@@ -815,6 +863,30 @@
       "title": "Katastrophenschutz in Deutschland: Im Ernstfall kommt es auf den Wohnort an",
       "url": "https://correctiv.org/en/current/2026/10/22/katastrophenschutz-in-deutschland-im-ernstfall-kommt-es-auf-den-wohnort-an/"
     },
+    "488cd5cf1f3110ea2888555d84cafa225dc189ddb39267f4399da9bf04308ddb": {
+      "api_usage": {
+        "input_tokens": 1483,
+        "output_tokens": 165,
+        "total_tokens": 1648
+      },
+      "author": "Naina Rao",
+      "checked_at": "2026-11-17T18:39:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on the land footprint of the clean energy transition and impacts on indigenous rights and resource flows; it does not allege or describe abuse of entrusted power, improper private gain, or substantive corruption investigations.",
+      "source": "Mongabay",
+      "title": "Global clean energy transition demands millions of acres, threatening indigenous rights: Report",
+      "url": "https://news.mongabay.com/short-article/2026/11/global-clean-energy-transition-demands-millions-of-acres-threatening-indigenous-rights-report-2/"
+    },
     "4a132d1169f022ec0362aa9ab1d77ff7dd978777fdf4988c9a4bd87368fb4f5c": {
       "api_usage": {
         "input_tokens": 1517,
@@ -862,6 +934,30 @@
       "source": "Mongabay",
       "title": "What do a bean and a flamingo have in common? Finding the unexpected in nature photos",
       "url": "https://news.mongabay.com/short-article/2026/11/what-do-a-bean-and-a-flamingo-have-in-common-finding-the-unexpected-in-nature-photos/"
+    },
+    "4f4aeba905ded89aba4b630a5266836ee24e70638645251202f762641b260fb7": {
+      "api_usage": {
+        "input_tokens": 1523,
+        "output_tokens": 145,
+        "total_tokens": 1668
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-17T18:39:44Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses wildlife hazards from minefields and border fences; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Three-legged Persian leopard\u2019s 150-mile journey highlights Caucasus border hazards",
+      "url": "https://news.mongabay.com/short-article/2026/11/three-legged-persian-leopards-150-mile-journey-highlights-caucasus-border-hazards/"
     },
     "514f7793f80048d694356ebb0bb158c75aaaebb437b761c65ae0fb56b672e9e7": {
       "api_usage": {
@@ -1367,7 +1463,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-17T09:15:46Z",
+      "checked_at": "2026-11-17T18:39:27Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -1472,6 +1568,30 @@
       "source": "Global Voices",
       "title": "How medical neglect killed Alfredo D\u00edaz in a Venezuelan cell",
       "url": "https://globalvoices.org/2026/11/13/how-medical-neglect-killed-alfredo-diaz-in-a-venezuelan-cell/"
+    },
+    "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3": {
+      "api_usage": {
+        "input_tokens": 2835,
+        "output_tokens": 318,
+        "total_tokens": 3153
+      },
+      "author": "Mong Palatino",
+      "checked_at": "2026-11-17T18:39:31Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article focuses on reforming military justice and accountability for soldiers (abuse of entrusted power), but it does not allege improper private gain or substantively cover corruption investigations; mentions of \u2018corruption\u2019 are incidental.",
+      "source": "Global Voices",
+      "title": "In win against impunity, Indonesian court orders the reform of Military Justice Law",
+      "url": "https://globalvoices.org/2026/11/17/in-win-against-impunity-indonesian-court-orders-the-reform-of-military-justice-law/"
     },
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2": {
       "api_usage": {
@@ -1730,6 +1850,30 @@
       "source": "Mongabay",
       "title": "Genetic study describes two new species of Amazonian howler monkeys",
       "url": "https://news.mongabay.com/short-article/2026/11/genetic-study-describes-two-new-species-of-amazonian-howler-monkeys/"
+    },
+    "966e7582248ffbc134ab07f7df0eaa8dc55afe97099364150b9119397ed3e382": {
+      "api_usage": {
+        "input_tokens": 1499,
+        "output_tokens": 141,
+        "total_tokens": 1640
+      },
+      "author": "Malaka Rodrigo",
+      "checked_at": "2026-11-17T18:39:46Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports a leopard caught in a snare and veterinary rescue; it does not allege abuse of entrusted power, improper private gain, or substantive corruption-related investigation or enforcement.",
+      "source": "Mongabay",
+      "title": "Another Sri Lankan leopard caught in a snare. These big cats need protecting, experts say",
+      "url": "https://news.mongabay.com/2026/11/another-sri-lankan-leopard-caught-in-a-snare-these-big-cats-need-protecting-experts-say/"
     },
     "96fc5fea4175cdfdb36a167622dc552e693f06b4cefe86f0dacdd22fb9343b13": {
       "api_usage": {
@@ -2069,6 +2213,34 @@
       "title": "From Flights to \u2018Incentives,\u2019 Indonesian Nickel Giant Harita Approved Payments for Local Politicians and Leaders",
       "url": "https://www.occrp.org/en/investigation/from-flights-to-incentives-indonesian-nickel-giant-harita-approved-payments-for-local-politicians-and-leaders"
     },
+    "ae0358698415e799d17c937c4e5604a443fd4ce7c614f547210219aa6d1e2f15": {
+      "api_usage": {
+        "input_tokens": 1437,
+        "output_tokens": 284,
+        "total_tokens": 1721
+      },
+      "author": "Rhett Ayers Butler",
+      "checked_at": "2026-11-17T18:39:49Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "part of the story. The more troubling issue was that a group of senior Sabah officials was negotiating with a Singapore company incorporated just two years earlier with only $1,000 in paid-up capital and no demonstrated",
+        "track record of managing a conservation project on anything approaching this scale. Indigenous communities whose customary rights could be affected had not been meaningfully consulted. Their ancestral land was",
+        "potentially being locked up in an opaque contract with largely unknown operators for more than a century. When the story broke, it immediately made headlines in Malaysia and beyond. The timing was important. A Malaysian"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article details senior Sabah officials negotiating an opaque carbon-credit deal with a virtually empty shell company, risking Indigenous land rights \u2014 a substantive allegation of abuse of entrusted power benefiting private actors and covered as core subject of the report.",
+      "source": "Mongabay",
+      "title": "Why conservation needs independent journalism (commentary)",
+      "url": "https://news.mongabay.com/2026/11/why-conservation-needs-independent-journalism/"
+    },
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce": {
       "api_usage": {
         "input_tokens": 6842,
@@ -2264,6 +2436,30 @@
       "source": "Mongabay",
       "title": "Francophone leaders must support jailed Mother Nature Cambodia activists (commentary)",
       "url": "https://news.mongabay.com/2026/11/francophone-leaders-must-support-jailed-mother-nature-cambodia-activists-commentary/"
+    },
+    "bd60cae9394a97e376ced6e619ebf2bd686a5e96babb1270d62c534c41d565c2": {
+      "api_usage": {
+        "input_tokens": 1499,
+        "output_tokens": 152,
+        "total_tokens": 1651
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-17T18:39:56Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on Prince William presenting Earthshot Prizes and related royal visit activities; it contains no allegations or substantive reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Prince William\u2019s presents Earthshot Prize winners with $1.3M each in Mumbai",
+      "url": "https://news.mongabay.com/short-article/2026/11/prince-williams-presents-earthshot-prize-winners-with-1-3m-each-in-mumbai/"
     },
     "bee3c44f0370be6560544454cac95c0a99f28d9ccbe5c6cc68cacd9508594a9c": {
       "api_usage": {
@@ -2739,6 +2935,30 @@
       "title": "The State as a Private Bank Account",
       "url": "https://correctiv.org/en/europe/2026/11/13/the-state-as-a-private-bank-account/"
     },
+    "de32183e0b8a187c3dc41edc31791dccb42e6b6503e165db6bcbb891117d16e3": {
+      "api_usage": {
+        "input_tokens": 3538,
+        "output_tokens": 567,
+        "total_tokens": 4105
+      },
+      "author": "Jude Pierre Louis",
+      "checked_at": "2026-11-17T18:39:38Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": true,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The piece focuses on illegal street sales and counterfeit medicines and describes private actors profiting, but it does not allege the abuse of entrusted public or organizational power for private gain or substantive corrupt actions by officials.",
+      "source": "Global Voices",
+      "title": "Street medicine vendors are dangerously filling Haiti\u2019s healthcare gaps",
+      "url": "https://globalvoices.org/2026/11/17/street-medicine-vendors-are-dangerously-filling-haitis-healthcare-gaps/"
+    },
     "de7a8aeddb5af25dd6dd756b982fd75ef35010b2becd7c3fc4b5db489b348ed2": {
       "api_usage": {
         "input_tokens": 1500,
@@ -2984,6 +3204,30 @@
       "title": "How banking giant ICBC helped Chinese firms gain a foothold in Europe\u2019s wind market",
       "url": "https://www.icij.org/investigations/china-capital/how-banking-giant-icbc-helped-chinese-firms-gain-a-foothold-in-europes-wind-market/"
     },
+    "f7e2f710757f6aed83caa2562ca3ee827b22edc31005e764ad7bfbac54320802": {
+      "api_usage": {
+        "input_tokens": 1210,
+        "output_tokens": 187,
+        "total_tokens": 1397
+      },
+      "author": "",
+      "checked_at": "2026-11-17T18:39:40Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses mineral competition, governance and weak oversight in the DRC but contains no specific allegations or substantive reporting of abuse of entrusted power, improper private gain, or investigations of corruption in the supplied passages.",
+      "source": "Mongabay",
+      "title": "DRC\u2019s Critical Minerals Moment",
+      "url": "https://news.mongabay.com/specials/2026/11/drcs-critical-minerals-moment/"
+    },
     "f9e6766dcfeb57db7505aaf0fa3290296efddf3ac4dcc1253166237e0de18285": {
       "api_usage": {
         "input_tokens": 1549,
@@ -3050,6 +3294,7 @@
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/aqtuzhmnsax24",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/46vlsbpj6gvur",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
+    "ae0358698415e799d17c937c4e5604a443fd4ce7c614f547210219aa6d1e2f15": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4w2usha43ftwt",
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5csomgosh5b3z",
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5tqahiyq5jfbi",
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/62avbly4xrzto",
@@ -3084,9 +3329,11 @@
     "10c8fc9521036b1c3a749ead05643a959e363bb7a3a9e91c752433bf836cf821",
     "10fdbfd9e020b7a28d7dca9e94e7edb50ab1703b1bafe60b77f8cd9701e4411b",
     "117a41b85249be893ae2efcd02607c5fbac388e864ca276dbd7defc305ef98c3",
+    "11a3d114f7c704f244437815ff03623ba9f25a08f6af91a6d4e3344f4f21dc86",
     "11cbfe99c78a1626b5f07004611355c054cd85f923d27e9a35de004fd2ec34d0",
     "120863f7a08274db4eb05a59218465b0487abbc771a50ad847a217ae1fc86356",
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
+    "13d200c5fb7d8ad05478bfe99bfda4d692316bc15ba56fbfb6cbf55153d0e148",
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b",
     "17075e2c26cbdb9730625976ea6bfd86b4ec5a1caff5c7912437d713ba9a3a53",
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
@@ -3150,12 +3397,14 @@
     "473098c43d99aa6a105ae5a5ee8338443d2b87e747b8b49c42f673548b8b8ba2",
     "47bb81b3260f54b5084e93ca32ce68ff9f1b25f9e4a6f050ed75d2f3d051aee0",
     "47e8ee10fb17ee419f7ba820445150f188f776aa24f0dc77c5fbbce50bc436e3",
+    "488cd5cf1f3110ea2888555d84cafa225dc189ddb39267f4399da9bf04308ddb",
     "490d63fb47530eabcb97b67da155a5794264c48e360aaf8e8d7cf3021efce5cc",
     "493f0dadcbd9a2c2bf4541c530b1b57724bdb6323e43e1cd62efdec03ea8244b",
     "4a132d1169f022ec0362aa9ab1d77ff7dd978777fdf4988c9a4bd87368fb4f5c",
     "4b5820e35b60ab0eeff40fc88150309090db155b15634ccb61160e81c9cd546d",
     "4c8c54bffa8d3402b43a2cd4e375a94d8f7eb33322f994f476e10e7c839d10d7",
     "4d206a4d6516585e30a9a0b7754b75b6470ce7be29ee115e9471d35046ddf845",
+    "4f4aeba905ded89aba4b630a5266836ee24e70638645251202f762641b260fb7",
     "50e81e4e4ba9ddfc7d0c35564e74dbd89381da7290bd13dea606bbab8a7b0679",
     "514f7793f80048d694356ebb0bb158c75aaaebb437b761c65ae0fb56b672e9e7",
     "517345c3038162d346d016951e703091d2fde552f8d2fcbe8a4ea9f7fa45164d",
@@ -3217,6 +3466,7 @@
     "7db86dc389cdd80a8cae9a37b1ec918a1364266049bdfdab9d47f83be3775411",
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
+    "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3",
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2",
     "812d62b831c2296e2414e9f052a8b3e4eb91ef999e69627230ff7cbc408765fe",
     "8173a8f14fa4db9cea809a17328ee5929949217836244585bffd51c8ab9585b7",
@@ -3241,6 +3491,7 @@
     "93842ee99e5b3fccdc0be32cee4325089a91a344934a37ff181f4d8a064fc700",
     "948401d17cd51c8ba62947c783afe6db9c1783c62f66cb6d203b04d601aab3d2",
     "961deab99c06c297cff017fa28265bd751c990977c96254843485a5f0e551053",
+    "966e7582248ffbc134ab07f7df0eaa8dc55afe97099364150b9119397ed3e382",
     "96b37c9b71c024dc4f04fd78a3df8eb1688a1c992db10674a33ab58ac39cb791",
     "96fc5fea4175cdfdb36a167622dc552e693f06b4cefe86f0dacdd22fb9343b13",
     "97120f26cae028120e881d78ab4443c549a1dbef4cf1f8558fe30924c9e050a6",
@@ -3274,6 +3525,7 @@
     "abbe566fe3e2cac0f61685c0a48c62f8fc8f7404e8c469d47b3893471aeddf9d",
     "ad3b81aafd8434ab6833e6db26c20fb53412ef6562a6c454cf03a3410b0c5ce5",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7",
+    "ae0358698415e799d17c937c4e5604a443fd4ce7c614f547210219aa6d1e2f15",
     "af602226ea1fccefa3867a4e8254b132434a4c16ab17ad6d11c9b4ef0e1b2279",
     "af641c7c2570a5196954388e0bf6c05ac75ba5fc5af7d0abcee232c8fcf0d306",
     "b2a995b333e04194386fa0240cbfb5268844723642cc7aad353352083afb7ab7",
@@ -3293,6 +3545,7 @@
     "bc1c5767fa50effee15933b9762c3fc0a4e6099e803c6a2a14b433295bfdf0e2",
     "bcd8cd77ac37aceec78daca5d2c51d06593f995b7e3a532c2857da9d2fefa4bc",
     "bd1fe13cb999c4be165cc229a14be0070ec7f8765eecb760d1ab0afe35869bcd",
+    "bd60cae9394a97e376ced6e619ebf2bd686a5e96babb1270d62c534c41d565c2",
     "bde37555f86293342febed08319bfcf81fdea04b30b20ffda3f1dbf8d290d880",
     "be1e4839c2610b94a6201ab0b1214d85efbf79fcb15a33d9acd51373eb613f82",
     "bee3c44f0370be6560544454cac95c0a99f28d9ccbe5c6cc68cacd9508594a9c",
@@ -3343,6 +3596,7 @@
     "dc3e5407d03be9132330b44c323f4f2bb281e63c57c3ee5da6f44072ff234cd2",
     "dc4cc40652de7757c05b103ef051b176e7000d18cbf8cc663b5147d3f301c19b",
     "dcefcd6523989618b4dc6d5a13c33e72d378624028400e61b12438c3fe85421a",
+    "de32183e0b8a187c3dc41edc31791dccb42e6b6503e165db6bcbb891117d16e3",
     "de7a8aeddb5af25dd6dd756b982fd75ef35010b2becd7c3fc4b5db489b348ed2",
     "decbbfa10e0cbb2d2ceac50209a6e813eaa58a7aff86c75fda1acb69ba491b49",
     "e03a94b28db3d7eb42b1907564a937cb9f3bc799c34a48dfd0a46d0c2fb85659",
@@ -3373,6 +3627,7 @@
     "f6cadee93a39adfe52612659565322d9af15e836d708b1130df03c1b56074b1e",
     "f6ee257376ba9db610bb90ca9a1547250f28737a7886b2bd866351473a423e38",
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38",
+    "f7e2f710757f6aed83caa2562ca3ee827b22edc31005e764ad7bfbac54320802",
     "f7f4a3be81defe27f822c6d26ab6359e4832b598ab041a751f39b935cf48e04f",
     "f952bc60b150bb192486b868ae33b3b26438d3ff7737ea562380c6001fb343ca",
     "f9e6766dcfeb57db7505aaf0fa3290296efddf3ac4dcc1253166237e0de18285",
