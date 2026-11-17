@@ -94,6 +94,30 @@
       "title": "Pope in Peruvian rainforest demands justice for environmental defenders killed for protecting Amazon",
       "url": "https://news.mongabay.com/short-article/2026/11/pope-in-peruvian-rainforest-demands-justice-for-environmental-defenders-killed-for-protecting-amazon/"
     },
+    "0ca7fcd535cee1ebb23db566740cf3519c31111b9e5dca6315157f5d4f29b50b": {
+      "api_usage": {
+        "input_tokens": 1492,
+        "output_tokens": 136,
+        "total_tokens": 1628
+      },
+      "author": "Mark Hillsdon",
+      "checked_at": "2026-11-17T09:15:53Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses plans for a marine protected area and whale shark conservation in Saleh Bay; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or substantive corruption-related investigation.",
+      "source": "Mongabay",
+      "title": "Plans for a new marine protected area boost whale shark conservation in Indonesia\u2019s Saleh Bay",
+      "url": "https://news.mongabay.com/2026/11/plans-for-a-new-marine-protected-area-boost-whale-shark-conservation-in-indonesias-saleh-bay/"
+    },
     "0f5c8ac6fdd5b86f068569256b61335047be2dd1874f716d28609228cc42fb00": {
       "api_usage": {
         "input_tokens": 1464,
@@ -577,6 +601,30 @@
       "source": "OCCRP",
       "title": "Albanian PM Offers Dialogue Amid Crackdown on Violent Protests",
       "url": "https://www.occrp.org/en/news/albanian-pm-offers-dialogue-amid-crackdown-on-violent-protests"
+    },
+    "36d0c2e60ff4677ce714baef2e098c32f606c5f75535f616e738aa4a940885c5": {
+      "api_usage": {
+        "input_tokens": 1471,
+        "output_tokens": 220,
+        "total_tokens": 1691
+      },
+      "author": "Gerald Flynn",
+      "checked_at": "2026-11-17T09:15:49Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on transboundary river pollution and a weakened monitoring agreement but does not allege or describe abuse of entrusted power for private gain, nor substantive corruption investigation or enforcement.",
+      "source": "Mongabay",
+      "title": "Thailand-Myanmar river pollution agreement was weakened, then signed. China remains silent",
+      "url": "https://news.mongabay.com/2026/11/thailand-myanmar-river-pollution-agreement-was-weakened-then-signed-china-remains-silent/"
     },
     "3aa6ff99eafada414d21693627caddfd1d7fae450106e88b0009bb00116b1231": {
       "api_usage": {
@@ -1319,7 +1367,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-17T01:06:37Z",
+      "checked_at": "2026-11-17T09:15:46Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -1754,6 +1802,30 @@
       "source": "Global Voices",
       "title": "Justice is the infrastructure the world keeps forgetting",
       "url": "https://globalvoices.org/2026/11/11/justice-is-the-infrastructure-the-world-keeps-forgetting/"
+    },
+    "9dd957edcf3a8afb6036723390237f27629b73686e5f01e00a60d698ef12a446": {
+      "api_usage": {
+        "input_tokens": 1475,
+        "output_tokens": 151,
+        "total_tokens": 1626
+      },
+      "author": "Jeff Hutton",
+      "checked_at": "2026-11-17T09:15:51Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses Singapore-Indonesia energy diplomacy and transboundary haze concerns; it does not allege or substantively cover abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "Singapore investors hope for diplomatic help after Indonesia halts $50b electricity export push",
+      "url": "https://news.mongabay.com/2026/11/singapore-investors-hope-for-diplomatic-help-after-indonesia-halts-50b-electricity-export-push/"
     },
     "9e66b50629e3387029ecf3f7fa6f81920e62203992e39ef212f2763ed91395ee": {
       "api_usage": {
@@ -3002,6 +3074,7 @@
     "07b0accd751b1e6f32796377284732ef67eea2c5bbadc07f723a7ff70cbffc4d",
     "080e5034c58cbf234a34be54f90563f6eb9a7245637c3c5893b02da3ddd95f5a",
     "082eaaed314a5b79813d3e503fc74b56b018979fe87a08c76e479c0578c2178b",
+    "0ca7fcd535cee1ebb23db566740cf3519c31111b9e5dca6315157f5d4f29b50b",
     "0e23ee23fcefa1a960d740e0b9c7d5c06ec38f1fc07d47fb6238c402791d7455",
     "0ec10dfec00a261169d57a7f7cd13b5345244a05b0201f7bd94d5cbae33fad06",
     "0f5c8ac6fdd5b86f068569256b61335047be2dd1874f716d28609228cc42fb00",
@@ -3056,6 +3129,7 @@
     "34777dc9749a419a154e576ea4ef9fe3c107a4c303aeedc72ba35d6a05cfe8f4",
     "353d05e764c45d7a450be3ee870fbc0486b54434deb36c6400a43c62d4f9636c",
     "367597c4a93366c7db4fc448c33a40b726fd6da94c95c25fde4e6341f004784d",
+    "36d0c2e60ff4677ce714baef2e098c32f606c5f75535f616e738aa4a940885c5",
     "39e6b6eec3bcca0a5625309ca0913ea27a69f159d2ddd36cf88a7b222ff45dd8",
     "3a1c6210703ea550ec5c4177d02deaf4bf9c7f740d83ad5ade4ce154312c1aa3",
     "3a68a3a519982a6ed18f1cf2e245c6380474061c53723c461b477221ab57b85a",
@@ -3177,6 +3251,7 @@
     "9be84e6c81b114b5ff156932b1e53914da17d3670b1bb33064c93796d76c2901",
     "9cb8e8fe0d24271bca9832a934c6ea2f1bed498180a667968c652ed62e7b9e07",
     "9cbb3aced155e6ed25fad231d04e02599b2954edd4ca73917616fce70b7283fc",
+    "9dd957edcf3a8afb6036723390237f27629b73686e5f01e00a60d698ef12a446",
     "9e66b50629e3387029ecf3f7fa6f81920e62203992e39ef212f2763ed91395ee",
     "9efe7b86b4e57b072e6d2875d4a30a11e648dfa250390ff007436c6a1e2e98dd",
     "9ff06fd68d37c32e2a6bc54eba436f57bcd52f63577de8bc6a3f63b5ed38a3c3",

@@ -80,6 +80,40 @@ Classifier reason: The piece alleges an NGO-run operation illegally collecting d
 - private gain: unknown
 - substantive corruption coverage: unknown
 
+## Pataxó Indigenous people protest the arrest of a female vice-chief in Brazil’s Bahia
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/short-article/2026/11/pataxo-indigenous-people-protest-the-arrest-of-a-female-vice-chief-in-brazils-bahia/
+
+Status: awaiting review
+
+Classifier reason: Article reports arrests by police and includes protesters' allegations that authorities are acting politically to silence Indigenous leaders, indicating alleged abuse of entrusted power but it does not show improper private gain or substantive coverage of corruption.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
+> in the Barra Velha Indigenous Territory. Erilsa Braz dos Santos, known as Uruba Pataxó, vice-chief of Barra Velha Mother Village, and communicator Karen Pataxó were arrested on Nov. 11 on suspicion of drug trafficking
+
+> Indigenous people on social media. “This is a political accusation, because she is a leader who defends her people and her territory,” a protester said in a video published on Instagram by the Media and Art Research
+
+> According to Indigenous leader Dário Pataxó, the imprisonment is intended to silence those who speak out against drug trafficking in the territory. “We know that their intention is to stop the movement. Uruba is one of
+
+## ‘He used Pornhub as the gun’
+
+Source: ICIJ
+
+Article: https://www.icij.org/news/2026/11/he-used-pornhub-as-the-gun/
+
+Status: awaiting review
+
+Classifier reason: Classifier refused or returned incomplete/invalid output; held for review.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
 ## Kremlin payment firm A7 has been pumping billions in ‘untraceable’ cash into global financial system
 
 Source: ICIJ
@@ -135,37 +169,3 @@ Classifier reason: Article alleges forced labor and supply-chain abuses by vesse
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
-
-## ‘He used Pornhub as the gun’
-
-Source: ICIJ
-
-Article: https://www.icij.org/news/2026/11/he-used-pornhub-as-the-gun/
-
-Status: awaiting review
-
-Classifier reason: Classifier refused or returned incomplete/invalid output; held for review.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
-## Pataxó Indigenous people protest the arrest of a female vice-chief in Brazil’s Bahia
-
-Source: Mongabay
-
-Article: https://news.mongabay.com/short-article/2026/11/pataxo-indigenous-people-protest-the-arrest-of-a-female-vice-chief-in-brazils-bahia/
-
-Status: awaiting review
-
-Classifier reason: Article reports arrests by police and includes protesters' allegations that authorities are acting politically to silence Indigenous leaders, indicating alleged abuse of entrusted power but it does not show improper private gain or substantive coverage of corruption.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
-> in the Barra Velha Indigenous Territory. Erilsa Braz dos Santos, known as Uruba Pataxó, vice-chief of Barra Velha Mother Village, and communicator Karen Pataxó were arrested on Nov. 11 on suspicion of drug trafficking
-
-> Indigenous people on social media. “This is a political accusation, because she is a leader who defends her people and her territory,” a protester said in a video published on Instagram by the Media and Art Research
-
-> According to Indigenous leader Dário Pataxó, the imprisonment is intended to silence those who speak out against drug trafficking in the territory. “We know that their intention is to stop the movement. Uruba is one of
