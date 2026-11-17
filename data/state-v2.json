@@ -339,6 +339,30 @@
       "title": "First the Broadcaster: Why Autocrats Target Broadcasting",
       "url": "https://correctiv.org/en/europe/2026/11/02/first-the-broadcaster-why-autocrats-target-broadcasting/"
     },
+    "1d46b7ff5542e5ebf1e27578bdad85007e7861e785e70b0f088b2e22dbe45169": {
+      "api_usage": {
+        "input_tokens": 2730,
+        "output_tokens": 238,
+        "total_tokens": 2968
+      },
+      "author": "Walid El Houri",
+      "checked_at": "2026-11-17T01:06:40Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article documents systemic abuse of state power, human-rights violations and impunity, but it does not allege abuse of entrusted power for improper private, family, business or party gain (the Transparency International definition of corruption). It does not substantively cover corruption investigations or corrupt transactions.",
+      "source": "Global Voices",
+      "title": "Making injustice legal: How Israeli law legitimizes apartheid, genocide and impunity",
+      "url": "https://globalvoices.org/2026/11/16/making-injustice-legal-how-israeli-law-legitimizes-apartheid-genocide-and-impunity/"
+    },
     "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be": {
       "api_usage": {
         "input_tokens": 1503,
@@ -839,6 +863,30 @@
       "title": "This ocean liner was the world\u2019s fastest. It\u2019s being sunk to make the largest artificial reef",
       "url": "https://news.mongabay.com/short-article/2026/11/this-ocean-liner-was-the-worlds-fastest-its-being-sunk-to-make-the-largest-artificial-reef/"
     },
+    "5615c09ee016541a9ff354ffe2eafeac0ff7c1964b33cb8d5660378340feef4e": {
+      "api_usage": {
+        "input_tokens": 1507,
+        "output_tokens": 141,
+        "total_tokens": 1648
+      },
+      "author": "Annelise Giseburt",
+      "checked_at": "2026-11-17T01:06:45Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses flood mitigation using rice paddies and green infrastructure; it contains no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "The power of the paddy: Japan looks to rice fields to help mitigate flooding",
+      "url": "https://news.mongabay.com/2026/11/the-power-of-the-paddy-japan-looks-to-rice-fields-to-help-mitigate-flooding/"
+    },
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287": {
       "api_usage": {
         "input_tokens": 1504,
@@ -1073,6 +1121,34 @@
       "title": "Drowned in fishing gear, struck by boats, North Atlantic right whales in serious trouble",
       "url": "https://news.mongabay.com/2026/11/drowned-in-fishing-gear-struck-by-boats-north-atlantic-right-whales-in-serious-trouble/"
     },
+    "68d6d35fd52bd1f0281bf7659e365eaaa5e6bd7c85f9820ad0c0210f00db9736": {
+      "api_usage": {
+        "input_tokens": 1509,
+        "output_tokens": 398,
+        "total_tokens": 1907
+      },
+      "author": "Karla MendesMariana Martins",
+      "checked_at": "2026-11-17T01:06:51Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "review",
+      "evidence": [
+        "in the Barra Velha Indigenous Territory. Erilsa Braz dos Santos, known as Uruba Patax\u00f3, vice-chief of Barra Velha Mother Village, and communicator Karen Patax\u00f3 were arrested on Nov. 11 on suspicion of drug trafficking",
+        "Indigenous people on social media. \u201cThis is a political accusation, because she is a leader who defends her people and her territory,\u201d a protester said in a video published on Instagram by the Media and Art Research",
+        "According to Indigenous leader D\u00e1rio Patax\u00f3, the imprisonment is intended to silence those who speak out against drug trafficking in the territory. \u201cWe know that their intention is to stop the movement. Uruba is one of"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports arrests by police and includes protesters' allegations that authorities are acting politically to silence Indigenous leaders, indicating alleged abuse of entrusted power but it does not show improper private gain or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Patax\u00f3 Indigenous people protest the arrest of a female vice-chief in Brazil\u2019s Bahia",
+      "url": "https://news.mongabay.com/short-article/2026/11/pataxo-indigenous-people-protest-the-arrest-of-a-female-vice-chief-in-brazils-bahia/"
+    },
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": {
       "api_usage": {
         "input_tokens": 1490,
@@ -1100,6 +1176,30 @@
       "source": "Mongabay",
       "title": "Canadian extractive firms displaced 300,000 in Africa since 1996, report says",
       "url": "https://news.mongabay.com/short-article/2026/11/canadian-extractive-firms-displaced-300000-in-africa-since-1996-report-says/"
+    },
+    "6bc12a38c71465dc4c380d4752488f46ae1260864930fe89ffbe948c7cbb1bed": {
+      "api_usage": {
+        "input_tokens": 1499,
+        "output_tokens": 201,
+        "total_tokens": 1700
+      },
+      "author": "Maxwell Radwin",
+      "checked_at": "2026-11-17T01:06:47Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on environmental legal challenge and illegal fishing/black\u2011market wildlife trade, but contains no allegation of abuse of entrusted power or corruption by officials; substantive coverage is conservation, not corruption.",
+      "source": "Mongabay",
+      "title": "Environmental groups challenge Mexico\u2019s rollback of protections for world\u2019s smallest porpoise",
+      "url": "https://news.mongabay.com/short-article/2026/11/environmental-groups-challenge-mexicos-rollback-of-protections-for-worlds-smallest-porpoise/"
     },
     "6c6dfc09f1902698490b6088a1d87e632605d5ab442f2057443a1fbce1138101": {
       "api_usage": {
@@ -1217,6 +1317,17 @@
       "source": "OCCRP",
       "title": "Smugglers Collected Up to $509M on Europe Routes in 2025",
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
+    },
+    "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
+      "checked_at": "2026-11-17T01:06:37Z",
+      "decision": "review",
+      "evidence": [],
+      "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
+      "reason": "Classifier refused or returned incomplete/invalid output; held for review.",
+      "retryable": true,
+      "source": "ICIJ",
+      "title": "\u2018He used Pornhub as the gun\u2019",
+      "url": "https://www.icij.org/news/2026/11/he-used-pornhub-as-the-gun/"
     },
     "775d4042fcf55132e00e9e83f0e35194e9e188f0c36923d3277d098aafcdd6f5": {
       "api_usage": {
@@ -2556,6 +2667,30 @@
       "title": "The State as a Private Bank Account",
       "url": "https://correctiv.org/en/europe/2026/11/13/the-state-as-a-private-bank-account/"
     },
+    "de7a8aeddb5af25dd6dd756b982fd75ef35010b2becd7c3fc4b5db489b348ed2": {
+      "api_usage": {
+        "input_tokens": 1500,
+        "output_tokens": 154,
+        "total_tokens": 1654
+      },
+      "author": "Stephin Thomas",
+      "checked_at": "2026-11-17T01:06:53Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports environmental harm from ritual immersions and civic complaints but contains no allegations of abuse of power, improper private gain, or substantive coverage of corruption or investigations.",
+      "source": "Mongabay",
+      "title": "Fish pay the price for sacred rituals at Mumbai\u2019s Banganga Tank",
+      "url": "https://news.mongabay.com/short-article/2026/11/fish-pay-the-price-for-sacred-rituals-at-mumbais-banganga-tank/"
+    },
     "decbbfa10e0cbb2d2ceac50209a6e813eaa58a7aff86c75fda1acb69ba491b49": {
       "api_usage": {
         "input_tokens": 1515,
@@ -2777,6 +2912,30 @@
       "title": "How banking giant ICBC helped Chinese firms gain a foothold in Europe\u2019s wind market",
       "url": "https://www.icij.org/investigations/china-capital/how-banking-giant-icbc-helped-chinese-firms-gain-a-foothold-in-europes-wind-market/"
     },
+    "f9e6766dcfeb57db7505aaf0fa3290296efddf3ac4dcc1253166237e0de18285": {
+      "api_usage": {
+        "input_tokens": 1549,
+        "output_tokens": 163,
+        "total_tokens": 1712
+      },
+      "author": "Saara-Maria Salonen",
+      "checked_at": "2026-11-17T01:06:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses criticism of a government conservation payment scheme (inadequate payments, poor monitoring, lack of dialogue) but contains no allegations of abuse of entrusted power for private gain or other corrupt acts; it\u2019s policy/program critique, not corruption reporting.",
+      "source": "Mongabay",
+      "title": "Payment scheme for human-wildlife coexistence faces growing criticism from S\u00e1mi reindeer herders",
+      "url": "https://news.mongabay.com/2026/11/payment-scheme-for-human-wildlife-coexistence-faces-growing-criticism-from-sami-reindeer-herders/"
+    },
     "fdda3fc0daf66cf9386657abbae287bab0ab70a74b551749faec8ffb62cf6b31": {
       "api_usage": {
         "input_tokens": 3285,
@@ -2811,7 +2970,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-16",
+  "last_checked_date": "2026-11-17",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -2864,6 +3023,7 @@
     "1b0542aa6c8f6e33697329ac042a6ee28e411043bddbf581d3d14cb9d65730cd",
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
+    "1d46b7ff5542e5ebf1e27578bdad85007e7861e785e70b0f088b2e22dbe45169",
     "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be",
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
@@ -2929,6 +3089,7 @@
     "52e6bd61c2486d3c208bceb4f3a2e26fdee3e9053c21da3662a09c6e3fbf48dd",
     "5366bddbbf744d8bd15e22755c0e7dabc0bd6a02957687b1d2c409014ea7d533",
     "54e9eed7436c367cb920d5d6b8feea2b0f6d8ac897b5073bf6b15742ce351ad1",
+    "5615c09ee016541a9ff354ffe2eafeac0ff7c1964b33cb8d5660378340feef4e",
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287",
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
@@ -2947,8 +3108,10 @@
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6",
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
+    "68d6d35fd52bd1f0281bf7659e365eaaa5e6bd7c85f9820ad0c0210f00db9736",
     "68dcdcf5d8bfcac2122ad08ba5884c1fe403a147b718fe03cb07f1b8bd370046",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88",
+    "6bc12a38c71465dc4c380d4752488f46ae1260864930fe89ffbe948c7cbb1bed",
     "6c6dfc09f1902698490b6088a1d87e632605d5ab442f2057443a1fbce1138101",
     "6cbb82d8d9758f61dc4711050702c406c3f1c89debf4fbd42b76ca7747a0983c",
     "6d047b0e5c130f511892afc11717de9fcddca27913f944eb8cfc0cc29b642a0f",
@@ -3105,6 +3268,7 @@
     "dc3e5407d03be9132330b44c323f4f2bb281e63c57c3ee5da6f44072ff234cd2",
     "dc4cc40652de7757c05b103ef051b176e7000d18cbf8cc663b5147d3f301c19b",
     "dcefcd6523989618b4dc6d5a13c33e72d378624028400e61b12438c3fe85421a",
+    "de7a8aeddb5af25dd6dd756b982fd75ef35010b2becd7c3fc4b5db489b348ed2",
     "decbbfa10e0cbb2d2ceac50209a6e813eaa58a7aff86c75fda1acb69ba491b49",
     "e03a94b28db3d7eb42b1907564a937cb9f3bc799c34a48dfd0a46d0c2fb85659",
     "e07429d72368e8550c8ba412ee3fe55e3b300096b07a257b0a5ad3268f6e2651",
@@ -3136,6 +3300,7 @@
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38",
     "f7f4a3be81defe27f822c6d26ab6359e4832b598ab041a751f39b935cf48e04f",
     "f952bc60b150bb192486b868ae33b3b26438d3ff7737ea562380c6001fb343ca",
+    "f9e6766dcfeb57db7505aaf0fa3290296efddf3ac4dcc1253166237e0de18285",
     "fdda3fc0daf66cf9386657abbae287bab0ab70a74b551749faec8ffb62cf6b31"
   ],
   "started_at": "2026-10-19T14:20:39Z",
