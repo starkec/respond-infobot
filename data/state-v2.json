@@ -235,6 +235,30 @@
       "title": "The scimitar-horned oryx is back in Chad",
       "url": "https://news.mongabay.com/short-article/2026/11/the-scimitar-horned-oryx-is-back-in-chad/"
     },
+    "1598a200ac5e8e1ad032f32338cc408bcc5de67d904098c781035708b878cbcb": {
+      "api_usage": {
+        "input_tokens": 1489,
+        "output_tokens": 127,
+        "total_tokens": 1616
+      },
+      "author": "Suzana Camargo",
+      "checked_at": "2026-11-18T18:09:31Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on jaguar rescue, habitat connectivity and conservation research; it does not allege or discuss abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Study maps jaguars across the Americas to help their populations rebound",
+      "url": "https://news.mongabay.com/2026/11/study-maps-jaguars-across-the-americas-to-help-their-populations-rebound/"
+    },
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": {
       "api_usage": {
         "input_tokens": 7218,
@@ -435,6 +459,30 @@
       "title": "Making injustice legal: How Israeli law legitimizes apartheid, genocide and impunity",
       "url": "https://globalvoices.org/2026/11/16/making-injustice-legal-how-israeli-law-legitimizes-apartheid-genocide-and-impunity/"
     },
+    "1dde625e00267ed57fe5d71cc7a7dbd9065e4fc93b7a7ee6c25910c03e102b64": {
+      "api_usage": {
+        "input_tokens": 1550,
+        "output_tokens": 152,
+        "total_tokens": 1702
+      },
+      "author": "David Brown",
+      "checked_at": "2026-11-18T18:09:27Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on a culinary prize and conservation of chinampas farming; it contains no allegations or substantive reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Lucio Usobiaga wins 2026 \u2018Nobel Prize of Gastronomy\u2019 for protecting Mexico\u2019s chinampas ecosystem",
+      "url": "https://news.mongabay.com/short-article/2026/11/lucio-usobiaga-wins-2026-nobel-prize-of-gastronomy-for-protecting-mexicos-chinampas-ecosystem/"
+    },
     "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be": {
       "api_usage": {
         "input_tokens": 1503,
@@ -612,6 +660,30 @@
       "title": "Amazon mining boss wanted by Brazil for sheltering Jair Bolsonaro\u2019s spy chief has businesses, properties in Florida",
       "url": "https://www.icij.org/news/2026/10/amazon-mining-boss-wanted-by-brazil-for-sheltering-jair-bolsonaros-spy-chief-has-businesses-properties-in-florida/"
     },
+    "2c6909ee8a217daca897f52c9989b3707f8d0f674905f60f7dd0e88ccc661395": {
+      "api_usage": {
+        "input_tokens": 2835,
+        "output_tokens": 173,
+        "total_tokens": 3008
+      },
+      "author": "The Hague Institute for Innovation of Law (HiiL)",
+      "checked_at": "2026-11-18T18:09:25Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses AI tools for legal information and access to justice, not allegations or substantive reporting of abuse of entrusted power for private gain. It focuses on service capacity, enforcement, sustainability and outcomes, not corruption.",
+      "source": "Global Voices",
+      "title": "An AI chatbot can explain your rights. But can it get you justice?",
+      "url": "https://globalvoices.org/2026/11/18/an-ai-chatbot-can-explain-your-rights-but-can-it-get-you-justice/"
+    },
     "319938c7a7d56a11948d8f8b6bb284b84e18b8741a0cbf508068042ac8bcef6f": {
       "api_usage": {
         "input_tokens": 1482,
@@ -701,6 +773,30 @@
       "source": "Mongabay",
       "title": "Thailand-Myanmar river pollution agreement was weakened, then signed. China remains silent",
       "url": "https://news.mongabay.com/2026/11/thailand-myanmar-river-pollution-agreement-was-weakened-then-signed-china-remains-silent/"
+    },
+    "381616738a845d909ac2607a88ca69c9ef36c511c16b656d57be342e21ed5e81": {
+      "api_usage": {
+        "input_tokens": 1515,
+        "output_tokens": 140,
+        "total_tokens": 1655
+      },
+      "author": "Naina Rao",
+      "checked_at": "2026-11-18T18:09:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on Bhutan winning the Earthshot Prize for forest conservation and restoration; it contains no allegations or discussion of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Bhutan wins $1.3m Earthshot Prize for maintaining 70% forest cover",
+      "url": "https://news.mongabay.com/short-article/2026/11/bhutan-wins-1-3m-earthshot-prize-for-maintaining-70-forest-cover/"
     },
     "3aa6ff99eafada414d21693627caddfd1d7fae450106e88b0009bb00116b1231": {
       "api_usage": {
@@ -1297,6 +1393,30 @@
       "title": "Bigger and more-frequent wildfires threaten water supplies across the US",
       "url": "https://news.mongabay.com/short-article/2026/11/bigger-and-more-frequent-wildfires-threaten-water-supplies-across-the-us/"
     },
+    "643aed1aa8dd93439450482b47c8aa701f4c92aef4e0bb294b0c6a9c907bf8cc": {
+      "api_usage": {
+        "input_tokens": 1692,
+        "output_tokens": 198,
+        "total_tokens": 1890
+      },
+      "author": "Isabella Cota",
+      "checked_at": "2026-11-18T18:09:20Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports murders of journalists and mentions reporting on organized crime ties, but contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption investigations or enforcement.",
+      "source": "ICIJ",
+      "title": "Two more journalists murdered in Latin America, prompting press freedom concerns",
+      "url": "https://www.icij.org/news/2026/11/two-more-journalists-murdered-in-latin-america-prompting-press-freedom-concerns/"
+    },
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6": {
       "api_usage": {
         "input_tokens": 1498,
@@ -1543,7 +1663,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-18T09:13:57Z",
+      "checked_at": "2026-11-18T18:09:18Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -1720,6 +1840,30 @@
       "source": "Mongabay",
       "title": "Beat it: Den Staat farmers in South Africa use drumming and fire to deter elephants",
       "url": "https://news.mongabay.com/2026/11/beat-it-den-staat-farmers-in-south-africa-use-drumming-and-fire-to-deter-elephants/"
+    },
+    "844318798f9f4c7a3b89c6ddefc83339d0cf2c1755c0288ea78f676cb6f7b90c": {
+      "api_usage": {
+        "input_tokens": 1495,
+        "output_tokens": 191,
+        "total_tokens": 1686
+      },
+      "author": "Aimee Gabay",
+      "checked_at": "2026-11-18T18:09:33Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports environmental, social and cultural harms from a state dam and mentions a concession for a second dam, but contains no allegations or evidence of abuse of entrusted power, improper private gain, or substantive coverage of corruption investigations.",
+      "source": "Mongabay",
+      "title": "Indigenous communities in Panama fear a second dam as damage from first goes unrepaired",
+      "url": "https://news.mongabay.com/2026/11/indigenous-communities-in-panama-fear-a-second-dam-as-damage-from-first-goes-unrepaired/"
     },
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
       "api_usage": {
@@ -2368,6 +2512,30 @@
       "source": "Mongabay",
       "title": "Why conservation needs independent journalism (commentary)",
       "url": "https://news.mongabay.com/2026/11/why-conservation-needs-independent-journalism/"
+    },
+    "af4f0acdb11b7fd630130f5d3338cbe47b8e552171cf0071eafc24e13ca4b2ee": {
+      "api_usage": {
+        "input_tokens": 1526,
+        "output_tokens": 148,
+        "total_tokens": 1674
+      },
+      "author": "Arvind KumarKhim Lal Gautam",
+      "checked_at": "2026-11-18T18:09:29Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses Himalayan floods, ecological impacts and need for data-driven restoration; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or investigative coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Better data can help restore Himalayan ecosystems & prepare for climate risks (commentary)",
+      "url": "https://news.mongabay.com/2026/11/better-data-can-help-restore-himalayan-ecosystems-prepare-for-climate-risks-commentary/"
     },
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce": {
       "api_usage": {
@@ -3232,6 +3400,30 @@
       "title": "Epidemiologist Neil Vora joins Mongabay\u2019s board as it expands global reach and planetary health coverage",
       "url": "https://news.mongabay.com/2026/11/epidemiologist-neil-vora-joins-mongabays-board-as-it-expands-global-reach-and-planetary-health-coverage/"
     },
+    "e44953c7251e2664b275f392494339b7b4172f13bffd933938330a1344cc6d55": {
+      "api_usage": {
+        "input_tokens": 3647,
+        "output_tokens": 195,
+        "total_tokens": 3842
+      },
+      "author": "Hong Kong Free Press",
+      "checked_at": "2026-11-18T18:09:23Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on Joshua Wong\u2019s prosecution and sentencing under Hong Kong\u2019s national security law and his activism; it does not allege abuse of entrusted power for private gain or substantive corruption, nor detail investigations of corrupt conduct.",
+      "source": "Global Voices",
+      "title": "\u2018Who will respond?\u2019: Jailed Hong Kong pro-democracy activist Joshua Wong fears being forgotten amid 10-year sentence",
+      "url": "https://globalvoices.org/2026/11/18/who-will-respond-jailed-hong-kong-pro-democracy-activist-joshua-wong-fears-being-forgotten-amid-10-year-sentence/"
+    },
     "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c": {
       "api_usage": {
         "input_tokens": 2348,
@@ -3463,6 +3655,7 @@
     "120863f7a08274db4eb05a59218465b0487abbc771a50ad847a217ae1fc86356",
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
     "13d200c5fb7d8ad05478bfe99bfda4d692316bc15ba56fbfb6cbf55153d0e148",
+    "1598a200ac5e8e1ad032f32338cc408bcc5de67d904098c781035708b878cbcb",
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b",
     "17075e2c26cbdb9730625976ea6bfd86b4ec5a1caff5c7912437d713ba9a3a53",
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
@@ -3473,6 +3666,7 @@
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
     "1d46b7ff5542e5ebf1e27578bdad85007e7861e785e70b0f088b2e22dbe45169",
+    "1dde625e00267ed57fe5d71cc7a7dbd9065e4fc93b7a7ee6c25910c03e102b64",
     "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be",
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
@@ -3493,6 +3687,7 @@
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c",
     "2b9ff46a0d5193c1c5b98f826c26c7b0ff8c30cd6fac65137d8e1b233e0a0d3f",
     "2bf25838eae737264a88bcf47a1b675d7769bad9378d0e81cef00bb2987be75a",
+    "2c6909ee8a217daca897f52c9989b3707f8d0f674905f60f7dd0e88ccc661395",
     "2d6e89728dba8ad52ff6b340e567284def611bd07f4e8868436b56ed8cf4a5c0",
     "2dce151e180e653c918188e0bd7fb5e67b06efac8b264a23994b5be32f24d28d",
     "2eed5c5afd63e5f5d765615bd54b45c23332925106fcc5ce4585ca49e3b569ac",
@@ -3507,6 +3702,7 @@
     "353d05e764c45d7a450be3ee870fbc0486b54434deb36c6400a43c62d4f9636c",
     "367597c4a93366c7db4fc448c33a40b726fd6da94c95c25fde4e6341f004784d",
     "36d0c2e60ff4677ce714baef2e098c32f606c5f75535f616e738aa4a940885c5",
+    "381616738a845d909ac2607a88ca69c9ef36c511c16b656d57be342e21ed5e81",
     "39e6b6eec3bcca0a5625309ca0913ea27a69f159d2ddd36cf88a7b222ff45dd8",
     "3a1c6210703ea550ec5c4177d02deaf4bf9c7f740d83ad5ade4ce154312c1aa3",
     "3a68a3a519982a6ed18f1cf2e245c6380474061c53723c461b477221ab57b85a",
@@ -3558,6 +3754,7 @@
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
     "62b5d88a70778541be986ba38ba7254f727c96cb8ec29d480ac081daef089580",
+    "643aed1aa8dd93439450482b47c8aa701f4c92aef4e0bb294b0c6a9c907bf8cc",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6",
@@ -3604,6 +3801,7 @@
     "812d62b831c2296e2414e9f052a8b3e4eb91ef999e69627230ff7cbc408765fe",
     "8173a8f14fa4db9cea809a17328ee5929949217836244585bffd51c8ab9585b7",
     "84065038687d9a853229bcf4223d03d9360ee044cba7ddd6d20ca94eba6c3f2e",
+    "844318798f9f4c7a3b89c6ddefc83339d0cf2c1755c0288ea78f676cb6f7b90c",
     "878410766ce99015e93ab2f53b7a4fc5dcf26f0506f8c66bd7a96b12acefd096",
     "87e0d1ce728987a7221a51d0e7a2a9cdace2e6aac29cef6137310fa78df5f428",
     "87ff9af1a0a0b52a4a737194b83adbd95bf76ecfcb9ac655deba7de06936db1f",
@@ -3660,6 +3858,7 @@
     "ad3b81aafd8434ab6833e6db26c20fb53412ef6562a6c454cf03a3410b0c5ce5",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7",
     "ae0358698415e799d17c937c4e5604a443fd4ce7c614f547210219aa6d1e2f15",
+    "af4f0acdb11b7fd630130f5d3338cbe47b8e552171cf0071eafc24e13ca4b2ee",
     "af602226ea1fccefa3867a4e8254b132434a4c16ab17ad6d11c9b4ef0e1b2279",
     "af641c7c2570a5196954388e0bf6c05ac75ba5fc5af7d0abcee232c8fcf0d306",
     "b2a995b333e04194386fa0240cbfb5268844723642cc7aad353352083afb7ab7",
@@ -3742,6 +3941,7 @@
     "e2a5fc68ea3bfea7c90a3f7a95ced2011df8e90d964af9224f9de590aeef561d",
     "e35ff155a7cedb0641bd3a8d3078c4983838858783d7df06b7a143c5fffeab47",
     "e3c0bb2c35f6bf550b50c4f7a292595d4c0d5591e53d3eabc84f611d416c9d4f",
+    "e44953c7251e2664b275f392494339b7b4172f13bffd933938330a1344cc6d55",
     "e58a7148f74faa5523c686bb702dd2892b61917ade84670d2d0449f7b04fb9d9",
     "e5c08647d572e95a85f2417c092765588d031066a2d758137c8e4694a3117137",
     "e64217509b7a416959bbee28778ddb00d81b6eeef6f1069cf7b9b9c8ab96b933",
