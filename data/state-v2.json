@@ -1369,6 +1369,30 @@
       "title": "South African court dismisses appeal over planned coal-fired power plants",
       "url": "https://news.mongabay.com/short-article/2026/11/south-african-court-dismisses-appeal-over-planned-coal-fired-power-plants/"
     },
+    "6d8226aac7b911b508fcdb80bb61bd6e7cd614e49816bcd75c080c533a204888": {
+      "api_usage": {
+        "input_tokens": 1480,
+        "output_tokens": 163,
+        "total_tokens": 1643
+      },
+      "author": "Karla Mendes",
+      "checked_at": "2026-11-18T01:20:45Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on a rare encounter of isolated Indigenous Aw\u00e1 people and governmental/NGO response regarding their safety; it does not allege abuse of entrusted power, improper private gain, or substantive corruption-related investigation.",
+      "source": "Mongabay",
+      "title": "Rare encounter with isolated Indigenous Aw\u00e1 people in Brazil exposes vulnerability",
+      "url": "https://news.mongabay.com/short-article/2026/11/rare-encounter-with-isolated-indigenous-awa-people-in-brazil-exposes-vulnerability/"
+    },
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c": {
       "api_usage": {
         "input_tokens": 3765,
@@ -1463,7 +1487,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-17T18:39:27Z",
+      "checked_at": "2026-11-18T01:20:39Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -1592,6 +1616,30 @@
       "source": "Global Voices",
       "title": "In win against impunity, Indonesian court orders the reform of Military Justice Law",
       "url": "https://globalvoices.org/2026/11/17/in-win-against-impunity-indonesian-court-orders-the-reform-of-military-justice-law/"
+    },
+    "80cbfcf0341c1bc67896de3489772cc8f5f3bef0adb8ff458f532d2e155ad143": {
+      "api_usage": {
+        "input_tokens": 1462,
+        "output_tokens": 175,
+        "total_tokens": 1637
+      },
+      "author": "Rhett Ayers Butler",
+      "checked_at": "2026-11-18T01:20:43Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Obituary about conservation work and sustainable supply chains; it describes business and environmental initiatives but contains no allegations of abuse of entrusted power, improper private gain, or substantive reporting on corruption investigations.",
+      "source": "Mongabay",
+      "title": "Jason Clay, who persuaded big business to help save nature, has died at 75",
+      "url": "https://news.mongabay.com/2026/11/jason-clay-who-persuaded-big-business-to-help-save-nature-has-died-at-75/"
     },
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2": {
       "api_usage": {
@@ -1994,6 +2042,30 @@
       "source": "Mongabay",
       "title": "In north India, women protect native bees in traditional home walls",
       "url": "https://news.mongabay.com/short-article/2026/11/in-north-india-women-protect-native-bees-in-traditional-home-walls/"
+    },
+    "9f0b4938742be925e26213b827738b74a07f424b513a836b79f5945659fbb81b": {
+      "api_usage": {
+        "input_tokens": 1481,
+        "output_tokens": 154,
+        "total_tokens": 1635
+      },
+      "author": "Mike DiGirolamo",
+      "checked_at": "2026-11-18T01:20:41Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes community-based conservation and conflict reduction with lions; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption-related investigation.",
+      "source": "Mongabay",
+      "title": "In Zimbabwe, trusted local guardians help communities coexist with lions",
+      "url": "https://news.mongabay.com/podcast/2026/11/in-zimbabwe-trusted-local-guardians-help-communities-coexist-with-lions/"
     },
     "9ff06fd68d37c32e2a6bc54eba436f57bcd52f63577de8bc6a3f63b5ed38a3c3": {
       "api_usage": {
@@ -3286,7 +3358,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-17",
+  "last_checked_date": "2026-11-18",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -3439,6 +3511,7 @@
     "6cbb82d8d9758f61dc4711050702c406c3f1c89debf4fbd42b76ca7747a0983c",
     "6d047b0e5c130f511892afc11717de9fcddca27913f944eb8cfc0cc29b642a0f",
     "6d2df1fe03d6087b21c0b8bfb6192dc4d73dc9d0757e6e1643a6ac9b00610be0",
+    "6d8226aac7b911b508fcdb80bb61bd6e7cd614e49816bcd75c080c533a204888",
     "6dc968203959902fae48848709e285c770592c1aef8167ff876ae0d5b958fb99",
     "6ded87de6b6017b40bbc86bafee8d83436ab34fd14c419080e4769f4b5ad7483",
     "6e447a4de0db00cbd5b5aed4b5b02f64f3b850283acd44f1bfe64c85fe35d183",
@@ -3467,6 +3540,7 @@
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
     "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3",
+    "80cbfcf0341c1bc67896de3489772cc8f5f3bef0adb8ff458f532d2e155ad143",
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2",
     "812d62b831c2296e2414e9f052a8b3e4eb91ef999e69627230ff7cbc408765fe",
     "8173a8f14fa4db9cea809a17328ee5929949217836244585bffd51c8ab9585b7",
@@ -3505,6 +3579,7 @@
     "9dd957edcf3a8afb6036723390237f27629b73686e5f01e00a60d698ef12a446",
     "9e66b50629e3387029ecf3f7fa6f81920e62203992e39ef212f2763ed91395ee",
     "9efe7b86b4e57b072e6d2875d4a30a11e648dfa250390ff007436c6a1e2e98dd",
+    "9f0b4938742be925e26213b827738b74a07f424b513a836b79f5945659fbb81b",
     "9ff06fd68d37c32e2a6bc54eba436f57bcd52f63577de8bc6a3f63b5ed38a3c3",
     "9ffcb854e8accf95e47445974da14afed69957400aa13d292b195bed8a29bad7",
     "a061a626161f44e19159282a60450fd4afc16a4c4df26abd5744bc4cb592efb2",
