@@ -169,3 +169,23 @@ Classifier reason: Article alleges forced labor and supply-chain abuses by vesse
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
+
+## Diversifying funding was supposed to protect civil society: It did not
+
+Source: Global Voices
+
+Article: https://globalvoices.org/2026/11/18/diversifying-funding-was-supposed-to-protect-civil-society-it-did-not/
+
+Status: awaiting review
+
+Classifier reason: The article reports allegations by El Salvador’s president that NGOs and journalists misused USAID funds as part of a money-laundering operation and describes restrictive foreign-agent laws, but it does not establish abuse of entrusted power for improper private gain or provide substantiated corruption findings. Further context is needed to confirm corruption elements.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
+> and civic space is particularly visible where governments are introducing or enforcing restrictions on organizations receiving resources from abroad. In El Salvador, President Nayib Bukele accused journalists and civil
+
+> society organizations of misusing USAID funds as part of a global money laundering operation, just as the US aid freeze hit. A few months later, the Legislative Assembly approved a Foreign Agents Law requiring anyone
+
+> receiving funds from abroad to register and pay a 30 percent tax on those contributions. By September 2025, long-standing organizations had begun to close: FESPAD, founded in 1988, and FUDECSO, after 33 years of work,

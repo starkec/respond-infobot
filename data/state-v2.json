@@ -535,6 +535,34 @@
       "title": "Hack Exposes Inner Workings of Russian Influence Operation \u201eStorm-1516\u201c",
       "url": "https://correctiv.org/en/latest-stories/2026/11/11/hack-exposes-inner-workings-of-russian-influence-operation-storm-1516/"
     },
+    "27308fbc213f504e312937c264bfcedc52dec5b1c750b03e2fcc92c2b39c8190": {
+      "api_usage": {
+        "input_tokens": 3584,
+        "output_tokens": 534,
+        "total_tokens": 4118
+      },
+      "author": "Forus",
+      "checked_at": "2026-11-18T09:14:02Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "review",
+      "evidence": [
+        "and civic space is particularly visible where governments are introducing or enforcing restrictions on organizations receiving resources from abroad. In El Salvador, President Nayib Bukele accused journalists and civil",
+        "society organizations of misusing USAID funds as part of a global money laundering operation, just as the US aid freeze hit. A few months later, the Legislative Assembly approved a Foreign Agents Law requiring anyone",
+        "receiving funds from abroad to register and pay a 30 percent tax on those contributions. By September 2025, long-standing organizations had begun to close: FESPAD, founded in 1988, and FUDECSO, after 33 years of work,"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports allegations by El Salvador\u2019s president that NGOs and journalists misused USAID funds as part of a money-laundering operation and describes restrictive foreign-agent laws, but it does not establish abuse of entrusted power for improper private gain or provide substantiated corruption findings. Further context is needed to confirm corruption elements.",
+      "source": "Global Voices",
+      "title": "Diversifying funding was supposed to protect civil society: It did not",
+      "url": "https://globalvoices.org/2026/11/18/diversifying-funding-was-supposed-to-protect-civil-society-it-did-not/"
+    },
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": {
       "api_usage": {
         "input_tokens": 4667,
@@ -1006,6 +1034,34 @@
       "source": "Mongabay",
       "title": "This ocean liner was the world\u2019s fastest. It\u2019s being sunk to make the largest artificial reef",
       "url": "https://news.mongabay.com/short-article/2026/11/this-ocean-liner-was-the-worlds-fastest-its-being-sunk-to-make-the-largest-artificial-reef/"
+    },
+    "548c34a7e21ee933e8d11de3b49a4d62d0161ea7df9772491fd381fbbc75066b": {
+      "api_usage": {
+        "input_tokens": 1479,
+        "output_tokens": 262,
+        "total_tokens": 1741
+      },
+      "author": "Gloria Dickie",
+      "checked_at": "2026-11-18T09:14:05Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "arrested for unlawful possession of nearly 900 kilograms (nearly 2,000 pounds) of pangolin scales and 145 kg (320 lb) of elephant ivory. His operations ceased, and in May 2023, he was convicted and sentenced to two",
+        "likely spent only a few months in custody and reportedly paid several million naira, the equivalent of a few thousand U.S. dollars, in bribes through his lawyer during court proceedings. The saga of Mr. X is emblematic",
+        "of the ongoing corruption and persistence of West and Central Africa\u2019s illegal wildlife trade that\u2019s pushing many species to the brink, despite better enforcement in recent years, according to a new report by the"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article substantively reports illegal wildlife trafficking and corruption: a trader was convicted, reportedly paid bribes during court proceedings to regain freedom, and the piece frames this as emblematic of ongoing corruption undermining enforcement in West and Central Africa.",
+      "source": "Mongabay",
+      "title": "Wildlife trafficking persists in West, Central Africa despite crackdowns: Report",
+      "url": "https://news.mongabay.com/2026/11/wildlife-trafficking-persists-in-west-central-africa-despite-crackdowns-report/"
     },
     "5615c09ee016541a9ff354ffe2eafeac0ff7c1964b33cb8d5660378340feef4e": {
       "api_usage": {
@@ -1487,7 +1543,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-18T01:20:39Z",
+      "checked_at": "2026-11-18T09:13:57Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -3363,6 +3419,7 @@
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4o3ktf4mquyfo",
+    "548c34a7e21ee933e8d11de3b49a4d62d0161ea7df9772491fd381fbbc75066b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7d53oozl3xudn",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/aqtuzhmnsax24",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/46vlsbpj6gvur",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
@@ -3426,6 +3483,7 @@
     "252624f88b56db4d806c5090b1b5d4aeec533e8c23ae23574ff2ff99be4666fd",
     "2680a9c0b7f0af78f2d0e0b284d08c1426c33687e8972c8a4c925963a49bdfc6",
     "272fee4229bf2095f9f24003c975f589390b61e7e7e97f33bf4062e1af171ed9",
+    "27308fbc213f504e312937c264bfcedc52dec5b1c750b03e2fcc92c2b39c8190",
     "28ccbc04fc48ef89e6aa1c4f03780bb94b3b19df1945e13f366c725f1f8288fa",
     "291116e5b8aecba9bdfc66baf3d21398dfb69d04f3cdce37d085b8575ba5fb9a",
     "292d7fad868a6817fdbae613f8192200fe02d302fb9b63575b3f7b63a19d7913",
@@ -3483,6 +3541,7 @@
     "52680ab1aa8ef9ae86b6eaa23c46a49dad72dd7585200d4a0c1a900f2bf2481e",
     "52e6bd61c2486d3c208bceb4f3a2e26fdee3e9053c21da3662a09c6e3fbf48dd",
     "5366bddbbf744d8bd15e22755c0e7dabc0bd6a02957687b1d2c409014ea7d533",
+    "548c34a7e21ee933e8d11de3b49a4d62d0161ea7df9772491fd381fbbc75066b",
     "54e9eed7436c367cb920d5d6b8feea2b0f6d8ac897b5073bf6b15742ce351ad1",
     "5615c09ee016541a9ff354ffe2eafeac0ff7c1964b33cb8d5660378340feef4e",
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287",
