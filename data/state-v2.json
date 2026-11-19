@@ -94,6 +94,30 @@
       "title": "Pope in Peruvian rainforest demands justice for environmental defenders killed for protecting Amazon",
       "url": "https://news.mongabay.com/short-article/2026/11/pope-in-peruvian-rainforest-demands-justice-for-environmental-defenders-killed-for-protecting-amazon/"
     },
+    "0c0b15b2b3989e9f9afe4d4d65e22abe7a57f05e204f6aca0b886718f298c5d6": {
+      "api_usage": {
+        "input_tokens": 1514,
+        "output_tokens": 217,
+        "total_tokens": 1731
+      },
+      "author": "Danielle Keeton-Olsen",
+      "checked_at": "2026-11-19T00:27:04Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes an indigenous land-rights victory against an oil palm concessionaire and warns about outside interests seeking profit, but provides no allegation or evidence of abuse of entrusted power, illicit private gain via corrupt acts, or substantive coverage of corruption investigations or enforcement.",
+      "source": "Mongabay",
+      "title": "Borneo Indigenous groups turn land rights victory into warning for future generations",
+      "url": "https://news.mongabay.com/2026/11/borneo-indigenous-groups-turn-land-rights-victory-into-warning-for-future-generations/"
+    },
     "0ca7fcd535cee1ebb23db566740cf3519c31111b9e5dca6315157f5d4f29b50b": {
       "api_usage": {
         "input_tokens": 1492,
@@ -506,6 +530,30 @@
       "source": "Mongabay",
       "title": "Vietnam\u2019s freshwater obsession leaves decades-long scars for Mekong Delta farmers",
       "url": "https://news.mongabay.com/2026/11/vietnams-freshwater-obsession-leaves-decades-long-scars-for-mekong-delta-farmers/"
+    },
+    "1fdcaa24bffe81e668f69b74c9e2d19744d776b565e951485467d95199e84c00": {
+      "api_usage": {
+        "input_tokens": 1540,
+        "output_tokens": 144,
+        "total_tokens": 1684
+      },
+      "author": "Bobby Bascomb",
+      "checked_at": "2026-11-19T00:27:02Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports environmental activism and conflicts over fishing policy but contains no allegation of officials abusing entrusted power for private gain, nor substantive coverage of corruption investigations or enforcement.",
+      "source": "Mongabay",
+      "title": "Greenpeace drops \u2018Attenboulder\u2019 to deter UK bottom trawlers in a marine protected area",
+      "url": "https://news.mongabay.com/short-article/2026/11/greenpeace-drops-attenboulder-to-deter-uk-bottom-trawlers-in-a-marine-protected-area/"
     },
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d": {
       "api_usage": {
@@ -1663,7 +1711,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-18T18:09:18Z",
+      "checked_at": "2026-11-19T00:26:57Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -2536,6 +2584,30 @@
       "source": "Mongabay",
       "title": "Better data can help restore Himalayan ecosystems & prepare for climate risks (commentary)",
       "url": "https://news.mongabay.com/2026/11/better-data-can-help-restore-himalayan-ecosystems-prepare-for-climate-risks-commentary/"
+    },
+    "b1857d4ba9390038c999ba18b4047d1cf6995884a66209f6f439167ba7347a64": {
+      "api_usage": {
+        "input_tokens": 2837,
+        "output_tokens": 156,
+        "total_tokens": 2993
+      },
+      "author": "Daria Dergacheva",
+      "checked_at": "2026-11-19T00:26:59Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes a civic-education app and election literacy; it mentions foreign meddling and disinformation but contains no allegations of abuse of entrusted power, improper private gain, or substantive reporting on corruption or investigations.",
+      "source": "Global Voices",
+      "title": "In Moldova, teens are learning about democracy and elections through an app",
+      "url": "https://globalvoices.org/2026/11/19/in-moldova-teens-are-learning-about-democracy-and-elections-through-an-app/"
     },
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce": {
       "api_usage": {
@@ -3448,6 +3520,30 @@
       "title": "Trinbagonian Jason Jones wins landmark Privy Council judgement deeming \u2018buggery laws\u2019 unconstitutional",
       "url": "https://globalvoices.org/2026/11/12/trinbagonian-jason-jones-wins-landmark-privy-council-judgement-deeming-buggery-laws-unconstitutional/"
     },
+    "f33594fbf71d18adcb48e45003fde2ca89959e29815a7b3eb4a5bfb5e73ab571": {
+      "api_usage": {
+        "input_tokens": 1446,
+        "output_tokens": 152,
+        "total_tokens": 1598
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-19T00:27:01Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports park infrastructure damage and restoration after flooding and reopening of hotels; it contains no allegations or reporting of abuse of power, improper private gain, or corruption-related investigation.",
+      "source": "Mongabay",
+      "title": "Grand Canyon\u2019s South Rim hotels to reopen as park eases water restrictions",
+      "url": "https://news.mongabay.com/short-article/2026/11/grand-canyons-south-rim-hotels-to-reopen-as-park-eases-water-restrictions/"
+    },
     "f4112d64d50ca03da2e6df131b6d97381ec0623f1323b4acce19c334dc88cb01": {
       "api_usage": {
         "input_tokens": 1538,
@@ -3606,7 +3702,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-18",
+  "last_checked_date": "2026-11-19",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -3640,6 +3736,7 @@
     "07b0accd751b1e6f32796377284732ef67eea2c5bbadc07f723a7ff70cbffc4d",
     "080e5034c58cbf234a34be54f90563f6eb9a7245637c3c5893b02da3ddd95f5a",
     "082eaaed314a5b79813d3e503fc74b56b018979fe87a08c76e479c0578c2178b",
+    "0c0b15b2b3989e9f9afe4d4d65e22abe7a57f05e204f6aca0b886718f298c5d6",
     "0ca7fcd535cee1ebb23db566740cf3519c31111b9e5dca6315157f5d4f29b50b",
     "0e23ee23fcefa1a960d740e0b9c7d5c06ec38f1fc07d47fb6238c402791d7455",
     "0ec10dfec00a261169d57a7f7cd13b5345244a05b0201f7bd94d5cbae33fad06",
@@ -3668,6 +3765,7 @@
     "1d46b7ff5542e5ebf1e27578bdad85007e7861e785e70b0f088b2e22dbe45169",
     "1dde625e00267ed57fe5d71cc7a7dbd9065e4fc93b7a7ee6c25910c03e102b64",
     "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be",
+    "1fdcaa24bffe81e668f69b74c9e2d19744d776b565e951485467d95199e84c00",
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
     "216133e36ed70a4e58a9d56eb4d48fe8a4001f26a16ef1bf2374c7d4f0c29e15",
@@ -3861,6 +3959,7 @@
     "af4f0acdb11b7fd630130f5d3338cbe47b8e552171cf0071eafc24e13ca4b2ee",
     "af602226ea1fccefa3867a4e8254b132434a4c16ab17ad6d11c9b4ef0e1b2279",
     "af641c7c2570a5196954388e0bf6c05ac75ba5fc5af7d0abcee232c8fcf0d306",
+    "b1857d4ba9390038c999ba18b4047d1cf6995884a66209f6f439167ba7347a64",
     "b2a995b333e04194386fa0240cbfb5268844723642cc7aad353352083afb7ab7",
     "b3956a7cfd547bf33818603860d618c8ff00fad204feb46c0aabee2201a6b9b6",
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce",
@@ -3952,6 +4051,7 @@
     "f175129e200f41dff0406a5dcb924fe19733c1d8da177a916247160895f6ada7",
     "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c",
     "f2a8d44a67763bff7f304f682f9397ee025bc322a892ee2e86fdf7f61489691c",
+    "f33594fbf71d18adcb48e45003fde2ca89959e29815a7b3eb4a5bfb5e73ab571",
     "f3ef4a7336023e694cf65be4e38aa0ba244c355859cbdc301f11f9c390cea26d",
     "f4112d64d50ca03da2e6df131b6d97381ec0623f1323b4acce19c334dc88cb01",
     "f522985ab89ca730ceed793a1ed161464cce664afca869af94067ed0ba0cc052",
