@@ -1711,7 +1711,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-19T00:26:57Z",
+      "checked_at": "2026-11-19T07:58:50Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -1888,6 +1888,30 @@
       "source": "Mongabay",
       "title": "Beat it: Den Staat farmers in South Africa use drumming and fire to deter elephants",
       "url": "https://news.mongabay.com/2026/11/beat-it-den-staat-farmers-in-south-africa-use-drumming-and-fire-to-deter-elephants/"
+    },
+    "80d9998b73d8142cfd9d494f8b2abf4316bfe6f742404a0d6e326562bdd3ee3d": {
+      "api_usage": {
+        "input_tokens": 1513,
+        "output_tokens": 133,
+        "total_tokens": 1646
+      },
+      "author": "David Brown",
+      "checked_at": "2026-11-19T07:58:52Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on anteater conservation, habitat restoration and rewilding; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "World Anteater Day: Rewilding and restoration offer hope for enigmatic species",
+      "url": "https://news.mongabay.com/short-article/2026/11/world-anteater-day-rewilding-and-restoration-offer-hope-for-enigmatic-species/"
     },
     "844318798f9f4c7a3b89c6ddefc83339d0cf2c1755c0288ea78f676cb6f7b90c": {
       "api_usage": {
@@ -3896,6 +3920,7 @@
     "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3",
     "80cbfcf0341c1bc67896de3489772cc8f5f3bef0adb8ff458f532d2e155ad143",
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2",
+    "80d9998b73d8142cfd9d494f8b2abf4316bfe6f742404a0d6e326562bdd3ee3d",
     "812d62b831c2296e2414e9f052a8b3e4eb91ef999e69627230ff7cbc408765fe",
     "8173a8f14fa4db9cea809a17328ee5929949217836244585bffd51c8ab9585b7",
     "84065038687d9a853229bcf4223d03d9360ee044cba7ddd6d20ca94eba6c3f2e",
