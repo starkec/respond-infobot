@@ -189,3 +189,17 @@ Classifier reason: Article alleges forced labor and supply-chain abuses by vesse
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
+
+## How one tiny island made conservation work
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/short-article/2026/11/how-one-tiny-island-made-conservation-work/
+
+Status: awaiting review
+
+Classifier reason: Insufficient article text; held for review.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown

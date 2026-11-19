@@ -846,6 +846,30 @@
       "title": "Bhutan wins $1.3m Earthshot Prize for maintaining 70% forest cover",
       "url": "https://news.mongabay.com/short-article/2026/11/bhutan-wins-1-3m-earthshot-prize-for-maintaining-70-forest-cover/"
     },
+    "3a6b52e798a096226fdda7dce6abd7fe76c14aa258c6ce5317c67d02a81a94cd": {
+      "api_usage": {
+        "input_tokens": 1505,
+        "output_tokens": 254,
+        "total_tokens": 1759
+      },
+      "author": "Selina Cheng",
+      "checked_at": "2026-11-19T17:24:49Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports wildlife smuggling and customs seizures but contains no allegation of abuse of entrusted power or officials using their position for private gain; it focuses on trafficking, not corruption investigations or misuse of authority.",
+      "source": "Mongabay",
+      "title": "Skinks in boots: How Hong Kong emerges as key hub in Australia\u2019s native reptile trafficking",
+      "url": "https://news.mongabay.com/2026/11/skinks-in-boots-how-hong-kong-emerges-as-key-hub-in-australias-native-reptile-trafficking/"
+    },
     "3aa6ff99eafada414d21693627caddfd1d7fae450106e88b0009bb00116b1231": {
       "api_usage": {
         "input_tokens": 1489,
@@ -1107,6 +1131,30 @@
       "title": "What do a bean and a flamingo have in common? Finding the unexpected in nature photos",
       "url": "https://news.mongabay.com/short-article/2026/11/what-do-a-bean-and-a-flamingo-have-in-common-finding-the-unexpected-in-nature-photos/"
     },
+    "4b5bf258ea2e93cf931d2e958313d72e076689ba8bcce8bb67bd4b9f5ad7734c": {
+      "api_usage": {
+        "input_tokens": 1497,
+        "output_tokens": 140,
+        "total_tokens": 1637
+      },
+      "author": "Daniel Shailer",
+      "checked_at": "2026-11-19T17:24:53Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses rising temperatures, forest fires and wildlife mortality in the central-north Amazon; it contains no allegations or descriptions of abuse of entrusted power, improper private gain, investigations or prosecutions related to corruption.",
+      "source": "Mongabay",
+      "title": "Central-north Amazonia has experienced an \u2018alarming\u2019 increase in temperatures: Study",
+      "url": "https://news.mongabay.com/2026/11/central-north-amazonia-has-experienced-an-alarming-increase-in-temperatures-study/"
+    },
     "4f4aeba905ded89aba4b630a5266836ee24e70638645251202f762641b260fb7": {
       "api_usage": {
         "input_tokens": 1523,
@@ -1254,6 +1302,17 @@
       "source": "Mongabay",
       "title": "Greta Thunberg arrives at UN climate talks saying \u2018everything we love is at stake\u2019",
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
+    },
+    "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
+      "checked_at": "2026-11-19T17:24:53Z",
+      "decision": "review",
+      "evidence": [],
+      "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
+      "reason": "Insufficient article text; held for review.",
+      "retryable": true,
+      "source": "Mongabay",
+      "title": "How one tiny island made conservation work",
+      "url": "https://news.mongabay.com/short-article/2026/11/how-one-tiny-island-made-conservation-work/"
     },
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b": {
       "api_usage": {
@@ -1465,6 +1524,30 @@
       "title": "Two more journalists murdered in Latin America, prompting press freedom concerns",
       "url": "https://www.icij.org/news/2026/11/two-more-journalists-murdered-in-latin-america-prompting-press-freedom-concerns/"
     },
+    "6713611317142462cfbbb9d88c5f8f18c42d9060f00355d5fe969c0ad8557ac8": {
+      "api_usage": {
+        "input_tokens": 1529,
+        "output_tokens": 168,
+        "total_tokens": 1697
+      },
+      "author": "Annisa Dinulislam",
+      "checked_at": "2026-11-19T17:24:51Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports on shark catches and conservation status, trade restrictions (CITES) and species data. It contains no allegations of officials abusing power, illicit private gain through corruption, or substantive coverage of corruption investigations or enforcement.",
+      "source": "Mongabay",
+      "title": "Threatened species make up half of shark catches at Indonesian fishing port, study finds",
+      "url": "https://news.mongabay.com/2026/11/threatened-species-make-up-half-of-shark-catches-at-indonesian-fishing-port-study-finds/"
+    },
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6": {
       "api_usage": {
         "input_tokens": 1498,
@@ -1617,6 +1700,30 @@
       "title": "Rare encounter with isolated Indigenous Aw\u00e1 people in Brazil exposes vulnerability",
       "url": "https://news.mongabay.com/short-article/2026/11/rare-encounter-with-isolated-indigenous-awa-people-in-brazil-exposes-vulnerability/"
     },
+    "70143b052a4b81a2d506de23b22dbc80be2ccca3155e70baf0a5d9d070d1a878": {
+      "api_usage": {
+        "input_tokens": 3279,
+        "output_tokens": 211,
+        "total_tokens": 3490
+      },
+      "author": "Daria Dergacheva",
+      "checked_at": "2026-11-19T17:24:45Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on preserving historical memory and Soviet political repression and digital storytelling in Guria; it does not allege abuse of entrusted power for improper private gain or substantive corruption investigations.",
+      "source": "Global Voices",
+      "title": "Family stories keep alive Georgia\u2019s democratic past and the memory of Soviet repression",
+      "url": "https://globalvoices.org/2026/11/19/sharing-family-histories-about-a-region-in-georgias-democratic-past-and-soviet-repression/"
+    },
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c": {
       "api_usage": {
         "input_tokens": 3765,
@@ -1711,7 +1818,7 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-19T07:58:50Z",
+      "checked_at": "2026-11-19T17:24:40Z",
       "decision": "review",
       "evidence": [],
       "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
@@ -2733,6 +2840,30 @@
       "title": "US companies apply to explore deep-sea mining in area bordering Pacific island states",
       "url": "https://news.mongabay.com/2026/11/us-companies-apply-to-explore-deep-sea-mining-in-area-bordering-pacific-island-states/"
     },
+    "b6f97751fa0953104534a0881925a841b2bf709e328264605b48093a462e2e53": {
+      "api_usage": {
+        "input_tokens": 1526,
+        "output_tokens": 193,
+        "total_tokens": 1719
+      },
+      "author": "Edward Carver",
+      "checked_at": "2026-11-19T17:24:56Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses geopolitical disputes and overfishing governance by NEAFC members but contains no allegation or description of abuse of entrusted power, improper private gain, or investigations/enforcement of corruption. It is environmental/resource governance reporting without substantive corruption content.",
+      "source": "Mongabay",
+      "title": "Geopolitical tensions hamper efforts to curb overfishing in waters near Europe",
+      "url": "https://news.mongabay.com/2026/11/geopolitical-tensions-hamper-efforts-to-curb-overfishing-in-waters-near-europe/"
+    },
     "b98e8414c71f99a1de10ccc10f01a438ef296fd24ae589e5ba9abe78d7bd1b61": {
       "api_usage": {
         "input_tokens": 1151,
@@ -3644,6 +3775,30 @@
       "title": "How banking giant ICBC helped Chinese firms gain a foothold in Europe\u2019s wind market",
       "url": "https://www.icij.org/investigations/china-capital/how-banking-giant-icbc-helped-chinese-firms-gain-a-foothold-in-europes-wind-market/"
     },
+    "f77cb7cb0fed7a485aa5a5ad9b0740b54ef2327b4b867819f47cb6e215b8cc66": {
+      "api_usage": {
+        "input_tokens": 2139,
+        "output_tokens": 159,
+        "total_tokens": 2298
+      },
+      "author": "Global Voices Announcements",
+      "checked_at": "2026-11-19T17:24:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article is a fundraising/feature piece about digital communities, platform risks, and misinformation. It does not allege or substantively describe abuse of entrusted power for private gain, investigations, or corrupt conduct.",
+      "source": "Global Voices",
+      "title": "Support Global Voices\u2019 December Spotlight: Digital Communities",
+      "url": "https://globalvoices.org/2026/11/19/support-global-voices-december-spotlight-digital-communities/"
+    },
     "f7e2f710757f6aed83caa2562ca3ee827b22edc31005e764ad7bfbac54320802": {
       "api_usage": {
         "input_tokens": 1210,
@@ -3828,6 +3983,7 @@
     "39e6b6eec3bcca0a5625309ca0913ea27a69f159d2ddd36cf88a7b222ff45dd8",
     "3a1c6210703ea550ec5c4177d02deaf4bf9c7f740d83ad5ade4ce154312c1aa3",
     "3a68a3a519982a6ed18f1cf2e245c6380474061c53723c461b477221ab57b85a",
+    "3a6b52e798a096226fdda7dce6abd7fe76c14aa258c6ce5317c67d02a81a94cd",
     "3aa6ff99eafada414d21693627caddfd1d7fae450106e88b0009bb00116b1231",
     "3b8f25daae542a9208109c17859279e6c7b06c6a3ff2b74928419cf6ca815eea",
     "3b9c91b452af52b0c8db07b8c05fcf92c19feb12b78870c1af80aee8c93c9815",
@@ -3850,6 +4006,7 @@
     "493f0dadcbd9a2c2bf4541c530b1b57724bdb6323e43e1cd62efdec03ea8244b",
     "4a132d1169f022ec0362aa9ab1d77ff7dd978777fdf4988c9a4bd87368fb4f5c",
     "4b5820e35b60ab0eeff40fc88150309090db155b15634ccb61160e81c9cd546d",
+    "4b5bf258ea2e93cf931d2e958313d72e076689ba8bcce8bb67bd4b9f5ad7734c",
     "4c8c54bffa8d3402b43a2cd4e375a94d8f7eb33322f994f476e10e7c839d10d7",
     "4d206a4d6516585e30a9a0b7754b75b6470ce7be29ee115e9471d35046ddf845",
     "4f4aeba905ded89aba4b630a5266836ee24e70638645251202f762641b260fb7",
@@ -3879,6 +4036,7 @@
     "643aed1aa8dd93439450482b47c8aa701f4c92aef4e0bb294b0c6a9c907bf8cc",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
+    "6713611317142462cfbbb9d88c5f8f18c42d9060f00355d5fe969c0ad8557ac8",
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6",
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
     "68d6d35fd52bd1f0281bf7659e365eaaa5e6bd7c85f9820ad0c0210f00db9736",
@@ -3895,6 +4053,7 @@
     "6e447a4de0db00cbd5b5aed4b5b02f64f3b850283acd44f1bfe64c85fe35d183",
     "6e51fe1ebaa3d1b67e70b34a7436bf9ba1fc1c1def11303ca3f2ad7520edfc36",
     "6e6c4d096e5f342071f6cabc7bc93b3bda1021a6bba9dc24db99ce3264018a61",
+    "70143b052a4b81a2d506de23b22dbc80be2ccca3155e70baf0a5d9d070d1a878",
     "70d233665e7711267cb44319baad6671d5963c4b1f0320af0f5785fe1cb6862e",
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c",
     "71d6b19e04252a506608a733253e47d81b63d4d57b92a077ee6731eb46ceec97",
@@ -3992,6 +4151,7 @@
     "b462926530d19c3fbed01273189c237a19f36b6d030866b6596c63db3dcafdbf",
     "b5bdbd885c73b3da78f8b7db7b6cfcabab4553283e4f43767d9f8fe3e30bd237",
     "b6e71687b8e4e6ccb92fd999cbe3cb2c51db27dee2fcf7cd767623f0a7c06e4f",
+    "b6f97751fa0953104534a0881925a841b2bf709e328264605b48093a462e2e53",
     "b7b56bab430c463403384885b5b210cb15989e33394dfb575b129d4eabb0d8da",
     "b8850b9424f6121a0cac966f89cb1139651245804414e5a02abc6705332ceff8",
     "b9682fef22139c9a4a12e451d5419cd1edf8cb042056e3054258a512e212b2bc",
@@ -4086,6 +4246,7 @@
     "f6cadee93a39adfe52612659565322d9af15e836d708b1130df03c1b56074b1e",
     "f6ee257376ba9db610bb90ca9a1547250f28737a7886b2bd866351473a423e38",
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38",
+    "f77cb7cb0fed7a485aa5a5ad9b0740b54ef2327b4b867819f47cb6e215b8cc66",
     "f7e2f710757f6aed83caa2562ca3ee827b22edc31005e764ad7bfbac54320802",
     "f7f4a3be81defe27f822c6d26ab6359e4832b598ab041a751f39b935cf48e04f",
     "f952bc60b150bb192486b868ae33b3b26438d3ff7737ea562380c6001fb343ca",
