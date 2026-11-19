@@ -86,6 +86,20 @@ Classifier reason: Article centers on protests and police crackdown; it notes de
 - private gain: unknown
 - substantive corruption coverage: unknown
 
+## How one tiny island made conservation work
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/short-article/2026/11/how-one-tiny-island-made-conservation-work/
+
+Status: awaiting review
+
+Classifier reason: Insufficient article text; held for review.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
 ## In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes
 
 Source: OCCRP
@@ -185,20 +199,6 @@ Article: https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourc
 Status: awaiting review
 
 Classifier reason: Article alleges forced labor and supply-chain abuses by vessels supplying StarKist, but it does not explicitly describe abuse of entrusted power for improper private gain or frame the wrongdoing as corruption. Additional context is needed to establish a concrete corruption connection.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
-## How one tiny island made conservation work
-
-Source: Mongabay
-
-Article: https://news.mongabay.com/short-article/2026/11/how-one-tiny-island-made-conservation-work/
-
-Status: awaiting review
-
-Classifier reason: Insufficient article text; held for review.
 
 - abuse of entrusted power: unknown
 - private gain: unknown
