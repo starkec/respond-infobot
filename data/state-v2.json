@@ -1352,7 +1352,7 @@
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
-      "checked_at": "2026-11-19T23:53:31Z",
+      "checked_at": "2026-11-20T07:22:28Z",
       "decision": "review",
       "evidence": [],
       "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
@@ -1772,6 +1772,30 @@
       "title": "Rare encounter with isolated Indigenous Aw\u00e1 people in Brazil exposes vulnerability",
       "url": "https://news.mongabay.com/short-article/2026/11/rare-encounter-with-isolated-indigenous-awa-people-in-brazil-exposes-vulnerability/"
     },
+    "6e85e3ab0d6dee7e5e852b672bef2a5eff9a4b8df14d2b297c57b5ecd71ad130": {
+      "api_usage": {
+        "input_tokens": 1542,
+        "output_tokens": 161,
+        "total_tokens": 1703
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-20T07:22:30Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses urban sprawl, habitat loss and waste driving crow populations in Kathmandu. It contains no allegations or reporting of abuse of entrusted power, improper private gain, investigations or other substantive corruption content.",
+      "source": "Mongabay",
+      "title": "As Nepal celebrates the crow, urban sprawl and waste drive strain",
+      "url": "https://news.mongabay.com/short-article/2026/11/as-nepal-celebrates-the-crow-urban-sprawl-and-waste-drive-strain/"
+    },
     "70143b052a4b81a2d506de23b22dbc80be2ccca3155e70baf0a5d9d070d1a878": {
       "api_usage": {
         "input_tokens": 3279,
@@ -1890,12 +1914,29 @@
       "url": "https://www.occrp.org/en/news/smugglers-collected-up-to-509m-on-europe-routes-in-2025"
     },
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": {
-      "checked_at": "2026-11-19T23:53:27Z",
-      "decision": "review",
-      "evidence": [],
-      "id": "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
-      "reason": "Classifier refused or returned incomplete/invalid output; held for review.",
-      "retryable": true,
+      "api_usage": {
+        "input_tokens": 4939,
+        "output_tokens": 357,
+        "total_tokens": 5296
+      },
+      "author": "David Kenner",
+      "checked_at": "2026-11-20T07:22:25Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "guarantee that the illegal content would be promptly removed. In one instance, according to a deposition of an Aylo employee included in the court filings, Pornhub kept a video featuring the abuse of a 12-year-old boy",
+        "verified. The abuser who victimized the 12-year-old boy was not only verified but allegedly sold videos of the abuse for $5 to $20 through Pornhub\u2019s revenue-sharing program, according to the civil complaint filed by the",
+        "boy\u2019s mother. Some of the videos remained for sale for almost seven months and attracted more than 180,000 views and 1,100 subscribers \u2014 meaning that Aylo profited directly from the abuse, the complaint alleges. The"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article substantively documents corporate abuse by Aylo/Pornhub employees failing to remove CSAM and hosting nonconsensual sexual material that generated revenue, alleging the company profited from abuse \u2014 meeting abuse of entrusted power, private gain and substantial coverage.",
       "source": "ICIJ",
       "title": "\u2018He used Pornhub as the gun\u2019",
       "url": "https://www.icij.org/news/2026/11/he-used-pornhub-as-the-gun/"
@@ -2019,6 +2060,30 @@
       "source": "Global Voices",
       "title": "In win against impunity, Indonesian court orders the reform of Military Justice Law",
       "url": "https://globalvoices.org/2026/11/17/in-win-against-impunity-indonesian-court-orders-the-reform-of-military-justice-law/"
+    },
+    "80979b58acd78f9cb4b633a233c3dab07274e1079f5c8f24af0b195f05b4c9a6": {
+      "api_usage": {
+        "input_tokens": 3858,
+        "output_tokens": 151,
+        "total_tokens": 4009
+      },
+      "author": "Jo Carter",
+      "checked_at": "2026-11-20T07:22:28Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses hate speech, gaps in anti-discrimination laws and human rights institutions in Japan, not allegations of misuse of entrusted power for private gain or related investigations. It does not substantively cover corruption.",
+      "source": "Global Voices",
+      "title": "Why Japan\u2019s anti-hate measures fall short",
+      "url": "https://globalvoices.org/2026/11/20/why-japans-anti-hate-measures-fall-short/"
     },
     "80cbfcf0341c1bc67896de3489772cc8f5f3bef0adb8ff458f532d2e155ad143": {
       "api_usage": {
@@ -4029,13 +4094,14 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-19",
+  "last_checked_date": "2026-11-20",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4o3ktf4mquyfo",
     "548c34a7e21ee933e8d11de3b49a4d62d0161ea7df9772491fd381fbbc75066b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7d53oozl3xudn",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/aqtuzhmnsax24",
+    "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/bekwzfipyrky4",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/46vlsbpj6gvur",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
     "ae0358698415e799d17c937c4e5604a443fd4ce7c614f547210219aa6d1e2f15": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4w2usha43ftwt",
@@ -4205,6 +4271,7 @@
     "6e447a4de0db00cbd5b5aed4b5b02f64f3b850283acd44f1bfe64c85fe35d183",
     "6e51fe1ebaa3d1b67e70b34a7436bf9ba1fc1c1def11303ca3f2ad7520edfc36",
     "6e6c4d096e5f342071f6cabc7bc93b3bda1021a6bba9dc24db99ce3264018a61",
+    "6e85e3ab0d6dee7e5e852b672bef2a5eff9a4b8df14d2b297c57b5ecd71ad130",
     "70143b052a4b81a2d506de23b22dbc80be2ccca3155e70baf0a5d9d070d1a878",
     "70d233665e7711267cb44319baad6671d5963c4b1f0320af0f5785fe1cb6862e",
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c",
@@ -4214,6 +4281,7 @@
     "743af9b4f39e90fb8e679a31bdefd3338f3a95f7d4660762af6d70049a5075f5",
     "746d9e406ab9586d96a0f444337926254f8beb98a36fa9b877458bc115726f6b",
     "751c8e9d696ff2dd5860f63efd76bf92e69a8809fb0f51d1c97b3701878edf9c",
+    "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
     "76721ba4df3a18f5c7ef7da7b0c9ae0a8a68aaf3de07e7a48be3ed46c9320162",
     "7722b42a62aaedcb3ce4bbad40daafbaa32231a60fbb0b12faef618273075912",
     "775d4042fcf55132e00e9e83f0e35194e9e188f0c36923d3277d098aafcdd6f5",
@@ -4229,6 +4297,7 @@
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
     "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3",
+    "80979b58acd78f9cb4b633a233c3dab07274e1079f5c8f24af0b195f05b4c9a6",
     "80cbfcf0341c1bc67896de3489772cc8f5f3bef0adb8ff458f532d2e155ad143",
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2",
     "80d9998b73d8142cfd9d494f8b2abf4316bfe6f742404a0d6e326562bdd3ee3d",

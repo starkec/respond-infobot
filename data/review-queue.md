@@ -134,20 +134,6 @@ Classifier reason: Article reports arrests by police and includes protesters' al
 
 > According to Indigenous leader Dário Pataxó, the imprisonment is intended to silence those who speak out against drug trafficking in the territory. “We know that their intention is to stop the movement. Uruba is one of
 
-## ‘He used Pornhub as the gun’
-
-Source: ICIJ
-
-Article: https://www.icij.org/news/2026/11/he-used-pornhub-as-the-gun/
-
-Status: awaiting review
-
-Classifier reason: Classifier refused or returned incomplete/invalid output; held for review.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
 ## Kremlin payment firm A7 has been pumping billions in ‘untraceable’ cash into global financial system
 
 Source: ICIJ
