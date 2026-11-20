@@ -189,3 +189,17 @@ Classifier reason: Article alleges forced labor and supply-chain abuses by vesse
 - abuse of entrusted power: unknown
 - private gain: unknown
 - substantive corruption coverage: unknown
+
+## Last Javan rhino habitat caught between mining plans and relocation debate
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/2026/11/last-javan-rhino-habitat-caught-between-mining-plans-and-relocation-debate/
+
+Status: awaiting review
+
+Classifier reason: Article notes a mining map affecting rhino habitat and that a mining tycoon (and brother of the president) in an official envoy role proposed relocating rhinos, suggesting possible conflict of interest. However the supplied text does not allege or document abuse of entrusted power, improper private gain, or a corruption investigation, so the connection is uncertain.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown

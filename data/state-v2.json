@@ -531,6 +531,30 @@
       "title": "Vietnam\u2019s freshwater obsession leaves decades-long scars for Mekong Delta farmers",
       "url": "https://news.mongabay.com/2026/11/vietnams-freshwater-obsession-leaves-decades-long-scars-for-mekong-delta-farmers/"
     },
+    "1f3975e8dafe3135234cfd6716d47343227b37fd6b198376ae34f3e466efd70a": {
+      "api_usage": {
+        "input_tokens": 1500,
+        "output_tokens": 156,
+        "total_tokens": 1656
+      },
+      "author": "Annelise Giseburt",
+      "checked_at": "2026-11-20T16:24:23Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses Japan's offshore wind potential, policy and industry challenges; it contains no allegations or reporting of abuse of entrusted power, improper private gain, investigations or substantive corruption coverage.",
+      "source": "Mongabay",
+      "title": "Japan looks to offshore wind to boost energy security, but hurdles remain",
+      "url": "https://news.mongabay.com/2026/11/japan-looks-to-offshore-wind-to-boost-energy-security-but-hurdles-remain/"
+    },
     "1fdcaa24bffe81e668f69b74c9e2d19744d776b565e951485467d95199e84c00": {
       "api_usage": {
         "input_tokens": 1540,
@@ -990,6 +1014,30 @@
       "title": "Angolan hunters protect Southern Africa\u2019s internationally important wetland",
       "url": "https://news.mongabay.com/2026/11/angolan-hunters-protect-southern-africas-internationally-important-wetland/"
     },
+    "412a9ff2eed29efb0c2d3ed5ff55e1cc333c82a758d5ca0d8c617946fb707c12": {
+      "api_usage": {
+        "input_tokens": 1476,
+        "output_tokens": 144,
+        "total_tokens": 1620
+      },
+      "author": "Charles Mpaka",
+      "checked_at": "2026-11-20T16:24:13Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses energy access and fossil fuels at a UN climate conference; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or substantive corruption investigation.",
+      "source": "Mongabay",
+      "title": "Fossil fuels\u2019 role in Africa\u2019s energy transition contested as UN climate conference closes",
+      "url": "https://news.mongabay.com/2026/11/fossil-fuels-role-in-africas-energy-transition-contested-as-un-climate-conference-closes/"
+    },
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990": {
       "api_usage": {
         "input_tokens": 4710,
@@ -1352,7 +1400,7 @@
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
-      "checked_at": "2026-11-20T07:22:28Z",
+      "checked_at": "2026-11-20T16:24:08Z",
       "decision": "review",
       "evidence": [],
       "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
@@ -2631,6 +2679,54 @@
       "title": "Cambodia\u2019s mangrove forests offer vital refuge for threatened wildlife, 7-year study finds",
       "url": "https://news.mongabay.com/short-article/2026/11/cambodias-mangrove-forests-offer-vital-refuge-for-threatened-wildlife-7-year-study-finds/"
     },
+    "a1bbfcb3c621a3f31ed2a249593fd90ec308da43bd12b2c276c7268f765cafe0": {
+      "api_usage": {
+        "input_tokens": 1502,
+        "output_tokens": 208,
+        "total_tokens": 1710
+      },
+      "author": "Naina Rao",
+      "checked_at": "2026-11-20T16:24:11Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports on deforestation linked to nickel supply chains and LME due-diligence gaps, but contains no allegations of abuse of entrusted power or improper private gain (bribery, embezzlement, nepotism, etc.). It is environmental/supply-chain reporting, not substantive corruption coverage.",
+      "source": "Mongabay",
+      "title": "Nickel linked to deforestation in Indonesia traded on London Metal Exchange, says report",
+      "url": "https://news.mongabay.com/short-article/2026/11/nickel-linked-to-deforestation-in-indonesia-traded-on-london-metal-exchange-says-report/"
+    },
+    "a1d5218c4be2b6d9ac66ee6af0f6b0615cabccad45e7acf6fe795b5eb9cc3f58": {
+      "api_usage": {
+        "input_tokens": 1540,
+        "output_tokens": 127,
+        "total_tokens": 1667
+      },
+      "author": "Shreya Dasgupta",
+      "checked_at": "2026-11-20T16:24:15Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on reptile habitat dependence and conservation status; it does not describe abuse of entrusted power, improper private gain, or substantive coverage of corruption investigations or allegations.",
+      "source": "Mongabay",
+      "title": "One in four land reptiles depends on rock habitats. Lack of protection leaves them in a hard place",
+      "url": "https://news.mongabay.com/short-article/2026/11/one-in-four-land-reptiles-depends-on-rock-habitats-lack-of-protection-leaves-them-in-a-hard-place/"
+    },
     "a253e38b9bc13aef980211dc4d486e7e72ba396060d36104556ee6207c440bea": {
       "api_usage": {
         "input_tokens": 1474,
@@ -3173,6 +3269,30 @@
       "title": "Pharma giants pay millions to Russian distributor entangled in corruption allegations to win cancer drug business",
       "url": "https://www.icij.org/investigations/cancer-calculus/pharma-giants-pay-millions-to-russian-distributor-entangled-in-corruption-allegations-to-win-cancer-drug-business/"
     },
+    "c05343c18689f647b281d1da429fc19d7059ec791f4854391f71411515cc46e0": {
+      "api_usage": {
+        "input_tokens": 1473,
+        "output_tokens": 131,
+        "total_tokens": 1604
+      },
+      "author": "Sean Mowbray",
+      "checked_at": "2026-11-20T16:24:21Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses floating wind energy commercialization and technical/market challenges; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Floating wind is building \u2018A lot of momentum\u2019 toward commercialization",
+      "url": "https://news.mongabay.com/2026/11/floating-wind-is-building-a-lot-of-momentum-toward-commercialization/"
+    },
     "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15": {
       "api_usage": {
         "input_tokens": 1163,
@@ -3366,6 +3486,30 @@
       "source": "Mongabay",
       "title": "How would the Amazon react if it dried up? A 25-year-old field study has the answer",
       "url": "https://news.mongabay.com/2026/11/how-would-the-amazon-react-if-it-dried-up-a-25-year-old-field-study-has-the-answer/"
+    },
+    "d1d7fc834e58046616e1ee7ee593d450908e6d190da02106edd402fbe748b3cd": {
+      "api_usage": {
+        "input_tokens": 1496,
+        "output_tokens": 294,
+        "total_tokens": 1790
+      },
+      "author": "Basten Gokkon",
+      "checked_at": "2026-11-20T16:24:18Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article notes a mining map affecting rhino habitat and that a mining tycoon (and brother of the president) in an official envoy role proposed relocating rhinos, suggesting possible conflict of interest. However the supplied text does not allege or document abuse of entrusted power, improper private gain, or a corruption investigation, so the connection is uncertain.",
+      "source": "Mongabay",
+      "title": "Last Javan rhino habitat caught between mining plans and relocation debate",
+      "url": "https://news.mongabay.com/2026/11/last-javan-rhino-habitat-caught-between-mining-plans-and-relocation-debate/"
     },
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a": {
       "api_usage": {
@@ -4159,6 +4303,7 @@
     "1d46b7ff5542e5ebf1e27578bdad85007e7861e785e70b0f088b2e22dbe45169",
     "1dde625e00267ed57fe5d71cc7a7dbd9065e4fc93b7a7ee6c25910c03e102b64",
     "1e7b6f2555ab87111cef6860750f8f9545282cffb7744f82b61153eefc8581be",
+    "1f3975e8dafe3135234cfd6716d47343227b37fd6b198376ae34f3e466efd70a",
     "1fdcaa24bffe81e668f69b74c9e2d19744d776b565e951485467d95199e84c00",
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
@@ -4208,6 +4353,7 @@
     "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02",
     "3f29401a5421f43d53dd722dfc7e24dcedb860eaa4d4c8ec662c2f08a77b6d00",
     "40ef8bfc039894121e1451a3d1f0b15cafa204a7a94fb31ef8dfb26142a8dcd8",
+    "412a9ff2eed29efb0c2d3ed5ff55e1cc333c82a758d5ca0d8c617946fb707c12",
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990",
     "44ff3c862d5d759a555fd5c4353384fa105bb915f2bdaec3b903d04f00b63754",
     "4524c9f9358089d4774acbf38fd8914235e455b41b7ec23b80079d748e2b9845",
@@ -4344,6 +4490,8 @@
     "9ffcb854e8accf95e47445974da14afed69957400aa13d292b195bed8a29bad7",
     "a061a626161f44e19159282a60450fd4afc16a4c4df26abd5744bc4cb592efb2",
     "a0a25a74fe009be699b76227f1831de476cacc282d954d91e065228b41a3a328",
+    "a1bbfcb3c621a3f31ed2a249593fd90ec308da43bd12b2c276c7268f765cafe0",
+    "a1d5218c4be2b6d9ac66ee6af0f6b0615cabccad45e7acf6fe795b5eb9cc3f58",
     "a253e38b9bc13aef980211dc4d486e7e72ba396060d36104556ee6207c440bea",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800",
     "a284a2a36a0551751e333beb9fd0c3d9e207da5505804634a3de2b9e920dc2ed",
@@ -4390,6 +4538,7 @@
     "bf2f0b47723b0cff4b9f2b83b8583ee6c29a7cd5df635f0a9252e21fc92e30d7",
     "bf2fa7ae9d1faee61acfbbb94dc97876af33c20163461b9e66555f089e101879",
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac",
+    "c05343c18689f647b281d1da429fc19d7059ec791f4854391f71411515cc46e0",
     "c056fce9d2fa72315ca3a196eab9acd6df91afbcbc0b91fbc9f756a0f75758ea",
     "c10ff0220dcd5c128ecaf1e8dcfce97eb179a32ac331aadc09d7ccd2676d2379",
     "c210778bbcc58c75f37d9ef4758df1e53fa458fe7ceab03503ee120c49aebaa3",
@@ -4414,6 +4563,7 @@
     "d08d6c0a0b796c95181c318b74cd7163d5cfae904905cf652d16bd5359660a70",
     "d14cc2c4cd08967e112e0a1e5b0debb7a6b836264c13dc4f952795d95de3bce8",
     "d189043fe2fd6300a0449eaa95576f71a21c5b4011fbcf2234cb86c27b6011ea",
+    "d1d7fc834e58046616e1ee7ee593d450908e6d190da02106edd402fbe748b3cd",
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
     "d3aedc238ffe003b2aa3bcdc98865cec5009bb6c2cff532b3dd445cb8702de36",
     "d5d04040527d6b170f46ef927374a3f3e250dd64d74977cefe5f75c66e156f97",
