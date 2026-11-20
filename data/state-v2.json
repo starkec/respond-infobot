@@ -49,6 +49,30 @@
       "title": "While Russia tries to manipulate information, local civil society is teaching Armenians media literacy",
       "url": "https://globalvoices.org/2026/11/13/while-russia-tries-to-manipulate-information-local-civil-society-is-teaching-armenians-media-literacy/"
     },
+    "025de3588076defb17ef8d257ef238b524e55e64c5fc0622bfe8e183ea6ef8b2": {
+      "api_usage": {
+        "input_tokens": 1477,
+        "output_tokens": 147,
+        "total_tokens": 1624
+      },
+      "author": "Geela Garcia",
+      "checked_at": "2026-11-20T22:50:40Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on soil degradation and farming practices in the Philippines; it contains no allegations or descriptions of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Philippine corn farmers investigate links between chemical farming and soil erosion",
+      "url": "https://news.mongabay.com/2026/11/philippine-corn-farmers-investigate-links-between-chemical-farming-and-soil-erosion/"
+    },
     "07add2c9a68eb218db1af1ce02fccaccc3d1c02e443a3f6c9be0a84230f7817f": {
       "api_usage": {
         "input_tokens": 1081,
@@ -603,6 +627,54 @@
       "title": "New evidence links Singapore palm oil giant to Indonesian deforesters, despite denials",
       "url": "https://www.icij.org/investigations/deforestation-inc/new-evidence-links-singapore-palm-oil-giant-to-indonesian-deforesters-despite-denials/"
     },
+    "22bb7bfae18c6894ffe909963039c961cb9a538875a1abd3c1e6237bc2ea2dca": {
+      "api_usage": {
+        "input_tokens": 1491,
+        "output_tokens": 141,
+        "total_tokens": 1632
+      },
+      "author": "James Hall",
+      "checked_at": "2026-11-20T22:50:25Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses a community-run Andean bear camera-trap conservation project and biodiversity education; it contains no allegations or reporting of abuse of power, improper private gain, investigations or corruption-related enforcement.",
+      "source": "Mongabay",
+      "title": "Quechua community in Peru builds up Andean bear camera trap project on their own reserve",
+      "url": "https://news.mongabay.com/2026/11/quechua-community-in-peru-builds-up-andean-bear-camera-trap-project-on-their-own-reserve/"
+    },
+    "263194541dc2a29e327157301415a626c585799c29bf57d38debb77f85f5b33e": {
+      "api_usage": {
+        "input_tokens": 4001,
+        "output_tokens": 314,
+        "total_tokens": 4315
+      },
+      "author": "Sydney Allen",
+      "checked_at": "2026-11-20T22:50:21Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on criminalizing ecocide and ICC reform to prosecute environmental harm by companies and states. It does not allege abuse of an entrusted role by a public official or organisation for private gain, so it does not meet the Transparency International definition of corruption.",
+      "source": "Global Voices",
+      "title": "The ongoing efforts to get ecocide recognized at the International Criminal Court",
+      "url": "https://globalvoices.org/2026/11/20/the-ongoing-efforts-to-get-ecocide-recognized-at-the-international-criminal-court/"
+    },
     "2680a9c0b7f0af78f2d0e0b284d08c1426c33687e8972c8a4c925963a49bdfc6": {
       "api_usage": {
         "input_tokens": 6432,
@@ -682,6 +754,54 @@
       "source": "Global Voices",
       "title": "Diversifying funding was supposed to protect civil society: It did not",
       "url": "https://globalvoices.org/2026/11/18/diversifying-funding-was-supposed-to-protect-civil-society-it-did-not/"
+    },
+    "27d00bf2e752b3048f5725b0e7795ace0b8c527665556c1158ba91fc5f8961d3": {
+      "api_usage": {
+        "input_tokens": 1341,
+        "output_tokens": 137,
+        "total_tokens": 1478
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-20T22:50:23Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses U.N. climate talks and criticisms over fossil fuels; it contains no allegations of abuse of entrusted power, improper private gain, or substantive reporting on corruption, investigations or enforcement.",
+      "source": "Mongabay",
+      "title": "UN climate talks slammed by activists, leaders as fossil fuels go unmentioned in draft agreement",
+      "url": "https://news.mongabay.com/short-article/2026/11/un-climate-talks-slammed-by-activists-leaders-as-fossil-fuels-go-unmentioned-in-draft-agreement/"
+    },
+    "293a2c0fb5340971e6a983cebd75ae0b1fabbf26044dda5749ccf9457a37f63a": {
+      "api_usage": {
+        "input_tokens": 1510,
+        "output_tokens": 292,
+        "total_tokens": 1802
+      },
+      "author": "Elizabeth Claire Alberts",
+      "checked_at": "2026-11-20T22:50:47Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article reports an allegedly illegal seabed auction and jurisdictional dispute but does not describe or allege abuse of entrusted power for private gain, nor substantive coverage of corruption, investigations or bribery. It focuses on leasing and legal challenge rather than corrupt conduct.",
+      "source": "Mongabay",
+      "title": "US leases American Samoan seabed for mining in auction deemed illegal by court",
+      "url": "https://news.mongabay.com/2026/11/us-leases-american-samoan-seabed-for-mining-in-auction-deemed-illegal-by-court/"
     },
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": {
       "api_usage": {
@@ -966,6 +1086,34 @@
       "title": "Animal cafes and exotic pet trade bring wildlife disease risks into public spaces",
       "url": "https://news.mongabay.com/2026/11/animal-cafes-and-exotic-pet-trade-bring-wildlife-disease-risks-into-public-spaces/"
     },
+    "3b9e0da62e79a3681d70dde82e0c601d14553103d8334cb8c448b0f27289b1f5": {
+      "api_usage": {
+        "input_tokens": 1465,
+        "output_tokens": 379,
+        "total_tokens": 1844
+      },
+      "author": "Georges Thierry HandjaJoe Eisen",
+      "checked_at": "2026-11-20T22:50:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "publish",
+      "evidence": [
+        "used by foreign interests and political elites as tools to perpetuate power \u2014 with control of natural resources and the benefits they generate tending to flow outwards and upwards \u2014 rather than to the people living in",
+        "these areas. Resource map of the Congo Basin. Graphic courtesy of Earth Insight. Today, much of the Congo Basin, the world\u2019s second largest rainforest, resembles a patchwork of extractive industry concessions, strictly",
+        "protected areas and an ever-increasing array of carbon offset projects which our organization has documented. These have largely failed to stem deforestation and biodiversity loss, while delivering few or no benefits to"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article alleges that foreign interests and political elites use maps and resource concessions to perpetuate control over natural resources so benefits flow away from local people, describing extractive concessions and projects that harm communities \u2014 meeting the definition of abuse of entrusted power for private gain and substantive coverage.",
+      "source": "Mongabay",
+      "title": "It\u2019s time to put Africa\u2019s forest communities on the map (commentary)",
+      "url": "https://news.mongabay.com/2026/11/its-past-time-to-put-africas-forest-communities-on-the-map-commentary/"
+    },
     "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02": {
       "api_usage": {
         "input_tokens": 1481,
@@ -989,6 +1137,30 @@
       "source": "Mongabay",
       "title": "El Ni\u00f1o\u2019s hidden toll on trees emerges years later in Papua New Guinea rainforest",
       "url": "https://news.mongabay.com/2026/11/el-ninos-hidden-toll-on-trees-emerges-years-later-in-papua-new-guinea-rainforest/"
+    },
+    "402c9aa041687475adc380f7fdd81ceeb736236d8d975994d53ad7edc2a20d63": {
+      "api_usage": {
+        "input_tokens": 1488,
+        "output_tokens": 175,
+        "total_tokens": 1663
+      },
+      "author": "Shanna Hanbury",
+      "checked_at": "2026-11-20T22:50:38Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports Indigenous protests blocking soy and fuel barges and demands for territory protection; it does not allege abuse of entrusted power or improper private gain nor focus on corruption investigations or enforcement.",
+      "source": "Mongabay",
+      "title": "Indigenous protesters board soy and oil barges on Brazilian Amazon river",
+      "url": "https://news.mongabay.com/short-article/2026/11/indigenous-protesters-board-soy-and-oil-barges-on-brazilian-amazon-river/"
     },
     "40ef8bfc039894121e1451a3d1f0b15cafa204a7a94fb31ef8dfb26142a8dcd8": {
       "api_usage": {
@@ -1400,7 +1572,7 @@
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
-      "checked_at": "2026-11-20T16:24:08Z",
+      "checked_at": "2026-11-20T22:50:14Z",
       "decision": "review",
       "evidence": [],
       "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
@@ -1454,6 +1626,30 @@
       "source": "OCCRP",
       "title": "In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes",
       "url": "https://www.occrp.org/en/scoop/in-a-vienna-bakery-a-sweet-scent-of-pastry-and-a-backdoor-for-serbian-votes"
+    },
+    "5abfb9b774bee392e1e9262d8a4dc015d7514191ab3c7fb2dc4ce13f71b6cf07": {
+      "api_usage": {
+        "input_tokens": 1478,
+        "output_tokens": 172,
+        "total_tokens": 1650
+      },
+      "author": "Maxwell Radwin",
+      "checked_at": "2026-11-20T22:50:29Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on a contested mining project and environmental/Indigenous concerns but contains no allegations or description of abuse of entrusted power, improper private gain, or investigations of corruption. It focuses on authorization and impacts, not corrupt conduct.",
+      "source": "Mongabay",
+      "title": "Ecuador copper mine advancing despite opposition from Indigenous communities",
+      "url": "https://news.mongabay.com/2026/11/ecuador-copper-mine-advancing-despite-opposition-from-indigenous-communities/"
     },
     "5b1df8d0f7df9ada3bc955d5b3b21cfbe359ae2de5cf655a103593e3ab9a9b80": {
       "api_usage": {
@@ -1771,6 +1967,30 @@
       "source": "Mongabay",
       "title": "Environmental groups challenge Mexico\u2019s rollback of protections for world\u2019s smallest porpoise",
       "url": "https://news.mongabay.com/short-article/2026/11/environmental-groups-challenge-mexicos-rollback-of-protections-for-worlds-smallest-porpoise/"
+    },
+    "6beff2d8075cb9bd649b92c18193c21c585c42ae0cf65f18d29c585d35d1d041": {
+      "api_usage": {
+        "input_tokens": 1494,
+        "output_tokens": 134,
+        "total_tokens": 1628
+      },
+      "author": "David Brown",
+      "checked_at": "2026-11-20T22:50:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes a renovated insect exhibit and education goals; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption-related investigation.",
+      "source": "Mongabay",
+      "title": "Renovated BUGarium in the US aims to connect people and insects",
+      "url": "https://news.mongabay.com/short-article/2026/11/renovated-bugarium-in-the-us-aims-to-connect-people-and-insects/"
     },
     "6c6dfc09f1902698490b6088a1d87e632605d5ab442f2057443a1fbce1138101": {
       "api_usage": {
@@ -2534,6 +2754,54 @@
       "source": "Global Voices",
       "title": "Ex-lawmaker sentenced to 12.5 years in prison in closed-door trial in Macau",
       "url": "https://globalvoices.org/2026/11/10/ex-lawmaker-sentenced-to-12-5-years-in-prison-in-closed-door-trial-in-macau/"
+    },
+    "995148b782a6e4c36851d26b8ff0ec9278bfb078897cac2610538fb9a36597dd": {
+      "api_usage": {
+        "input_tokens": 1495,
+        "output_tokens": 116,
+        "total_tokens": 1611
+      },
+      "author": "Jeremy Hance",
+      "checked_at": "2026-11-20T22:50:27Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses potential discovery of a new primate species, with no allegations of abuse of power, improper private gain, or substantive reporting on corruption.",
+      "source": "Mongabay",
+      "title": "Could a short tail mean a new monkey species in Laos? Some scientists think so",
+      "url": "https://news.mongabay.com/2026/11/could-a-short-tail-mean-a-new-monkey-species-in-laos-some-scientists-think-so/"
+    },
+    "9a36815d7f31bbfa795c63ac594cc77f3db3e49f9da59819b95fcae660c5b48e": {
+      "api_usage": {
+        "input_tokens": 1855,
+        "output_tokens": 389,
+        "total_tokens": 2244
+      },
+      "author": "David Kenner",
+      "checked_at": "2026-11-20T22:50:18Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "review",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article documents FDA practices that enabled device makers to obscure harms, but it does not explicitly allege that FDA officials abused entrusted power for private gain or that companies received improper benefits; the connection to corruption is plausible but not clearly established in the text provided.",
+      "source": "ICIJ",
+      "title": "Medical device makers have gotten worse at disclosing when their products harm people, new study finds. The FDA let them.",
+      "url": "https://www.icij.org/investigations/implant-files/medical-device-makers-have-gotten-worse-at-disclosing-when-their-products-harm-people-new-study-finds-the-fda-let-them/"
     },
     "9cbb3aced155e6ed25fad231d04e02599b2954edd4ca73917616fce70b7283fc": {
       "api_usage": {
@@ -3960,6 +4228,30 @@
       "title": "Anatomy of a Chinese loanbook",
       "url": "https://www.icij.org/investigations/china-capital/anatomy-of-a-chinese-loanbook/"
     },
+    "ea686289a6df11233af0dd5e3cc485017f39056f5951db9ead5b8363270ac6fd": {
+      "api_usage": {
+        "input_tokens": 1438,
+        "output_tokens": 160,
+        "total_tokens": 1598
+      },
+      "author": "Rhett Ayers Butler",
+      "checked_at": "2026-11-20T22:50:32Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses philanthropy and conservation challenges (funding gaps, protected areas, community impacts) but contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Where family foundations can help marine conservation",
+      "url": "https://news.mongabay.com/2026/11/where-family-foundations-can-help-marine-conservation/"
+    },
     "ea981252a38f353875500959ba2ee6c387c3b99e93528506fc195a0e19c38a51": {
       "api_usage": {
         "input_tokens": 1323,
@@ -4243,6 +4535,7 @@
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4o3ktf4mquyfo",
+    "3b9e0da62e79a3681d70dde82e0c601d14553103d8334cb8c448b0f27289b1f5": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5rbkhosrbncvc",
     "548c34a7e21ee933e8d11de3b49a4d62d0161ea7df9772491fd381fbbc75066b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7d53oozl3xudn",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/aqtuzhmnsax24",
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/bekwzfipyrky4",
@@ -4266,6 +4559,7 @@
     "01a667cb1fd9cfcea2819986f0e5d6c0899b36f5e09c925023f7c07589524010",
     "01f3ceea2a743a1b31402a17f5cfa5632463aa3e71ca90dc0e7c9030f682e79f",
     "0253322edf9859751fb374929fbfca13f17b3fa10a7e7ed1e3e3ccbfc11b0d32",
+    "025de3588076defb17ef8d257ef238b524e55e64c5fc0622bfe8e183ea6ef8b2",
     "03fe4a1f14be2af2dd8caea190b0d943de172489be0592a11d8e0571b827792b",
     "0476b2d2d0e2706e296160eb4b24d8f1fa356bc6ae5e984b0f076d30e9611b0a",
     "049abc7380f4e76668ac9272c730034586e6300096ab4615c56ead8e2b783db9",
@@ -4309,15 +4603,19 @@
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
     "216133e36ed70a4e58a9d56eb4d48fe8a4001f26a16ef1bf2374c7d4f0c29e15",
     "222c22357ac865b786de3f57d214bff992f7084f63e83210e667cfc2f8336de7",
+    "22bb7bfae18c6894ffe909963039c961cb9a538875a1abd3c1e6237bc2ea2dca",
     "22bf9e388ecd4b17bac41f744204e3eae6cf438340a2713dfd33b00a7ecb1acb",
     "250b48593eb86ab206d04acafc0e70051ce5fd76ee47ec31881a195d2992e370",
     "252624f88b56db4d806c5090b1b5d4aeec533e8c23ae23574ff2ff99be4666fd",
+    "263194541dc2a29e327157301415a626c585799c29bf57d38debb77f85f5b33e",
     "2680a9c0b7f0af78f2d0e0b284d08c1426c33687e8972c8a4c925963a49bdfc6",
     "272fee4229bf2095f9f24003c975f589390b61e7e7e97f33bf4062e1af171ed9",
     "27308fbc213f504e312937c264bfcedc52dec5b1c750b03e2fcc92c2b39c8190",
+    "27d00bf2e752b3048f5725b0e7795ace0b8c527665556c1158ba91fc5f8961d3",
     "28ccbc04fc48ef89e6aa1c4f03780bb94b3b19df1945e13f366c725f1f8288fa",
     "291116e5b8aecba9bdfc66baf3d21398dfb69d04f3cdce37d085b8575ba5fb9a",
     "292d7fad868a6817fdbae613f8192200fe02d302fb9b63575b3f7b63a19d7913",
+    "293a2c0fb5340971e6a983cebd75ae0b1fabbf26044dda5749ccf9457a37f63a",
     "294570f63cd6e493a0b0c105cd2bce3323a87b0085e2f7a44bda4323bb5f7e25",
     "29afecaac4590fe0c96f52174603536cd71ebc84489d9f36fbd476793714b9fa",
     "29bdd0b07201a59c1273112758591e23cbfba3e9edba3808eb49157678a8ee43",
@@ -4349,9 +4647,11 @@
     "3aa6ff99eafada414d21693627caddfd1d7fae450106e88b0009bb00116b1231",
     "3b8f25daae542a9208109c17859279e6c7b06c6a3ff2b74928419cf6ca815eea",
     "3b9c91b452af52b0c8db07b8c05fcf92c19feb12b78870c1af80aee8c93c9815",
+    "3b9e0da62e79a3681d70dde82e0c601d14553103d8334cb8c448b0f27289b1f5",
     "3cf58729cfc0917a3ec800b6565126fa6cdbf5fa95212d94112a27b10eb939bf",
     "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02",
     "3f29401a5421f43d53dd722dfc7e24dcedb860eaa4d4c8ec662c2f08a77b6d00",
+    "402c9aa041687475adc380f7fdd81ceeb736236d8d975994d53ad7edc2a20d63",
     "40ef8bfc039894121e1451a3d1f0b15cafa204a7a94fb31ef8dfb26142a8dcd8",
     "412a9ff2eed29efb0c2d3ed5ff55e1cc333c82a758d5ca0d8c617946fb707c12",
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990",
@@ -4387,6 +4687,7 @@
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5a9d0e0935d2582357edf7e8989601040c26151c524460078ee1bef4048dfc69",
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b",
+    "5abfb9b774bee392e1e9262d8a4dc015d7514191ab3c7fb2dc4ce13f71b6cf07",
     "5b1df8d0f7df9ada3bc955d5b3b21cfbe359ae2de5cf655a103593e3ab9a9b80",
     "5c8e56482e9e27d537a0ed3fbe488c0d65cc341f9a0815f2fa0cc53b519dde95",
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
@@ -4407,6 +4708,7 @@
     "68dcdcf5d8bfcac2122ad08ba5884c1fe403a147b718fe03cb07f1b8bd370046",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88",
     "6bc12a38c71465dc4c380d4752488f46ae1260864930fe89ffbe948c7cbb1bed",
+    "6beff2d8075cb9bd649b92c18193c21c585c42ae0cf65f18d29c585d35d1d041",
     "6c6dfc09f1902698490b6088a1d87e632605d5ab442f2057443a1fbce1138101",
     "6cbb82d8d9758f61dc4711050702c406c3f1c89debf4fbd42b76ca7747a0983c",
     "6d047b0e5c130f511892afc11717de9fcddca27913f944eb8cfc0cc29b642a0f",
@@ -4477,6 +4779,8 @@
     "97120f26cae028120e881d78ab4443c549a1dbef4cf1f8558fe30924c9e050a6",
     "9839f615dc45cdfb081fa94337a887a53f14afbc834902454537ad528f368dbc",
     "994b6b3d9dc91f85b906e2e97692d7f817647c0471f00ad847ab55f5c81e5764",
+    "995148b782a6e4c36851d26b8ff0ec9278bfb078897cac2610538fb9a36597dd",
+    "9a36815d7f31bbfa795c63ac594cc77f3db3e49f9da59819b95fcae660c5b48e",
     "9a3f1d31ca6d843e90c0d2b79ca3a486fe9cad0105826eb88ae664ce8e45293e",
     "9bc3fe4a67a00351b3ae60a45aad7a790e8ff27d61b9d050e9d73d6d23b5fdcc",
     "9be84e6c81b114b5ff156932b1e53914da17d3670b1bb33064c93796d76c2901",
@@ -4602,6 +4906,7 @@
     "e64217509b7a416959bbee28778ddb00d81b6eeef6f1069cf7b9b9c8ab96b933",
     "e736fc7febbfc54e187992cfd79dabb1803f6a20fa4164b43aeee9db506833a7",
     "e83f386a00584013c89a5b33b4cdad96786f110307887194b5cfa5242d933ae3",
+    "ea686289a6df11233af0dd5e3cc485017f39056f5951db9ead5b8363270ac6fd",
     "ea981252a38f353875500959ba2ee6c387c3b99e93528506fc195a0e19c38a51",
     "ebc3399faa1ff2be0effd6b2cd1708298e63974231f354c127c21181ddd1a2cd",
     "ec8e8dee0454417924be7160a7cb353f9bef50b2bc7bf9686bbfdb87b626aa10",

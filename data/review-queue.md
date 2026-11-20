@@ -176,6 +176,20 @@ Classifier reason: Article details controversial seabed-mining applications and 
 - private gain: unknown
 - substantive corruption coverage: unknown
 
+## Last Javan rhino habitat caught between mining plans and relocation debate
+
+Source: Mongabay
+
+Article: https://news.mongabay.com/2026/11/last-javan-rhino-habitat-caught-between-mining-plans-and-relocation-debate/
+
+Status: awaiting review
+
+Classifier reason: Article notes a mining map affecting rhino habitat and that a mining tycoon (and brother of the president) in an official envoy role proposed relocating rhinos, suggesting possible conflict of interest. However the supplied text does not allege or document abuse of entrusted power, improper private gain, or a corruption investigation, so the connection is uncertain.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
 ## US brand StarKist suspends tuna sourcing from vessels accused of exploiting Indonesian fishers
 
 Source: Mongabay
@@ -190,15 +204,15 @@ Classifier reason: Article alleges forced labor and supply-chain abuses by vesse
 - private gain: unknown
 - substantive corruption coverage: unknown
 
-## Last Javan rhino habitat caught between mining plans and relocation debate
+## Medical device makers have gotten worse at disclosing when their products harm people, new study finds. The FDA let them.
 
-Source: Mongabay
+Source: ICIJ
 
-Article: https://news.mongabay.com/2026/11/last-javan-rhino-habitat-caught-between-mining-plans-and-relocation-debate/
+Article: https://www.icij.org/investigations/implant-files/medical-device-makers-have-gotten-worse-at-disclosing-when-their-products-harm-people-new-study-finds-the-fda-let-them/
 
 Status: awaiting review
 
-Classifier reason: Article notes a mining map affecting rhino habitat and that a mining tycoon (and brother of the president) in an official envoy role proposed relocating rhinos, suggesting possible conflict of interest. However the supplied text does not allege or document abuse of entrusted power, improper private gain, or a corruption investigation, so the connection is uncertain.
+Classifier reason: The article documents FDA practices that enabled device makers to obscure harms, but it does not explicitly allege that FDA officials abused entrusted power for private gain or that companies received improper benefits; the connection to corruption is plausible but not clearly established in the text provided.
 
 - abuse of entrusted power: unknown
 - private gain: unknown
