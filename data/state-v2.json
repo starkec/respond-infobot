@@ -1620,7 +1620,7 @@
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
-      "checked_at": "2026-11-21T12:42:37Z",
+      "checked_at": "2026-11-21T19:49:25Z",
       "decision": "review",
       "evidence": [],
       "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
@@ -2087,6 +2087,30 @@
       "source": "Mongabay",
       "title": "South African court dismisses appeal over planned coal-fired power plants",
       "url": "https://news.mongabay.com/short-article/2026/11/south-african-court-dismisses-appeal-over-planned-coal-fired-power-plants/"
+    },
+    "6d100a6de72de8d8f37a9a30093383206c17712b31123c8dfb738fb50eb02521": {
+      "api_usage": {
+        "input_tokens": 3407,
+        "output_tokens": 154,
+        "total_tokens": 3561
+      },
+      "author": "Cynthia Ebot Takang",
+      "checked_at": "2026-11-21T19:49:28Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article focuses on displacement, children's education and livelihoods amid the Anglophone conflict in Cameroon; it does not allege or describe abuse of entrusted power, improper private gain, or substantive corruption investigations.",
+      "source": "Global Voices",
+      "title": "Growing up displaced in Cameroon after ten years of conflict",
+      "url": "https://globalvoices.org/2026/11/21/growing-up-displaced-in-cameroon-after-ten-years-of-conflict/"
     },
     "6d8226aac7b911b508fcdb80bb61bd6e7cd614e49816bcd75c080c533a204888": {
       "api_usage": {
@@ -4787,6 +4811,7 @@
     "6c6dfc09f1902698490b6088a1d87e632605d5ab442f2057443a1fbce1138101",
     "6cbb82d8d9758f61dc4711050702c406c3f1c89debf4fbd42b76ca7747a0983c",
     "6d047b0e5c130f511892afc11717de9fcddca27913f944eb8cfc0cc29b642a0f",
+    "6d100a6de72de8d8f37a9a30093383206c17712b31123c8dfb738fb50eb02521",
     "6d2df1fe03d6087b21c0b8bfb6192dc4d73dc9d0757e6e1643a6ac9b00610be0",
     "6d8226aac7b911b508fcdb80bb61bd6e7cd614e49816bcd75c080c533a204888",
     "6dc968203959902fae48848709e285c770592c1aef8167ff876ae0d5b958fb99",
