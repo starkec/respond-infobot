@@ -755,6 +755,30 @@
       "title": "Diversifying funding was supposed to protect civil society: It did not",
       "url": "https://globalvoices.org/2026/11/18/diversifying-funding-was-supposed-to-protect-civil-society-it-did-not/"
     },
+    "27afd2b9f36895853c44e0768d6a61f29873c637c116f9ee68f94ae8b1173bba": {
+      "api_usage": {
+        "input_tokens": 1345,
+        "output_tokens": 130,
+        "total_tokens": 1475
+      },
+      "author": "Leo PlunkettSandy Watt",
+      "checked_at": "2026-11-21T12:42:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses conservation and community-designed marine protection on Lundy Island; it contains no allegations or description of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "The British island that made a deal with nature",
+      "url": "https://news.mongabay.com/video/2026/11/the-british-island-that-made-a-deal-with-nature/"
+    },
     "27d00bf2e752b3048f5725b0e7795ace0b8c527665556c1158ba91fc5f8961d3": {
       "api_usage": {
         "input_tokens": 1341,
@@ -1113,6 +1137,30 @@
       "source": "Mongabay",
       "title": "It\u2019s time to put Africa\u2019s forest communities on the map (commentary)",
       "url": "https://news.mongabay.com/2026/11/its-past-time-to-put-africas-forest-communities-on-the-map-commentary/"
+    },
+    "3d11fb1cb1a53fa666d3d7f1c54ca407bc04aad6ff87345580e9ede5f8cd2aea": {
+      "api_usage": {
+        "input_tokens": 3476,
+        "output_tokens": 179,
+        "total_tokens": 3655
+      },
+      "author": "Sanjib Chaudhary",
+      "checked_at": "2026-11-21T12:42:40Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses Indigenous culinary history, food sovereignty and land access but contains no allegations or substantive reporting of abuse of entrusted power, improper private gain, or corruption investigations. It is cultural and policy-focused, not about corruption.",
+      "source": "Global Voices",
+      "title": "Reclaiming Indigenous culinary histories in Nepal",
+      "url": "https://globalvoices.org/2026/11/21/rereclaiming-indigenous-culinary-histories-in-nepal/"
     },
     "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02": {
       "api_usage": {
@@ -1572,7 +1620,7 @@
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
-      "checked_at": "2026-11-21T04:00:20Z",
+      "checked_at": "2026-11-21T12:42:37Z",
       "decision": "review",
       "evidence": [],
       "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
@@ -4635,6 +4683,7 @@
     "2680a9c0b7f0af78f2d0e0b284d08c1426c33687e8972c8a4c925963a49bdfc6",
     "272fee4229bf2095f9f24003c975f589390b61e7e7e97f33bf4062e1af171ed9",
     "27308fbc213f504e312937c264bfcedc52dec5b1c750b03e2fcc92c2b39c8190",
+    "27afd2b9f36895853c44e0768d6a61f29873c637c116f9ee68f94ae8b1173bba",
     "27d00bf2e752b3048f5725b0e7795ace0b8c527665556c1158ba91fc5f8961d3",
     "28ccbc04fc48ef89e6aa1c4f03780bb94b3b19df1945e13f366c725f1f8288fa",
     "291116e5b8aecba9bdfc66baf3d21398dfb69d04f3cdce37d085b8575ba5fb9a",
@@ -4673,6 +4722,7 @@
     "3b9c91b452af52b0c8db07b8c05fcf92c19feb12b78870c1af80aee8c93c9815",
     "3b9e0da62e79a3681d70dde82e0c601d14553103d8334cb8c448b0f27289b1f5",
     "3cf58729cfc0917a3ec800b6565126fa6cdbf5fa95212d94112a27b10eb939bf",
+    "3d11fb1cb1a53fa666d3d7f1c54ca407bc04aad6ff87345580e9ede5f8cd2aea",
     "3e643ff83cf2fbe0791d8950dadfb9f9cfe6a708a0484156cc7dbdea9ecc6e02",
     "3f29401a5421f43d53dd722dfc7e24dcedb860eaa4d4c8ec662c2f08a77b6d00",
     "402c9aa041687475adc380f7fdd81ceeb736236d8d975994d53ad7edc2a20d63",
