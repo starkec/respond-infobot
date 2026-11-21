@@ -148,6 +148,20 @@ Classifier reason: The story documents large-scale money laundering and a Kremli
 - private gain: unknown
 - substantive corruption coverage: unknown
 
+## Medical device makers have gotten worse at disclosing when their products harm people, new study finds. The FDA let them.
+
+Source: ICIJ
+
+Article: https://www.icij.org/investigations/implant-files/medical-device-makers-have-gotten-worse-at-disclosing-when-their-products-harm-people-new-study-finds-the-fda-let-them/
+
+Status: awaiting review
+
+Classifier reason: The article documents FDA practices that enabled device makers to obscure harms, but it does not explicitly allege that FDA officials abused entrusted power for private gain or that companies received improper benefits; the connection to corruption is plausible but not clearly established in the text provided.
+
+- abuse of entrusted power: unknown
+- private gain: unknown
+- substantive corruption coverage: unknown
+
 ## Mongabay shark meat investigation shortlisted for two journalism awards in Brazil
 
 Source: Mongabay
@@ -199,20 +213,6 @@ Article: https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourc
 Status: awaiting review
 
 Classifier reason: Article alleges forced labor and supply-chain abuses by vessels supplying StarKist, but it does not explicitly describe abuse of entrusted power for improper private gain or frame the wrongdoing as corruption. Additional context is needed to establish a concrete corruption connection.
-
-- abuse of entrusted power: unknown
-- private gain: unknown
-- substantive corruption coverage: unknown
-
-## Medical device makers have gotten worse at disclosing when their products harm people, new study finds. The FDA let them.
-
-Source: ICIJ
-
-Article: https://www.icij.org/investigations/implant-files/medical-device-makers-have-gotten-worse-at-disclosing-when-their-products-harm-people-new-study-finds-the-fda-let-them/
-
-Status: awaiting review
-
-Classifier reason: The article documents FDA practices that enabled device makers to obscure harms, but it does not explicitly allege that FDA officials abused entrusted power for private gain or that companies received improper benefits; the connection to corruption is plausible but not clearly established in the text provided.
 
 - abuse of entrusted power: unknown
 - private gain: unknown

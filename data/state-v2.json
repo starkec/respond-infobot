@@ -1572,7 +1572,7 @@
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
-      "checked_at": "2026-11-20T22:50:14Z",
+      "checked_at": "2026-11-21T04:00:20Z",
       "decision": "review",
       "evidence": [],
       "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
@@ -1863,6 +1863,30 @@
       "source": "Mongabay",
       "title": "Threatened species make up half of shark catches at Indonesian fishing port, study finds",
       "url": "https://news.mongabay.com/2026/11/threatened-species-make-up-half-of-shark-catches-at-indonesian-fishing-port-study-finds/"
+    },
+    "67a2ea346c95de0d96d33384aa7002833d01b83d160afc3827ebac33b2509831": {
+      "api_usage": {
+        "input_tokens": 1517,
+        "output_tokens": 163,
+        "total_tokens": 1680
+      },
+      "author": "Kamanthi Wickramasinghe",
+      "checked_at": "2026-11-21T04:00:23Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports extreme rainfall and flooding in Colombo, focusing on meteorological intensity and impacts; it does not allege or substantively discuss abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Extreme rainfalls flood Sri Lanka\u2019s coastal city as wetlands, drains vanish",
+      "url": "https://news.mongabay.com/2026/11/extreme-rainfalls-flood-sri-lankas-coastal-city-as-wetlands-drains-vanish/"
     },
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6": {
       "api_usage": {
@@ -4530,7 +4554,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-20",
+  "last_checked_date": "2026-11-21",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -4702,6 +4726,7 @@
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
     "6713611317142462cfbbb9d88c5f8f18c42d9060f00355d5fe969c0ad8557ac8",
+    "67a2ea346c95de0d96d33384aa7002833d01b83d160afc3827ebac33b2509831",
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6",
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
     "68d6d35fd52bd1f0281bf7659e365eaaa5e6bd7c85f9820ad0c0210f00db9736",
