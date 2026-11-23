@@ -73,6 +73,54 @@
       "title": "Philippine corn farmers investigate links between chemical farming and soil erosion",
       "url": "https://news.mongabay.com/2026/11/philippine-corn-farmers-investigate-links-between-chemical-farming-and-soil-erosion/"
     },
+    "05a5449ad9837cde74f5cdc197f6081edc162ab609882989b981b5e494eef2f9": {
+      "api_usage": {
+        "input_tokens": 1323,
+        "output_tokens": 134,
+        "total_tokens": 1457
+      },
+      "author": "Associated Press",
+      "checked_at": "2026-11-23T22:42:13Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses collapse of UN climate talks over fossil fuels and negotiations, with no allegations of abuse of entrusted power, improper private gain, or substantive corruption coverage in the supplied text.",
+      "source": "Mongabay",
+      "title": "Analysis: The collapse of UN climate talks, over fossil fuels, was years in the making",
+      "url": "https://news.mongabay.com/short-article/2026/11/analysis-the-collapse-of-un-climate-talks-over-fossil-fuels-was-years-in-the-making/"
+    },
+    "05a6e702c25f95ecb7de9b839a9615716429e63413256614c6e820926cc97a0e": {
+      "api_usage": {
+        "input_tokens": 1473,
+        "output_tokens": 125,
+        "total_tokens": 1598
+      },
+      "author": "Amanda MagnaniAna Clara Otoni",
+      "checked_at": "2026-11-23T22:42:19Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses climate-driven droughts threatening riverine health clinics; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Longer droughts threaten floating health clinics as Amazon streams run dry",
+      "url": "https://news.mongabay.com/2026/11/longer-droughts-dry-amazon-waterways-and-threaten-floating-health-clinics/"
+    },
     "06ed5c0f5e2534c10facd764d219e153142722a03cc1f059cd22ccdb41a16c51": {
       "api_usage": {
         "input_tokens": 5187,
@@ -454,6 +502,30 @@
       "source": "Mongabay",
       "title": "Rangers\u2019 role must be built into biodiversity conservation commitments (commentary)",
       "url": "https://news.mongabay.com/2026/11/rangers-role-must-be-built-into-biodiversity-conservation-commitments-commentary/"
+    },
+    "199f3c04f1b8ce915fd52f5088214a061bc42b3e19bfda51bbf23fa653898aa1": {
+      "api_usage": {
+        "input_tokens": 1473,
+        "output_tokens": 141,
+        "total_tokens": 1614
+      },
+      "author": "Bernard Chiguvare",
+      "checked_at": "2026-11-23T22:42:15Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports on flood damage and infrastructure repairs and residents' concerns but contains no allegations or substantive reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "In South Africa\u2019s Limpopo, residents wonder what the next flood will bring",
+      "url": "https://news.mongabay.com/2026/11/in-south-africas-limpopo-residents-wonder-what-the-next-flood-will-bring/"
     },
     "1b0542aa6c8f6e33697329ac042a6ee28e411043bddbf581d3d14cb9d65730cd": {
       "api_usage": {
@@ -850,6 +922,30 @@
       "source": "Mongabay",
       "title": "UN climate talks slammed by activists, leaders as fossil fuels go unmentioned in draft agreement",
       "url": "https://news.mongabay.com/short-article/2026/11/un-climate-talks-slammed-by-activists-leaders-as-fossil-fuels-go-unmentioned-in-draft-agreement/"
+    },
+    "27ff7bec288e4d515aaec1d0a77ec0692dd07fc733705db3d6399b13a4265d54": {
+      "api_usage": {
+        "input_tokens": 1464,
+        "output_tokens": 131,
+        "total_tokens": 1595
+      },
+      "author": "David Brown",
+      "checked_at": "2026-11-23T22:42:21Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes an educational initiative for children about nature and conservation; it contains no allegations or substantive reporting of abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "Mongabay Kids launches Wild Guardians: A free education initiative to engage children with nature",
+      "url": "https://news.mongabay.com/short-article/2026/11/mongabay-kids-launches-wild-guardians-a-free-education-initiative-to-engage-children-with-nature/"
     },
     "293a2c0fb5340971e6a983cebd75ae0b1fabbf26044dda5749ccf9457a37f63a": {
       "api_usage": {
@@ -2449,6 +2545,54 @@
       "title": "Indonesia\u2019s domestic palm oil market carries the biggest deforestation footprint",
       "url": "https://news.mongabay.com/2026/11/indonesias-domestic-palm-oil-market-carries-the-biggest-deforestation-footprint/"
     },
+    "797a25b4578166cbd19e04b744020805468b791ca808e2423d0586bcd042fc2c": {
+      "api_usage": {
+        "input_tokens": 1514,
+        "output_tokens": 148,
+        "total_tokens": 1662
+      },
+      "author": "Mongabay.com",
+      "checked_at": "2026-11-23T22:42:07Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses climate-driven decline of South Korea\u2019s squid fishery, catch statistics and price changes; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Warming seas threaten South Korea\u2019s iconic squid fishery with collapse by 2040s",
+      "url": "https://news.mongabay.com/short-article/2026/11/warming-seas-threaten-south-koreas-iconic-squid-fishery-with-collapse-by-2040s/"
+    },
+    "7b62d32d09f0d492c0111a748c379d94f6d1050161dea82ff418f991c249e8c1": {
+      "api_usage": {
+        "input_tokens": 1518,
+        "output_tokens": 182,
+        "total_tokens": 1700
+      },
+      "author": "Gonzalo Ortu\u00f1o L\u00f3pez",
+      "checked_at": "2026-11-23T22:42:11Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses policy changes weakening Amazon protections and environmental impacts but contains no allegations or evidence of abuse of entrusted power for private gain, corruption investigations, or improper benefits to officials or private parties.",
+      "source": "Mongabay",
+      "title": "Colombia president\u2019s move on mining, oil weakens country\u2019s Amazon protections, experts warn",
+      "url": "https://news.mongabay.com/2026/11/colombia-presidents-move-on-mining-oil-weakens-countrys-amazon-protections-experts-warn/"
+    },
     "7ca63eb503b7f2412a1a88318387b11f92ab87ad5b60fbc7d2674c97fd0a250f": {
       "api_usage": {
         "input_tokens": 1479,
@@ -2521,6 +2665,30 @@
       "title": "How medical neglect killed Alfredo D\u00edaz in a Venezuelan cell",
       "url": "https://globalvoices.org/2026/11/13/how-medical-neglect-killed-alfredo-diaz-in-a-venezuelan-cell/"
     },
+    "7e1ce069f2174428327bf16360908d942a05a66feeff737c375e273e1622c1f3": {
+      "api_usage": {
+        "input_tokens": 1498,
+        "output_tokens": 185,
+        "total_tokens": 1683
+      },
+      "author": "Holly C. Jonas",
+      "checked_at": "2026-11-23T22:42:09Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses philanthropic funding distribution and barriers to direct access for Indigenous communities, but contains no allegations or substantive reporting of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "\u2018We had to reinvent the system completely,\u2019 Brazilian philanthropy leader says",
+      "url": "https://news.mongabay.com/2026/11/we-had-to-reinvent-the-system-completely-brazilian-philanthropy-leader-says/"
+    },
     "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3": {
       "api_usage": {
         "input_tokens": 2835,
@@ -2544,6 +2712,30 @@
       "source": "Global Voices",
       "title": "In win against impunity, Indonesian court orders the reform of Military Justice Law",
       "url": "https://globalvoices.org/2026/11/17/in-win-against-impunity-indonesian-court-orders-the-reform-of-military-justice-law/"
+    },
+    "8063bf45a856d2b62e464992a163095f8447d360d2bca6afe882d77260eea176": {
+      "api_usage": {
+        "input_tokens": 1499,
+        "output_tokens": 138,
+        "total_tokens": 1637
+      },
+      "author": "Chisapi Kumbutso",
+      "checked_at": "2026-11-23T22:42:04Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article describes an agroecological farm supplying airline catering and composting waste; it contains no allegations or discussion of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "From farm to airline plates, a Zambia farm closes its food-waste loop",
+      "url": "https://news.mongabay.com/2026/11/from-farm-to-airline-plates-a-zambia-farm-closes-its-food-waste-loop/"
     },
     "80979b58acd78f9cb4b633a233c3dab07274e1079f5c8f24af0b195f05b4c9a6": {
       "api_usage": {
@@ -3801,6 +3993,30 @@
       "title": "Floating wind is building \u2018A lot of momentum\u2019 toward commercialization",
       "url": "https://news.mongabay.com/2026/11/floating-wind-is-building-a-lot-of-momentum-toward-commercialization/"
     },
+    "c1706af9d70156d4efb373aec00e26582e363e54c49316041570a2ab8494a920": {
+      "api_usage": {
+        "input_tokens": 1468,
+        "output_tokens": 130,
+        "total_tokens": 1598
+      },
+      "author": "Liz Kimbrough",
+      "checked_at": "2026-11-23T22:42:02Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports an ecological study about wolves dispersing blueberry seeds; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "Wolves help wild blueberries grow, US study finds",
+      "url": "https://news.mongabay.com/2026/11/wolves-help-wild-blueberries-grow-us-study-finds/"
+    },
     "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15": {
       "api_usage": {
         "input_tokens": 1163,
@@ -4759,6 +4975,30 @@
       "source": "Global Voices",
       "title": "Civil society questions decree that could block access to telecommunications networks in Mozambique",
       "url": "https://globalvoices.org/2026/11/16/civil-society-questions-decree-that-could-block-access-to-telecommunications-networks-in-mozambique/"
+    },
+    "fe5760e7a201b7fa50467cacf7d1911010f28623ade90a6e480162152354a6a5": {
+      "api_usage": {
+        "input_tokens": 1501,
+        "output_tokens": 156,
+        "total_tokens": 1657
+      },
+      "author": "Rhett Ayers Butler",
+      "checked_at": "2026-11-23T22:42:17Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article reports environmental recovery and government restoration efforts for mangroves and wildlife; it contains no allegations of abuse of entrusted power, improper private gain, or substantive coverage of corruption.",
+      "source": "Mongabay",
+      "title": "China\u2019s mangroves have bounced back. Birds have returned too",
+      "url": "https://news.mongabay.com/short-article/2026/11/chinas-mangroves-have-bounced-back-birds-have-returned-too/"
     }
   },
   "feeds": [
@@ -4803,6 +5043,8 @@
     "03fe4a1f14be2af2dd8caea190b0d943de172489be0592a11d8e0571b827792b",
     "0476b2d2d0e2706e296160eb4b24d8f1fa356bc6ae5e984b0f076d30e9611b0a",
     "049abc7380f4e76668ac9272c730034586e6300096ab4615c56ead8e2b783db9",
+    "05a5449ad9837cde74f5cdc197f6081edc162ab609882989b981b5e494eef2f9",
+    "05a6e702c25f95ecb7de9b839a9615716429e63413256614c6e820926cc97a0e",
     "0667447ac00a975c5c5f9ef37d2af11abbbfb64801dfb771c0f89213e6db84cf",
     "06ed5c0f5e2534c10facd764d219e153142722a03cc1f059cd22ccdb41a16c51",
     "07add2c9a68eb218db1af1ce02fccaccc3d1c02e443a3f6c9be0a84230f7817f",
@@ -4833,6 +5075,7 @@
     "188e708e4f83f2f1d8a41ab3afc2a1ef899cf50d146822d0b76f7e34a03da5ad",
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671",
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
+    "199f3c04f1b8ce915fd52f5088214a061bc42b3e19bfda51bbf23fa653898aa1",
     "1b0542aa6c8f6e33697329ac042a6ee28e411043bddbf581d3d14cb9d65730cd",
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
@@ -4855,6 +5098,7 @@
     "27308fbc213f504e312937c264bfcedc52dec5b1c750b03e2fcc92c2b39c8190",
     "27afd2b9f36895853c44e0768d6a61f29873c637c116f9ee68f94ae8b1173bba",
     "27d00bf2e752b3048f5725b0e7795ace0b8c527665556c1158ba91fc5f8961d3",
+    "27ff7bec288e4d515aaec1d0a77ec0692dd07fc733705db3d6399b13a4265d54",
     "28ccbc04fc48ef89e6aa1c4f03780bb94b3b19df1945e13f366c725f1f8288fa",
     "291116e5b8aecba9bdfc66baf3d21398dfb69d04f3cdce37d085b8575ba5fb9a",
     "292d7fad868a6817fdbae613f8192200fe02d302fb9b63575b3f7b63a19d7913",
@@ -4986,14 +5230,18 @@
     "77c9077e14bc68721659a82769f1de9d017fcaa0b1a68796dbd587059d61f54b",
     "78524d1ce41bc2124daa3c1720729f316832b66654307cb55889c6af7ff08436",
     "79006c1053c8ac21f07139a92f01b09ba2bde226b31e592e60b3a53df0df78c0",
+    "797a25b4578166cbd19e04b744020805468b791ca808e2423d0586bcd042fc2c",
     "7a4e232949ce130b31ea8aef31c6538ac496d2a9f34b081ae5aea3bc6fd767bb",
+    "7b62d32d09f0d492c0111a748c379d94f6d1050161dea82ff418f991c249e8c1",
     "7ca63eb503b7f2412a1a88318387b11f92ab87ad5b60fbc7d2674c97fd0a250f",
     "7d149e884630ea9f5d319ae6c7609bbac736709d7dbd439533e059013e8dd27a",
     "7d32d56b8063265c78ca9c889aa6a35330c81f28e3c53ab62cdb69a29013bcd7",
     "7db86dc389cdd80a8cae9a37b1ec918a1364266049bdfdab9d47f83be3775411",
+    "7e1ce069f2174428327bf16360908d942a05a66feeff737c375e273e1622c1f3",
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
     "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3",
+    "8063bf45a856d2b62e464992a163095f8447d360d2bca6afe882d77260eea176",
     "80979b58acd78f9cb4b633a233c3dab07274e1079f5c8f24af0b195f05b4c9a6",
     "80cbfcf0341c1bc67896de3489772cc8f5f3bef0adb8ff458f532d2e155ad143",
     "80cc2c6d1c8bdf302c6cbed59bb93e7990ce0a51c72d4e0886a762d308dfcbe2",
@@ -5095,6 +5343,7 @@
     "c05343c18689f647b281d1da429fc19d7059ec791f4854391f71411515cc46e0",
     "c056fce9d2fa72315ca3a196eab9acd6df91afbcbc0b91fbc9f756a0f75758ea",
     "c10ff0220dcd5c128ecaf1e8dcfce97eb179a32ac331aadc09d7ccd2676d2379",
+    "c1706af9d70156d4efb373aec00e26582e363e54c49316041570a2ab8494a920",
     "c210778bbcc58c75f37d9ef4758df1e53fa458fe7ceab03503ee120c49aebaa3",
     "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15",
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da",
@@ -5180,7 +5429,8 @@
     "f7f4a3be81defe27f822c6d26ab6359e4832b598ab041a751f39b935cf48e04f",
     "f952bc60b150bb192486b868ae33b3b26438d3ff7737ea562380c6001fb343ca",
     "f9e6766dcfeb57db7505aaf0fa3290296efddf3ac4dcc1253166237e0de18285",
-    "fdda3fc0daf66cf9386657abbae287bab0ab70a74b551749faec8ffb62cf6b31"
+    "fdda3fc0daf66cf9386657abbae287bab0ab70a74b551749faec8ffb62cf6b31",
+    "fe5760e7a201b7fa50467cacf7d1911010f28623ade90a6e480162152354a6a5"
   ],
   "started_at": "2026-10-19T14:20:39Z",
   "version": 2
