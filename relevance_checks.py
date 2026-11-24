@@ -92,9 +92,11 @@ def ensure_ready(state, config, key, report, state_path):
     if previous.get("date") == today and previous.get("classifier_id") == identity and previous.get("status") == "passed":
         report["classifier_health"] = {**previous, "cached": True}
         return
-    rows = self_checks(config, key)
-    passed = all(row["status"] == "passed" for row in rows)
-    health = {"date": today, "classifier_id": identity, "status": "passed" if passed else "failed", "cases": rows}
+    probes = [bot.prompt_delivery_probe(config, key, model=model)
+              for model in dict.fromkeys((config["model"], config["verification_model"]))]
+    rows = self_checks(config, key) if all(row["status"] == "passed" for row in probes) else []
+    passed = all(row["status"] == "passed" for row in probes) and bool(rows) and all(row["status"] == "passed" for row in rows)
+    health = {"date": today, "classifier_id": identity, "status": "passed" if passed else "failed", "prompt_delivery": probes, "cases": rows}
     report["classifier_health"] = health
     state["classifier_health"] = health
     common.save_state(state_path, state)

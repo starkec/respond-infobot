@@ -32,32 +32,9 @@ def check_feeds(config):
 
 
 def instruction_probes(config, key):
-    rows = []
-    schema = {"type": "object", "additionalProperties": False,
-              "properties": {"answer": {"type": "string"}}, "required": ["answer"]}
-    for channel in ("instructions", "system_message"):
-        marker = "RESPOND_PROMPT_DELIVERY_24NOV_" + channel.upper()
-        instruction = "Return JSON with the answer field set to exactly " + marker + ". This is a configuration check."
-        user_input = "Please return an object with an answer field for this configuration check."
-        payload = {"model": config["model"], "store": False, "max_output_tokens": 2048,
-                   "reasoning": {"effort": "low"},
-                   "text": {"format": {"type": "json_schema", "name": "delivery_probe", "strict": True, "schema": schema}}}
-        if channel == "instructions":
-            payload.update(instructions=instruction, input=user_input)
-        else:
-            payload["input"] = [{"role": "system", "content": instruction}, {"role": "user", "content": user_input}]
-        request = Request(config["api_url"], data=json.dumps(payload).encode(), method="POST",
-                          headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
-        response = json.loads(common.read_response(request, "UvA prompt-delivery probe", timeout=config["api_timeout_seconds"], allow_redirects=False))
-        output = "".join(part.get("text", "") for item in response.get("output", []) if item.get("type") == "message"
-                         for part in item.get("content", []) if part.get("type") == "output_text")
-        try:
-            observed = json.loads(output).get("answer", "")
-        except (ValueError, AttributeError):
-            observed = "invalid output"
-        row = {"probe": channel, "status": "passed" if observed == marker else "failed", "observed": observed[:120]}
-        rows.append(row)
-        print("Prompt delivery " + channel + ": " + row["status"], flush=True)
+    rows = [bot.prompt_delivery_probe(config, key), bot.prompt_delivery_probe(config, key, system_message=True)]
+    for row in rows:
+        print("Prompt delivery " + row["probe"] + ": " + row["status"], flush=True)
     return rows
 
 
@@ -70,8 +47,8 @@ def check_uva(config, key, samples):
         available = {row["id"] for row in models["data"]}
     except (ValueError, TypeError, KeyError):
         raise common.SetupError("UvA returned invalid model-discovery data.") from None
-    if config["model"] not in available:
-        raise common.SetupError("The configured model is not available to this UvA key. Choose an exact ID from /v1/models; no provider/model fallback was used.")
+    if not {config["model"], config["verification_model"]} <= available:
+        raise common.SetupError("A configured selection/verification model is not available to this UvA key. Choose an exact ID from /v1/models; no provider/model fallback was used.")
     results = relevance_checks.self_checks(config, key)
     if any(row["status"] != "passed" for row in results):
         return results  # Retain the failing case in the saved report.
@@ -90,7 +67,7 @@ def main():
     parser.add_argument("--report", default="reports/setup-check.json")
     args = parser.parse_args()
     config = bot.load_config("config-v2.json")
-    report = {"created_at": common.utc_now(), "provider": config["provider"], "model": config["model"], "posted": 0}
+    report = {"created_at": common.utc_now(), "provider": config["provider"], "model": config["model"], "verification_model": config["verification_model"], "posted": 0}
     try:
         if args.prompt_probe_only:
             report["check_kind"] = "prompt_delivery_only"

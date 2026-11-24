@@ -113,8 +113,9 @@ def load_config(path):
             raise common.SetupError(f"Invalid v2 setting: {name}.")
     if config["min_article_chars"] > config["max_article_chars"]:
         raise common.SetupError("The minimum article length exceeds the maximum.")
-    if not isinstance(config.get("model"), str) or not re.fullmatch(r"[A-Za-z0-9._-]{1,100}", config["model"]):
-        raise common.SetupError("Set a valid classifier model in config-v2.json.")
+    for field in ("model", "verification_model"):
+        if not isinstance(config.get(field), str) or not re.fullmatch(r"[A-Za-z0-9._-]{1,100}", config[field]):
+            raise common.SetupError("Set valid selection and verification models in config-v2.json.")
     if config.get("provider") != "uva" or config.get("api_url") != API_URL:
         raise common.SetupError("Configure the approved UvA Responses endpoint; direct commercial API fallback is disabled.")
     if type(config.get("api_timeout_seconds")) is not int or not 25 <= config["api_timeout_seconds"] <= 300:
@@ -131,7 +132,7 @@ def load_config(path):
 
 
 def classifier_id(config):
-    settings = {name: config[name] for name in ("provider", "api_url", "model", "reasoning_effort", "verification_reasoning_effort", "max_output_tokens")}
+    settings = {name: config[name] for name in ("provider", "api_url", "model", "verification_model", "reasoning_effort", "verification_reasoning_effort", "max_output_tokens")}
     settings.update(policy=POLICY, verifier_policy=VERIFIER_POLICY, schema=SCHEMA, extractor=EXTRACTOR_VERSION)
     return hashlib.sha256(json.dumps(settings, sort_keys=True).encode()).hexdigest()
 
@@ -381,7 +382,8 @@ def assess_text(article, config, api_key, text, origin, truncated, *, verify=Fal
     schema["properties"]["evidence_ids"]["items"]["enum"] = allowed
     for prop in schema["properties"]["criterion_evidence_ids"]["properties"].values():
         prop["items"]["enum"] = allowed
-    payload = {"model": config["model"], "store": False,
+    chosen_model = config["verification_model"] if verify else config["model"]
+    payload = {"model": chosen_model, "store": False,
                "instructions": VERIFIER_POLICY if verify else POLICY,
                "input": json.dumps({"source": article["source_name"], "title": article["title"],
                                     "url": article["link"], "text_origin": origin,
@@ -390,13 +392,15 @@ def assess_text(article, config, api_key, text, origin, truncated, *, verify=Fal
                "text": {"format": {"type": "json_schema", "name": "corruption_relevance",
                                     "strict": True, "schema": schema}}}
     effort = config["verification_reasoning_effort"] if verify else config["reasoning_effort"]
-    if config["model"].startswith("gpt-5"):
+    if chosen_model.startswith("gpt-5"):
         payload["reasoning"] = {"effort": effort}
     request = Request(config["api_url"], data=json.dumps(payload).encode("utf-8"), method="POST",
                       headers={"Authorization": "Bearer " + api_key, "Content-Type": "application/json"})
     try:
         response = json.loads(common.read_response(request, "LLM classification", timeout=config["api_timeout_seconds"], allow_redirects=False))
         if response.get("status") == "incomplete":
+            if response.get("incomplete_details", {}).get("reason") == "content_filter":
+                raise common.SetupError("Classifier refused this article (content filter); automatic retry required.")
             raise common.SetupError("Classifier output was incomplete; automatic retry required.")
         if response.get("status") != "completed":
             raise ValueError("Incomplete response")
@@ -409,6 +413,7 @@ def assess_text(article, config, api_key, text, origin, truncated, *, verify=Fal
     except (ValueError, TypeError, KeyError, AttributeError):
         raise common.SetupError("Classifier refused or returned incomplete/invalid output; automatic retry required.") from None
     result = resolve_evidence(value, passages, text)
+    result["model"] = chosen_model
     result["reasoning_effort"] = effort
     result["api_usage"] = {"requests": 1}
     usage = response.get("usage")
@@ -444,6 +449,35 @@ def classify(article, config, api_key):
     result = classify_text(article, config, api_key, text, origin, truncated)
     result["article_input"]["available_text_chars"] = article["_available_text_chars"]
     return result
+
+
+def prompt_delivery_probe(config, key, *, model=None, system_message=False):
+    model = model or config["model"]
+    channel = "system_message" if system_message else "instructions"
+    marker = "RESPOND_PROMPT_DELIVERY_24NOV_" + channel.upper()
+    instruction = "Return JSON with the answer field set to exactly " + marker + ". This is a configuration check."
+    user_input = "Please return an object with an answer field for this configuration check."
+    schema = {"type": "object", "additionalProperties": False,
+              "properties": {"answer": {"type": "string"}}, "required": ["answer"]}
+    payload = {"model": model, "store": False, "max_output_tokens": 2048,
+               "text": {"format": {"type": "json_schema", "name": "delivery_probe", "strict": True, "schema": schema}}}
+    if model.startswith("gpt-5"):
+        payload["reasoning"] = {"effort": "low"}
+    if system_message:
+        payload["input"] = [{"role": "system", "content": instruction}, {"role": "user", "content": user_input}]
+    else:
+        payload.update(instructions=instruction, input=user_input)
+    request = Request(config["api_url"], data=json.dumps(payload).encode(), method="POST",
+                      headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
+    try:
+        response = json.loads(common.read_response(request, "UvA prompt-delivery probe", timeout=config["api_timeout_seconds"], allow_redirects=False))
+        output = "".join(part.get("text", "") for item in response.get("output", []) if item.get("type") == "message"
+                         for part in item.get("content", []) if part.get("type") == "output_text")
+        observed = json.loads(output).get("answer", "")
+        completed = response.get("status") == "completed"
+    except (ValueError, AttributeError, TypeError):
+        observed, completed = "invalid output", False
+    return {"probe": channel, "model": model, "status": "passed" if completed and observed == marker else "failed"}
 
 
 def read_v2_state(path, client):
@@ -821,7 +855,7 @@ def main():
         raise common.SetupError("Add UVAAI_API_KEY to GitHub Actions secrets for v2 classification. Never put it in config or chat.")
     state = None
     feeds, errors = ({}, []) if args.mode == "review" else fetch_feeds(config)
-    report = {"provider": config["provider"], "api_url": config["api_url"], "classifier_id": classifier_id(config), "mode": args.mode, "created_at": common.utc_now(), "model": config["model"],
+    report = {"provider": config["provider"], "verification_model": config["verification_model"], "api_url": config["api_url"], "classifier_id": classifier_id(config), "mode": args.mode, "created_at": common.utc_now(), "model": config["model"],
               "policy_hash": hashlib.sha256(POLICY.encode()).hexdigest(),
               "feed_errors": errors, "articles": [], "posted": 0}
     try:

@@ -175,7 +175,8 @@ retained for 14 days. That report includes article metadata, model, policy hash
 and decisions, not full article bodies or API keys. Repeating preview repeats
 the LLM requests; it deliberately evaluates current articles afresh.
 
-The configured model remains `gpt-5-mini`. Requests now go exclusively to
+The first-pass model remains `gpt-5-mini`; proposed publications are verified by
+`gpt-5.4`, whose availability was confirmed using the existing UvA key. Requests go exclusively to
 `https://llmproxy.uva.nl/v1/responses` using `UVAAI_API_KEY`, Bearer authentication,
 strict JSON schema output and `store: false`. No direct OpenAI endpoint or
 commercial-provider fallback is used. The UvA gateway may route to external
@@ -188,11 +189,11 @@ from each accessible source and replay eight recent posts. A missing key or
 unavailable model fails visibly. Invalid structured output never approves
 publication. No automatic model substitution occurs.
 
-LLM requests have a separate 180-second timeout and a 4,096-token output ceiling
+LLM requests have a separate 180-second timeout and an 8,192-token output ceiling
 (including reasoning). The first assessment uses low reasoning effort; proposed
 publications receive a separate medium-effort verification with no access to the
 first assessment. The endpoint, provider, model, both prompts, schema, extraction
-version and both reasoning settings form a cache identity.
+version, both model IDs and both reasoning settings form a cache identity.
 Authenticated API redirects are refused. Keys, headers and response bodies are
 never logged. Provider/endpoint/model metadata and token counts are reported.
 
@@ -220,13 +221,13 @@ passages separately for each criterion. Missing elements prevent publication.
 The application copies the selected passages verbatim and verifies their IDs;
 these checks prevent invented citations, not mistaken interpretations.
 
-A proposed publication goes to a second fresh request using the same model, the
+A proposed publication goes to a second fresh request using the stronger
+configured verification model, the
 full supplied article body and a separate verification prompt. The verifier sees
 none of the first assessment's conclusions. Publication requires both stages to
 approve. Disagreement or uncertainty becomes a final automatic exclusion, with
 the reasons and both assessments saved for optional auditing. This favours
-precision and can miss some relevant stories. Two calls to the same model can
-still share errors; no numerical accuracy guarantee is claimed.
+precision and can miss some relevant stories. Both models can still share errors; no numerical accuracy guarantee is claimed.
 
 The clarified boundaries reject general disinformation, industrial subsidies,
 corporate harm, resource inequality and illustrative commentary anecdotes unless
@@ -235,7 +236,8 @@ Political, administrative, judicial and private-sector corruption all remain
 within scope; investigations and allegations still qualify.
 
 On the first live run each UTC day, or whenever the classifier identity changes,
-six synthetic checks exercise public kickbacks, private embezzlement and four
+prompt-delivery probes verify both configured models, then six synthetic checks
+exercise public kickbacks, private embezzlement and four
 common false-positive boundaries. A failing check stops all publication for that
 run; the next scheduled run checks again automatically. A successful result is
 cached for that day. Every code-push integration check additionally replays eight

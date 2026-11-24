@@ -34,6 +34,8 @@ class AutonomousClassifierTests(unittest.TestCase):
         self.assertNotIn("FIRST-DECISION-MARKER", json.dumps(second))
         self.assertEqual(first["reasoning"]["effort"], "low")
         self.assertEqual(second["reasoning"]["effort"], "medium")
+        self.assertEqual(first["model"], self.config["model"])
+        self.assertEqual(second["model"], self.config["verification_model"])
         self.assertEqual(result["api_usage"]["requests"], 2)
         self.assertEqual(result["api_usage"]["input_tokens"], 200)
         self.assertEqual(result["verification"]["decision"], "publish")
@@ -100,6 +102,27 @@ class AutonomousClassifierTests(unittest.TestCase):
     def test_commentary_topic_class_does_not_hide_the_article_body(self):
         markup = '<article class="post topic-commentary"><p>Actual commentary body.</p><div class="comments">Discussion widget.</div></article>'
         self.assertEqual(bot.html_text(markup), "Actual commentary body.")
+
+    def test_prompt_delivery_probe_cannot_pass_from_schema_or_input_alone(self):
+        marker = "RESPOND_PROMPT_DELIVERY_24NOV_INSTRUCTIONS"
+        raw = json.dumps({"status": "completed", "output": [{"type": "message", "content": [
+            {"type": "output_text", "text": json.dumps({"answer": marker})}]}]}).encode()
+        with patch.object(common, "read_response", return_value=raw) as api:
+            result = bot.prompt_delivery_probe(self.config, "private-key")
+        payload = json.loads(api.call_args.args[0].data)
+        self.assertEqual(result["status"], "passed")
+        self.assertIn(marker, payload["instructions"])
+        self.assertNotIn(marker, payload["input"])
+        self.assertNotIn(marker, json.dumps(payload["text"]))
+
+    def test_prompt_delivery_probe_detects_ignored_instructions(self):
+        raw = json.dumps({"status": "completed", "output": [{"type": "message", "content": [
+            {"type": "output_text", "text": json.dumps({"answer": "generic reply"})}]}]}).encode()
+        with patch.object(common, "read_response", return_value=raw):
+            self.assertEqual(bot.prompt_delivery_probe(self.config, "key")["status"], "failed")
+
+    def test_verifier_model_changes_cache_identity(self):
+        self.assertNotEqual(bot.classifier_id(self.config), bot.classifier_id({**self.config, "verification_model": "gpt-5"}))
 
     def test_verifier_configuration_changes_cache_identity(self):
         self.assertNotEqual(bot.classifier_id(self.config), bot.classifier_id({**self.config, "verification_reasoning_effort": "high"}))
@@ -182,11 +205,11 @@ class AutonomousOperationsTests(unittest.TestCase):
 
     def test_daily_health_failure_stops_posting_and_recovers_automatically(self):
         failed = [{"status": "failed", "case": "boundary"}]
-        with patch.object(checks, "self_checks", return_value=failed):
+        with patch.object(checks, "self_checks", return_value=failed), patch.object(bot, "prompt_delivery_probe", return_value={"status": "passed"}):
             with self.assertRaisesRegex(common.SetupError, "self-check failed"):
                 checks.ensure_ready(self.state, self.config, "key", {}, self.path)
         passed = [{"status": "passed", "case": "boundary"}]
-        with patch.object(checks, "self_checks", return_value=passed) as check:
+        with patch.object(checks, "self_checks", return_value=passed) as check, patch.object(bot, "prompt_delivery_probe", return_value={"status": "passed"}):
             checks.ensure_ready(self.state, self.config, "key", {}, self.path)
             checks.ensure_ready(self.state, self.config, "key", {}, self.path)
         self.assertEqual(check.call_count, 1)
