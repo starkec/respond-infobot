@@ -44,7 +44,7 @@ def check_uva(config, key, samples):
         raise common.SetupError("The configured model is not available to this UvA key. Choose an exact ID from /v1/models; no provider/model fallback was used.")
     results = relevance_checks.self_checks(config, key)
     if any(row["status"] != "passed" for row in results):
-        raise common.SetupError("UvA autonomous relevance self-check failed; publication is held by the same daily check.")
+        return results  # Retain the failing case in the saved report.
     for sample in samples:
         if sample:
             decision = bot.classify(sample, config, key)
@@ -66,6 +66,8 @@ def main():
         if not args.feeds_only:
             key = os.environ.get("UVAAI_API_KEY", "").strip()
             report["uva"] = check_uva(config, key, [sample for _, sample in checks])
+            if any(row["status"] != "passed" for row in report["uva"]):
+                raise common.SetupError("UvA autonomous relevance self-check failed; inspect the saved cases.")
             report["recent_post_replay"] = relevance_checks.replay_recent(config, key)
             if any(row["status"] != "passed" for row in report["recent_post_replay"]):
                 raise common.SetupError("Recent-post replay failed or an article was unavailable; inspect the read-only report.")

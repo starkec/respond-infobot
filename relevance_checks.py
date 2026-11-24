@@ -48,11 +48,18 @@ def self_checks(config, key):
     for name, expected, title, text in SELF_CASES:
         article = {"source_name": "Synthetic operational self-check", "title": title,
                    "link": "https://example.org/self-check/" + name}
-        result = bot.classify_text(article, config, key, text)
+        try:
+            result = bot.classify_text(article, config, key, text)
+        except common.SetupError as exc:
+            if isinstance(exc, common.APIError) or "LLM classification" in str(exc):
+                raise
+            rows.append({"case": name, "expected": expected, "status": "failed", "error": str(exc)})
+            continue
         rows.append({"case": name, "expected": expected, "decision": result["decision"],
                      "reason": result["reason"], "api_usage": result["api_usage"],
                      "verified": result.get("verification", {}).get("decision") == "publish",
                      "status": "passed" if result["decision"] == expected else "failed"})
+        print("Self-check " + name + ": " + rows[-1]["status"], flush=True)
     return rows
 
 
@@ -70,6 +77,7 @@ def replay_recent(config, key):
         except common.SetupError as exc:
             row.update(status="unavailable", error=str(exc))
         rows.append(row)
+        print("Recent-post check " + name + ": " + row["status"], flush=True)
     return rows
 
 

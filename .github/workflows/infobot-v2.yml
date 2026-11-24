@@ -44,7 +44,10 @@ permissions:
   contents: read
 
 concurrency:
-  group: respond-infobot-publishing
+  group: >-
+    ${{ github.event_name == 'pull_request' && format('respond-infobot-pr-{0}', github.event.pull_request.number) ||
+        github.ref_name != github.event.repository.default_branch && format('respond-infobot-validation-{0}', github.ref_name) ||
+        'respond-infobot-publishing' }}
   cancel-in-progress: false
 
 jobs:
