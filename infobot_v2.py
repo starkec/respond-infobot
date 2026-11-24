@@ -757,6 +757,8 @@ def select_and_publish(feeds, config, api_key, report, client=None, state=None, 
             except common.SetupError as exc:
                 row.update(decision="review", reason=str(exc), evidence=[], retryable=True)
                 global_failure = isinstance(exc, common.APIError) or "LLM classification" in str(exc)
+                if global_failure and "technical_attempts" in previous:
+                    row["technical_attempts"] = previous["technical_attempts"]
                 if not global_failure and not preview:
                     operational_failure(row, previous)
                 report["articles"].append(row)

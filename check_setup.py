@@ -33,8 +33,10 @@ def check_feeds(config):
 
 def instruction_probes(config, key):
     rows = [bot.prompt_delivery_probe(config, key), bot.prompt_delivery_probe(config, key, system_message=True)]
+    if config["verification_model"] != config["model"]:
+        rows.append(bot.prompt_delivery_probe(config, key, model=config["verification_model"]))
     for row in rows:
-        print("Prompt delivery " + row["probe"] + ": " + row["status"], flush=True)
+        print("Prompt delivery " + row["model"] + " " + row["probe"] + ": " + row["status"], flush=True)
     return rows
 
 

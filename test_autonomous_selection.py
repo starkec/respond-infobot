@@ -178,6 +178,19 @@ class AutonomousOperationsTests(unittest.TestCase):
         self.assertNotIn(self.key, self.state["seen"])
         self.assertNotIn("technical_attempts", self.state["decisions"][self.key])
 
+    def test_service_outage_preserves_previous_article_failure_count(self):
+        self.state["decisions"][self.key] = {"decision": "review", "reason": "Publisher failure", "evidence": [],
+            "technical_attempts": 2, "retryable": True, "classifier_id": bot.classifier_id(self.config),
+            "url": self.item["link"], "source": self.item["source_name"], "title": self.item["title"]}
+        with patch.object(bot, "classify", side_effect=common.APIError(503, "Unavailable", "LLM classification")):
+            with self.assertRaises(common.APIError):
+                self.run_bot()
+        self.assertEqual(self.state["decisions"][self.key]["technical_attempts"], 2)
+        with patch.object(bot, "classify", side_effect=common.SetupError("Publisher unavailable")):
+            self.run_bot()
+        self.assertEqual(self.state["decisions"][self.key]["decision"], "skip")
+        self.assertEqual(self.state["decisions"][self.key]["technical_attempts"], 3)
+
     def test_old_hold_outside_current_feed_is_reassessed_and_excluded(self):
         self.config["feeds"] = [{k: self.item[k] for k in ("source_name", "feed_url", "language")}]
         self.state["decisions"][self.key] = {"decision": "review", "reason": "Old uncertainty", "evidence": [],
