@@ -53,6 +53,6 @@
   "api_timeout_seconds": 180,
   "max_output_tokens": 8192,
   "reasoning_effort": "low",
-  "verification_reasoning_effort": "medium",
-  "verification_model": "gpt-5.4"
+  "verification_reasoning_effort": "high",
+  "verification_model": "gpt-5-mini"
 }

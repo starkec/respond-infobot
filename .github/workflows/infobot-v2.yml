@@ -97,7 +97,7 @@ jobs:
           UVAAI_API_KEY: ${{ secrets.UVAAI_API_KEY }}
         run: |
           python -m pip install -r requirements-v2.txt
-          python check_setup.py --prompt-probe-only
+          python check_setup.py
       - name: Save read-only integration report
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

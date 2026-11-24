@@ -175,8 +175,10 @@ retained for 14 days. That report includes article metadata, model, policy hash
 and decisions, not full article bodies or API keys. Repeating preview repeats
 the LLM requests; it deliberately evaluates current articles afresh.
 
-The first-pass model remains `gpt-5-mini`; proposed publications are verified by
-`gpt-5.4`, whose availability was confirmed using the existing UvA key. Requests go exclusively to
+Both stages use the working `gpt-5-mini` route: low reasoning for screening and
+high reasoning for a separate, stricter verification. Larger models advertised by
+the proxy failed actual compatibility probes (HTTP 400/500), so they are not used.
+Requests go exclusively to
 `https://llmproxy.uva.nl/v1/responses` using `UVAAI_API_KEY`, Bearer authentication,
 strict JSON schema output and `store: false`. No direct OpenAI endpoint or
 commercial-provider fallback is used. The UvA gateway may route to external
@@ -191,7 +193,7 @@ publication. No automatic model substitution occurs.
 
 LLM requests have a separate 180-second timeout and an 8,192-token output ceiling
 (including reasoning). The first assessment uses low reasoning effort; proposed
-publications receive a separate medium-effort verification with no access to the
+publications receive a separate high-effort verification with no access to the
 first assessment. The endpoint, provider, model, both prompts, schema, extraction
 version, both model IDs and both reasoning settings form a cache identity.
 Authenticated API redirects are refused. Keys, headers and response bodies are
@@ -217,17 +219,20 @@ The model must separately establish abuse of entrusted power, improper private
 gain and substantive corruption coverage. It must identify the actor, entrusted
 role, alleged abuse, beneficiary and improper benefit, identify the article’s
 main informational purpose and coverage type, and cite numbered article
-passages separately for each criterion. Missing elements prevent publication.
+passages separately for each criterion. Missing elements prevent publication. Both assessments additionally categorise
+the actual conduct and benefit. The application vetoes excluded categories such
+as industrial policy/competition, general corporate harm and ordinary business
+benefits, even when the model's high-level booleans are all true. These remain
+model-assigned categories, not independent fact verification.
 The application copies the selected passages verbatim and verifies their IDs;
 these checks prevent invented citations, not mistaken interpretations.
 
-A proposed publication goes to a second fresh request using the stronger
-configured verification model, the
+A proposed publication goes to a second fresh request using a different verification prompt, the
 full supplied article body and a separate verification prompt. The verifier sees
 none of the first assessment's conclusions. Publication requires both stages to
 approve. Disagreement or uncertainty becomes a final automatic exclusion, with
 the reasons and both assessments saved for optional auditing. This favours
-precision and can miss some relevant stories. Both models can still share errors; no numerical accuracy guarantee is claimed.
+precision and can miss some relevant stories. The two assessments can still share errors; no numerical accuracy guarantee is claimed.
 
 The clarified boundaries reject general disinformation, industrial subsidies,
 corporate harm, resource inequality and illustrative commentary anecdotes unless

@@ -84,7 +84,7 @@ def read_response(request, description, *, timeout=TIMEOUT_SECONDS, allow_redire
             code = json.loads(exc.read(4096)).get("error", "RequestFailed")
             if isinstance(code, dict):
                 known = {"model", "input", "instructions", "reasoning", "reasoning.effort", "max_output_tokens", "text", "text.format", "text.format.schema"}
-                parameter = code.get("param") if code.get("param") in known else None
+                parameter = code.get("param") if isinstance(code.get("param"), str) and code.get("param") in known else None
                 message = code.get("message", "")
                 if isinstance(message, str):
                     for pattern, label in ((r"not allowed|not permitted|permission|not authorized", "model_access_restricted"),

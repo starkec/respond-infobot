@@ -33,7 +33,7 @@ class AutonomousClassifierTests(unittest.TestCase):
         self.assertEqual(first["input"], second["input"])
         self.assertNotIn("FIRST-DECISION-MARKER", json.dumps(second))
         self.assertEqual(first["reasoning"]["effort"], "low")
-        self.assertEqual(second["reasoning"]["effort"], "medium")
+        self.assertEqual(second["reasoning"]["effort"], "high")
         self.assertEqual(first["model"], self.config["model"])
         self.assertEqual(second["model"], self.config["verification_model"])
         self.assertEqual(result["api_usage"]["requests"], 2)
@@ -70,6 +70,16 @@ class AutonomousClassifierTests(unittest.TestCase):
         self.assertEqual(result["decision"], "skip")
         self.assertEqual(api.call_count, 1)
         self.assertIn("principal_corruption_focus", result["reason"])
+
+    def test_excluded_conduct_or_ordinary_benefit_vetoes_true_boolean_checks(self):
+        for change in ({"conduct_type": "industrial_policy_or_competition"},
+                       {"conduct_type": "general_corporate_harm_or_negligence"},
+                       {"benefit_type": "ordinary_policy_or_business_benefit"},
+                       {"benefit_type": "political_influence_without_corrupt_mechanism"}):
+            with self.subTest(change=change), patch.object(common, "read_response", return_value=response(**change)) as api:
+                result = bot.classify_text(article(), self.config, "key", TEXT)
+            self.assertEqual(result["decision"], "skip")
+            self.assertEqual(api.call_count, 1)
 
     def test_nonexistent_per_criterion_evidence_cannot_publish(self):
         with patch.object(common, "read_response", return_value=response(
@@ -125,7 +135,7 @@ class AutonomousClassifierTests(unittest.TestCase):
         self.assertNotEqual(bot.classifier_id(self.config), bot.classifier_id({**self.config, "verification_model": "gpt-5"}))
 
     def test_verifier_configuration_changes_cache_identity(self):
-        self.assertNotEqual(bot.classifier_id(self.config), bot.classifier_id({**self.config, "verification_reasoning_effort": "high"}))
+        self.assertNotEqual(bot.classifier_id(self.config), bot.classifier_id({**self.config, "verification_reasoning_effort": "medium"}))
 
 
 class AutonomousOperationsTests(unittest.TestCase):
