@@ -31,6 +31,36 @@ def check_feeds(config):
         return list(pool.map(check, config["feeds"]))
 
 
+def instruction_probes(config, key):
+    rows = []
+    schema = {"type": "object", "additionalProperties": False,
+              "properties": {"answer": {"type": "string"}}, "required": ["answer"]}
+    for channel in ("instructions", "system_message"):
+        marker = "RESPOND_PROMPT_DELIVERY_24NOV_" + channel.upper()
+        instruction = "Return JSON with the answer field set to exactly " + marker + ". This is a configuration check."
+        user_input = "Please return an object with an answer field for this configuration check."
+        payload = {"model": config["model"], "store": False, "max_output_tokens": 2048,
+                   "reasoning": {"effort": "low"},
+                   "text": {"format": {"type": "json_schema", "name": "delivery_probe", "strict": True, "schema": schema}}}
+        if channel == "instructions":
+            payload.update(instructions=instruction, input=user_input)
+        else:
+            payload["input"] = [{"role": "system", "content": instruction}, {"role": "user", "content": user_input}]
+        request = Request(config["api_url"], data=json.dumps(payload).encode(), method="POST",
+                          headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
+        response = json.loads(common.read_response(request, "UvA prompt-delivery probe", timeout=config["api_timeout_seconds"], allow_redirects=False))
+        output = "".join(part.get("text", "") for item in response.get("output", []) if item.get("type") == "message"
+                         for part in item.get("content", []) if part.get("type") == "output_text")
+        try:
+            observed = json.loads(output).get("answer", "")
+        except (ValueError, AttributeError):
+            observed = "invalid output"
+        row = {"probe": channel, "status": "passed" if observed == marker else "failed", "observed": observed[:120]}
+        rows.append(row)
+        print("Prompt delivery " + channel + ": " + row["status"], flush=True)
+    return rows
+
+
 def check_uva(config, key, samples):
     if not key:
         raise common.SetupError("UVAAI_API_KEY is missing. Set the repository Actions secret before running integration checks.")
@@ -65,6 +95,9 @@ def main():
         report["feeds"] = [row for row, _ in checks]
         if not args.feeds_only:
             key = os.environ.get("UVAAI_API_KEY", "").strip()
+            report["prompt_delivery"] = instruction_probes(config, key)
+            if any(row["status"] != "passed" for row in report["prompt_delivery"]):
+                raise common.SetupError("UvA prompt delivery failed; inspect instructions/system-message probe results.")
             report["uva"] = check_uva(config, key, [sample for _, sample in checks])
             if any(row["status"] != "passed" for row in report["uva"]):
                 raise common.SetupError("UvA autonomous relevance self-check failed; inspect the saved cases.")
