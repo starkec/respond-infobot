@@ -62,6 +62,16 @@ class UvATests(unittest.TestCase):
                 common.read_response(bot.Request(bot.API_URL), "LLM classification", allow_redirects=False)
         self.assertNotIn("private-value", str(caught.exception))
 
+    def test_api_diagnostic_exposes_only_known_parameter_and_error_category(self):
+        error = HTTPError(bot.API_URL, 400, "Bad request", {}, io.BytesIO(b'{"error":{"code":"400","param":"model","message":"Invalid model private-sensitive-text"}}'))
+        with patch.object(common, "build_opener") as opener:
+            opener.return_value.open.side_effect = error
+            with self.assertRaises(common.APIError) as caught:
+                common.read_response(bot.Request(bot.API_URL), "LLM classification", allow_redirects=False)
+        self.assertEqual(caught.exception.parameter, "model")
+        self.assertEqual(caught.exception.category, "model_unavailable")
+        self.assertNotIn("private-sensitive-text", str(caught.exception))
+
     def test_provider_endpoint_and_reasoning_are_part_of_cache_identity(self):
         for key, value in (("provider", "other"), ("api_url", "https://other.example/v1/responses"), ("reasoning_effort", "medium")):
             self.assertNotEqual(bot.classifier_id(self.config), bot.classifier_id({**self.config, key: value}))

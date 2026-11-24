@@ -27,10 +27,13 @@ class SetupError(Exception):
 
 
 class APIError(SetupError):
-    def __init__(self, status, code, description):
+    def __init__(self, status, code, description, *, parameter=None, category=None):
         self.status = status
         self.code = code
-        super().__init__(f"{description} failed (HTTP {status}, {code}).")
+        self.parameter = parameter
+        self.category = category
+        detail = "".join(", " + value for value in (parameter, category) if value)
+        super().__init__(f"{description} failed (HTTP {status}, {code}{detail}).")
 
 
 def utc_now():
@@ -76,15 +79,28 @@ def read_response(request, description, *, timeout=TIMEOUT_SECONDS, allow_redire
                 "Bluesky rejected the login. Check BSKY_HANDLE and BSKY_APP_PASSWORD "
                 "in GitHub Actions secrets. Use an app password, not the main password."
             ) from None
+        parameter = category = None
         try:
             code = json.loads(exc.read(4096)).get("error", "RequestFailed")
+            if isinstance(code, dict):
+                known = {"model", "input", "instructions", "reasoning", "reasoning.effort", "max_output_tokens", "text", "text.format", "text.format.schema"}
+                parameter = code.get("param") if code.get("param") in known else None
+                message = code.get("message", "")
+                if isinstance(message, str):
+                    for pattern, label in ((r"not allowed|not permitted|permission|not authorized", "model_access_restricted"),
+                                           (r"not found|not exist|invalid model|unknown model", "model_unavailable"),
+                                           (r"not supported|unsupported", "unsupported_parameter"),
+                                           (r"budget|quota", "quota_or_budget")):
+                        if re.search(pattern, message, re.I):
+                            category = label
+                            break
             if isinstance(code, dict):
                 code = code.get("code") or code.get("type") or "RequestFailed"
         except (ValueError, AttributeError):
             code = "RequestFailed"
         if not isinstance(code, str) or not re.fullmatch(r"[A-Za-z0-9_]{1,60}", code):
             code = "RequestFailed"
-        raise APIError(exc.code, code, description) from None
+        raise APIError(exc.code, code, description, parameter=parameter, category=category) from None
     except (URLError, TimeoutError, OSError):
         raise SetupError(f"{description} could not connect or timed out. Try again later.") from None
     if len(body) > MAX_RESPONSE_BYTES:
