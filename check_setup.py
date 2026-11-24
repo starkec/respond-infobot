@@ -73,18 +73,8 @@ def main():
     try:
         if args.prompt_probe_only:
             report["check_kind"] = "prompt_delivery_only"
-            model_request = Request("https://llmproxy.uva.nl/v1/models", headers={"Authorization": "Bearer " + os.environ.get("UVAAI_API_KEY", "").strip()})
-            models = json.loads(common.read_response(model_request, "UvA model discovery", timeout=60, allow_redirects=False))
-            report["available_verifier_models"] = sorted(row["id"] for row in models["data"] if row["id"].startswith("gpt-5"))
             key = os.environ.get("UVAAI_API_KEY", "").strip()
-            report["prompt_delivery"] = [bot.prompt_delivery_probe(config, key), bot.prompt_delivery_probe(config, key, system_message=True)]
-            report["verifier_probes"] = []
-            for candidate in ("gpt-5", "gpt-5.1", "gpt-5.4", "gpt-5.5"):
-                try:
-                    row = bot.prompt_delivery_probe(config, key, model=candidate)
-                except common.SetupError as exc:
-                    row = {"model": candidate, "status": "failed", "error": str(exc)}
-                report["verifier_probes"].append(row)
+            report["prompt_delivery"] = instruction_probes(config, key)
             if any(row["status"] != "passed" for row in report["prompt_delivery"]):
                 raise common.SetupError("UvA prompt delivery failed; inspect instructions/system-message probe results.")
             report["status"] = "passed"

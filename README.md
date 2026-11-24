@@ -219,7 +219,8 @@ The model must separately establish abuse of entrusted power, improper private
 gain and substantive corruption coverage. It must identify the actor, entrusted
 role, alleged abuse, beneficiary and improper benefit, identify the article’s
 main informational purpose and coverage type, and cite numbered article
-passages separately for each criterion. Missing elements prevent publication. Both assessments additionally categorise
+passages separately for each criterion. Missing elements prevent publication.
+Both assessments additionally categorise
 the actual conduct and benefit. The application vetoes excluded categories such
 as industrial policy/competition, general corporate harm and ordinary business
 benefits, even when the model's high-level booleans are all true. These remain
@@ -227,12 +228,13 @@ model-assigned categories, not independent fact verification.
 The application copies the selected passages verbatim and verifies their IDs;
 these checks prevent invented citations, not mistaken interpretations.
 
-A proposed publication goes to a second fresh request using a different verification prompt, the
-full supplied article body and a separate verification prompt. The verifier sees
+A proposed publication goes to a fresh request with the supplied article body
+and a separate verification prompt. The verifier sees
 none of the first assessment's conclusions. Publication requires both stages to
 approve. Disagreement or uncertainty becomes a final automatic exclusion, with
 the reasons and both assessments saved for optional auditing. This favours
-precision and can miss some relevant stories. The two assessments can still share errors; no numerical accuracy guarantee is claimed.
+precision and can miss some relevant stories. The two assessments can still
+share errors; no numerical accuracy guarantee is claimed.
 
 The clarified boundaries reject general disinformation, industrial subsidies,
 corporate harm, resource inequality and illustrative commentary anecdotes unless
@@ -241,9 +243,9 @@ Political, administrative, judicial and private-sector corruption all remain
 within scope; investigations and allegations still qualify.
 
 On the first live run each UTC day, or whenever the classifier identity changes,
-prompt-delivery probes verify both configured models, then six synthetic checks
-exercise public kickbacks, private embezzlement and four
-common false-positive boundaries. A failing check stops all publication for that
+prompt-delivery probes verify each configured model, then six synthetic checks
+exercise public kickbacks, private embezzlement and four common false-positive
+boundaries. A failing check stops all publication for that
 run; the next scheduled run checks again automatically. A successful result is
 cached for that day. Every code-push integration check additionally replays eight
 real recent posts: four prior false positives and four clear corruption cases.
