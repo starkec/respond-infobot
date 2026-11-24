@@ -89,6 +89,10 @@ class AutonomousClassifierTests(unittest.TestCase):
                   '<article>' + 'Unrelated long teaser. ' * 100 + '</article></main>')
         self.assertEqual(bot.html_text(markup), "Main allegation.")
 
+    def test_commentary_topic_class_does_not_hide_the_article_body(self):
+        markup = '<article class="post topic-commentary"><p>Actual commentary body.</p><div class="comments">Discussion widget.</div></article>'
+        self.assertEqual(bot.html_text(markup), "Actual commentary body.")
+
     def test_verifier_configuration_changes_cache_identity(self):
         self.assertNotEqual(bot.classifier_id(self.config), bot.classifier_id({**self.config, "verification_reasoning_effort": "high"}))
 

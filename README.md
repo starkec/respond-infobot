@@ -168,7 +168,9 @@ applicable attribution metadata. No preview or publishing path downloads images,
 uploads blobs or attaches link-preview cards. Missing required credits or
 article-specific licence restrictions create review holds.
 It does not log into Bluesky, change the profile, publish posts or write posting
-history. It writes only `reports/latest.json`, uploaded as an Actions artifact
+history. The preview command writes `reports/latest.json`. A manually dispatched preview
+also runs the read-only setup/replay check, writing `reports/setup-check.json`.
+These reports are uploaded as an Actions artifact
 retained for 14 days. That report includes article metadata, model, policy hash
 and decisions, not full article bodies or API keys. Repeating preview repeats
 the LLM requests; it deliberately evaluates current articles afresh.
@@ -181,9 +183,10 @@ model infrastructure; this change is not a claim of university-only hosting or
 zero data retention. Confirm the selected backend and terms with UvA.
 
 The UvA key must have access to the exact configured model ID. Read-only checks
-query `/v1/models`, submit a synthetic corruption example and classify one
-current story from each added source. A missing key or unavailable model fails visibly. Invalid structured output
-never approves publication. No automatic model substitution occurs.
+query `/v1/models`, run six synthetic boundary cases, classify one current story
+from each accessible source and replay eight recent posts. A missing key or
+unavailable model fails visibly. Invalid structured output never approves
+publication. No automatic model substitution occurs.
 
 LLM requests have a separate 180-second timeout and a 4,096-token output ceiling
 (including reasoning). The first assessment uses low reasoning effort; proposed

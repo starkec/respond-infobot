@@ -164,7 +164,8 @@ class ArticleHTML(HTMLParser):
     EXCLUDED = {"script", "style", "nav", "header", "footer", "aside", "form", "noscript", "template", "figcaption"}
     BODY_CLASSES = {"entry-content", "post-content", "article-body", "article-content", "wp-block-post-content",
                     "singular__content__text__content", "full-article"}
-    WIDGET = re.compile(r"(?:related|recommend|newsletter|social|share[-_]|promo[-_]|comments?|donat|"
+    WIDGET = re.compile(r"(?:related|recommend|newsletter|social|share[-_]|promo[-_]|donat|"
+                        r"(?:^|[\s_-])comments?(?:$|[\s_-])|"
                         r"text-credits|single-article-(?:footer|tags)|cite-article|author-bio|newsrelated|leak-to)", re.I)
 
     def __init__(self):
