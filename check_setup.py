@@ -86,11 +86,19 @@ def check_uva(config, key, samples):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--feeds-only", action="store_true")
+    parser.add_argument("--prompt-probe-only", action="store_true")
     parser.add_argument("--report", default="reports/setup-check.json")
     args = parser.parse_args()
     config = bot.load_config("config-v2.json")
     report = {"created_at": common.utc_now(), "provider": config["provider"], "model": config["model"], "posted": 0}
     try:
+        if args.prompt_probe_only:
+            report["check_kind"] = "prompt_delivery_only"
+            report["prompt_delivery"] = instruction_probes(config, os.environ.get("UVAAI_API_KEY", "").strip())
+            if any(row["status"] != "passed" for row in report["prompt_delivery"]):
+                raise common.SetupError("UvA prompt delivery failed; inspect instructions/system-message probe results.")
+            report["status"] = "passed"
+            return
         checks = check_feeds(config)
         report["feeds"] = [row for row, _ in checks]
         if not args.feeds_only:
