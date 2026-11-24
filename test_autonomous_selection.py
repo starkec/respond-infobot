@@ -61,6 +61,14 @@ class AutonomousClassifierTests(unittest.TestCase):
             self.assertEqual(result["decision"], "skip")
             self.assertEqual(api.call_count, 1)
 
+    def test_other_primary_focus_blocks_publish_even_with_true_criteria(self):
+        with patch.object(common, "read_response", return_value=response(
+                coverage_type="other", article_focus="Advocacy for journalism funding using investigations as examples")) as api:
+            result = bot.classify_text(article(), self.config, "key", TEXT)
+        self.assertEqual(result["decision"], "skip")
+        self.assertEqual(api.call_count, 1)
+        self.assertIn("principal_corruption_focus", result["reason"])
+
     def test_nonexistent_per_criterion_evidence_cannot_publish(self):
         with patch.object(common, "read_response", return_value=response(
                 criterion_evidence_ids={name: [99999] for name in CHECKS})):
@@ -163,6 +171,14 @@ class AutonomousOperationsTests(unittest.TestCase):
             self.run_bot()
         classify.assert_not_called()
         self.assertEqual(self.state["posted"][self.key], "at://existing")
+
+    def test_replay_refusal_is_withheld_for_negative_but_not_a_pass_for_positive(self):
+        config = bot.load_config("config-v2.json")
+        with patch.object(bot, "classify", side_effect=common.SetupError("Classifier refused this article; automatic retry required.")):
+            rows = checks.replay_recent(config, "key")
+        self.assertTrue(all(row["status"] == "safely_withheld" and not row["semantic_checked"]
+                            for row in rows if row["expected"] == "skip"))
+        self.assertTrue(all(row["status"] == "unavailable" for row in rows if row["expected"] == "publish"))
 
     def test_daily_health_failure_stops_posting_and_recovers_automatically(self):
         failed = [{"status": "failed", "case": "boundary"}]

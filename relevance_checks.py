@@ -20,7 +20,7 @@ SELF_CASES = [
     ("harmful_business", "skip", "Platform profits from harmful content despite complaints",
      "A company failed to remove abusive and illegal content after complaints. Court filings allege negligent moderation and revenue earned from that content. Victims seek compensation and stronger enforcement. The article focuses on the company's moderation failures and the resulting harm. It describes no bribery, embezzlement, self-dealing or corrupt use of delegated decision-making authority."),
     ("illustrative_anecdote", "skip", "Why journalism deserves conservation funding",
-     "The author opens with an example of officials negotiating an opaque conservation deal that failed after reporting. No private kickback or self-dealing is alleged. The rest of the commentary argues for funding independent journalism, explains how reporting helps conservation projects, and discusses measuring its impact. The purpose is to advocate journalism funding, not investigate a concrete corruption case."),
+     "The author opens by recalling an old case in which a mayor was convicted of accepting kickbacks on a conservation contract after journalists exposed the payments. The rest of the commentary argues for funding independent journalism, explains how reporting helps conservation projects, and discusses measuring its impact. Several other past investigations illustrate the argument. There are no new findings about the old case; the commentary primarily advocates journalism funding."),
 ]
 
 REAL_CASES = [
@@ -75,7 +75,11 @@ def replay_recent(config, key):
                        article_input=result["article_input"], api_usage=result["api_usage"],
                        status="passed" if result["decision"] == expected else "failed")
         except common.SetupError as exc:
-            row.update(status="unavailable", error=str(exc))
+            if expected == "skip" and str(exc).startswith("Classifier refused this article"):
+                row.update(status="safely_withheld", decision="not_published", semantic_checked=False,
+                           error=str(exc))
+            else:
+                row.update(status="unavailable", error=str(exc))
         rows.append(row)
         print("Recent-post check " + name + ": " + row["status"], flush=True)
     return rows

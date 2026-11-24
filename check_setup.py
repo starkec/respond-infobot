@@ -69,7 +69,7 @@ def main():
             if any(row["status"] != "passed" for row in report["uva"]):
                 raise common.SetupError("UvA autonomous relevance self-check failed; inspect the saved cases.")
             report["recent_post_replay"] = relevance_checks.replay_recent(config, key)
-            if any(row["status"] != "passed" for row in report["recent_post_replay"]):
+            if any(row["status"] not in ("passed", "safely_withheld") for row in report["recent_post_replay"]):
                 raise common.SetupError("Recent-post replay failed or an article was unavailable; inspect the read-only report.")
         if any(row["status"] != "passed" for row, _ in checks):
             raise common.SetupError("One or more feed/article/attribution checks failed; see setup-check.json.")

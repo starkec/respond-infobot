@@ -26,7 +26,8 @@ CHECKS = {"abuse_of_entrusted_power": True, "private_gain": True,
 MODEL_CASE = {"actor": "Officials", "entrusted_role": "Awarding public contracts",
               "alleged_abuse": "Steering contracts for kickbacks", "beneficiary": "Officials",
               "improper_benefit": "Private kickbacks"}
-MODEL_FIELDS = {**CHECKS, "corruption_case": MODEL_CASE,
+MODEL_FIELDS = {**CHECKS, "article_focus": "Investigation into procurement kickbacks",
+                "coverage_type": "corruption_reporting", "corruption_case": MODEL_CASE,
                 "criterion_evidence_ids": {name: [1] for name in CHECKS}}
 PUBLICATION = {"format": "text-only"}
 

@@ -214,7 +214,8 @@ There is no keyword-only exclusion: investigations need not use the word
 "corruption". Publisher text is supplied as untrusted data without tools.
 The model must separately establish abuse of entrusted power, improper private
 gain and substantive corruption coverage. It must identify the actor, entrusted
-role, alleged abuse, beneficiary and improper benefit, and cite numbered article
+role, alleged abuse, beneficiary and improper benefit, identify the article’s
+main informational purpose and coverage type, and cite numbered article
 passages separately for each criterion. Missing elements prevent publication.
 The application copies the selected passages verbatim and verifies their IDs;
 these checks prevent invented citations, not mistaken interpretations.
@@ -239,7 +240,9 @@ common false-positive boundaries. A failing check stops all publication for that
 run; the next scheduled run checks again automatically. A successful result is
 cached for that day. Every code-push integration check additionally replays eight
 real recent posts: four prior false positives and four clear corruption cases.
-These targeted development cases are not a representative accuracy benchmark.
+A model refusal on a known negative case is recorded separately as safely
+withheld, not counted as a completed semantic classification. These targeted
+development cases are not a representative accuracy benchmark.
 
 ## Classifier development and checks
 
