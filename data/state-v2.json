@@ -2152,6 +2152,30 @@
       "title": "Extreme rainfalls flood Sri Lanka\u2019s coastal city as wetlands, drains vanish",
       "url": "https://news.mongabay.com/2026/11/extreme-rainfalls-flood-sri-lankas-coastal-city-as-wetlands-drains-vanish/"
     },
+    "67d5710e91d0af9ef1a00959266c4921a1a070ad63d014ffc189cce5a279bd4f": {
+      "api_usage": {
+        "input_tokens": 1522,
+        "output_tokens": 125,
+        "total_tokens": 1647
+      },
+      "author": "Rhett Ayers Butler",
+      "checked_at": "2026-11-24T06:28:49Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article is about wildlife research on bush dog rarity and camera-trap data; it does not discuss abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Bush dogs are very rare. You\u2019re 100x more likely to see a jaguar",
+      "url": "https://news.mongabay.com/short-article/2026/11/bush-dogs-are-very-rare-youre-100x-more-likely-to-see-a-jaguar/"
+    },
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6": {
       "api_usage": {
         "input_tokens": 1498,
@@ -4756,6 +4780,30 @@
       "title": "Trinbagonian Jason Jones wins landmark Privy Council judgement deeming \u2018buggery laws\u2019 unconstitutional",
       "url": "https://globalvoices.org/2026/11/12/trinbagonian-jason-jones-wins-landmark-privy-council-judgement-deeming-buggery-laws-unconstitutional/"
     },
+    "f3336adabe7b97c803fd784253f865324d8576371c8da069250d780ce9f44c24": {
+      "api_usage": {
+        "input_tokens": 1500,
+        "output_tokens": 141,
+        "total_tokens": 1641
+      },
+      "author": "Robin Hicks",
+      "checked_at": "2026-11-24T06:28:47Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses aggressive whale-watching practices and industry competition, but contains no allegations of abuse of entrusted power, improper private gain tied to official roles, or substantive reporting on corruption investigations.",
+      "source": "Mongabay",
+      "title": "Timor-Leste issues guidelines for whale-watching, but malpractice is rife as industry booms",
+      "url": "https://news.mongabay.com/2026/11/timor-leste-issues-guidelines-for-whale-watching-but-malpractice-is-rife-as-industry-booms/"
+    },
     "f33594fbf71d18adcb48e45003fde2ca89959e29815a7b3eb4a5bfb5e73ab571": {
       "api_usage": {
         "input_tokens": 1446,
@@ -5010,7 +5058,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-23",
+  "last_checked_date": "2026-11-24",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -5194,6 +5242,7 @@
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
     "6713611317142462cfbbb9d88c5f8f18c42d9060f00355d5fe969c0ad8557ac8",
     "67a2ea346c95de0d96d33384aa7002833d01b83d160afc3827ebac33b2509831",
+    "67d5710e91d0af9ef1a00959266c4921a1a070ad63d014ffc189cce5a279bd4f",
     "687c76dd10640da6058825a6b85e7343d89473c063fd4e651efd506a19a0b1c6",
     "68add1151efdb9dcfe44bd6d4168e0eac77312027111c85e66b74da1c3006bd3",
     "68d6d35fd52bd1f0281bf7659e365eaaa5e6bd7c85f9820ad0c0210f00db9736",
@@ -5413,6 +5462,7 @@
     "f175129e200f41dff0406a5dcb924fe19733c1d8da177a916247160895f6ada7",
     "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c",
     "f2a8d44a67763bff7f304f682f9397ee025bc322a892ee2e86fdf7f61489691c",
+    "f3336adabe7b97c803fd784253f865324d8576371c8da069250d780ce9f44c24",
     "f33594fbf71d18adcb48e45003fde2ca89959e29815a7b3eb4a5bfb5e73ab571",
     "f3ef4a7336023e694cf65be4e38aa0ba244c355859cbdc301f11f9c390cea26d",
     "f4112d64d50ca03da2e6df131b6d97381ec0623f1323b4acce19c334dc88cb01",
