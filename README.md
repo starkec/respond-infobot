@@ -5,11 +5,13 @@ within WP8 of the RESPOND project. The repository contains this version only.
 Its existing v2 filenames and history format are retained to preserve the
 configuration and posting history.
 
-**Status as of 9 November 2026.** The UvA gateway and English source update
-is prepared while public posting remains paused. Reactivation is a separate
-operator action (`INFOBOT_V2_ENABLED=true`). Code pushes run read-only checks,
-never a publication run. Proof-of-concept posting began on 19 October 2026 and
-ran successfully for three days. Existing publication history is retained.
+**Autonomous selection update, 24 November 2026.** Automatic publication now
+requires agreement between two fresh LLM assessments of the extracted article
+body. Concrete evidence must support entrusted power, alleged misuse, improper
+benefit and substantive coverage. Uncertainty or disagreement is excluded
+automatically. No routine article-reading or approval task is required of the
+operator. Daily automatic self-checks hold posting if the classifier fails and
+retry on the next scheduled run. Existing publication history is retained.
 
 The bot reads ICIJ, Bellingcat, CORRECTIV (English), EDJNet, Mongabay and
 Global Voices. OCCRP has been removed because permission was not granted.
@@ -63,13 +65,11 @@ political corruption, digital technologies, democratic participation and
 approaches to strengthening integrity.
 
 The bot's public account is [Corruption Bot on Bluesky](https://bsky.app/profile/corruptionbot.bsky.social).
-Members of RESPOND's UvA research team working on Subtask 8.3.2 share
-responsibility for manual checks once a week on a rotating basis. The assigned
-researcher reviews uncertain articles and checks the wider output, failed runs
-and persistent technical holds. Automatic publication does not require approval
-of every post; uncertain relevance decisions are held for manual review.
-The workflow's automated checks do not independently verify the truth of the
-publisher's reporting.
+Routine operation is autonomous. The bot excludes uncertain relevance decisions,
+retries temporary article problems with a bounded budget, and records its reasons
+for optional auditing. Manual overrides remain available but are not required
+for normal posting. The workflow checks relevance and program behaviour; it does
+not independently establish the truth of a publisher's reporting.
 
 ### Funding acknowledgement
 
@@ -116,11 +116,13 @@ links. The Instagram strategy in that plan uses partners' accounts.
 | `bot_common.py` | Shared text, URL identity, history and Bluesky API helpers |
 | `config-v2.json` | Six English feeds, UvA endpoint/model and processing limits |
 | `publication.py` | Attribution and licence checks for plain-text posts |
-| `check_setup.py` | Read-only live feed and UvA integration checks |
+| `check_setup.py` | Read-only live feed, UvA and recent-post regression checks |
+| `relevance_checks.py` | Six daily synthetic self-checks and eight real recent-post replay cases |
+| `test_autonomous_selection.py` | Extraction, two-stage selection, exclusion, retry and health-gate regressions |
 | `requirements-v2.txt` | Standard-library-only runtime; no third-party packages |
 | `.github/workflows/infobot-v2.yml` | Checks, manual actions and scheduled posting |
 | `data/state-v2.json` | Production article, publication and review history; do not delete or reset |
-| `data/review-queue.md` | Current stories held for manual review |
+| `data/review-queue.md` | Operational holds and automatic retry status; optional manual overrides |
 | `test_*.py` | Offline regression tests using mocked services |
 
 ## Operation in GitHub Actions
@@ -180,12 +182,14 @@ zero data retention. Confirm the selected backend and terms with UvA.
 
 The UvA key must have access to the exact configured model ID. Read-only checks
 query `/v1/models`, submit a synthetic corruption example and classify one
-current story from each added source. A missing key, unavailable model or invalid
-structured output fails visibly. No automatic model substitution occurs.
+current story from each added source. A missing key or unavailable model fails visibly. Invalid structured output
+never approves publication. No automatic model substitution occurs.
 
-LLM requests have a separate 180-second timeout, a 4,096-token output ceiling
-(including reasoning) and low reasoning effort for GPT-5 models. The endpoint,
-provider, model, schema and reasoning configuration form a cache identity.
+LLM requests have a separate 180-second timeout and a 4,096-token output ceiling
+(including reasoning). The first assessment uses low reasoning effort; proposed
+publications receive a separate medium-effort verification with no access to the
+first assessment. The endpoint, provider, model, both prompts, schema, extraction
+version and both reasoning settings form a cache identity.
 Authenticated API redirects are refused. Keys, headers and response bodies are
 never logged. Provider/endpoint/model metadata and token counts are reported.
 
@@ -206,17 +210,33 @@ Every configured source passes the same classifier.
 There is no keyword-only exclusion: investigations need not use the word
 "corruption". Publisher text is supplied as untrusted data without tools.
 The model must separately establish abuse of entrusted power, improper private
-gain, and substantive coverage of corruption. The code holds an attempted
-publish decision if any of these conditions is false or unknown. Those checks
-are included in the report. They are still model judgments, not verified facts.
+gain and substantive corruption coverage. It must identify the actor, entrusted
+role, alleged abuse, beneficiary and improper benefit, and cite numbered article
+passages separately for each criterion. Missing elements prevent publication.
+The application copies the selected passages verbatim and verifies their IDs;
+these checks prevent invented citations, not mistaken interpretations.
 
-For a publish decision the model must select 1-3 numbered supporting passages
-from the supplied article. The application copies their text verbatim and
-checks that each is an exact substring of the supplied text. The model never
-writes the quotations itself. This prevents invented quotations; it does not
-prove that the model interpreted a real passage correctly. The research team already inspected the adaptation during the proof of concept.
-No new numerical accuracy estimate is claimed by this software migration. False positives and missed stories
-remain possible. `review` never publishes automatically.
+A proposed publication goes to a second fresh request using the same model, the
+full supplied article body and a separate verification prompt. The verifier sees
+none of the first assessment's conclusions. Publication requires both stages to
+approve. Disagreement or uncertainty becomes a final automatic exclusion, with
+the reasons and both assessments saved for optional auditing. This favours
+precision and can miss some relevant stories. Two calls to the same model can
+still share errors; no numerical accuracy guarantee is claimed.
+
+The clarified boundaries reject general disinformation, industrial subsidies,
+corporate harm, resource inequality and illustrative commentary anecdotes unless
+the text establishes a concrete corrupt mechanism as a substantive subject.
+Political, administrative, judicial and private-sector corruption all remain
+within scope; investigations and allegations still qualify.
+
+On the first live run each UTC day, or whenever the classifier identity changes,
+six synthetic checks exercise public kickbacks, private embezzlement and four
+common false-positive boundaries. A failing check stops all publication for that
+run; the next scheduled run checks again automatically. A successful result is
+cached for that day. Every code-push integration check additionally replays eight
+real recent posts: four prior false positives and four clear corruption cases.
+These targeted development cases are not a representative accuracy benchmark.
 
 ## Classifier development and checks
 
@@ -268,17 +288,18 @@ correctly.
 ## Fetching and limits
 
 `config-v2.json` lists HTTPS RSS/Atom URLs, source names and post languages.
-RSS content fields are used when sufficiently substantial; short feeds trigger
-an article-page download. The HTML reader prefers article/main text and otherwise
-paragraphs, excluding navigation, scripts and sidebars. It is intentionally a
-conservative extractor: paywalls, changed markup, short pages and JavaScript-only
-pages may be held rather than classified. It does not bypass access restrictions.
+The article page is always downloaded for classification; a long RSS excerpt
+never substitutes for it. The HTML reader prefers publisher article-body
+containers and excludes related-story widgets, navigation, scripts, sidebars,
+sharing widgets and captions. The same downloaded page is reused for attribution
+checks. Unavailable, insufficient or changed pages create automatic retry holds;
+there is no attempt to bypass access restrictions.
 
-RSS summaries alone are not treated as full articles. The classifier is told
-when the supplied content comes from an RSS content field and may be partial,
-and when text is truncated. The default minimum is 400 characters and maximum
-24,000 characters per story. Downloads are limited to 2 MB and same-publisher
-HTTPS URLs/redirects; a publisher's offsite syndication links are skipped.
+The minimum is 400 characters and the input ceiling is 24,000 characters per
+story. Longer bodies are explicitly marked truncated in both model requests.
+Input metadata records origin, lengths, truncation and a SHA-256 fingerprint,
+without saving full article bodies. Downloads remain limited to 2 MB and
+same-publisher HTTPS URLs/redirects; offsite syndication links are skipped.
 
 There are at most 20 classification attempts and five publication attempts
 per run, with sources interleaved so a high-volume feed does not monopolise a
@@ -290,15 +311,19 @@ separate stories; cross-outlet story clustering is not implemented.
 ## History, review holds and failures
 
 V2 records seen URLs, posted URIs and editorial decisions in `data/state-v2.json`.
-Publish/skip decisions and model review holds are not reclassified automatically.
-An editorial review hold enters history without a post. The persistent,
-human-readable list is **[data/review-queue.md](data/review-queue.md)**, created
-after initialisation. It includes each original URL, the model's reason,
-three corruption criteria, supporting excerpts when available, and publication/attribution errors.
-The same list appears in each live workflow's job summary. Reports are available
-under **Actions > Infobot v2 > completed run > infobot-v2-decisions** for 14 days.
+New editorial non-matches, uncertain assessments and verifier disagreements
+are saved as automatic skip decisions. There is no editorial queue that the
+operator must read. Legacy unposted review holds are automatically reassessed,
+including those no longer in the rolling feed. Published articles and explicit
+human rejections remain untouched.
 
-### Review and approve or reject a held story
+The optional **[data/review-queue.md](data/review-queue.md)** now lists technical
+holds and automatic retry times. The same list appears in the workflow summary.
+Reports under **Actions > Infobot v2 > infobot-v2-decisions** are retained for
+14 days and include the corruption case, criterion-specific excerpts, both
+assessments where applicable, input metadata and successful-request token counts.
+
+### Optional manual override for a held story
 
 1. Open the original article from `data/review-queue.md` and read it. Check who
    allegedly abused an entrusted role, who gained improperly, and whether this
@@ -336,14 +361,19 @@ stories, without posting them automatically. A manual approval explicitly releas
 the selected story from that baseline.
 There is no need to edit `seen`, `posted` or the JSON history manually.
 
-Download failures, insufficient text or invalid model output are retryable review
-holds, stored with `retryable: true` without marking the article seen. These are
-retried while the article is still in the feed. API connection, authentication,
-quota and rate-limit failures stop the run visibly. An unavailable feed is
-reported as a failed check while successful sources can still be processed.
-Unprocessed articles are not marked seen. Saved decisions make failed publication
-retries economical; changes to provider, endpoint, model, schema or policy invalidate a pending cached
-decision. Already processed stories are not automatically reconsidered.
+Article download failures, insufficient bodies, invalid/refused model output and
+attribution problems retry automatically after at least 30 minutes, then two
+hours. After three unsuccessful attempts the story is excluded automatically.
+Holds remain retryable after leaving the feed when the article is still available
+at its recorded publisher URL. Pending valid two-stage decisions can be reused
+for an attribution retry. Posted records are never duplicated or reset.
+
+API connection, authentication, quota and rate-limit failures stop the run
+visibly, without exhausting an article's retry budget or allowing unfiltered
+posts. A failing feed is reported while successful sources can still be
+processed. Scheduled checks retry automatically. Changes to either prompt,
+provider, endpoint, model, schema, extraction version or reasoning setting
+invalidate pending cached decisions.
 
 The workflow saves partial state even when a later operation fails. Stable post
 keys and absent-record guards allow recovery after lost responses or failed
@@ -374,7 +404,7 @@ Licence metadata remains in configuration and internal publication records;
 it is not displayed in the post text or added as a separate link facet.
 Required credits are preserved; the headline is shortened only if needed for
 Bluesky's 300-character limit. Missing or overlong required credits hold the
-story for review. No copyrighted article body is publicly republished.
+story for automatic retry and eventual exclusion. No article body is publicly republished.
 
 Historical posts and duplicate-protection records are not rewritten or deleted.
 Old `image_error` holds remain readable for audit and manual review, but future
@@ -396,7 +426,7 @@ python infobot_v2.py --mode preview
 Tests mock the LLM, publishers and Bluesky; they do not establish live model
 classification accuracy. A real preview needs `UVAAI_API_KEY` in the environment
 and API connectivity. Repeated previews classify current articles afresh and
-incur API usage. Reports include token counts for successful new classifications;
+incur API usage. Reports include token counts for both stages of successful new classifications;
 consult the UvA proxy administrators for quotas, access and billing.
 
 Initialisation, live publishing and review also need the Bluesky credentials.

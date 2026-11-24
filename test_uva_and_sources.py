@@ -13,17 +13,20 @@ from urllib.error import HTTPError
 import bot_common as common
 import infobot_v2 as bot
 import publication
-from test_infobot_v2 import article, CHECKS, PUBLISH
+from test_infobot_v2 import article, CHECKS, PUBLISH, MODEL_FIELDS, TEXT
 from test_publishing import FakeBluesky
 
 
 class UvATests(unittest.TestCase):
     def setUp(self):
         self.config = bot.load_config("config-v2.json")
+        download = patch.object(bot, "download", return_value=f"<article><p>{TEXT}</p></article>".encode())
+        download.start()
+        self.addCleanup(download.stop)
 
     def test_request_routes_only_to_uva_with_bearer_and_separate_timeout(self):
         response = {"status": "completed", "output": [{"type": "message", "content": [{"type": "output_text",
-                    "text": json.dumps({**CHECKS, "decision": "publish", "reason": "Alleged kickbacks.", "evidence_ids": [1]})}]}]}
+                    "text": json.dumps({**MODEL_FIELDS, "decision": "publish", "reason": "Alleged kickbacks.", "evidence_ids": [1]})}]}]}
         with patch.object(common, "read_response", return_value=json.dumps(response).encode()) as call:
             bot.classify(article(), self.config, "secret-test-key")
         req = call.call_args.args[0]

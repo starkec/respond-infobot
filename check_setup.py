@@ -9,6 +9,7 @@ from urllib.request import Request
 
 import bot_common as common
 import infobot_v2 as bot
+import relevance_checks
 
 
 def check_feeds(config):
@@ -41,16 +42,11 @@ def check_uva(config, key, samples):
         raise common.SetupError("UvA returned invalid model-discovery data.") from None
     if config["model"] not in available:
         raise common.SetupError("The configured model is not available to this UvA key. Choose an exact ID from /v1/models; no provider/model fallback was used.")
-    synthetic = {"source_name": "Synthetic integration test", "title": "Officials charged over procurement kickbacks",
-                 "link": "https://example.org/synthetic-test", "language": "en",
-                 "feed_content": ("Prosecutors charged the mayor with taking private kickbacks from a contractor in exchange for steering public procurement contracts. "
-                                  "The alleged bribes were paid to the mayor's personal bank account. The investigation concerns abuse of the mayor's official authority for personal financial gain. ") * 3}
-    decision = bot.classify(synthetic, config, key)
-    if decision["decision"] != "publish" or not all(decision["checks"].values()) or not decision["evidence"]:
-        raise common.SetupError("UvA structured-output smoke check did not recognise the explicit synthetic corruption case.")
-    results = [{"source": "Synthetic integration test", "decision": decision["decision"], "status": "passed"}]
+    results = relevance_checks.self_checks(config, key)
+    if any(row["status"] != "passed" for row in results):
+        raise common.SetupError("UvA autonomous relevance self-check failed; publication is held by the same daily check.")
     for sample in samples:
-        if sample and sample["source_name"] in bot.publication.POLICIES:
+        if sample:
             decision = bot.classify(sample, config, key)
             results.append({"source": sample["source_name"], "url": sample["link"], "decision": decision["decision"],
                             "checks": decision["checks"], "api_usage": decision.get("api_usage", {}), "status": "passed"})
@@ -68,7 +64,11 @@ def main():
         checks = check_feeds(config)
         report["feeds"] = [row for row, _ in checks]
         if not args.feeds_only:
-            report["uva"] = check_uva(config, os.environ.get("UVAAI_API_KEY", "").strip(), [sample for _, sample in checks])
+            key = os.environ.get("UVAAI_API_KEY", "").strip()
+            report["uva"] = check_uva(config, key, [sample for _, sample in checks])
+            report["recent_post_replay"] = relevance_checks.replay_recent(config, key)
+            if any(row["status"] != "passed" for row in report["recent_post_replay"]):
+                raise common.SetupError("Recent-post replay failed or an article was unavailable; inspect the read-only report.")
         if any(row["status"] != "passed" for row, _ in checks):
             raise common.SetupError("One or more feed/article/attribution checks failed; see setup-check.json.")
         report["status"] = "passed"

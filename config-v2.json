@@ -52,5 +52,6 @@
   "api_url": "https://llmproxy.uva.nl/v1/responses",
   "api_timeout_seconds": 180,
   "max_output_tokens": 4096,
-  "reasoning_effort": "low"
+  "reasoning_effort": "low",
+  "verification_reasoning_effort": "medium"
 }
