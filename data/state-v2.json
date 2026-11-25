@@ -1,5 +1,103 @@
 {
   "account_did": "did:plc:lzmlnzqvphebtdx34yt2tn2i",
+  "classifier_health": {
+    "cases": [
+      {
+        "api_usage": {
+          "input_tokens": 3970,
+          "output_tokens": 2116,
+          "requests": 2,
+          "total_tokens": 6086
+        },
+        "case": "public_kickbacks",
+        "decision": "publish",
+        "expected": "publish",
+        "reason": "Article reports prosecutors' allegation that a mayor abused her procurement authority to steer contracts in exchange for payments into her personal account and via a shell company; it directly alleges kickbacks and an active investigation.",
+        "status": "passed",
+        "verified": true
+      },
+      {
+        "api_usage": {
+          "input_tokens": 3968,
+          "output_tokens": 1975,
+          "requests": 2,
+          "total_tokens": 5943
+        },
+        "case": "private_embezzlement",
+        "decision": "publish",
+        "expected": "publish",
+        "reason": "Article directly reports an alleged embezzlement: the company's treasurer, entrusted with staff pension assets, is accused of secretly transferring them to his own investment firm and concealing the transfers for personal enrichment.",
+        "status": "passed",
+        "verified": true
+      },
+      {
+        "api_usage": {
+          "input_tokens": 1854,
+          "output_tokens": 425,
+          "requests": 1,
+          "total_tokens": 2279
+        },
+        "case": "foreign_disinformation",
+        "decision": "skip",
+        "expected": "skip",
+        "reason": "Article is about volunteers teaching media literacy to counter foreign disinformation; it explicitly reports no bribery, diverted resources, self-dealing or illicit financing. No entrusted-role abuse or private gain is alleged.",
+        "status": "passed",
+        "verified": false
+      },
+      {
+        "api_usage": {
+          "input_tokens": 1857,
+          "output_tokens": 437,
+          "requests": 1,
+          "total_tokens": 2294
+        },
+        "case": "industrial_subsidies",
+        "decision": "skip",
+        "expected": "skip",
+        "reason": "Article describes state bank financing as part of industrial policy and mentions competition probes of subsidies but explicitly says there are no allegations of bribery, self-dealing or diversion; no abuse of entrusted power for private gain is alleged and corruption is not the article's main focus.",
+        "status": "passed",
+        "verified": false
+      },
+      {
+        "api_usage": {
+          "input_tokens": 1862,
+          "output_tokens": 397,
+          "requests": 1,
+          "total_tokens": 2259
+        },
+        "case": "harmful_business",
+        "decision": "skip",
+        "expected": "skip",
+        "reason": "Article reports corporate moderation failures and revenue from harmful content but does not allege abuse of an entrusted role for private gain or any corrupt mechanism; thus it is not substantively about corruption.",
+        "status": "passed",
+        "verified": false
+      },
+      {
+        "api_usage": {
+          "input_tokens": 1889,
+          "output_tokens": 745,
+          "requests": 1,
+          "total_tokens": 2634
+        },
+        "case": "illustrative_anecdote",
+        "decision": "skip",
+        "expected": "skip",
+        "reason": "Article is primarily an advocacy commentary about funding journalism; the referenced corruption case is illustrative rather than the article's main focus, so it does not meet the substantive coverage criterion.",
+        "status": "passed",
+        "verified": false
+      }
+    ],
+    "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+    "date": "2026-11-25",
+    "prompt_delivery": [
+      {
+        "model": "gpt-5-mini",
+        "probe": "instructions",
+        "status": "passed"
+      }
+    ],
+    "status": "passed"
+  },
   "decisions": {
     "00e3fc8f729f3598d44e5083cca439c4621d34cbed293810b52101cabe1a8e1f": {
       "api_usage": {
@@ -378,6 +476,91 @@
       "source": "Mongabay",
       "title": "Plan to breed rare Asian golden cats for pets raises conservation concerns",
       "url": "https://news.mongabay.com/short-article/2026/11/plan-to-breed-rare-asian-golden-cats-for-pets-raises-conservation-concerns/"
+    },
+    "1346b7e7b4e34091e937621c1f931f773449969deca891623f1f064d99d27d3c": {
+      "api_usage": {
+        "input_tokens": 4517,
+        "output_tokens": 570,
+        "requests": 1,
+        "total_tokens": 5087
+      },
+      "article_focus": "labor dispute and workplace safety at Indonesia Morowali Industrial Park (IMIP)",
+      "article_input": {
+        "available_text_chars": 9205,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "f2cdb25a17ab5fcfcfd56b468880298499f54a16fa50f6965a9881641bd518fc",
+        "text_chars": 9205,
+        "truncated": false
+      },
+      "author": "Jeff Hutton",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T13:05:16Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "nepotism_or_cronyism",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article focuses on labor dispute and workplace safety at IMIP; it raises possible employer interference in unions but corruption is not the article\u2019s main informational purpose and the text does not establish a concrete, proven abuse-for-private-gain corruption scheme meeting all criteria.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 4517,
+          "output_tokens": 570,
+          "requests": 1,
+          "total_tokens": 5087
+        },
+        "article_focus": "labor dispute and workplace safety at Indonesia Morowali Industrial Park (IMIP)",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "nepotism_or_cronyism",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "review",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article focuses on labor dispute and workplace safety at IMIP; it raises possible employer interference in unions but corruption is not the article\u2019s main informational purpose and the text does not establish a concrete, proven abuse-for-private-gain corruption scheme meeting all criteria.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Deadly accidents loom over labor dispute at Indonesia\u2019s largest nickel hub",
+      "url": "https://news.mongabay.com/2026/11/deadly-accidents-loom-over-labor-dispute-at-indonesias-largest-nickel-hub/"
     },
     "13d200c5fb7d8ad05478bfe99bfda4d692316bc15ba56fbfb6cbf55153d0e148": {
       "api_usage": {
@@ -845,28 +1028,117 @@
     },
     "2680a9c0b7f0af78f2d0e0b284d08c1426c33687e8972c8a4c925963a49bdfc6": {
       "api_usage": {
-        "input_tokens": 6432,
-        "output_tokens": 466,
-        "total_tokens": 6898
+        "input_tokens": 7288,
+        "output_tokens": 962,
+        "requests": 1,
+        "total_tokens": 8250
+      },
+      "article_focus": "Investigative reporting on political advertising financed by AI-industry-funded Super PACs and alleged use of shell companies to conceal payments and evade disclosure",
+      "article_input": {
+        "available_text_chars": 18941,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "fda3bc6b8e0597d18956f0ab58acf1d666f49703249a1bafbc886586f9615e35",
+        "text_chars": 18941,
+        "truncated": false
       },
       "author": "Kolina Koltai",
-      "checked_at": "2026-11-09T20:47:45Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "political_influence_without_corrupt_mechanism",
+      "checked_at": "2026-11-25T13:05:01Z",
       "checks": {
-        "abuse_of_entrusted_power": false,
+        "abuse_of_entrusted_power": true,
         "private_gain": true,
         "substantive_corruption_coverage": true
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "procurement_or_appointment_rigging",
+      "corruption_case": {
+        "actor": "Leading the Future (LTF) and affiliated Super PACs (Think Big, American Mission) and their vendor LLCs",
+        "alleged_abuse": "Channelling millions in disbursements to newly created LLC vendors with no public presence to conceal how the Super PACs were spending money and evade reporting requirements",
+        "beneficiary": "AI-industry backers and the Super PAC network funded by them (e.g., donors tied to LTF and allied committees)",
+        "entrusted_role": "Registered Super PACs and political committees required by federal law to disclose receipts and disbursements",
+        "improper_benefit": "Concealed political spending and influence over campaigns/policy outcomes by hiding the true flow of funds"
+      },
+      "coverage_type": "corruption_reporting",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [
+          "surpassing US$11 billion last week and exceeding the amount spent on any other election cycle to date. Super PACs are a particular type of political action committee (PAC) that may receive unlimited contributions from",
+          "its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC by the",
+          "non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big\u2019s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had \u201cunlawfully evaded federal reporting requirements"
+        ],
+        "private_gain": [
+          "the Future (LTF), a Super PAC which opposes regulations that \u201cconstrain\u201d innovation in AI. The network has received US$125 million in funding in total from OpenAI president Greg Brockman, his wife Anna Brockman,",
+          "are paying millions of dollars to try to sway the results in their chosen candidates\u2019 favour often do not mention AI at all. While LTF is a registered Super PAC itself, FEC filings show it mainly disburses money to",
+          "transparency laws, voters lose\u201d. \u201cFederal reporting requirements help ensure transparency in our elections and protect voters\u2019 legal right to know where the money is going,\u201d Ghosh said. \u201cSecret spending schemes like"
+        ],
+        "substantive_corruption_coverage": [
+          "Super PACs have been observed in the current election cycle, such as cryptocurrency-linked Fairshake and its affiliated Super PACs . Bellingcat analysed data on more than 300 online video ad campaigns paid for by Think",
+          "its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC by the",
+          "non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big\u2019s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had \u201cunlawfully evaded federal reporting requirements"
+        ]
+      },
+      "decision": "skip",
       "evidence": [
-        "PACs in its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC",
-        "by the non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big\u2019s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had \u201cunlawfully evaded federal reporting",
-        "if this was indeed the same entity referred to in Think Big\u2019s filings \u2013 began receiving payments from the Super PACs within two to three months of their business registrations. Saurav Ghosh, CLC\u2019s Director of Federal"
+        "its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC by the",
+        "non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big\u2019s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had \u201cunlawfully evaded federal reporting requirements",
+        "services including communications and strategy consulting, as well as legal fees. The network\u2019s Democrat-focused Super PAC, Think Big , paid a company called Lantern Production Consultants LLC more than $20 million,"
       ],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "The article documents alleged concealment of Super PAC spending via shell LLCs and a formal FEC complaint alleging evasion of reporting, showing substantive coverage of potentially corrupt campaign-finance practices and private benefit to donors. However it does not clearly describe an abuse of entrusted public power by an official, so the abuse criterion is uncertain.",
+      "reason": "Corruption elements lack support (corruption_specific_benefit). The article's main reporting documents alleged unlawful funneling of Super PAC disbursements through newly created LLCs to conceal spending tied to AI-industry donors, meeting the abuse + private gain + substantive coverage criteria.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 7288,
+          "output_tokens": 962,
+          "requests": 1,
+          "total_tokens": 8250
+        },
+        "article_focus": "Investigative reporting on political advertising financed by AI-industry-funded Super PACs and alleged use of shell companies to conceal payments and evade disclosure",
+        "benefit_type": "political_influence_without_corrupt_mechanism",
+        "checks": {
+          "abuse_of_entrusted_power": true,
+          "private_gain": true,
+          "substantive_corruption_coverage": true
+        },
+        "conduct_type": "procurement_or_appointment_rigging",
+        "corruption_case": {
+          "actor": "Leading the Future (LTF) and affiliated Super PACs (Think Big, American Mission) and their vendor LLCs",
+          "alleged_abuse": "Channelling millions in disbursements to newly created LLC vendors with no public presence to conceal how the Super PACs were spending money and evade reporting requirements",
+          "beneficiary": "AI-industry backers and the Super PAC network funded by them (e.g., donors tied to LTF and allied committees)",
+          "entrusted_role": "Registered Super PACs and political committees required by federal law to disclose receipts and disbursements",
+          "improper_benefit": "Concealed political spending and influence over campaigns/policy outcomes by hiding the true flow of funds"
+        },
+        "coverage_type": "corruption_reporting",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [
+            "surpassing US$11 billion last week and exceeding the amount spent on any other election cycle to date. Super PACs are a particular type of political action committee (PAC) that may receive unlimited contributions from",
+            "its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC by the",
+            "non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big\u2019s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had \u201cunlawfully evaded federal reporting requirements"
+          ],
+          "private_gain": [
+            "the Future (LTF), a Super PAC which opposes regulations that \u201cconstrain\u201d innovation in AI. The network has received US$125 million in funding in total from OpenAI president Greg Brockman, his wife Anna Brockman,",
+            "are paying millions of dollars to try to sway the results in their chosen candidates\u2019 favour often do not mention AI at all. While LTF is a registered Super PAC itself, FEC filings show it mainly disburses money to",
+            "transparency laws, voters lose\u201d. \u201cFederal reporting requirements help ensure transparency in our elections and protect voters\u2019 legal right to know where the money is going,\u201d Ghosh said. \u201cSecret spending schemes like"
+          ],
+          "substantive_corruption_coverage": [
+            "Super PACs have been observed in the current election cycle, such as cryptocurrency-linked Fairshake and its affiliated Super PACs . Bellingcat analysed data on more than 300 online video ad campaigns paid for by Think",
+            "its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC by the",
+            "non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big\u2019s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had \u201cunlawfully evaded federal reporting requirements"
+          ]
+        },
+        "decision": "review",
+        "evidence": [
+          "its network revealed that they were channelling more than $36.4 million in total towards four companies that were newly set up, with no apparent online presence outside of these filings. A complaint to the FEC by the",
+          "non-profit Campaign Legal Center (CLC) in May cited American Mission and Think Big\u2019s payments to Summit Ridge and Lantern Productions, alleging that the Super PACs had \u201cunlawfully evaded federal reporting requirements",
+          "services including communications and strategy consulting, as well as legal fees. The network\u2019s Democrat-focused Super PAC, Think Big , paid a company called Lantern Production Consultants LLC more than $20 million,"
+        ],
+        "model": "gpt-5-mini",
+        "reason": "Corruption elements lack support (corruption_specific_benefit). The article's main reporting documents alleged unlawful funneling of Super PAC disbursements through newly created LLCs to conceal spending tied to AI-industry donors, meeting the abuse + private gain + substantive coverage criteria.",
+        "reasoning_effort": "low"
+      },
       "source": "Bellingcat",
       "title": "Inside the Secretive, Contradictory World of Campaign Ads Funded by AI Super PACs",
       "url": "https://www.bellingcat.com/news/2026/11/02/ai-super-pacs-political-advertising/"
@@ -897,28 +1169,85 @@
     },
     "27308fbc213f504e312937c264bfcedc52dec5b1c750b03e2fcc92c2b39c8190": {
       "api_usage": {
-        "input_tokens": 3584,
-        "output_tokens": 534,
-        "total_tokens": 4118
+        "input_tokens": 4843,
+        "output_tokens": 467,
+        "requests": 1,
+        "total_tokens": 5310
+      },
+      "article_focus": "Analysis of the funding crisis facing civil society and its effects on civic space",
+      "article_input": {
+        "available_text_chars": 11237,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "e7ace6e005b625df470d76891d6dc17cb7b840832d9a9c4503db7485c4f593b6",
+        "text_chars": 11237,
+        "truncated": false
       },
       "author": "Forus",
-      "checked_at": "2026-11-18T09:14:02Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:03:23Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
-        "substantive_corruption_coverage": true
+        "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
-      "evidence": [
-        "and civic space is particularly visible where governments are introducing or enforcing restrictions on organizations receiving resources from abroad. In El Salvador, President Nayib Bukele accused journalists and civil",
-        "society organizations of misusing USAID funds as part of a global money laundering operation, just as the US aid freeze hit. A few months later, the Legislative Assembly approved a Foreign Agents Law requiring anyone",
-        "receiving funds from abroad to register and pay a 30 percent tax on those contributions. By September 2025, long-standing organizations had begun to close: FESPAD, founded in 1988, and FUDECSO, after 33 years of work,"
-      ],
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "other_explicit_corrupt_abuse",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "The article reports allegations by El Salvador\u2019s president that NGOs and journalists misused USAID funds as part of a money-laundering operation and describes restrictive foreign-agent laws, but it does not establish abuse of entrusted power for improper private gain or provide substantiated corruption findings. Further context is needed to confirm corruption elements.",
+      "reason": "The article analyses a funding crisis and shrinking civic space; it reports accusations and restrictive laws but does not document an abuse of an entrusted role for private gain or a concrete corrupt benefit tied to that misuse. No specific corrupt mechanism (bribery, embezzlement, self-dealing, kickbacks, diverted entrusted assets) is established.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 4843,
+          "output_tokens": 467,
+          "requests": 1,
+          "total_tokens": 5310
+        },
+        "article_focus": "Analysis of the funding crisis facing civil society and its effects on civic space",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article analyses a funding crisis and shrinking civic space; it reports accusations and restrictive laws but does not document an abuse of an entrusted role for private gain or a concrete corrupt benefit tied to that misuse. No specific corrupt mechanism (bribery, embezzlement, self-dealing, kickbacks, diverted entrusted assets) is established.",
+        "reasoning_effort": "low"
+      },
       "source": "Global Voices",
       "title": "Diversifying funding was supposed to protect civil society: It did not",
       "url": "https://globalvoices.org/2026/11/18/diversifying-funding-was-supposed-to-protect-civil-society-it-did-not/"
@@ -1046,24 +1375,85 @@
     },
     "2bf25838eae737264a88bcf47a1b675d7769bad9378d0e81cef00bb2987be75a": {
       "api_usage": {
-        "input_tokens": 1695,
-        "output_tokens": 473,
-        "total_tokens": 2168
+        "input_tokens": 3142,
+        "output_tokens": 872,
+        "requests": 1,
+        "total_tokens": 4014
+      },
+      "article_focus": "Reporting on alleged criminal activity: a Brazilian mining boss accused of sheltering ex-intelligence director and alleged money laundering, and his Florida businesses/properties.",
+      "article_input": {
+        "available_text_chars": 4384,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "afe857a661fc537e1b23867e867a48f5c5f3d4cd95d85ce8347543a06a250db3",
+        "text_chars": 4384,
+        "truncated": false
       },
       "author": "Brenda Medina",
-      "checked_at": "2026-11-09T20:47:30Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "illicit_financing_or_enrichment",
+      "checked_at": "2026-11-25T13:03:17Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "other_explicit_corrupt_abuse",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "corruption_reporting",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "Article reports investigations and allegations about sheltering a former intelligence director and mentions money-laundering probes, but the text does not establish an alleged abuse of entrusted power for private gain or provide substantive corruption details.",
+      "reason": "Article reports alleged sheltering of a former intelligence chief and money laundering by a mining boss, but it does not establish abuse of an entrusted role by the accused (the main accused is a private miner) nor clearly link an entrusted-power misuse to private gain as required by the strict definition, so the three required corruption criteria are not all met.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3142,
+          "output_tokens": 872,
+          "requests": 1,
+          "total_tokens": 4014
+        },
+        "article_focus": "Reporting on alleged criminal activity: a Brazilian mining boss accused of sheltering ex-intelligence director and alleged money laundering, and his Florida businesses/properties.",
+        "benefit_type": "illicit_financing_or_enrichment",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "corruption_reporting",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports alleged sheltering of a former intelligence chief and money laundering by a mining boss, but it does not establish abuse of an entrusted role by the accused (the main accused is a private miner) nor clearly link an entrusted-power misuse to private gain as required by the strict definition, so the three required corruption criteria are not all met.",
+        "reasoning_effort": "low"
+      },
       "source": "ICIJ",
       "title": "Amazon mining boss wanted by Brazil for sheltering Jair Bolsonaro\u2019s spy chief has businesses, properties in Florida",
       "url": "https://www.icij.org/news/2026/10/amazon-mining-boss-wanted-by-brazil-for-sheltering-jair-bolsonaros-spy-chief-has-businesses-properties-in-florida/"
@@ -1146,17 +1536,18 @@
         "output_tokens": 369,
         "total_tokens": 1989
       },
+      "autonomous_exclusion": true,
       "checked_at": "2026-10-22T20:51:12Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "decision": "review",
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
       "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
-      "reason": "The story documents exports from an Irish alumina refinery to Russian smelters and mentions lobbying by Ireland that kept alumina exports exempt, but the passages do not allege that a public official abused entrusted power for private gain (bribery, kickbacks or similar). The link to corruption is possible but not clearly established in the supplied text, so further clarification or evidence is needed.",
+      "reason": "Publisher is no longer configured; automatically excluded.",
       "source": "OCCRP",
       "title": "EU Sanctions Envoy Pushes for Action Against Rusal\u2019s Irish Alumina Refinery",
       "url": "https://www.occrp.org/en/news/eu-sanctions-envoy-pushes-for-action-against-rusals-irish-alumina-refinery"
@@ -1167,17 +1558,18 @@
         "output_tokens": 360,
         "total_tokens": 1835
       },
+      "autonomous_exclusion": true,
       "checked_at": "2026-10-20T21:40:43Z",
       "checks": {
         "abuse_of_entrusted_power": true,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "decision": "review",
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
       "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
-      "reason": "Article centers on protests and police crackdown; it notes demonstrators demand Rama\u2019s resignation over \u201callegations of widespread corruption,\u201d but provides no substantive details, investigations, or examples of corrupt acts or private benefit. Connection to corruption is asserted but not developed in the supplied passages.",
+      "reason": "Publisher is no longer configured; automatically excluded.",
       "source": "OCCRP",
       "title": "Albanian PM Offers Dialogue Amid Crackdown on Violent Protests",
       "url": "https://www.occrp.org/en/news/albanian-pm-offers-dialogue-amid-crackdown-on-violent-protests"
@@ -1908,12 +2300,86 @@
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
-      "checked_at": "2026-11-23T10:50:56Z",
-      "decision": "review",
+      "api_usage": {
+        "input_tokens": 2448,
+        "output_tokens": 415,
+        "requests": 1,
+        "total_tokens": 2863
+      },
+      "article_focus": "Feature on how conservation succeeded on Lundy Island (conservation story)",
+      "article_input": {
+        "available_text_chars": 2198,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "a74cb4fc04667fef3b39f0be391c28e62d5caad35b1b460f16e0298c3fa7ad36",
+        "text_chars": 2198,
+        "truncated": false
+      },
+      "author": "",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:04:52Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
       "evidence": [],
-      "id": "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
-      "reason": "Insufficient article text; held for review.",
-      "retryable": true,
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article is a conservation feature about Lundy Island and contains no allegations, descriptions, or analysis of abuse of entrusted power or private gain. No passages establish corrupt conduct or benefits.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 2448,
+          "output_tokens": 415,
+          "requests": 1,
+          "total_tokens": 2863
+        },
+        "article_focus": "Feature on how conservation succeeded on Lundy Island (conservation story)",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article is a conservation feature about Lundy Island and contains no allegations, descriptions, or analysis of abuse of entrusted power or private gain. No passages establish corrupt conduct or benefits.",
+        "reasoning_effort": "low"
+      },
       "source": "Mongabay",
       "title": "How one tiny island made conservation work",
       "url": "https://news.mongabay.com/short-article/2026/11/how-one-tiny-island-made-conservation-work/"
@@ -1972,17 +2438,18 @@
         "output_tokens": 562,
         "total_tokens": 3573
       },
+      "autonomous_exclusion": true,
       "checked_at": "2026-10-21T19:40:37Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": true,
         "substantive_corruption_coverage": true
       },
-      "decision": "review",
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
       "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
-      "reason": "The piece alleges an NGO-run operation illegally collecting diaspora voter registrations to favor the ruling party, including recordings and legal experts calling it unlawful. However it\u2019s unclear from the supplied passages whether a public official or other person formally entrusted with authority abused that role or whether state actors colluded \u2014 that connection is asserted but not concretely proven in the text provided.",
+      "reason": "Publisher is no longer configured; automatically excluded.",
       "source": "OCCRP",
       "title": "In a Vienna Bakery, Fresh Pastries and a Backdoor for Serbian Votes",
       "url": "https://www.occrp.org/en/scoop/in-a-vienna-bakery-a-sweet-scent-of-pastry-and-a-backdoor-for-serbian-votes"
@@ -2228,6 +2695,176 @@
       "title": "Two more journalists murdered in Latin America, prompting press freedom concerns",
       "url": "https://www.icij.org/news/2026/11/two-more-journalists-murdered-in-latin-america-prompting-press-freedom-concerns/"
     },
+    "65abf3143f3707d189ab77cb82585cbb55a6166be98965005ba9d6dbcc1359c0": {
+      "api_usage": {
+        "input_tokens": 3225,
+        "output_tokens": 526,
+        "requests": 1,
+        "total_tokens": 3751
+      },
+      "article_focus": "Reporting on wildlife trafficking and gaps in criminal prosecutions in Nigeria",
+      "article_input": {
+        "available_text_chars": 4979,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "b81409a8a913e0fa58defbf79785c132dabe600aca8092d6c1879501840b30e5",
+        "text_chars": 4979,
+        "truncated": false
+      },
+      "author": "Mongabay.com",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:05:38Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on wildlife trafficking and weaknesses in prosecutions of criminal syndicates but contains no allegation that entrusted officials abused their roles for private gain (no bribery, embezzlement, self-dealing or corrupt appointments described). Therefore it does not meet the strict definition of corruption for publication.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3225,
+          "output_tokens": 526,
+          "requests": 1,
+          "total_tokens": 3751
+        },
+        "article_focus": "Reporting on wildlife trafficking and gaps in criminal prosecutions in Nigeria",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on wildlife trafficking and weaknesses in prosecutions of criminal syndicates but contains no allegation that entrusted officials abused their roles for private gain (no bribery, embezzlement, self-dealing or corrupt appointments described). Therefore it does not meet the strict definition of corruption for publication.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Nigeria\u2019s ivory and pangolin trade exposes gaps in wildlife crime prosecutions",
+      "url": "https://news.mongabay.com/short-article/2026/11/nigerias-ivory-and-pangolin-trade-exposes-gaps-in-wildlife-crime-prosecutions/"
+    },
+    "663c9c04405504d3d6aceca9c82353b079284ea0f00d4edee988efd852ab7e16": {
+      "api_usage": {
+        "input_tokens": 6127,
+        "output_tokens": 375,
+        "requests": 1,
+        "total_tokens": 6502
+      },
+      "article_focus": "Describing the role, welfare, management and future of working elephants in Nepal\u2019s conservation efforts (including census methods and welfare initiatives).",
+      "article_input": {
+        "available_text_chars": 14597,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "3fc46644ba15e693498932495d5b25b44b895828fc335c47f0b065269f6b39b2",
+        "text_chars": 14597,
+        "truncated": false
+      },
+      "author": "Henry Doellinger",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:05:33Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on the role, welfare and declining supply of working elephants in Nepal and conservation techniques; it contains no allegation or description of abuse of an entrusted role for private gain or any specific corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6127,
+          "output_tokens": 375,
+          "requests": 1,
+          "total_tokens": 6502
+        },
+        "article_focus": "Describing the role, welfare, management and future of working elephants in Nepal\u2019s conservation efforts (including census methods and welfare initiatives).",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on the role, welfare and declining supply of working elephants in Nepal and conservation techniques; it contains no allegation or description of abuse of an entrusted role for private gain or any specific corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Photos: Elephants maintain an essential role in conservation in Nepal despite shifting norms",
+      "url": "https://news.mongabay.com/2026/11/photos-elephants-maintain-an-essential-role-in-conservation-in-nepal-despite-shifting-norms/"
+    },
     "6713611317142462cfbbb9d88c5f8f18c42d9060f00355d5fe969c0ad8557ac8": {
       "api_usage": {
         "input_tokens": 1529,
@@ -2326,28 +2963,85 @@
     },
     "68d6d35fd52bd1f0281bf7659e365eaaa5e6bd7c85f9820ad0c0210f00db9736": {
       "api_usage": {
-        "input_tokens": 1509,
-        "output_tokens": 398,
-        "total_tokens": 1907
+        "input_tokens": 3355,
+        "output_tokens": 450,
+        "requests": 1,
+        "total_tokens": 3805
+      },
+      "article_focus": "Report on the arrest of Patax\u00f3 Indigenous leaders, community protest and claims of political persecution over land/conflict issues",
+      "article_input": {
+        "available_text_chars": 5149,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "7cb2652009c2cddbe1e7cf23422a7a3d9c7ae501e154ba974f679901d7cbcb85",
+        "text_chars": 5149,
+        "truncated": false
       },
       "author": "Karla MendesMariana Martins",
-      "checked_at": "2026-11-17T01:06:51Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:04:48Z",
       "checks": {
-        "abuse_of_entrusted_power": true,
+        "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
-      "evidence": [
-        "in the Barra Velha Indigenous Territory. Erilsa Braz dos Santos, known as Uruba Patax\u00f3, vice-chief of Barra Velha Mother Village, and communicator Karen Patax\u00f3 were arrested on Nov. 11 on suspicion of drug trafficking",
-        "Indigenous people on social media. \u201cThis is a political accusation, because she is a leader who defends her people and her territory,\u201d a protester said in a video published on Instagram by the Media and Art Research",
-        "According to Indigenous leader D\u00e1rio Patax\u00f3, the imprisonment is intended to silence those who speak out against drug trafficking in the territory. \u201cWe know that their intention is to stop the movement. Uruba is one of"
-      ],
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "Article reports arrests by police and includes protesters' allegations that authorities are acting politically to silence Indigenous leaders, indicating alleged abuse of entrusted power but it does not show improper private gain or substantive coverage of corruption.",
+      "reason": "Article reports arrests and Indigenous protests and alleges political persecution but does not establish misuse of an entrusted role for private gain or a specific corrupt mechanism. Insufficient evidence to meet the strict corruption criteria.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3355,
+          "output_tokens": 450,
+          "requests": 1,
+          "total_tokens": 3805
+        },
+        "article_focus": "Report on the arrest of Patax\u00f3 Indigenous leaders, community protest and claims of political persecution over land/conflict issues",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports arrests and Indigenous protests and alleges political persecution but does not establish misuse of an entrusted role for private gain or a specific corrupt mechanism. Insufficient evidence to meet the strict corruption criteria.",
+        "reasoning_effort": "low"
+      },
       "source": "Mongabay",
       "title": "Patax\u00f3 Indigenous people protest the arrest of a female vice-chief in Brazil\u2019s Bahia",
       "url": "https://news.mongabay.com/short-article/2026/11/pataxo-indigenous-people-protest-the-arrest-of-a-female-vice-chief-in-brazils-bahia/"
@@ -2499,6 +3193,91 @@
       "source": "Mongabay",
       "title": "Rare encounter with isolated Indigenous Aw\u00e1 people in Brazil exposes vulnerability",
       "url": "https://news.mongabay.com/short-article/2026/11/rare-encounter-with-isolated-indigenous-awa-people-in-brazil-exposes-vulnerability/"
+    },
+    "6e2d27f875b60caf22d8d1777f0f0b6b47c88b39f57ddac9c83955a275621dff": {
+      "api_usage": {
+        "input_tokens": 2579,
+        "output_tokens": 499,
+        "requests": 1,
+        "total_tokens": 3078
+      },
+      "article_focus": "Wildlife conservation and urban river clean-up (otter sightings and human-wildlife conflict)",
+      "article_input": {
+        "available_text_chars": 2694,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "4c3a3325746a51272d21473db89e646da7e74a052966582b1ed4164d4fb4f613",
+        "text_chars": 2694,
+        "truncated": false
+      },
+      "author": "Juan MazaPhilip Jacobson",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:05:22Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article reports on smooth-coated otters returning to Kuala Lumpur\u2019s Klang River and related conservation/conflict with residents. It contains no allegation or description of abuse of entrusted power, private gain, or any corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 2579,
+          "output_tokens": 499,
+          "requests": 1,
+          "total_tokens": 3078
+        },
+        "article_focus": "Wildlife conservation and urban river clean-up (otter sightings and human-wildlife conflict)",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article reports on smooth-coated otters returning to Kuala Lumpur\u2019s Klang River and related conservation/conflict with residents. It contains no allegation or description of abuse of entrusted power, private gain, or any corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Otters raise hope for Kuala Lumpur\u2019s river",
+      "url": "https://news.mongabay.com/short-article/2026/11/otters-raise-hope-for-kuala-lumpurs-river/"
     },
     "6e85e3ab0d6dee7e5e852b672bef2a5eff9a4b8df14d2b297c57b5ecd71ad130": {
       "api_usage": {
@@ -3268,24 +4047,169 @@
     },
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99": {
       "api_usage": {
-        "input_tokens": 2990,
-        "output_tokens": 451,
-        "total_tokens": 3441
+        "input_tokens": 12270,
+        "output_tokens": 6598,
+        "requests": 2,
+        "total_tokens": 18868
       },
-      "checked_at": "2026-10-21T19:40:44Z",
+      "article_focus": "Investigation of A7\u2019s cash-based payment operation laundering Russian rubles via market brokers, PSB and shell companies to strip origins and evade Western sanctions, moving billions to China.",
+      "article_input": {
+        "available_text_chars": 14186,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "cba279022934824a1536e9a9515cc195fa8a0643b13644dc8655c7fba4f42406",
+        "text_chars": 14186,
+        "truncated": false
+      },
+      "author": "",
+      "benefit_type": "illicit_financing_or_enrichment",
+      "checked_at": "2026-11-25T13:04:42Z",
       "checks": {
-        "abuse_of_entrusted_power": false,
+        "abuse_of_entrusted_power": true,
         "private_gain": true,
         "substantive_corruption_coverage": true
       },
-      "decision": "review",
-      "evidence": [],
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "other_explicit_corrupt_abuse",
+      "corruption_case": {
+        "actor": "A7 (Kremlin-backed payments firm) and Promsvyazbank (PSB), a co-owner/state defense bank",
+        "alleged_abuse": "Processing large volumes of untraceable cash from Moscow wholesale markets, then using shell companies and foreign payment routes to strip the Russian origin of funds, facilitating money laundering and sanctions evasion",
+        "beneficiary": "A7 and its clients/brokers (Sadovod market brokers), associated shell companies and ultimate foreign beneficiaries (Chinese exporters)",
+        "entrusted_role": "A7 as a payment processor/trusted intermediary handling client funds; PSB as a state bank providing vaulting, account credits and approvals for A7 transactions",
+        "improper_benefit": "Billions of dollars in laundered transfers and profits, enabling illicit enrichment and avoidance of sanctions"
+      },
+      "coverage_type": "corruption_reporting",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [
+          "bespoke payment management system, then trucks the cash on to Promsvyazbank, or PSB, the Russian state defense bank, a co-owner of the company. PSB puts it in a vault and credits A7 accounts. PSB acknowledged ICIJ\u2019s",
+          "Voloshin PSB, which serves as a bank for all payments routed through the company inside Russia, typically has to give approval to process market payments made by A7, likely because of the size of this channel, according",
+          "request for comment, but did not provide a response. Records show that A7 then orders one of a network of shell companies registered outside Russia to make a payment on behalf of an A7 client to a beneficiary\u2019s account,"
+        ],
+        "private_gain": [
+          "industrial cash machine that is A7, the payments giant backed by the Russian state. Between November 2024 and July 2025, A7 processed at least 283 tons of cash rubles, worth more than $14 billion, an investigation by",
+          "base \u2014 a big, aggregated pile of clients,\u201d a person familiar with the matter, who requested anonymity due to security concerns, told ICIJ. \u201cAnd that\u2019s exactly what they go there for: the money and the profit.\u201d For",
+          "some 126 billion rubles ($1.2 billion). A leaked A7 promissory note register reviewed by ICIJ reveals that A7\u2019s cash intake at PSB only rose in 2025, reaching 195 billion rubles ($2.3 billion) in a single month by April"
+        ],
+        "substantive_corruption_coverage": [
+          "network\u201d designed to evade Western sanctions at scale, according to U.S. authorities. On Oct. 1, the U.S. Treasury sanctioned A7 as a \u201csignificant transnational criminal organization,\u201d which \u201cutilizes money laundering",
+          "principal channels for laundering billions of dollars worth of payments out of Russia and into the global financial system, via a global network of shell companies, often with accounts at major international banks. As",
+          "the International Consortium of Investigative Journalists and Russian independent media outlet Proekt has found. For A7, ICIJ discovered, cash is king, the jet fuel for a firm now under scrutiny as a \u201cshadow banking"
+        ]
+      },
+      "decision": "publish",
+      "evidence": [
+        "network\u201d designed to evade Western sanctions at scale, according to U.S. authorities. On Oct. 1, the U.S. Treasury sanctioned A7 as a \u201csignificant transnational criminal organization,\u201d which \u201cutilizes money laundering",
+        "bespoke payment management system, then trucks the cash on to Promsvyazbank, or PSB, the Russian state defense bank, a co-owner of the company. PSB puts it in a vault and credits A7 accounts. PSB acknowledged ICIJ\u2019s",
+        "industrial cash machine that is A7, the payments giant backed by the Russian state. Between November 2024 and July 2025, A7 processed at least 283 tons of cash rubles, worth more than $14 billion, an investigation by"
+      ],
       "model": "gpt-5-mini",
-      "policy_hash": "13e943fad66e0cbded0ca3a94e6017077a824d566c4da5770ea3552b5e3e2a87",
-      "reason": "The story documents large-scale money laundering and a Kremlin-backed payments firm (A7) moving billions via cash and state-linked Promsvyazbank, and was sanctioned as a criminal network. It clearly involves private gain and centers on corruption-like activity, but the supplied passages do not explicitly show an entrusted public official abusing their role\u2014this connection is unclear and needs clarification.",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "ICIJ\u2019s investigation documents a payments operation (A7) processing massive untraceable cash via market brokers, a state-linked bank (PSB) and shell companies to strip fund origins \u2014 an alleged money\u2011laundering/sanctions\u2011evasion scheme generating substantial profit.",
+      "reasoning_effort": "high",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6007,
+          "output_tokens": 900,
+          "requests": 1,
+          "total_tokens": 6907
+        },
+        "article_focus": "A detailed investigative report exposing A7\u2019s cash-based payments network used to evade sanctions and launder funds internationally.",
+        "benefit_type": "illicit_financing_or_enrichment",
+        "checks": {
+          "abuse_of_entrusted_power": true,
+          "private_gain": true,
+          "substantive_corruption_coverage": true
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "A7 (state-backed/\u2019Kremlin\u2019 payment firm)",
+          "alleged_abuse": "Using its role to process large volumes of untraceable cash and route payments via shell companies to strip Russian origin and evade Western sanctions (money laundering/sanctions evasion)",
+          "beneficiary": "A7 clients and associated counterparties (including Chinese exporters and shell-company network); the service benefits A7 and its partners, and enables sanctioned actors",
+          "entrusted_role": "State-linked payments processor and partner bank (Promsvyazbank/PSB) responsible for processing and routing payments",
+          "improper_benefit": "Movement and concealment of at least billions of dollars (hundreds of tons of cash; >$14 billion processed) into the global financial system, enabling illicit financing and sanctions evasion"
+        },
+        "coverage_type": "corruption_reporting",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [
+            "bespoke payment management system, then trucks the cash on to Promsvyazbank, or PSB, the Russian state defense bank, a co-owner of the company. PSB puts it in a vault and credits A7 accounts. PSB acknowledged ICIJ\u2019s",
+            "often a Chinese exporter, at another bank outside Russia \u2014 without any trace of the cash, or Russian origin, of the funds surfacing on the wire transfer or supporting documentation. The shell companies are advanced",
+            "Voloshin PSB, which serves as a bank for all payments routed through the company inside Russia, typically has to give approval to process market payments made by A7, likely because of the size of this channel, according"
+          ],
+          "private_gain": [
+            "industrial cash machine that is A7, the payments giant backed by the Russian state. Between November 2024 and July 2025, A7 processed at least 283 tons of cash rubles, worth more than $14 billion, an investigation by",
+            "principal channels for laundering billions of dollars worth of payments out of Russia and into the global financial system, via a global network of shell companies, often with accounts at major international banks. As",
+            "often a Chinese exporter, at another bank outside Russia \u2014 without any trace of the cash, or Russian origin, of the funds surfacing on the wire transfer or supporting documentation. The shell companies are advanced"
+          ],
+          "substantive_corruption_coverage": [
+            "industrial cash machine that is A7, the payments giant backed by the Russian state. Between November 2024 and July 2025, A7 processed at least 283 tons of cash rubles, worth more than $14 billion, an investigation by",
+            "network\u201d designed to evade Western sanctions at scale, according to U.S. authorities. On Oct. 1, the U.S. Treasury sanctioned A7 as a \u201csignificant transnational criminal organization,\u201d which \u201cutilizes money laundering",
+            "principal channels for laundering billions of dollars worth of payments out of Russia and into the global financial system, via a global network of shell companies, often with accounts at major international banks. As"
+          ]
+        },
+        "decision": "publish",
+        "evidence": [
+          "industrial cash machine that is A7, the payments giant backed by the Russian state. Between November 2024 and July 2025, A7 processed at least 283 tons of cash rubles, worth more than $14 billion, an investigation by",
+          "network\u201d designed to evade Western sanctions at scale, according to U.S. authorities. On Oct. 1, the U.S. Treasury sanctioned A7 as a \u201csignificant transnational criminal organization,\u201d which \u201cutilizes money laundering",
+          "principal channels for laundering billions of dollars worth of payments out of Russia and into the global financial system, via a global network of shell companies, often with accounts at major international banks. As"
+        ],
+        "model": "gpt-5-mini",
+        "reason": "The article's main purpose is investigative reporting on A7\u2019s large-scale cash-based payments system used to evade sanctions and launder funds. It documents a state-linked bank\u2019s role and concrete sums processed, establishing entrusted-role misuse and private benefit from laundering activity.",
+        "reasoning_effort": "low"
+      },
       "source": "ICIJ",
       "title": "Kremlin payment firm A7 has been pumping billions in \u2018untraceable\u2019 cash into global financial system",
-      "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/"
+      "url": "https://www.icij.org/news/2026/10/kremlin-payment-firm-a7-has-been-pumping-billions-in-untraceable-cash-into-global-financial-system/",
+      "verification": {
+        "api_usage": {
+          "input_tokens": 6263,
+          "output_tokens": 5698,
+          "requests": 1,
+          "total_tokens": 11961
+        },
+        "article_focus": "Investigation of A7\u2019s cash-based payment operation laundering Russian rubles via market brokers, PSB and shell companies to strip origins and evade Western sanctions, moving billions to China.",
+        "benefit_type": "illicit_financing_or_enrichment",
+        "checks": {
+          "abuse_of_entrusted_power": true,
+          "private_gain": true,
+          "substantive_corruption_coverage": true
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "A7 (Kremlin-backed payments firm) and Promsvyazbank (PSB), a co-owner/state defense bank",
+          "alleged_abuse": "Processing large volumes of untraceable cash from Moscow wholesale markets, then using shell companies and foreign payment routes to strip the Russian origin of funds, facilitating money laundering and sanctions evasion",
+          "beneficiary": "A7 and its clients/brokers (Sadovod market brokers), associated shell companies and ultimate foreign beneficiaries (Chinese exporters)",
+          "entrusted_role": "A7 as a payment processor/trusted intermediary handling client funds; PSB as a state bank providing vaulting, account credits and approvals for A7 transactions",
+          "improper_benefit": "Billions of dollars in laundered transfers and profits, enabling illicit enrichment and avoidance of sanctions"
+        },
+        "coverage_type": "corruption_reporting",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [
+            "bespoke payment management system, then trucks the cash on to Promsvyazbank, or PSB, the Russian state defense bank, a co-owner of the company. PSB puts it in a vault and credits A7 accounts. PSB acknowledged ICIJ\u2019s",
+            "Voloshin PSB, which serves as a bank for all payments routed through the company inside Russia, typically has to give approval to process market payments made by A7, likely because of the size of this channel, according",
+            "request for comment, but did not provide a response. Records show that A7 then orders one of a network of shell companies registered outside Russia to make a payment on behalf of an A7 client to a beneficiary\u2019s account,"
+          ],
+          "private_gain": [
+            "industrial cash machine that is A7, the payments giant backed by the Russian state. Between November 2024 and July 2025, A7 processed at least 283 tons of cash rubles, worth more than $14 billion, an investigation by",
+            "base \u2014 a big, aggregated pile of clients,\u201d a person familiar with the matter, who requested anonymity due to security concerns, told ICIJ. \u201cAnd that\u2019s exactly what they go there for: the money and the profit.\u201d For",
+            "some 126 billion rubles ($1.2 billion). A leaked A7 promissory note register reviewed by ICIJ reveals that A7\u2019s cash intake at PSB only rose in 2025, reaching 195 billion rubles ($2.3 billion) in a single month by April"
+          ],
+          "substantive_corruption_coverage": [
+            "network\u201d designed to evade Western sanctions at scale, according to U.S. authorities. On Oct. 1, the U.S. Treasury sanctioned A7 as a \u201csignificant transnational criminal organization,\u201d which \u201cutilizes money laundering",
+            "principal channels for laundering billions of dollars worth of payments out of Russia and into the global financial system, via a global network of shell companies, often with accounts at major international banks. As",
+            "the International Consortium of Investigative Journalists and Russian independent media outlet Proekt has found. For A7, ICIJ discovered, cash is king, the jet fuel for a firm now under scrutiny as a \u201cshadow banking"
+          ]
+        },
+        "decision": "publish",
+        "evidence": [
+          "network\u201d designed to evade Western sanctions at scale, according to U.S. authorities. On Oct. 1, the U.S. Treasury sanctioned A7 as a \u201csignificant transnational criminal organization,\u201d which \u201cutilizes money laundering",
+          "bespoke payment management system, then trucks the cash on to Promsvyazbank, or PSB, the Russian state defense bank, a co-owner of the company. PSB puts it in a vault and credits A7 accounts. PSB acknowledged ICIJ\u2019s",
+          "industrial cash machine that is A7, the payments giant backed by the Russian state. Between November 2024 and July 2025, A7 processed at least 283 tons of cash rubles, worth more than $14 billion, an investigation by"
+        ],
+        "model": "gpt-5-mini",
+        "reason": "ICIJ\u2019s investigation documents a payments operation (A7) processing massive untraceable cash via market brokers, a state-linked bank (PSB) and shell companies to strip fund origins \u2014 an alleged money\u2011laundering/sanctions\u2011evasion scheme generating substantial profit.",
+        "reasoning_effort": "high"
+      }
     },
     "91addbfcf193f0f3c038ed3d765ff33c7edf190a10c1ea90e9a3e0e11beaf74c": {
       "api_usage": {
@@ -3481,24 +4405,85 @@
     },
     "9a36815d7f31bbfa795c63ac594cc77f3db3e49f9da59819b95fcae660c5b48e": {
       "api_usage": {
-        "input_tokens": 1855,
-        "output_tokens": 389,
-        "total_tokens": 2244
+        "input_tokens": 3171,
+        "output_tokens": 597,
+        "requests": 1,
+        "total_tokens": 3768
+      },
+      "article_focus": "Regulatory transparency and patient safety failings in medical device adverse-event reporting",
+      "article_input": {
+        "available_text_chars": 4815,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "b3c8b30984eba5a3bf53bb3f449a169f4cc60ef8a6fcfcf3a3544adcf4c069a0",
+        "text_chars": 4815,
+        "truncated": false
       },
       "author": "David Kenner",
-      "checked_at": "2026-11-20T22:50:18Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T13:03:50Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "general_corporate_harm_or_negligence",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "The article documents FDA practices that enabled device makers to obscure harms, but it does not explicitly allege that FDA officials abused entrusted power for private gain or that companies received improper benefits; the connection to corruption is plausible but not clearly established in the text provided.",
+      "reason": "The article documents poor transparency and FDA use of summary-reporting exemptions that conceal device harms, but it does not allege an entrusted actor abused power for private gain (no bribery, self-dealing, diverted assets or explicit corrupt favour). The piece is regulatory/ safety reporting, not a report of concrete corruption.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3171,
+          "output_tokens": 597,
+          "requests": 1,
+          "total_tokens": 3768
+        },
+        "article_focus": "Regulatory transparency and patient safety failings in medical device adverse-event reporting",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "general_corporate_harm_or_negligence",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article documents poor transparency and FDA use of summary-reporting exemptions that conceal device harms, but it does not allege an entrusted actor abused power for private gain (no bribery, self-dealing, diverted assets or explicit corrupt favour). The piece is regulatory/ safety reporting, not a report of concrete corruption.",
+        "reasoning_effort": "low"
+      },
       "source": "ICIJ",
       "title": "Medical device makers have gotten worse at disclosing when their products harm people, new study finds. The FDA let them.",
       "url": "https://www.icij.org/investigations/implant-files/medical-device-makers-have-gotten-worse-at-disclosing-when-their-products-harm-people-new-study-finds-the-fda-let-them/"
@@ -3770,24 +4755,93 @@
     },
     "a5bf88b212fc0c64ac5895ef908236e75cd0ddf02b1ae18f19a7faf081a7892d": {
       "api_usage": {
-        "input_tokens": 1478,
-        "output_tokens": 428,
-        "total_tokens": 1906
+        "input_tokens": 3192,
+        "output_tokens": 695,
+        "requests": 1,
+        "total_tokens": 3887
+      },
+      "article_focus": "Report on a Mongabay investigation documenting government procurements of shark meat for public institutions and the investigation's recognition in journalism awards, plus ensuing policy and public-health reactions.",
+      "article_input": {
+        "available_text_chars": 4802,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "ac01d6f2984a78e47721a5a07141e99b968b9cd8047076d9204dfb586ff01152",
+        "text_chars": 4802,
+        "truncated": false
       },
       "author": "Mongabay.com",
-      "checked_at": "2026-11-13T21:40:57Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T13:03:43Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
-      "evidence": [],
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [
+        "Mongabay shark meat investigation shortlisted for two journalism awards in Brazil Mongabay.com 13 Nov 2026 Brazil A Mongabay investigation that revealed large-scale government purchases of shark meat for schools,",
+        "hospitals, prisons and other public institutions in Brazil has been named as a finalist for two Brazilian journalism awards . Published in 2025 in collaboration with the Pulitzer Center, the investigation tracked 1,012",
+        "public procurements issued since 2004 to purchase more than 5,400 metric tons of shark meat, worth at least 112 million reais ($20.1 million). The findings sparked environmental and public health concerns. Sharks, some"
+      ],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "The article reports an investigation into large-scale government procurements of shark meat and transparency concerns, but it does not allege or describe an abuse of entrusted power for improper private gain. The corruption connection is therefore unclear from the supplied text.",
+      "reason": "Article reports a data-driven investigation into large-scale government purchases of shark meat and resulting policy/public-health impacts, but does not allege misuse of an entrusted role for private gain or describe a corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3192,
+          "output_tokens": 695,
+          "requests": 1,
+          "total_tokens": 3887
+        },
+        "article_focus": "Report on a Mongabay investigation documenting government procurements of shark meat for public institutions and the investigation's recognition in journalism awards, plus ensuing policy and public-health reactions.",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [
+          "Mongabay shark meat investigation shortlisted for two journalism awards in Brazil Mongabay.com 13 Nov 2026 Brazil A Mongabay investigation that revealed large-scale government purchases of shark meat for schools,",
+          "hospitals, prisons and other public institutions in Brazil has been named as a finalist for two Brazilian journalism awards . Published in 2025 in collaboration with the Pulitzer Center, the investigation tracked 1,012",
+          "public procurements issued since 2004 to purchase more than 5,400 metric tons of shark meat, worth at least 112 million reais ($20.1 million). The findings sparked environmental and public health concerns. Sharks, some"
+        ],
+        "model": "gpt-5-mini",
+        "reason": "Article reports a data-driven investigation into large-scale government purchases of shark meat and resulting policy/public-health impacts, but does not allege misuse of an entrusted role for private gain or describe a corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
       "source": "Mongabay",
       "title": "Mongabay shark meat investigation shortlisted for two journalism awards in Brazil",
       "url": "https://news.mongabay.com/short-article/2026/11/mongabay-shark-meat-investigation-shortlisted-for-two-journalism-awards-in-brazil/"
@@ -4019,24 +5073,85 @@
     },
     "b5bdbd885c73b3da78f8b7db7b6cfcabab4553283e4f43767d9f8fe3e30bd237": {
       "api_usage": {
-        "input_tokens": 1543,
-        "output_tokens": 282,
-        "total_tokens": 1825
+        "input_tokens": 6979,
+        "output_tokens": 707,
+        "requests": 1,
+        "total_tokens": 7686
+      },
+      "article_focus": "Reporting on U.S. companies' applications for deep-sea mining exploration in South Pacific high-seas areas and related environmental, regulatory and regional objections.",
+      "article_input": {
+        "available_text_chars": 17985,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "930816cdeeec95d81d3bece85cf644a9c91ba805b96940136a416ad908f62337",
+        "text_chars": 17985,
+        "truncated": false
       },
       "author": "Elizabeth Claire Alberts",
-      "checked_at": "2026-11-11T21:45:48Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:03:36Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "other_explicit_corrupt_abuse",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "Article details controversial seabed-mining applications and a U.S. permitting process that bypasses a U.N. regulator, but it does not allege specific abuse of entrusted power or improper private gain by officials or companies. Context is uncertain for a corruption finding.",
+      "reason": "The article reports environmental and regulatory controversy over U.S. companies' deep-sea mining permit applications and NOAA's permitting approach, but it does not allege a concrete abuse of an entrusted role tied to private gain (e.g., bribery, self-dealing, embezzlement). Corruption elements are not established in the text.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6979,
+          "output_tokens": 707,
+          "requests": 1,
+          "total_tokens": 7686
+        },
+        "article_focus": "Reporting on U.S. companies' applications for deep-sea mining exploration in South Pacific high-seas areas and related environmental, regulatory and regional objections.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article reports environmental and regulatory controversy over U.S. companies' deep-sea mining permit applications and NOAA's permitting approach, but it does not allege a concrete abuse of an entrusted role tied to private gain (e.g., bribery, self-dealing, embezzlement). Corruption elements are not established in the text.",
+        "reasoning_effort": "low"
+      },
       "source": "Mongabay",
       "title": "US companies apply to explore deep-sea mining in area bordering Pacific island states",
       "url": "https://news.mongabay.com/2026/11/us-companies-apply-to-explore-deep-sea-mining-in-area-bordering-pacific-island-states/"
@@ -4333,6 +5448,91 @@
       "title": "As new season starts, Antarctic krill-fishing vessels face urgent conservation decision (commentary)",
       "url": "https://news.mongabay.com/2026/11/as-new-season-starts-antarctic-krill-fishing-vessels-face-urgent-conservation-decision-commentary/"
     },
+    "c4e6055ff8aabf399e5b72e1f9a85831f071de786f456b92ff5c634e9b4cb0d7": {
+      "api_usage": {
+        "input_tokens": 3766,
+        "output_tokens": 480,
+        "requests": 1,
+        "total_tokens": 4246
+      },
+      "article_focus": "Describing how slow, under-resourced courts and pre-trial detention in Nigeria leave poor people jailed and reliant on viral social-media campaigns for release.",
+      "article_input": {
+        "available_text_chars": 6490,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "f5d391bd9379dd8a3ed681ec4dcd661a754ffd09329054c61b402b3ec069aa5f",
+        "text_chars": 6490,
+        "truncated": false
+      },
+      "author": "Guest Contributor",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:05:11Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article highlights injustice of slow courts and reliance on viral social-media campaigns to free indigent detainees, but it does not allege abuse of an entrusted role for private gain or identify a corrupt mechanism or beneficiary.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3766,
+          "output_tokens": 480,
+          "requests": 1,
+          "total_tokens": 4246
+        },
+        "article_focus": "Describing how slow, under-resourced courts and pre-trial detention in Nigeria leave poor people jailed and reliant on viral social-media campaigns for release.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article highlights injustice of slow courts and reliance on viral social-media campaigns to free indigent detainees, but it does not allege abuse of an entrusted role for private gain or identify a corrupt mechanism or beneficiary.",
+        "reasoning_effort": "low"
+      },
+      "source": "Global Voices",
+      "title": "Jailed for being poor, forgotten by slow courts in Nigeria, saved by strangers online",
+      "url": "https://globalvoices.org/2026/11/25/jailed-for-being-poor-forgotten-by-slow-courts-in-nigeria-saved-by-strangers-online/"
+    },
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da": {
       "api_usage": {
         "input_tokens": 895,
@@ -4529,24 +5729,85 @@
     },
     "d1d7fc834e58046616e1ee7ee593d450908e6d190da02106edd402fbe748b3cd": {
       "api_usage": {
-        "input_tokens": 1496,
-        "output_tokens": 294,
-        "total_tokens": 1790
+        "input_tokens": 5295,
+        "output_tokens": 499,
+        "requests": 1,
+        "total_tokens": 5794
+      },
+      "article_focus": "Conservation of the last Javan rhino and dispute over a government mining rezoning and proposed translocation",
+      "article_input": {
+        "available_text_chars": 11845,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "093956204122a2a7085d37a78febc4286f18fa0e30def2e13dc20de7741f28fe",
+        "text_chars": 11845,
+        "truncated": false
       },
       "author": "Basten Gokkon",
-      "checked_at": "2026-11-20T16:24:18Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T13:03:29Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "industrial_policy_or_competition",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "Article notes a mining map affecting rhino habitat and that a mining tycoon (and brother of the president) in an official envoy role proposed relocating rhinos, suggesting possible conflict of interest. However the supplied text does not allege or document abuse of entrusted power, improper private gain, or a corruption investigation, so the connection is uncertain.",
+      "reason": "The article reports on conservation debates and a government mining rezoning; it does not allege or document an abuse of entrusted power linked to private gain or a specific corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 5295,
+          "output_tokens": 499,
+          "requests": 1,
+          "total_tokens": 5794
+        },
+        "article_focus": "Conservation of the last Javan rhino and dispute over a government mining rezoning and proposed translocation",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "industrial_policy_or_competition",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article reports on conservation debates and a government mining rezoning; it does not allege or document an abuse of entrusted power linked to private gain or a specific corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
       "source": "Mongabay",
       "title": "Last Javan rhino habitat caught between mining plans and relocation debate",
       "url": "https://news.mongabay.com/2026/11/last-javan-rhino-habitat-caught-between-mining-plans-and-relocation-debate/"
@@ -4705,24 +5966,85 @@
     },
     "d8c04bcd696e326d2c177ea05391c45c39b6032bd4d8eb1a15b6e19029090e16": {
       "api_usage": {
-        "input_tokens": 1512,
-        "output_tokens": 478,
-        "total_tokens": 1990
+        "input_tokens": 4927,
+        "output_tokens": 431,
+        "requests": 1,
+        "total_tokens": 5358
+      },
+      "article_focus": "Reporting on alleged forced labor and labor-rights campaign targeting StarKist\u2019s tuna supply chain and the company\u2019s response",
+      "article_input": {
+        "available_text_chars": 10556,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "b77b2bfed85e2a1fd0507b02302f261421e4763695b4355f68aee2b6a0c940d5",
+        "text_chars": 10556,
+        "truncated": false
       },
       "author": "Basten Gokkon",
-      "checked_at": "2026-11-11T14:44:32Z",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:03:08Z",
       "checks": {
         "abuse_of_entrusted_power": false,
         "private_gain": false,
         "substantive_corruption_coverage": false
       },
-      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
-      "decision": "review",
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
       "evidence": [],
       "model": "gpt-5-mini",
-      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
       "provider": "uva",
-      "reason": "Article alleges forced labor and supply-chain abuses by vessels supplying StarKist, but it does not explicitly describe abuse of entrusted power for improper private gain or frame the wrongdoing as corruption. Additional context is needed to establish a concrete corruption connection.",
+      "reason": "The article documents alleged forced labor and exploitation in tuna supply chains and corporate sourcing responses, but does not allege misuse of an entrusted role for private gain (bribery, embezzlement, self-dealing, patronage or similar). It therefore does not meet the strict definition of corruption required for publish/review.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 4927,
+          "output_tokens": 431,
+          "requests": 1,
+          "total_tokens": 5358
+        },
+        "article_focus": "Reporting on alleged forced labor and labor-rights campaign targeting StarKist\u2019s tuna supply chain and the company\u2019s response",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article documents alleged forced labor and exploitation in tuna supply chains and corporate sourcing responses, but does not allege misuse of an entrusted role for private gain (bribery, embezzlement, self-dealing, patronage or similar). It therefore does not meet the strict definition of corruption required for publish/review.",
+        "reasoning_effort": "low"
+      },
       "source": "Mongabay",
       "title": "US brand StarKist suspends tuna sourcing from vessels accused of exploiting Indonesian fishers",
       "url": "https://news.mongabay.com/2026/11/us-brand-starkist-suspends-tuna-sourcing-from-vessels-accused-of-exploiting-indonesian-fishers/"
@@ -5096,6 +6418,91 @@
       "title": "Kiwi return to Wellington hills after 150 years in M\u0101ori-led conservation milestone",
       "url": "https://news.mongabay.com/short-article/2026/11/kiwi-return-to-wellington-hills-after-150-years-in-maori-led-conservation-milestone/"
     },
+    "ee69c3cdff7ba3c8e7929e016b97f6945a9a62126dc2dab2b27c395ce4706ebe": {
+      "api_usage": {
+        "input_tokens": 3318,
+        "output_tokens": 517,
+        "requests": 1,
+        "total_tokens": 3835
+      },
+      "article_focus": "Report on drought-driven river declines and impacts on communities in Roraima, Brazil",
+      "article_input": {
+        "available_text_chars": 4862,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "6af1402a3948ab1aabfe2a961eb5fe6dadefb297d91e488700933722b31ec33d",
+        "text_chars": 4862,
+        "truncated": false
+      },
+      "author": "Shanna Hanbury",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T13:05:28Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article reports on severe drought, falling river levels and humanitarian impacts in Roraima\u2019s Amazon. It contains no allegations or descriptions of misuse of entrusted power, corrupt mechanisms, or private gain tied to an entrusted role.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3318,
+          "output_tokens": 517,
+          "requests": 1,
+          "total_tokens": 3835
+        },
+        "article_focus": "Report on drought-driven river declines and impacts on communities in Roraima, Brazil",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article reports on severe drought, falling river levels and humanitarian impacts in Roraima\u2019s Amazon. It contains no allegations or descriptions of misuse of entrusted power, corrupt mechanisms, or private gain tied to an entrusted role.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Severe drought dries up rivers, cuts off communities in Brazil\u2019s Amazon",
+      "url": "https://news.mongabay.com/short-article/2026/11/severe-drought-dries-up-rivers-cuts-off-communities-in-brazils-amazon/"
+    },
     "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c": {
       "api_usage": {
         "input_tokens": 2348,
@@ -5456,6 +6863,7 @@
     "5cc417834a276f0ff0c674f27e57c89bd56174e0f811cdc192a827661a02b9c1": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7tl2rkh74ivsj",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/aqtuzhmnsax24",
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/bekwzfipyrky4",
+    "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/2zxrmzjygigbh",
     "a26e383d5e466f57111ac61c4b918ba5cc55b1e70ae4abab2ad741a47aa0a800": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/46vlsbpj6gvur",
     "adf900c37bc2ef345eeaded08e1d1ab80b5dadbfbbfd7a393c458e01346a6fd7": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4vyc2shxw7vto",
     "ae0358698415e799d17c937c4e5604a443fd4ce7c614f547210219aa6d1e2f15": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4w2usha43ftwt",
@@ -5504,6 +6912,7 @@
     "11a51e721df673ad174913b211225de0461ce3e6e94cfc41cfa7d328b733321c",
     "11cbfe99c78a1626b5f07004611355c054cd85f923d27e9a35de004fd2ec34d0",
     "120863f7a08274db4eb05a59218465b0487abbc771a50ad847a217ae1fc86356",
+    "1346b7e7b4e34091e937621c1f931f773449969deca891623f1f064d99d27d3c",
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
     "13d200c5fb7d8ad05478bfe99bfda4d692316bc15ba56fbfb6cbf55153d0e148",
     "1598a200ac5e8e1ad032f32338cc408bcc5de67d904098c781035708b878cbcb",
@@ -5614,6 +7023,7 @@
     "54e9eed7436c367cb920d5d6b8feea2b0f6d8ac897b5073bf6b15742ce351ad1",
     "5615c09ee016541a9ff354ffe2eafeac0ff7c1964b33cb8d5660378340feef4e",
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287",
+    "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5a3597d15643f4007a1af93f63e2e5deff8d996e18f687946c0d2b67c4438b51",
@@ -5634,6 +7044,8 @@
     "643aed1aa8dd93439450482b47c8aa701f4c92aef4e0bb294b0c6a9c907bf8cc",
     "6479e401f2a6d50d2af020ce91a59a6e3da07e9283cdfc94976ca18edd4a16c4",
     "6582788e60133dd65eb8afb62be19791f2d36c5fa58f9d27535bb17125fefc14",
+    "65abf3143f3707d189ab77cb82585cbb55a6166be98965005ba9d6dbcc1359c0",
+    "663c9c04405504d3d6aceca9c82353b079284ea0f00d4edee988efd852ab7e16",
     "6713611317142462cfbbb9d88c5f8f18c42d9060f00355d5fe969c0ad8557ac8",
     "67a2ea346c95de0d96d33384aa7002833d01b83d160afc3827ebac33b2509831",
     "67d5710e91d0af9ef1a00959266c4921a1a070ad63d014ffc189cce5a279bd4f",
@@ -5652,6 +7064,7 @@
     "6d8226aac7b911b508fcdb80bb61bd6e7cd614e49816bcd75c080c533a204888",
     "6dc968203959902fae48848709e285c770592c1aef8167ff876ae0d5b958fb99",
     "6ded87de6b6017b40bbc86bafee8d83436ab34fd14c419080e4769f4b5ad7483",
+    "6e2d27f875b60caf22d8d1777f0f0b6b47c88b39f57ddac9c83955a275621dff",
     "6e447a4de0db00cbd5b5aed4b5b02f64f3b850283acd44f1bfe64c85fe35d183",
     "6e51fe1ebaa3d1b67e70b34a7436bf9ba1fc1c1def11303ca3f2ad7520edfc36",
     "6e6c4d096e5f342071f6cabc7bc93b3bda1021a6bba9dc24db99ce3264018a61",
@@ -5795,6 +7208,7 @@
     "c210778bbcc58c75f37d9ef4758df1e53fa458fe7ceab03503ee120c49aebaa3",
     "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15",
     "c2c948cf8d93531ca3c5ad99c8c61d4e88c11caf3b30aa344f8d299d087cf83d",
+    "c4e6055ff8aabf399e5b72e1f9a85831f071de786f456b92ff5c634e9b4cb0d7",
     "c50075cedfde695cd7af73e2b5e26545d056d3a831c8f8c54f10cb16265db5da",
     "c5be85373b075d7e55dbba834558df2f88fd94ee2dc36155b3a1583e6ee706eb",
     "c67dbdb399a9bd4bb30ba8b01bece9cde69d8bbdd2c8fec24b72d00180a12e39",
@@ -5861,6 +7275,7 @@
     "eb556aa4090666f8ed4095e3b03a87feda84c862edd0671dc6e98b263efbdfb4",
     "ebc3399faa1ff2be0effd6b2cd1708298e63974231f354c127c21181ddd1a2cd",
     "ec8e8dee0454417924be7160a7cb353f9bef50b2bc7bf9686bbfdb87b626aa10",
+    "ee69c3cdff7ba3c8e7929e016b97f6945a9a62126dc2dab2b27c395ce4706ebe",
     "f11b5c403c62c8db2153a6ff7516f268b7f9ddccf1bd3a5bfe2ba2497177af5f",
     "f175129e200f41dff0406a5dcb924fe19733c1d8da177a916247160895f6ada7",
     "f27d3677b86c325d7ffa715c697d352363415f1c173f31b216434b4a766fac3c",
