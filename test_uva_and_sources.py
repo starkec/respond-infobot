@@ -13,17 +13,20 @@ from urllib.error import HTTPError
 import bot_common as common
 import infobot_v2 as bot
 import publication
-from test_infobot_v2 import article, CHECKS, PUBLISH
+from test_infobot_v2 import article, CHECKS, PUBLISH, MODEL_FIELDS, TEXT
 from test_publishing import FakeBluesky
 
 
 class UvATests(unittest.TestCase):
     def setUp(self):
         self.config = bot.load_config("config-v2.json")
+        download = patch.object(bot, "download", return_value=f"<article><p>{TEXT}</p></article>".encode())
+        download.start()
+        self.addCleanup(download.stop)
 
     def test_request_routes_only_to_uva_with_bearer_and_separate_timeout(self):
         response = {"status": "completed", "output": [{"type": "message", "content": [{"type": "output_text",
-                    "text": json.dumps({**CHECKS, "decision": "publish", "reason": "Alleged kickbacks.", "evidence_ids": [1]})}]}]}
+                    "text": json.dumps({**MODEL_FIELDS, "decision": "publish", "reason": "Alleged kickbacks.", "evidence_ids": [1]})}]}]}
         with patch.object(common, "read_response", return_value=json.dumps(response).encode()) as call:
             bot.classify(article(), self.config, "secret-test-key")
         req = call.call_args.args[0]
@@ -58,6 +61,16 @@ class UvATests(unittest.TestCase):
             with self.assertRaisesRegex(common.APIError, "invalid_api_key") as caught:
                 common.read_response(bot.Request(bot.API_URL), "LLM classification", allow_redirects=False)
         self.assertNotIn("private-value", str(caught.exception))
+
+    def test_api_diagnostic_exposes_only_known_parameter_and_error_category(self):
+        error = HTTPError(bot.API_URL, 400, "Bad request", {}, io.BytesIO(b'{"error":{"code":"400","param":"model","message":"Invalid model private-sensitive-text"}}'))
+        with patch.object(common, "build_opener") as opener:
+            opener.return_value.open.side_effect = error
+            with self.assertRaises(common.APIError) as caught:
+                common.read_response(bot.Request(bot.API_URL), "LLM classification", allow_redirects=False)
+        self.assertEqual(caught.exception.parameter, "model")
+        self.assertEqual(caught.exception.category, "model_unavailable")
+        self.assertNotIn("private-sensitive-text", str(caught.exception))
 
     def test_provider_endpoint_and_reasoning_are_part_of_cache_identity(self):
         for key, value in (("provider", "other"), ("api_url", "https://other.example/v1/responses"), ("reasoning_effort", "medium")):

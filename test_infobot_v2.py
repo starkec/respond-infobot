@@ -17,11 +17,19 @@ from test_publishing import FakeBluesky
 FEED = {"source_name": "Example", "feed_url": "https://example.org/feed/", "language": "en"}
 TEXT = "The investigation alleges that officials accepted kickbacks for public contracts. " * 12
 PUBLISH = {"decision": "publish", "reason": "The investigation concerns alleged procurement kickbacks.",
-           "evidence": ["officials accepted kickbacks for public contracts."]}
+           "evidence": ["officials accepted kickbacks for public contracts."],
+           "selection": {"decision": "publish"}, "verification": {"decision": "publish"}}
 SKIP = {"decision": "skip", "reason": "An unrelated story.", "evidence": []}
 REVIEW = {"decision": "review", "reason": "The connection is uncertain.", "evidence": []}
 CHECKS = {"abuse_of_entrusted_power": True, "private_gain": True,
           "substantive_corruption_coverage": True}
+MODEL_CASE = {"actor": "Officials", "entrusted_role": "Awarding public contracts",
+              "alleged_abuse": "Steering contracts for kickbacks", "beneficiary": "Officials",
+              "improper_benefit": "Private kickbacks"}
+MODEL_FIELDS = {**CHECKS, "article_focus": "Investigation into procurement kickbacks",
+                "coverage_type": "corruption_reporting", "conduct_type": "bribery_or_kickbacks",
+                "benefit_type": "bribe_or_kickback", "corruption_case": MODEL_CASE,
+                "criterion_evidence_ids": {name: [1] for name in CHECKS}}
 PUBLICATION = {"format": "text-only"}
 
 
@@ -86,17 +94,22 @@ class FeedTests(unittest.TestCase):
 class ClassifierTests(unittest.TestCase):
     def setUp(self):
         self.config = bot.load_config("config-v2.json")
+        download = patch.object(bot, "download", return_value=f"<article><p>{TEXT}</p></article>".encode())
+        download.start()
+        self.addCleanup(download.stop)
 
     def test_structured_api_request_and_validated_evidence(self):
         response = {"status": "completed", "usage": {"input_tokens": 3200, "output_tokens": 700, "total_tokens": 3900}, "output": [{"type": "message", "content": [
-            {"type": "output_text", "text": json.dumps({**CHECKS, "decision": "publish", "reason": PUBLISH["reason"], "evidence_ids": [1]})}]}]}
+            {"type": "output_text", "text": json.dumps({**MODEL_FIELDS, "decision": "publish", "reason": PUBLISH["reason"], "evidence_ids": [1]})}]}]}
         with patch.object(bot.common, "read_response", return_value=json.dumps(response).encode()) as call:
             result = bot.classify(article(), self.config, "fake-private-key")
             self.assertEqual(result["decision"], "publish")
             self.assertIn(result["evidence"][0], TEXT)
-            self.assertEqual(result["api_usage"], response["usage"])
-        request = call.call_args.args[0]
+            self.assertEqual(result["api_usage"]["requests"], 2)
+            self.assertEqual(result["api_usage"]["input_tokens"], 2 * response["usage"]["input_tokens"])
+        request = call.call_args_list[0].args[0]
         payload = json.loads(request.data)
+        self.assertEqual(json.loads(call.call_args_list[1].args[0].data)["instructions"], bot.VERIFIER_POLICY)
         self.assertEqual(request.full_url, bot.API_URL)
         self.assertFalse(payload["store"])
         self.assertTrue(payload["text"]["format"]["strict"])
@@ -108,19 +121,19 @@ class ClassifierTests(unittest.TestCase):
         passages = bot.split_passages(TEXT)
         self.assertEqual(" ".join(p["text"] for p in passages), TEXT.strip())
         self.assertTrue(all(len(p["text"]) <= 220 and p["text"] in TEXT for p in passages))
-        result = bot.resolve_evidence({**CHECKS, "decision": "publish", "reason": "Relevant.", "evidence_ids": [2, 1, 2]}, passages, TEXT)
+        result = bot.resolve_evidence({**MODEL_FIELDS, "decision": "publish", "reason": "Relevant.", "evidence_ids": [2, 1, 2]}, passages, TEXT)
         self.assertEqual(result["evidence"], [passages[1]["text"], passages[0]["text"]])
 
     def test_invalid_or_missing_evidence_ids_cannot_publish(self):
         passages = bot.split_passages(TEXT)
         for ids in ([], [99999], [True], ["1"], [1, 1, 1, 1]):
             with self.subTest(ids=ids), self.assertRaises(common.SetupError):
-                bot.resolve_evidence({**CHECKS, "decision": "publish", "reason": "Relevant.", "evidence_ids": ids}, passages, TEXT)
+                bot.resolve_evidence({**MODEL_FIELDS, "decision": "publish", "reason": "Relevant.", "evidence_ids": ids}, passages, TEXT)
 
     def test_uncertain_private_gain_role_or_centrality_overrides_publish(self):
         passages = bot.split_passages(TEXT)
         for condition in CHECKS:
-            value = {**CHECKS, condition: False, "decision": "publish", "reason": "Possibly related.", "evidence_ids": [1]}
+            value = {**MODEL_FIELDS, condition: False, "decision": "publish", "reason": "Possibly related.", "evidence_ids": [1]}
             with self.subTest(condition=condition):
                 result = bot.resolve_evidence(value, passages, TEXT)
                 self.assertEqual(result["decision"], "review")
@@ -128,7 +141,7 @@ class ClassifierTests(unittest.TestCase):
                 self.assertFalse(result["checks"][condition])
 
     def test_truthy_strings_cannot_bypass_corruption_checks(self):
-        value = {**CHECKS, "private_gain": "true", "decision": "publish", "reason": "Related.", "evidence_ids": [1]}
+        value = {**MODEL_FIELDS, "private_gain": "true", "decision": "publish", "reason": "Related.", "evidence_ids": [1]}
         with self.assertRaises(common.SetupError):
             bot.resolve_evidence(value, bot.split_passages(TEXT), TEXT)
 
@@ -157,7 +170,7 @@ class ClassifierTests(unittest.TestCase):
             text, origin, truncated = bot.article_text({**article(), "feed_content": "Short teaser"}, self.config)
         download.assert_called_once_with(article()["link"])
         self.assertIn("kickbacks", text)
-        self.assertEqual(origin, "extracted article text")
+        self.assertEqual(origin, "extracted article body")
         self.assertFalse(truncated)
 
     def test_short_or_blocked_article_cannot_reach_the_llm(self):
@@ -167,7 +180,8 @@ class ClassifierTests(unittest.TestCase):
         call.assert_not_called()
 
     def test_input_size_is_bounded_and_truncation_disclosed(self):
-        text, _, truncated = bot.article_text({**article(), "feed_content": TEXT * 100}, self.config)
+        with patch.object(bot, "download", return_value=f"<article><p>{TEXT * 100}</p></article>".encode()):
+            text, _, truncated = bot.article_text({**article(), "feed_content": "A teaser"}, self.config)
         self.assertEqual(len(text), self.config["max_article_chars"])
         self.assertTrue(truncated)
 
@@ -179,6 +193,7 @@ class StateAndPublishingTests(unittest.TestCase):
         self.path = Path(self.directory.name) / "state-v2.json"
         self.client = FakeBluesky()
         self.config = bot.load_config("config-v2.json")
+        self.config["feeds"] = [FEED]
         self.config["max_posts_per_run"] = 2
         self.feeds = {FEED["feed_url"]: [article(3), article(2), article(1)]}
         self.state = {"version": 2, "account_did": self.client.did, "feeds": list(self.feeds),
@@ -328,6 +343,8 @@ class StateAndPublishingTests(unittest.TestCase):
             bot.select_and_publish(self.feeds, self.config, "key", {"articles": []}, self.client, self.state, self.path)
         self.state = bot.read_v2_state(self.path, self.client)
         self.assertTrue(self.state["decisions"][common.article_id(article(1))]["retryable"])
+        for decision in self.state["decisions"].values():
+            decision["retry_after"] = "2000-01-01T00:00:00Z"
         _, classifier = self.run_bot()
         self.assertEqual(classifier.call_count, 2)
         self.assertEqual(self.client.post_count, 2)
@@ -339,6 +356,8 @@ class StateAndPublishingTests(unittest.TestCase):
         self.assertEqual(self.state["seen"], [])
         self.assertTrue(all(row["decision"] == "review" and row["publication_error"] for row in report["articles"]))
         self.preparation_mock.side_effect = None
+        for decision in self.state["decisions"].values():
+            decision["retry_after"] = "2000-01-01T00:00:00Z"
         _, classifier = self.run_bot()
         classifier.assert_not_called()
         self.assertEqual(self.client.post_count, 2)

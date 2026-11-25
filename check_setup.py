@@ -9,6 +9,7 @@ from urllib.request import Request
 
 import bot_common as common
 import infobot_v2 as bot
+import relevance_checks
 
 
 def check_feeds(config):
@@ -30,6 +31,15 @@ def check_feeds(config):
         return list(pool.map(check, config["feeds"]))
 
 
+def instruction_probes(config, key):
+    rows = [bot.prompt_delivery_probe(config, key), bot.prompt_delivery_probe(config, key, system_message=True)]
+    if config["verification_model"] != config["model"]:
+        rows.append(bot.prompt_delivery_probe(config, key, model=config["verification_model"]))
+    for row in rows:
+        print("Prompt delivery " + row["model"] + " " + row["probe"] + ": " + row["status"], flush=True)
+    return rows
+
+
 def check_uva(config, key, samples):
     if not key:
         raise common.SetupError("UVAAI_API_KEY is missing. Set the repository Actions secret before running integration checks.")
@@ -39,18 +49,13 @@ def check_uva(config, key, samples):
         available = {row["id"] for row in models["data"]}
     except (ValueError, TypeError, KeyError):
         raise common.SetupError("UvA returned invalid model-discovery data.") from None
-    if config["model"] not in available:
-        raise common.SetupError("The configured model is not available to this UvA key. Choose an exact ID from /v1/models; no provider/model fallback was used.")
-    synthetic = {"source_name": "Synthetic integration test", "title": "Officials charged over procurement kickbacks",
-                 "link": "https://example.org/synthetic-test", "language": "en",
-                 "feed_content": ("Prosecutors charged the mayor with taking private kickbacks from a contractor in exchange for steering public procurement contracts. "
-                                  "The alleged bribes were paid to the mayor's personal bank account. The investigation concerns abuse of the mayor's official authority for personal financial gain. ") * 3}
-    decision = bot.classify(synthetic, config, key)
-    if decision["decision"] != "publish" or not all(decision["checks"].values()) or not decision["evidence"]:
-        raise common.SetupError("UvA structured-output smoke check did not recognise the explicit synthetic corruption case.")
-    results = [{"source": "Synthetic integration test", "decision": decision["decision"], "status": "passed"}]
+    if not {config["model"], config["verification_model"]} <= available:
+        raise common.SetupError("A configured selection/verification model is not available to this UvA key. Choose an exact ID from /v1/models; no provider/model fallback was used.")
+    results = relevance_checks.self_checks(config, key)
+    if any(row["status"] != "passed" for row in results):
+        return results  # Retain the failing case in the saved report.
     for sample in samples:
-        if sample and sample["source_name"] in bot.publication.POLICIES:
+        if sample:
             decision = bot.classify(sample, config, key)
             results.append({"source": sample["source_name"], "url": sample["link"], "decision": decision["decision"],
                             "checks": decision["checks"], "api_usage": decision.get("api_usage", {}), "status": "passed"})
@@ -60,15 +65,33 @@ def check_uva(config, key, samples):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--feeds-only", action="store_true")
+    parser.add_argument("--prompt-probe-only", action="store_true")
     parser.add_argument("--report", default="reports/setup-check.json")
     args = parser.parse_args()
     config = bot.load_config("config-v2.json")
-    report = {"created_at": common.utc_now(), "provider": config["provider"], "model": config["model"], "posted": 0}
+    report = {"created_at": common.utc_now(), "provider": config["provider"], "model": config["model"], "verification_model": config["verification_model"], "posted": 0}
     try:
+        if args.prompt_probe_only:
+            report["check_kind"] = "prompt_delivery_only"
+            key = os.environ.get("UVAAI_API_KEY", "").strip()
+            report["prompt_delivery"] = instruction_probes(config, key)
+            if any(row["status"] != "passed" for row in report["prompt_delivery"]):
+                raise common.SetupError("UvA prompt delivery failed; inspect instructions/system-message probe results.")
+            report["status"] = "passed"
+            return
         checks = check_feeds(config)
         report["feeds"] = [row for row, _ in checks]
         if not args.feeds_only:
-            report["uva"] = check_uva(config, os.environ.get("UVAAI_API_KEY", "").strip(), [sample for _, sample in checks])
+            key = os.environ.get("UVAAI_API_KEY", "").strip()
+            report["prompt_delivery"] = instruction_probes(config, key)
+            if any(row["status"] != "passed" for row in report["prompt_delivery"]):
+                raise common.SetupError("UvA prompt delivery failed; inspect instructions/system-message probe results.")
+            report["uva"] = check_uva(config, key, [sample for _, sample in checks])
+            if any(row["status"] != "passed" for row in report["uva"]):
+                raise common.SetupError("UvA autonomous relevance self-check failed; inspect the saved cases.")
+            report["recent_post_replay"] = relevance_checks.replay_recent(config, key)
+            if any(row["status"] not in ("passed", "safely_withheld") for row in report["recent_post_replay"]):
+                raise common.SetupError("Recent-post replay failed or an article was unavailable; inspect the read-only report.")
         if any(row["status"] != "passed" for row, _ in checks):
             raise common.SetupError("One or more feed/article/attribution checks failed; see setup-check.json.")
         report["status"] = "passed"
