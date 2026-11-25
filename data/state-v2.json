@@ -219,6 +219,91 @@
       "title": "Longer droughts threaten floating health clinics as Amazon streams run dry",
       "url": "https://news.mongabay.com/2026/11/longer-droughts-dry-amazon-waterways-and-threaten-floating-health-clinics/"
     },
+    "05aeec60527815362c7676e0b50f3f4340a44274f4cbebd0a7e1342906ba0772": {
+      "api_usage": {
+        "input_tokens": 6311,
+        "output_tokens": 472,
+        "requests": 1,
+        "total_tokens": 6783
+      },
+      "article_focus": "environmental reporting on wildfires and community adoption of fire-free agriculture",
+      "article_input": {
+        "available_text_chars": 15446,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "9dfe65568e505fb6009feaf62f32fdd3660385d6ff708a55d7f3a836f3c81a15",
+        "text_chars": 15446,
+        "truncated": false
+      },
+      "author": "Louise Hunt",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T22:36:46Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports fires, fire-free agriculture and patterns of fires in licensed oil palm areas but does not allege abuse of an entrusted role or a concrete corrupt mechanism or private benefit tied to misuse of power.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6311,
+          "output_tokens": 472,
+          "requests": 1,
+          "total_tokens": 6783
+        },
+        "article_focus": "environmental reporting on wildfires and community adoption of fire-free agriculture",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports fires, fire-free agriculture and patterns of fires in licensed oil palm areas but does not allege abuse of an entrusted role or a concrete corrupt mechanism or private benefit tied to misuse of power.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "As Indonesia burns, communities look to fire-free agriculture for relief",
+      "url": "https://news.mongabay.com/2026/11/as-indonesia-burns-communities-look-to-fire-free-agriculture-for-relief/"
+    },
     "06ed5c0f5e2534c10facd764d219e153142722a03cc1f059cd22ccdb41a16c51": {
       "api_usage": {
         "input_tokens": 5187,
@@ -734,6 +819,91 @@
       "title": "In South Africa\u2019s Limpopo, residents wonder what the next flood will bring",
       "url": "https://news.mongabay.com/2026/11/in-south-africas-limpopo-residents-wonder-what-the-next-flood-will-bring/"
     },
+    "19f0422dbb9dbfc85ada2d667ae865a4d0d5e275076c922f6a4a9c6bd625aff9": {
+      "api_usage": {
+        "input_tokens": 3041,
+        "output_tokens": 498,
+        "requests": 1,
+        "total_tokens": 3539
+      },
+      "article_focus": "Reporting on study estimating tax recovery from a proposed UN tax convention to curb multinational profit shifting and the political dynamics around the proposal.",
+      "article_input": {
+        "available_text_chars": 4334,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "ae44a3c5e856e43a8eb0264cb4f5481d9acd75bee535e0c8e004dd46b60983d0",
+        "text_chars": 4334,
+        "truncated": false
+      },
+      "author": "Micah Reddy",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T22:35:51Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "industrial_policy_or_competition",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on profit shifting and a proposed UN tax convention to recoup taxes from multinationals; it describes corporate tax avoidance and policy negotiations but does not allege abuse of an entrusted role or a corrupt mechanism linking officials to private gain.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3041,
+          "output_tokens": 498,
+          "requests": 1,
+          "total_tokens": 3539
+        },
+        "article_focus": "Reporting on study estimating tax recovery from a proposed UN tax convention to curb multinational profit shifting and the political dynamics around the proposal.",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "industrial_policy_or_competition",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on profit shifting and a proposed UN tax convention to recoup taxes from multinationals; it describes corporate tax avoidance and policy negotiations but does not allege abuse of an entrusted role or a corrupt mechanism linking officials to private gain.",
+        "reasoning_effort": "low"
+      },
+      "source": "ICIJ",
+      "title": "New study shows proposed UN tax convention could see countries recover nearly $400 billion in taxes",
+      "url": "https://www.icij.org/news/2026/11/new-study-shows-proposed-un-tax-convention-could-see-countries-recover-nearly-400-billion-in-taxes/"
+    },
     "1b0542aa6c8f6e33697329ac042a6ee28e411043bddbf581d3d14cb9d65730cd": {
       "api_usage": {
         "input_tokens": 1502,
@@ -757,6 +927,91 @@
       "source": "Mongabay",
       "title": "Targeted by al-Shabaab for defending Kenya\u2019s ecosystems: Foundation founder gets award",
       "url": "https://news.mongabay.com/2026/11/targeted-by-al-shabaab-for-defending-kenyas-ecosystems-foundation-founder-gets-award/"
+    },
+    "1cae637d893585f62d63e8254fdf3865501ebef7f722afc5c107a33b003c1ec2": {
+      "api_usage": {
+        "input_tokens": 3113,
+        "output_tokens": 372,
+        "requests": 1,
+        "total_tokens": 3485
+      },
+      "article_focus": "Impact of heavy rains on waterleaf production and farmers' efforts to replant in Nigeria",
+      "article_input": {
+        "available_text_chars": 4417,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "a805a301935307d3626aad751c2fd3537174cab8408dbdb2d126f439b7270eb4",
+        "text_chars": 4417,
+        "truncated": false
+      },
+      "author": "Kingsley Charles",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T22:36:55Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article is a human-interest/food-security piece about heavy rains and waterleaf farming; it contains no allegations or descriptions of abuse of entrusted power or private gain.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3113,
+          "output_tokens": 372,
+          "requests": 1,
+          "total_tokens": 3485
+        },
+        "article_focus": "Impact of heavy rains on waterleaf production and farmers' efforts to replant in Nigeria",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article is a human-interest/food-security piece about heavy rains and waterleaf farming; it contains no allegations or descriptions of abuse of entrusted power or private gain.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Despite heavy rains, farmers hope for a viable waterleaf harvest in Nigeria",
+      "url": "https://news.mongabay.com/2026/11/despite-heavy-rains-farmers-hope-for-a-viable-waterleaf-harvest-in-nigeria/"
     },
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a": {
       "api_usage": {
@@ -1938,6 +2193,91 @@
       "title": "How Online Maps Lay Bare the US Military Bases Targeted by Iran",
       "url": "https://www.bellingcat.com/news/2026/11/05/how-online-maps-lay-bare-the-us-military-bases-targeted-by-iran/"
     },
+    "42ac81d68e0aa018bb2c0f5c87a17f394d231bffe8a6aeb4b63d145ca47af4eb": {
+      "api_usage": {
+        "input_tokens": 6582,
+        "output_tokens": 500,
+        "requests": 1,
+        "total_tokens": 7082
+      },
+      "article_focus": "Report on ICCAT annual meeting outcomes and the compromise on shark finning rules and tuna management measures",
+      "article_input": {
+        "available_text_chars": 16043,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "8c2f070d99909e7f21a2389f184ca2e0468e675c2672078efaa6a129a160f0b7",
+        "text_chars": 16043,
+        "truncated": false
+      },
+      "author": "Edward Carver",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T22:36:51Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article reports on ICCAT fisheries negotiations and conservation outcomes; it documents political negotiation and industry influence but provides no allegation or evidence of an entrusted official abusing power for private gain (no bribery, self-dealing, embezzlement or patronage described). Therefore it does not meet the strict corruption definition.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6582,
+          "output_tokens": 500,
+          "requests": 1,
+          "total_tokens": 7082
+        },
+        "article_focus": "Report on ICCAT annual meeting outcomes and the compromise on shark finning rules and tuna management measures",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article reports on ICCAT fisheries negotiations and conservation outcomes; it documents political negotiation and industry influence but provides no allegation or evidence of an entrusted official abusing power for private gain (no bribery, self-dealing, embezzlement or patronage described). Therefore it does not meet the strict corruption definition.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Nations hail new shark finning rules in the Atlantic. Conservationists say Japan blocked better ones",
+      "url": "https://news.mongabay.com/2026/11/nations-hail-new-shark-finning-rules-in-the-atlantic-conservationists-say-japan-blocked-better-ones/"
+    },
     "44ff3c862d5d759a555fd5c4353384fa105bb915f2bdaec3b903d04f00b63754": {
       "api_usage": {
         "input_tokens": 1683,
@@ -2299,6 +2639,172 @@
       "title": "Greta Thunberg arrives at UN climate talks saying \u2018everything we love is at stake\u2019",
       "url": "https://news.mongabay.com/short-article/2026/11/greta-thunberg-arrives-at-un-climate-talks-saying-everything-we-love-is-at-stake/"
     },
+    "58360541cb8bc52dbb63cd3820311b1f047cbcc20d65e30407ef910b64b5b11b": {
+      "api_usage": {
+        "input_tokens": 13676,
+        "output_tokens": 5062,
+        "requests": 2,
+        "total_tokens": 18738
+      },
+      "article_focus": "Reporting on an internal Kaingang conflict driven by illegal leasing of Indigenous land, displacement and associated violence",
+      "article_input": {
+        "available_text_chars": 16421,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "3524af7b625b68e06c95af7e1ad4ee2e86b45af70ac380e8767495c5bd46e09d",
+        "text_chars": 16421,
+        "truncated": false
+      },
+      "author": "Jos\u00e9 Pires",
+      "benefit_type": "self_dealing_or_corrupt_favour",
+      "checked_at": "2026-11-25T22:36:33Z",
+      "checks": {
+        "abuse_of_entrusted_power": true,
+        "private_gain": true,
+        "substantive_corruption_coverage": true
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "self_dealing_or_illicit_enrichment",
+      "corruption_case": {
+        "actor": "Leaders of the Laranjal Indigenous Community Association (Acil) / Iva\u00ed village leaders",
+        "alleged_abuse": "Illegally leasing communal Indigenous land to third\u2011party farmers, using their leadership positions to authorize/extract payments and employing threats/violence to protect the arrangements (culminating in a violent raid)",
+        "beneficiary": "A small leadership circle / Acil leaders of Iva\u00ed village",
+        "entrusted_role": "Managers/leaders of the Indigenous association entrusted to oversee Iva\u00ed reserve lands and lease revenues",
+        "improper_benefit": "Lease payments paid into Acil\u2019s bank account and an additional fee (500 reais per alqueire) pocketed by the leaders, amounting to tens of thousands of reais"
+      },
+      "coverage_type": "corruption_reporting",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [
+          "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+          "being illegal, the practice concentrates money in the hands of a small leadership circle while most families in the reserve live in poverty. Kaingang residents say leaders protect the leasing arrangements through",
+          "violence, driving out or even killing anyone who questions the system. Aware of the risks, in 2024, according to the residents, a group of Indigenous residents decided to challenge the leaders. The pushback sparked"
+        ],
+        "private_gain": [
+          "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+          "people who were killed for questioning the leases.\u201d Farmers sign contracts with Acil and pay straight into the association\u2019s bank account. \u201cBut if you\u2019re late, or do something they don\u2019t like, you risk running into",
+          "trouble,\u201d he says. Beyond the official payments, leaders pocket an extra fee of 500 reais per alqueire, he adds. \u201cThat extra money stays with the leaders, you know. I usually plant about 10 alqueires twice a year. So do"
+        ],
+        "substantive_corruption_coverage": [
+          "Indigenous Kaingang have been waiting to return home since an attack destroyed their village in January 2025. Displaced residents say they were driven out by fellow Kaingang from another village, exposing an internal",
+          "feud over illegal leasing of Indigenous lands to local farmers. While residents of the camp are planning retaliation, the Federal Public Prosecutor\u2019s Office is attempting to broker an agreement to replace the leases",
+          "Prosecutor\u2019s Office, Funai, Acil and residents of Iva\u00ed signed a consent decree (TAC) to establish a new agricultural, environmental and land-management system designed to end leasing on the reserve. The agreement was"
+        ]
+      },
+      "decision": "publish",
+      "evidence": [
+        "between the two villages. Local farmers have been leasing areas inside the Iva\u00ed Indigenous Territory to grow monocrops since the mid-2000s, according to a Funai document . Leasing Indigenous land violates Brazil\u2019s",
+        "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+        "trouble,\u201d he says. Beyond the official payments, leaders pocket an extra fee of 500 reais per alqueire, he adds. \u201cThat extra money stays with the leaders, you know. I usually plant about 10 alqueires twice a year. So do"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article documents leaders of the Laranjal Indigenous Community Association (Acil) \u2014 entrusted to manage community land \u2014 illegally leasing Kaingang territory to farmers, collecting payments (including an extra fee pocketed by leaders) and using threats/violence to protect the deals; the piece centres on this corrupt practice and enforcement efforts.",
+      "reasoning_effort": "high",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6710,
+          "output_tokens": 830,
+          "requests": 1,
+          "total_tokens": 7540
+        },
+        "article_focus": "Report and analysis of an internal Kaingang conflict driven by illegal leasing of Indigenous lands and associated leadership misconduct; coverage centers on the leasing practice as the main cause of displacement and violence.",
+        "benefit_type": "self_dealing_or_corrupt_favour",
+        "checks": {
+          "abuse_of_entrusted_power": true,
+          "private_gain": true,
+          "substantive_corruption_coverage": true
+        },
+        "conduct_type": "self_dealing_or_illicit_enrichment",
+        "corruption_case": {
+          "actor": "Leaders of the Laranjal Indigenous Community Association (Acil) / leaders from Iva\u00ed village",
+          "alleged_abuse": "Organizing and maintaining illegal leases of Indigenous land to local farmers, protecting those leases through threats and violence, and excluding or driving out community members who challenge the practice",
+          "beneficiary": "A small leadership circle within Acil / the identified leaders of Iva\u00ed village",
+          "entrusted_role": "Management of the Iva\u00ed Indigenous Territory and oversight of Acil, the association that administers lease revenues on behalf of the community",
+          "improper_benefit": "Concentrated lease revenues paid into Acil\u2019s account and an additional hidden fee (500 reais per alqueire) pocketed by leaders"
+        },
+        "coverage_type": "corruption_reporting",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [
+            "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+            "between the two villages. Local farmers have been leasing areas inside the Iva\u00ed Indigenous Territory to grow monocrops since the mid-2000s, according to a Funai document . Leasing Indigenous land violates Brazil\u2019s",
+            "violence, driving out or even killing anyone who questions the system. Aware of the risks, in 2024, according to the residents, a group of Indigenous residents decided to challenge the leaders. The pushback sparked"
+          ],
+          "private_gain": [
+            "trouble,\u201d he says. Beyond the official payments, leaders pocket an extra fee of 500 reais per alqueire, he adds. \u201cThat extra money stays with the leaders, you know. I usually plant about 10 alqueires twice a year. So do",
+            "says he pays Acil 3,000 Brazilian reais (around $500) per planted alqueire (a regional unit equal to 2.42 hectares or about 6 acres). According to the farmer, who grows soybeans and corn, the amount is charged per",
+            "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond"
+          ],
+          "substantive_corruption_coverage": [
+            "Indigenous Kaingang have been waiting to return home since an attack destroyed their village in January 2025. Displaced residents say they were driven out by fellow Kaingang from another village, exposing an internal",
+            "feud over illegal leasing of Indigenous lands to local farmers. While residents of the camp are planning retaliation, the Federal Public Prosecutor\u2019s Office is attempting to broker an agreement to replace the leases",
+            "Prosecutor\u2019s Office, Funai, Acil and residents of Iva\u00ed signed a consent decree (TAC) to establish a new agricultural, environmental and land-management system designed to end leasing on the reserve. The agreement was"
+          ]
+        },
+        "decision": "publish",
+        "evidence": [
+          "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+          "trouble,\u201d he says. Beyond the official payments, leaders pocket an extra fee of 500 reais per alqueire, he adds. \u201cThat extra money stays with the leaders, you know. I usually plant about 10 alqueires twice a year. So do",
+          "between the two villages. Local farmers have been leasing areas inside the Iva\u00ed Indigenous Territory to grow monocrops since the mid-2000s, according to a Funai document . Leasing Indigenous land violates Brazil\u2019s"
+        ],
+        "model": "gpt-5-mini",
+        "reason": "The article primarily reports and analyses an ongoing conflict driven by the illegal leasing of Indigenous territory; it alleges that association leaders (Acil) who manage communal lands unlawfully lease parcels, concentrate lease revenues and pocket extra fees, which fits the definition of abuse of entrusted power for private gain and is central to the story.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Divided and displaced: Brazil\u2019s Kaingang people wait for an end to illegal leasing conflict",
+      "url": "https://news.mongabay.com/2026/11/divided-and-displaced-brazils-kaingang-people-wait-for-an-end-to-illegal-leasing-conflict/",
+      "verification": {
+        "api_usage": {
+          "input_tokens": 6966,
+          "output_tokens": 4232,
+          "requests": 1,
+          "total_tokens": 11198
+        },
+        "article_focus": "Reporting on an internal Kaingang conflict driven by illegal leasing of Indigenous land, displacement and associated violence",
+        "benefit_type": "self_dealing_or_corrupt_favour",
+        "checks": {
+          "abuse_of_entrusted_power": true,
+          "private_gain": true,
+          "substantive_corruption_coverage": true
+        },
+        "conduct_type": "self_dealing_or_illicit_enrichment",
+        "corruption_case": {
+          "actor": "Leaders of the Laranjal Indigenous Community Association (Acil) / Iva\u00ed village leaders",
+          "alleged_abuse": "Illegally leasing communal Indigenous land to third\u2011party farmers, using their leadership positions to authorize/extract payments and employing threats/violence to protect the arrangements (culminating in a violent raid)",
+          "beneficiary": "A small leadership circle / Acil leaders of Iva\u00ed village",
+          "entrusted_role": "Managers/leaders of the Indigenous association entrusted to oversee Iva\u00ed reserve lands and lease revenues",
+          "improper_benefit": "Lease payments paid into Acil\u2019s bank account and an additional fee (500 reais per alqueire) pocketed by the leaders, amounting to tens of thousands of reais"
+        },
+        "coverage_type": "corruption_reporting",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [
+            "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+            "being illegal, the practice concentrates money in the hands of a small leadership circle while most families in the reserve live in poverty. Kaingang residents say leaders protect the leasing arrangements through",
+            "violence, driving out or even killing anyone who questions the system. Aware of the risks, in 2024, according to the residents, a group of Indigenous residents decided to challenge the leaders. The pushback sparked"
+          ],
+          "private_gain": [
+            "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+            "people who were killed for questioning the leases.\u201d Farmers sign contracts with Acil and pay straight into the association\u2019s bank account. \u201cBut if you\u2019re late, or do something they don\u2019t like, you risk running into",
+            "trouble,\u201d he says. Beyond the official payments, leaders pocket an extra fee of 500 reais per alqueire, he adds. \u201cThat extra money stays with the leaders, you know. I usually plant about 10 alqueires twice a year. So do"
+          ],
+          "substantive_corruption_coverage": [
+            "Indigenous Kaingang have been waiting to return home since an attack destroyed their village in January 2025. Displaced residents say they were driven out by fellow Kaingang from another village, exposing an internal",
+            "feud over illegal leasing of Indigenous lands to local farmers. While residents of the camp are planning retaliation, the Federal Public Prosecutor\u2019s Office is attempting to broker an agreement to replace the leases",
+            "Prosecutor\u2019s Office, Funai, Acil and residents of Iva\u00ed signed a consent decree (TAC) to establish a new agricultural, environmental and land-management system designed to end leasing on the reserve. The agreement was"
+          ]
+        },
+        "decision": "publish",
+        "evidence": [
+          "between the two villages. Local farmers have been leasing areas inside the Iva\u00ed Indigenous Territory to grow monocrops since the mid-2000s, according to a Funai document . Leasing Indigenous land violates Brazil\u2019s",
+          "other monocultures. The practice brings thousands of Brazilian reais to the Laranjal Indigenous Community Association (Acil), an organization managed by leaders from Iva\u00ed village who oversee the lease revenues. Beyond",
+          "trouble,\u201d he says. Beyond the official payments, leaders pocket an extra fee of 500 reais per alqueire, he adds. \u201cThat extra money stays with the leaders, you know. I usually plant about 10 alqueires twice a year. So do"
+        ],
+        "model": "gpt-5-mini",
+        "reason": "The article documents leaders of the Laranjal Indigenous Community Association (Acil) \u2014 entrusted to manage community land \u2014 illegally leasing Kaingang territory to farmers, collecting payments (including an extra fee pocketed by leaders) and using threats/violence to protect the deals; the piece centres on this corrupt practice and enforcement efforts.",
+        "reasoning_effort": "high"
+      }
+    },
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7": {
       "api_usage": {
         "input_tokens": 2448,
@@ -2407,6 +2913,91 @@
       "source": "Mongabay",
       "title": "Bumblebees are problem-solvers too",
       "url": "https://news.mongabay.com/short-article/2026/11/bumblebees-are-problem-solvers-too/"
+    },
+    "5a99a08946892ce9395d89d77ccb740620fed69bc1e542cba2dce825ebcb741a": {
+      "api_usage": {
+        "input_tokens": 3311,
+        "output_tokens": 478,
+        "requests": 1,
+        "total_tokens": 3789
+      },
+      "article_focus": "Report on Kenyan community legal challenge and concerns about land rights and consultation over the proposed Dangote $16 billion refinery project; coverage of court adjournment and community reactions.",
+      "article_input": {
+        "available_text_chars": 5013,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "7c3e5bb29c7ec018304af9db65a55eb6640a04ee974b059a2ed9afd39f125b93",
+        "text_chars": 5013,
+        "truncated": false
+      },
+      "author": "Elodie Toto",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T22:37:00Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "resource_or_rights_policy",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports a land dispute and court hearing over a proposed refinery project and community consultation/land-title issues but does not allege or describe an abuse of entrusted power for private gain (no bribery, self-dealing, diversion of resources or favouritism is claimed).",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3311,
+          "output_tokens": 478,
+          "requests": 1,
+          "total_tokens": 3789
+        },
+        "article_focus": "Report on Kenyan community legal challenge and concerns about land rights and consultation over the proposed Dangote $16 billion refinery project; coverage of court adjournment and community reactions.",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "resource_or_rights_policy",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports a land dispute and court hearing over a proposed refinery project and community consultation/land-title issues but does not allege or describe an abuse of entrusted power for private gain (no bribery, self-dealing, diversion of resources or favouritism is claimed).",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Kenyan communities take on Nigerian billionaire\u2019s $16 billion refinery project as court adjourns hearing",
+      "url": "https://news.mongabay.com/short-article/2026/11/kenyan-communities-take-on-nigerian-billionaires-16-billion-refinery-project-as-court-adjourns-hearing/"
     },
     "5a9d0e0935d2582357edf7e8989601040c26151c524460078ee1bef4048dfc69": {
       "api_usage": {
@@ -2529,6 +3120,91 @@
       "source": "Global Voices",
       "title": "In Kyrgyzstan, public meetings with the president turn into a quest to seek justice",
       "url": "https://globalvoices.org/2026/11/24/in-kyrgyzstan-public-meetings-with-the-president-turn-into-a-quest-to-seek-justice/"
+    },
+    "5d0192b218325a03196641c44c95c113c44a91448675e98faa81c6c7d73735c2": {
+      "api_usage": {
+        "input_tokens": 2988,
+        "output_tokens": 498,
+        "requests": 1,
+        "total_tokens": 3486
+      },
+      "article_focus": "ICIJ statement defending source confidentiality and press freedom in litigation over court records used in its Pornhub investigation",
+      "article_input": {
+        "available_text_chars": 4302,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "74b4ec6c624d80d843584c62fd62fcee07ba129c1ce63ef0a9789cb6acf0cf76",
+        "text_chars": 4302,
+        "truncated": false
+      },
+      "author": "ICIJ",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T22:35:46Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article is about ICIJ defending a confidential source and press freedom in a dispute over court records related to Pornhub; it does not allege abuse of entrusted power for private gain as defined, so it is not a corruption story under the provided definition.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 2988,
+          "output_tokens": 498,
+          "requests": 1,
+          "total_tokens": 3486
+        },
+        "article_focus": "ICIJ statement defending source confidentiality and press freedom in litigation over court records used in its Pornhub investigation",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article is about ICIJ defending a confidential source and press freedom in a dispute over court records related to Pornhub; it does not allege abuse of entrusted power for private gain as defined, so it is not a corruption story under the provided definition.",
+        "reasoning_effort": "low"
+      },
+      "source": "ICIJ",
+      "title": "Statement: ICIJ battles to protect source behind Pornhub documents story",
+      "url": "https://www.icij.org/inside-icij/2026/11/statement-icij-battles-to-protect-source-behind-pornhub-documents-story/"
     },
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59": {
       "api_usage": {
@@ -3351,6 +4027,91 @@
       "title": "Can regenerative school gardens strengthen food security in Cameroon?",
       "url": "https://globalvoices.org/2026/11/12/can-regenerative-school-gardens-strengthen-food-security-in-cameroon/"
     },
+    "722d699c8dc178485cfe802882f45b2f0f53c7879fcee92e2eb671f6d8e59181": {
+      "api_usage": {
+        "input_tokens": 2700,
+        "output_tokens": 397,
+        "requests": 1,
+        "total_tokens": 3097
+      },
+      "article_focus": "News report of the U.S. Army's controlled detonation of degraded explosive chemicals at the Iowa Army Ammunition Plant and related public health/environmental concerns.",
+      "article_input": {
+        "available_text_chars": 3008,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "bce11c17ad4900bc088aa20c303ad50d477320058917883887ecb5fed9f24189",
+        "text_chars": 3008,
+        "truncated": false
+      },
+      "author": "Associated Press",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T22:36:41Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports a controlled detonation and public health/environmental concerns; it contains no allegations or evidence of abuse of entrusted power for private gain. No corrupt conduct or improper benefit is described.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 2700,
+          "output_tokens": 397,
+          "requests": 1,
+          "total_tokens": 3097
+        },
+        "article_focus": "News report of the U.S. Army's controlled detonation of degraded explosive chemicals at the Iowa Army Ammunition Plant and related public health/environmental concerns.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports a controlled detonation and public health/environmental concerns; it contains no allegations or evidence of abuse of entrusted power for private gain. No corrupt conduct or improper benefit is described.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Army blows up bomb chemicals in Iowa despite fears a toxic plume could endanger residents",
+      "url": "https://news.mongabay.com/short-article/2026/11/army-blows-up-bomb-chemicals-in-iowa-despite-fears-a-toxic-plume-could-endanger-residents/"
+    },
     "7320a48302f8bcb0386acb7c7d83e83079047cd52105dbb951b6958dc6f39f8c": {
       "api_usage": {
         "input_tokens": 1483,
@@ -3639,6 +4400,91 @@
       "source": "Global Voices",
       "title": "In win against impunity, Indonesian court orders the reform of Military Justice Law",
       "url": "https://globalvoices.org/2026/11/17/in-win-against-impunity-indonesian-court-orders-the-reform-of-military-justice-law/"
+    },
+    "8057ceded3b172f5dadaa34cdc1b0378ac7261577accaab3d58708342d4ed040": {
+      "api_usage": {
+        "input_tokens": 4386,
+        "output_tokens": 511,
+        "requests": 1,
+        "total_tokens": 4897
+      },
+      "article_focus": "Reporting on Cargill\u2019s public support for the EU Deforestation Regulation while lobbying, via trade groups and meetings, to delay or weaken it",
+      "article_input": {
+        "available_text_chars": 8870,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "c363f9cfad3eb840d4da927e49ca484af33c4b2dafbf6dc0724b7582a6371cf6",
+        "text_chars": 8870,
+        "truncated": false
+      },
+      "author": "Maxwell Radwin",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T22:35:56Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "industrial_policy_or_competition",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article documents corporate lobbying to weaken EU deforestation rules and influence policy. It does not allege misuse of an entrusted public or fiduciary role for private gain (e.g., bribery, embezzlement, self-dealing by an official), so it does not meet the strict corruption definition required for publication.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 4386,
+          "output_tokens": 511,
+          "requests": 1,
+          "total_tokens": 4897
+        },
+        "article_focus": "Reporting on Cargill\u2019s public support for the EU Deforestation Regulation while lobbying, via trade groups and meetings, to delay or weaken it",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "industrial_policy_or_competition",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article documents corporate lobbying to weaken EU deforestation rules and influence policy. It does not allege misuse of an entrusted public or fiduciary role for private gain (e.g., bribery, embezzlement, self-dealing by an official), so it does not meet the strict corruption definition required for publication.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Cargill publicly backs EU deforestation law while lobbying to weaken it, probe finds",
+      "url": "https://news.mongabay.com/2026/11/cargill-publicly-backs-eu-deforestation-law-while-lobbying-to-weaken-it-probe-finds/"
     },
     "8063bf45a856d2b62e464992a163095f8447d360d2bca6afe882d77260eea176": {
       "api_usage": {
@@ -6294,6 +7140,176 @@
       "title": "\u2018Who will respond?\u2019: Jailed Hong Kong pro-democracy activist Joshua Wong fears being forgotten amid 10-year sentence",
       "url": "https://globalvoices.org/2026/11/18/who-will-respond-jailed-hong-kong-pro-democracy-activist-joshua-wong-fears-being-forgotten-amid-10-year-sentence/"
     },
+    "e516881077ca357fd16813788f251bd48750670abd13fc50a934f9fa3ab0f2fa": {
+      "api_usage": {
+        "input_tokens": 6070,
+        "output_tokens": 299,
+        "requests": 1,
+        "total_tokens": 6369
+      },
+      "article_focus": "Conservation/ecology: species decline, habitat loss and climate impacts",
+      "article_input": {
+        "available_text_chars": 13656,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "476e47308411641dd89c8f57901a2f7e4e79d681b2ea7b2c74f76028e1f514f5",
+        "text_chars": 13656,
+        "truncated": false
+      },
+      "author": "Sean Mowbray",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-25T22:36:37Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports ecological research on quetzal habitat loss (deforestation, climate change) and conservation needs; it contains no allegation or evidence of abuse of entrusted power or private gain tied to corrupt mechanisms.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6070,
+          "output_tokens": 299,
+          "requests": 1,
+          "total_tokens": 6369
+        },
+        "article_focus": "Conservation/ecology: species decline, habitat loss and climate impacts",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports ecological research on quetzal habitat loss (deforestation, climate change) and conservation needs; it contains no allegation or evidence of abuse of entrusted power or private gain tied to corrupt mechanisms.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "A \u2018stunning,\u2019 colorful bird losing ground to deforestation and climate change: Study",
+      "url": "https://news.mongabay.com/2026/11/a-stunning-colorful-bird-losing-ground-to-deforestation-and-climate-change-study/"
+    },
+    "e6121dc01ad67179ac43558f107e19916cc33d8b573db30d0fa3c52b381429c3": {
+      "api_usage": {
+        "input_tokens": 3383,
+        "output_tokens": 442,
+        "requests": 1,
+        "total_tokens": 3825
+      },
+      "article_focus": "reporting on formal recognition of Indigenous territory and associated land-grabbing/deforestation risks",
+      "article_input": {
+        "available_text_chars": 5271,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "01159197fca1a3ed17753c839b955d5723d83468326d9d3b4695bc4f5aedef48",
+        "text_chars": 5271,
+        "truncated": false
+      },
+      "author": "Shanna Hanbury",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-25T22:37:04Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "resource_or_rights_policy",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports government recognition of Indigenous land and deforestation/land-grabbing risks but does not allege a specific abuse of an entrusted role that produced a concrete private benefit. References to land grabbers, registry problems and calls to deny rural credit are policy and risk reporting, not documented corrupt misuse for private gain.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3383,
+          "output_tokens": 442,
+          "requests": 1,
+          "total_tokens": 3825
+        },
+        "article_focus": "reporting on formal recognition of Indigenous territory and associated land-grabbing/deforestation risks",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "resource_or_rights_policy",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports government recognition of Indigenous land and deforestation/land-grabbing risks but does not allege a specific abuse of an entrusted role that produced a concrete private benefit. References to land grabbers, registry problems and calls to deny rural credit are policy and risk reporting, not documented corrupt misuse for private gain.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Brazil\u2019s President Lula moves to recognize Chief Raoni\u2019s Indigenous land",
+      "url": "https://news.mongabay.com/short-article/2026/11/brazils-president-lula-moves-to-recognize-chief-raonis-indigenous-land/"
+    },
     "e6bbdb5540fd96331a57e7811e6a5b4e72eafc0ea7bd77c7f6e7a03e26c92140": {
       "api_usage": {
         "input_tokens": 1494,
@@ -6860,6 +7876,7 @@
     "2a061958a56d79742820eac0c5672b42571eed316e0af973db351bc6235c708c": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/4o3ktf4mquyfo",
     "3b9e0da62e79a3681d70dde82e0c601d14553103d8334cb8c448b0f27289b1f5": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/5rbkhosrbncvc",
     "548c34a7e21ee933e8d11de3b49a4d62d0161ea7df9772491fd381fbbc75066b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7d53oozl3xudn",
+    "58360541cb8bc52dbb63cd3820311b1f047cbcc20d65e30407ef910b64b5b11b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7khk7cb7srldh",
     "5cc417834a276f0ff0c674f27e57c89bd56174e0f811cdc192a827661a02b9c1": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/7tl2rkh74ivsj",
     "6b675f6ca7837402364ce0714bdfc4957454214060d097d7d8e5406e47ecdf88": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/aqtuzhmnsax24",
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/bekwzfipyrky4",
@@ -6890,6 +7907,7 @@
     "049abc7380f4e76668ac9272c730034586e6300096ab4615c56ead8e2b783db9",
     "05a5449ad9837cde74f5cdc197f6081edc162ab609882989b981b5e494eef2f9",
     "05a6e702c25f95ecb7de9b839a9615716429e63413256614c6e820926cc97a0e",
+    "05aeec60527815362c7676e0b50f3f4340a44274f4cbebd0a7e1342906ba0772",
     "0667447ac00a975c5c5f9ef37d2af11abbbfb64801dfb771c0f89213e6db84cf",
     "06ed5c0f5e2534c10facd764d219e153142722a03cc1f059cd22ccdb41a16c51",
     "07991c32fd58e15ef3eaa6753097af0c3c794331238c7d438dfcf3955728499d",
@@ -6923,7 +7941,9 @@
     "1935d472e8e701dce7c36888e3a1effef7b50ca8cbc9b6e63e34156303816671",
     "1973243d7d8bcc880564cc185677dd679bf1eb641396b0b8c3e865104ce999d6",
     "199f3c04f1b8ce915fd52f5088214a061bc42b3e19bfda51bbf23fa653898aa1",
+    "19f0422dbb9dbfc85ada2d667ae865a4d0d5e275076c922f6a4a9c6bd625aff9",
     "1b0542aa6c8f6e33697329ac042a6ee28e411043bddbf581d3d14cb9d65730cd",
+    "1cae637d893585f62d63e8254fdf3865501ebef7f722afc5c107a33b003c1ec2",
     "1ce0b470440191d7a65970a79596b9a2263cc9fa02a61a33736b75483c7fff8a",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396",
     "1d46b7ff5542e5ebf1e27578bdad85007e7861e785e70b0f088b2e22dbe45169",
@@ -6994,6 +8014,7 @@
     "40ef8bfc039894121e1451a3d1f0b15cafa204a7a94fb31ef8dfb26142a8dcd8",
     "412a9ff2eed29efb0c2d3ed5ff55e1cc333c82a758d5ca0d8c617946fb707c12",
     "4280ff1c14f07a896f9e041e5269dc972a763339853c4d9526293661ff4fc990",
+    "42ac81d68e0aa018bb2c0f5c87a17f394d231bffe8a6aeb4b63d145ca47af4eb",
     "44ff3c862d5d759a555fd5c4353384fa105bb915f2bdaec3b903d04f00b63754",
     "4524c9f9358089d4774acbf38fd8914235e455b41b7ec23b80079d748e2b9845",
     "45c3d3327f58d875b0605d0c8a2175e0c2efd0528968f4ca5b275308276fad20",
@@ -7023,16 +8044,19 @@
     "54e9eed7436c367cb920d5d6b8feea2b0f6d8ac897b5073bf6b15742ce351ad1",
     "5615c09ee016541a9ff354ffe2eafeac0ff7c1964b33cb8d5660378340feef4e",
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287",
+    "58360541cb8bc52dbb63cd3820311b1f047cbcc20d65e30407ef910b64b5b11b",
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5a3597d15643f4007a1af93f63e2e5deff8d996e18f687946c0d2b67c4438b51",
+    "5a99a08946892ce9395d89d77ccb740620fed69bc1e542cba2dce825ebcb741a",
     "5a9d0e0935d2582357edf7e8989601040c26151c524460078ee1bef4048dfc69",
     "5abde0b4f0abb7a7b79c17df4159671c77b6de7e479e822c3b28adf46389348b",
     "5abfb9b774bee392e1e9262d8a4dc015d7514191ab3c7fb2dc4ce13f71b6cf07",
     "5b1df8d0f7df9ada3bc955d5b3b21cfbe359ae2de5cf655a103593e3ab9a9b80",
     "5c8e56482e9e27d537a0ed3fbe488c0d65cc341f9a0815f2fa0cc53b519dde95",
     "5cc417834a276f0ff0c674f27e57c89bd56174e0f811cdc192a827661a02b9c1",
+    "5d0192b218325a03196641c44c95c113c44a91448675e98faa81c6c7d73735c2",
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
     "5e6a1b2573be0c6a1ce9630822a7af4323ff0fbc3b17983b8cc15198f8d1c472",
     "5f6ccdf0a7614ee50ea2368790e6031338b299a4b963d4a8de3d381d848b629b",
@@ -7073,6 +8097,7 @@
     "70d233665e7711267cb44319baad6671d5963c4b1f0320af0f5785fe1cb6862e",
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c",
     "71d6b19e04252a506608a733253e47d81b63d4d57b92a077ee6731eb46ceec97",
+    "722d699c8dc178485cfe802882f45b2f0f53c7879fcee92e2eb671f6d8e59181",
     "72857455d495984473a2a0700196ab1f9889f59088c452465f982c8853fc1736",
     "7320a48302f8bcb0386acb7c7d83e83079047cd52105dbb951b6958dc6f39f8c",
     "743af9b4f39e90fb8e679a31bdefd3338f3a95f7d4660762af6d70049a5075f5",
@@ -7097,6 +8122,7 @@
     "7ec92fd0baccc57f4fa005fb4cb5938701b59a1d0af8aeb4942324630f515d61",
     "7fa3d586abded865a9738b153e864fa06d980c86026ed0efaf48746d8d325e56",
     "804dd3e475584dcd370ab98ee0c7e13ce84b1bc69b7a841673a8ec6df21a9eb3",
+    "8057ceded3b172f5dadaa34cdc1b0378ac7261577accaab3d58708342d4ed040",
     "8063bf45a856d2b62e464992a163095f8447d360d2bca6afe882d77260eea176",
     "80979b58acd78f9cb4b633a233c3dab07274e1079f5c8f24af0b195f05b4c9a6",
     "80cbfcf0341c1bc67896de3489772cc8f5f3bef0adb8ff458f532d2e155ad143",
@@ -7264,8 +8290,10 @@
     "e35ff155a7cedb0641bd3a8d3078c4983838858783d7df06b7a143c5fffeab47",
     "e3c0bb2c35f6bf550b50c4f7a292595d4c0d5591e53d3eabc84f611d416c9d4f",
     "e44953c7251e2664b275f392494339b7b4172f13bffd933938330a1344cc6d55",
+    "e516881077ca357fd16813788f251bd48750670abd13fc50a934f9fa3ab0f2fa",
     "e58a7148f74faa5523c686bb702dd2892b61917ade84670d2d0449f7b04fb9d9",
     "e5c08647d572e95a85f2417c092765588d031066a2d758137c8e4694a3117137",
+    "e6121dc01ad67179ac43558f107e19916cc33d8b573db30d0fa3c52b381429c3",
     "e64217509b7a416959bbee28778ddb00d81b6eeef6f1069cf7b9b9c8ab96b933",
     "e6bbdb5540fd96331a57e7811e6a5b4e72eafc0ea7bd77c7f6e7a03e26c92140",
     "e736fc7febbfc54e187992cfd79dabb1803f6a20fa4164b43aeee9db506833a7",
