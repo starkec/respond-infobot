@@ -771,6 +771,30 @@
       "title": "New evidence links Singapore palm oil giant to Indonesian deforesters, despite denials",
       "url": "https://www.icij.org/investigations/deforestation-inc/new-evidence-links-singapore-palm-oil-giant-to-indonesian-deforesters-despite-denials/"
     },
+    "2219ada5e27154d8e835252e1cc38d316e336d17f1e62b6c234ab0e732410bcc": {
+      "api_usage": {
+        "input_tokens": 1508,
+        "output_tokens": 200,
+        "total_tokens": 1708
+      },
+      "author": "Mike DiGirolamo",
+      "checked_at": "2026-11-25T02:49:44Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article discusses Suncor\u2019s plan to release treated wastewater and community opposition and regulatory process, but contains no allegations that entrusted power was abused for private gain or any substantive reporting of corruption, investigations, or illicit benefit.",
+      "source": "Mongabay",
+      "title": "\u2018We don\u2019t want it\u2019: First Nations reject plan to release mining waste into water source",
+      "url": "https://news.mongabay.com/podcast/2026/11/we-dont-want-it-first-nations-reject-plan-to-release-mining-waste-into-water-source/"
+    },
     "22bb7bfae18c6894ffe909963039c961cb9a538875a1abd3c1e6237bc2ea2dca": {
       "api_usage": {
         "input_tokens": 1491,
@@ -3005,6 +3029,30 @@
       "title": "Ecuador\u2019s bioeconomy plan vows sustainability, but faces a test of government priorities",
       "url": "https://news.mongabay.com/2026/11/ecuadors-bioeconomy-plan-vows-sustainability-but-faces-a-test-of-government-priorities/"
     },
+    "885a9aa9504595c34c5aead1556950198d2f06e6912eee1ebc01a562926b5d84": {
+      "api_usage": {
+        "input_tokens": 1448,
+        "output_tokens": 154,
+        "total_tokens": 1602
+      },
+      "author": "Ouma Elvine Tina",
+      "checked_at": "2026-11-25T02:49:41Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "The article is a personal commentary on feminist approaches to climate reporting and women's experiences of environmental impacts; it contains no allegations or discussion of abuse of power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "How a feminist lens is shaping my climate reporting (commentary)",
+      "url": "https://news.mongabay.com/2026/11/how-a-feminist-lens-is-shaping-my-climate-reporting-commentary/"
+    },
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
       "api_usage": {
         "input_tokens": 1406,
@@ -3169,6 +3217,30 @@
       "source": "Mongabay",
       "title": "California\u2019s Wolf Divide",
       "url": "https://news.mongabay.com/specials/2026/11/californias-wolf-divide/"
+    },
+    "8edae59301a96cf8ef7f6335c1eb7d29e95c7df195b22b12f481364321bef8dd": {
+      "api_usage": {
+        "input_tokens": 1487,
+        "output_tokens": 137,
+        "total_tokens": 1624
+      },
+      "author": "Rhett Ayers Butler",
+      "checked_at": "2026-11-25T02:49:46Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses conservation efforts and species recovery; it contains no allegations or descriptions of abuse of entrusted power, improper private gain, or corruption investigations.",
+      "source": "Mongabay",
+      "title": "Species down to the last 50 animals can recover, but rarely without help",
+      "url": "https://news.mongabay.com/short-article/2026/11/species-down-to-the-last-50-animals-can-recover-but-rarely-without-help/"
     },
     "8f23c9d7945300f1be3380d66a9400794dcab8916ee614804908dd0cdc40f2fb": {
       "api_usage": {
@@ -4900,6 +4972,30 @@
       "title": "\u2018Who will respond?\u2019: Jailed Hong Kong pro-democracy activist Joshua Wong fears being forgotten amid 10-year sentence",
       "url": "https://globalvoices.org/2026/11/18/who-will-respond-jailed-hong-kong-pro-democracy-activist-joshua-wong-fears-being-forgotten-amid-10-year-sentence/"
     },
+    "e6bbdb5540fd96331a57e7811e6a5b4e72eafc0ea7bd77c7f6e7a03e26c92140": {
+      "api_usage": {
+        "input_tokens": 1494,
+        "output_tokens": 153,
+        "total_tokens": 1647
+      },
+      "author": "Winda Charmila",
+      "checked_at": "2026-11-25T02:49:48Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "88c6270eba5faf1cbce3e7781949e6fb2e22f0f2c9f7ba4a6b526185ddc50683",
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "5f7aa90cab9655090a41aa3b0e0b61f6a7768c61bbf2d8f39f878584654035f2",
+      "provider": "uva",
+      "reason": "Article discusses wildfires, haze and heatwave co-exposure in Indonesia and a related scientific study; it contains no allegations or reporting of abuse of entrusted power, improper private gain, or corruption-related investigations.",
+      "source": "Mongabay",
+      "title": "Study reveals rising \u2018double threat\u2019 of wildfire smoke and heatwaves in Indonesia",
+      "url": "https://news.mongabay.com/2026/11/study-reveals-rising-double-threat-of-wildfire-smoke-and-heatwaves-in-indonesia/"
+    },
     "e83f386a00584013c89a5b33b4cdad96786f110307887194b5cfa5242d933ae3": {
       "api_usage": {
         "input_tokens": 6791,
@@ -5350,7 +5446,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-24",
+  "last_checked_date": "2026-11-25",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -5429,6 +5525,7 @@
     "20db1ce7aac1dbbdaf0ed85abff52ca29df60ec9d5b4b6c0b602b960fe2743d5",
     "211b01e04b96532bd6c4d3ce27d197a2da56c62ba372099866ea95bc704cf91d",
     "216133e36ed70a4e58a9d56eb4d48fe8a4001f26a16ef1bf2374c7d4f0c29e15",
+    "2219ada5e27154d8e835252e1cc38d316e336d17f1e62b6c234ab0e732410bcc",
     "222c22357ac865b786de3f57d214bff992f7084f63e83210e667cfc2f8336de7",
     "22bb7bfae18c6894ffe909963039c961cb9a538875a1abd3c1e6237bc2ea2dca",
     "22bf9e388ecd4b17bac41f744204e3eae6cf438340a2713dfd33b00a7ecb1acb",
@@ -5601,6 +5698,7 @@
     "87ff9af1a0a0b52a4a737194b83adbd95bf76ecfcb9ac655deba7de06936db1f",
     "88462f057c2e98a97923bbdccaf8e87793e49182a722e55c42951b503892a7ba",
     "88596189e1dc1e93eeec3e08daf10906895f94b10f1c0efe02954350390009df",
+    "885a9aa9504595c34c5aead1556950198d2f06e6912eee1ebc01a562926b5d84",
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005",
     "8a2ff82ae85935354d70f2e41e7f9de511d659124813bc5029b21ac0b135968b",
@@ -5610,6 +5708,7 @@
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
     "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
+    "8edae59301a96cf8ef7f6335c1eb7d29e95c7df195b22b12f481364321bef8dd",
     "8f23c9d7945300f1be3380d66a9400794dcab8916ee614804908dd0cdc40f2fb",
     "8fdd554b423facaf68d2038ee280f232f7eafa36ab2ad25b7274ec903553b3c8",
     "8ff6f2fbfcc730ed27b9dcb55e5572bdb584ab41503cd2c3a22f670f4f06bf99",
@@ -5754,6 +5853,7 @@
     "e58a7148f74faa5523c686bb702dd2892b61917ade84670d2d0449f7b04fb9d9",
     "e5c08647d572e95a85f2417c092765588d031066a2d758137c8e4694a3117137",
     "e64217509b7a416959bbee28778ddb00d81b6eeef6f1069cf7b9b9c8ab96b933",
+    "e6bbdb5540fd96331a57e7811e6a5b4e72eafc0ea7bd77c7f6e7a03e26c92140",
     "e736fc7febbfc54e187992cfd79dabb1803f6a20fa4164b43aeee9db506833a7",
     "e83f386a00584013c89a5b33b4cdad96786f110307887194b5cfa5242d933ae3",
     "ea686289a6df11233af0dd5e3cc485017f39056f5951db9ead5b8363270ac6fd",
