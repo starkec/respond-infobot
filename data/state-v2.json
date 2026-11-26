@@ -4464,6 +4464,91 @@
       "title": "\u2018He used Pornhub as the gun\u2019",
       "url": "https://www.icij.org/news/2026/11/he-used-pornhub-as-the-gun/"
     },
+    "76e65b49cd8a1420ad42b0a98f94cd939baef078cdd6ca52ef8352cd2505aa75": {
+      "api_usage": {
+        "input_tokens": 5404,
+        "output_tokens": 460,
+        "requests": 1,
+        "total_tokens": 5864
+      },
+      "article_focus": "community forestry and conservation in the DRC, including governance, financing and implementation challenges",
+      "article_input": {
+        "available_text_chars": 12559,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "dd61f3a53198872c3383f80a337a5debb453bce0ac9172a9ae654582e9ab426d",
+        "text_chars": 12559,
+        "truncated": false
+      },
+      "author": "Didier Makal",
+      "autonomous_exclusion": true,
+      "benefit_type": "bribe_or_kickback",
+      "checked_at": "2026-11-26T23:21:42Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "bribery_or_kickbacks",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article's primary focus is community forestry and conservation; corruption is mentioned as an obstacle but not the main subject. The piece does allege payoffs to officials, but corruption is not the article's substantive focus required for publication.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 5404,
+          "output_tokens": 460,
+          "requests": 1,
+          "total_tokens": 5864
+        },
+        "article_focus": "community forestry and conservation in the DRC, including governance, financing and implementation challenges",
+        "benefit_type": "bribe_or_kickback",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "bribery_or_kickbacks",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article's primary focus is community forestry and conservation; corruption is mentioned as an obstacle but not the main subject. The piece does allege payoffs to officials, but corruption is not the article's substantive focus required for publication.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Community forests offer hope for conservation in DRC, but major hurdles remain",
+      "url": "https://news.mongabay.com/2026/11/community-forests-offer-hope-for-conservation-in-drc-but-major-hurdles-remain/"
+    },
     "775d4042fcf55132e00e9e83f0e35194e9e188f0c36923d3277d098aafcdd6f5": {
       "api_usage": {
         "input_tokens": 1485,
@@ -7444,6 +7529,91 @@
       "title": "As butterflies sweep Sri Lanka, global study finds expanding ranges linked to climate change",
       "url": "https://news.mongabay.com/2026/11/as-butterflies-sweep-sri-lanka-global-study-finds-expanding-ranges-linked-to-climate-change/"
     },
+    "df14889c774790d53c7f5bce40cbed403e2480d8f672adcb3e8883ad515928a6": {
+      "api_usage": {
+        "input_tokens": 6223,
+        "output_tokens": 489,
+        "requests": 1,
+        "total_tokens": 6712
+      },
+      "article_focus": "environmental and social impacts of tequila-driven agave expansion and failures of regulation",
+      "article_input": {
+        "available_text_chars": 14362,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "bea92a88180fb9d94cbf764d3880863f00ec2e364506fd0db2fc070429bc6936",
+        "text_chars": 14362,
+        "truncated": false
+      },
+      "author": "Mariana Gonz\u00e1lez-M\u00e1rquez",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-26T23:21:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "general_corporate_harm_or_negligence",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article documents environmental and social harm from agave expansion and regulatory shortcomings, but it does not allege that entrusted officials abused their roles to secure private gain (bribes, self-dealing, diverted assets or favouritism). Failures to enforce rules and illegal sales by intermediaries are reported, but no concrete misuse of an entrusted position or linked improper benefit is shown in the text.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6223,
+          "output_tokens": 489,
+          "requests": 1,
+          "total_tokens": 6712
+        },
+        "article_focus": "environmental and social impacts of tequila-driven agave expansion and failures of regulation",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "general_corporate_harm_or_negligence",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article documents environmental and social harm from agave expansion and regulatory shortcomings, but it does not allege that entrusted officials abused their roles to secure private gain (bribes, self-dealing, diverted assets or favouritism). Failures to enforce rules and illegal sales by intermediaries are reported, but no concrete misuse of an entrusted position or linked improper benefit is shown in the text.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Tequila\u2019s hangover: How the drink\u2019s success drove deforestation in Mexico",
+      "url": "https://news.mongabay.com/2026/11/tequilas-hangover-how-the-drinks-success-drove-deforestation-in-mexico/"
+    },
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725": {
       "api_usage": {
         "input_tokens": 1430,
@@ -7758,6 +7928,99 @@
       "source": "Mongabay",
       "title": "Study reveals rising \u2018double threat\u2019 of wildfire smoke and heatwaves in Indonesia",
       "url": "https://news.mongabay.com/2026/11/study-reveals-rising-double-threat-of-wildfire-smoke-and-heatwaves-in-indonesia/"
+    },
+    "e6d670bde16f2a9c69f5dd473c42a4850b36bfff3fd65ab32c54c03c05b1f442": {
+      "api_usage": {
+        "input_tokens": 3346,
+        "output_tokens": 459,
+        "requests": 1,
+        "total_tokens": 3805
+      },
+      "article_focus": "Legislative/policy analysis of a U.S. bill (BAAJA) that would speed permitting for energy infrastructure and its potential environmental impacts",
+      "article_input": {
+        "available_text_chars": 5292,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "bddc33311f3a77eaef8b8a77f41f90d2af6f0c192ccbabd68c512e9c20790fe1",
+        "text_chars": 5292,
+        "truncated": false
+      },
+      "author": "Bobby Bascomb",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-26T23:21:39Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "industrial_policy_or_competition",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [
+        "development for renewable energy and transmission lines, but environmental organizations warn it will also fast-track fossil fuels by undermining environmental regulations. \u201cA technology-neutral fast track in the hands",
+        "infrastructure projects must comply with bedrock environmental laws including the Clean Water Act, Endangered Species Act, and National Environmental Policy Act (NEPA). If BAAJA becomes law, those environmental hurdles",
+        "will become easier to clear. Fewer projects would require NEPA review, the time frame for environmental assessments would be shorter, and the window to sue over approved projects would shrink. Consultation on potential"
+      ],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on a legislative change that could speed permitting for both clean energy and fossil fuel projects, but does not allege an abuse of an entrusted role for private gain or describe a concrete corrupt mechanism or improper private benefit tied to misuse of authority.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3346,
+          "output_tokens": 459,
+          "requests": 1,
+          "total_tokens": 3805
+        },
+        "article_focus": "Legislative/policy analysis of a U.S. bill (BAAJA) that would speed permitting for energy infrastructure and its potential environmental impacts",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "industrial_policy_or_competition",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [
+          "development for renewable energy and transmission lines, but environmental organizations warn it will also fast-track fossil fuels by undermining environmental regulations. \u201cA technology-neutral fast track in the hands",
+          "infrastructure projects must comply with bedrock environmental laws including the Clean Water Act, Endangered Species Act, and National Environmental Policy Act (NEPA). If BAAJA becomes law, those environmental hurdles",
+          "will become easier to clear. Fewer projects would require NEPA review, the time frame for environmental assessments would be shorter, and the window to sue over approved projects would shrink. Consultation on potential"
+        ],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on a legislative change that could speed permitting for both clean energy and fossil fuel projects, but does not allege an abuse of an entrusted role for private gain or describe a concrete corrupt mechanism or improper private benefit tied to misuse of authority.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "US bill to speed up clean energy projects could also fast-track fossil fuels",
+      "url": "https://news.mongabay.com/short-article/2026/11/us-bill-to-speed-up-clean-energy-projects-could-also-fast-track-fossil-fuels/"
     },
     "e83f386a00584013c89a5b33b4cdad96786f110307887194b5cfa5242d933ae3": {
       "api_usage": {
@@ -8618,6 +8881,7 @@
     "751c8e9d696ff2dd5860f63efd76bf92e69a8809fb0f51d1c97b3701878edf9c",
     "75439f5babebc3c23633bae23a97d6126993e07682d3359c9b6c0e6ee9723645",
     "76721ba4df3a18f5c7ef7da7b0c9ae0a8a68aaf3de07e7a48be3ed46c9320162",
+    "76e65b49cd8a1420ad42b0a98f94cd939baef078cdd6ca52ef8352cd2505aa75",
     "7722b42a62aaedcb3ce4bbad40daafbaa32231a60fbb0b12faef618273075912",
     "775d4042fcf55132e00e9e83f0e35194e9e188f0c36923d3277d098aafcdd6f5",
     "776b4148d2c2cdf3ea107c8af51f0110b8a1f26760aa0cc60896d6f4a5977186",
@@ -8795,6 +9059,7 @@
     "de32183e0b8a187c3dc41edc31791dccb42e6b6503e165db6bcbb891117d16e3",
     "de7a8aeddb5af25dd6dd756b982fd75ef35010b2becd7c3fc4b5db489b348ed2",
     "decbbfa10e0cbb2d2ceac50209a6e813eaa58a7aff86c75fda1acb69ba491b49",
+    "df14889c774790d53c7f5bce40cbed403e2480d8f672adcb3e8883ad515928a6",
     "e03a94b28db3d7eb42b1907564a937cb9f3bc799c34a48dfd0a46d0c2fb85659",
     "e07429d72368e8550c8ba412ee3fe55e3b300096b07a257b0a5ad3268f6e2651",
     "e0c844b0598cdea60be52e611ef5219cabdf649e82ac5528fa82bb23fcdb9725",
@@ -8811,6 +9076,7 @@
     "e6121dc01ad67179ac43558f107e19916cc33d8b573db30d0fa3c52b381429c3",
     "e64217509b7a416959bbee28778ddb00d81b6eeef6f1069cf7b9b9c8ab96b933",
     "e6bbdb5540fd96331a57e7811e6a5b4e72eafc0ea7bd77c7f6e7a03e26c92140",
+    "e6d670bde16f2a9c69f5dd473c42a4850b36bfff3fd65ab32c54c03c05b1f442",
     "e736fc7febbfc54e187992cfd79dabb1803f6a20fa4164b43aeee9db506833a7",
     "e83f386a00584013c89a5b33b4cdad96786f110307887194b5cfa5242d933ae3",
     "ea686289a6df11233af0dd5e3cc485017f39056f5951db9ead5b8363270ac6fd",
