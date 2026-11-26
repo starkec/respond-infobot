@@ -171,6 +171,91 @@
       "title": "Philippine corn farmers investigate links between chemical farming and soil erosion",
       "url": "https://news.mongabay.com/2026/11/philippine-corn-farmers-investigate-links-between-chemical-farming-and-soil-erosion/"
     },
+    "0504d4aa5e10bdaee7d279731a1dc45f35c180b9ac5fefe3074ef45c3974fad7": {
+      "api_usage": {
+        "input_tokens": 6774,
+        "output_tokens": 299,
+        "requests": 1,
+        "total_tokens": 7073
+      },
+      "article_focus": "How women farmers are reviving endangered Himalayan medicinal plants and the social/administrative challenges they face",
+      "article_input": {
+        "available_text_chars": 16420,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "0b1c0c671a9db87c685c98d2bbac8e9a9f53218c28270d84b1c6eb7d505bf97c",
+        "text_chars": 16420,
+        "truncated": false
+      },
+      "author": "Swati Thapa",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-26T14:31:05Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on conservation, women\u2019s cultivation of medicinal plants and administrative hurdles (land ownership/certification), but contains no allegation or evidence of abuse of entrusted power for private gain or any specific corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6774,
+          "output_tokens": 299,
+          "requests": 1,
+          "total_tokens": 7073
+        },
+        "article_focus": "How women farmers are reviving endangered Himalayan medicinal plants and the social/administrative challenges they face",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on conservation, women\u2019s cultivation of medicinal plants and administrative hurdles (land ownership/certification), but contains no allegation or evidence of abuse of entrusted power for private gain or any specific corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "How Uttarakhand\u2019s women farmers are reviving endangered Himalayan medicinal plants",
+      "url": "https://news.mongabay.com/2026/11/how-uttarakhands-women-farmers-are-reviving-endangered-himalayan-medicinal-plants/"
+    },
     "05a5449ad9837cde74f5cdc197f6081edc162ab609882989b981b5e494eef2f9": {
       "api_usage": {
         "input_tokens": 1323,
@@ -2974,6 +3059,91 @@
       "source": "Mongabay",
       "title": "How one tiny island made conservation work",
       "url": "https://news.mongabay.com/short-article/2026/11/how-one-tiny-island-made-conservation-work/"
+    },
+    "5873c4ddd44a6c17aefab617691c86873c04d71ad96385412ad407a1b0748c57": {
+      "api_usage": {
+        "input_tokens": 4580,
+        "output_tokens": 477,
+        "requests": 1,
+        "total_tokens": 5057
+      },
+      "article_focus": "Report on the 7th World Conference on Marine Biodiversity, covering scientific topics (deep-sea mining impacts, taxonomy, eDNA, conservation) and perspectives shared by researchers and organizers.",
+      "article_input": {
+        "available_text_chars": 9322,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "06597d1748bb0c26f054b3e17b7f6fc3abe6b2a144e6ffb71af3658640ce29d2",
+        "text_chars": 9322,
+        "truncated": false
+      },
+      "author": "Edward Carver",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-26T14:31:10Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "other_explicit_corrupt_abuse",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article is a conference report about marine biodiversity and deep-sea research. It does not allege misuse of an entrusted role or a concrete improper private benefit tied to such misuse; no corruption case is established.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 4580,
+          "output_tokens": 477,
+          "requests": 1,
+          "total_tokens": 5057
+        },
+        "article_focus": "Report on the 7th World Conference on Marine Biodiversity, covering scientific topics (deep-sea mining impacts, taxonomy, eDNA, conservation) and perspectives shared by researchers and organizers.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article is a conference report about marine biodiversity and deep-sea research. It does not allege misuse of an entrusted role or a concrete improper private benefit tied to such misuse; no corruption case is established.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "International marine biodiversity conference emphasizes the unsung and the unknown",
+      "url": "https://news.mongabay.com/2026/11/international-marine-biodiversity-conference-emphasizes-the-unsung-and-the-unknown/"
     },
     "5a3597d15643f4007a1af93f63e2e5deff8d996e18f687946c0d2b67c4438b51": {
       "api_usage": {
@@ -6585,6 +6755,91 @@
       "title": "Spicy ping-pong balls and flaming dung keep elephants at bay in Zimbabwe",
       "url": "https://news.mongabay.com/short-article/2026/11/spicy-ping-pong-balls-and-flaming-dung-keep-elephants-at-bay-in-zimbabwe/"
     },
+    "caa03c786a01c487f44cabd4cb8b211d1b1f05ba3546c001d6215b3646f6ad9b": {
+      "api_usage": {
+        "input_tokens": 3350,
+        "output_tokens": 707,
+        "requests": 1,
+        "total_tokens": 4057
+      },
+      "article_focus": "Report on the Kenyan government's move to award the Mrima Hill mining tender to a U.S. consortium, geopolitical context, and local environmental and community concerns.",
+      "article_input": {
+        "available_text_chars": 5282,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "a3ebacf856a6356af4c99b124620e60fb8a4a714240774fffe2f4a2e90fabab1",
+        "text_chars": 5282,
+        "truncated": false
+      },
+      "author": "Elodie Toto",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-26T14:31:16Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on award process and geopolitical context for Mrima Hill and notes civil-society concerns about secrecy and lack of public participation, but does not allege a concrete abuse of an entrusted role tied to a specific private benefit or corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3350,
+          "output_tokens": 707,
+          "requests": 1,
+          "total_tokens": 4057
+        },
+        "article_focus": "Report on the Kenyan government's move to award the Mrima Hill mining tender to a U.S. consortium, geopolitical context, and local environmental and community concerns.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on award process and geopolitical context for Mrima Hill and notes civil-society concerns about secrecy and lack of public participation, but does not allege a concrete abuse of an entrusted role tied to a specific private benefit or corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "US gains foothold in race for Africa\u2019s critical minerals in Kenya\u2019s Mrima Hill project",
+      "url": "https://news.mongabay.com/short-article/2026/11/us-gains-foothold-in-race-for-africas-critical-minerals-in-kenyas-mrima-hill-project/"
+    },
     "cbc943f9a9de0625a18d2ab6520da76ce675e7cd952b26174453b9e8312a6ca7": {
       "api_usage": {
         "input_tokens": 3014,
@@ -6790,6 +7045,91 @@
       "source": "Mongabay",
       "title": "El Ni\u00f1o drove drought, but climate change intensified Indonesia\u2019s fire crisis: Study",
       "url": "https://news.mongabay.com/short-article/2026/11/el-nino-drove-drought-but-climate-change-intensified-indonesias-fire-crisis-study/"
+    },
+    "d4ce781fdd36226ef26db033d8fec4ceb69e784928a9450ec2580c6785d87daf": {
+      "api_usage": {
+        "input_tokens": 3322,
+        "output_tokens": 353,
+        "requests": 1,
+        "total_tokens": 3675
+      },
+      "article_focus": "Wildlife conservation and human\u2013wolf coexistence policy/management",
+      "article_input": {
+        "available_text_chars": 5174,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "c9903e779d50f93dde02ccd8277ae29e7071b42618056b403bec2633cededa1b",
+        "text_chars": 5174,
+        "truncated": false
+      },
+      "author": "Mongabay.com",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-26T14:31:20Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article discusses wolf recovery and human\u2013wolf coexistence, management options, and EU policy changes on protections, but it contains no allegations or evidence of abuse of entrusted power for private gain, corrupt mechanisms, or improper benefits. Therefore it does not meet the corruption criteria.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3322,
+          "output_tokens": 353,
+          "requests": 1,
+          "total_tokens": 3675
+        },
+        "article_focus": "Wildlife conservation and human\u2013wolf coexistence policy/management",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article discusses wolf recovery and human\u2013wolf coexistence, management options, and EU policy changes on protections, but it contains no allegations or evidence of abuse of entrusted power for private gain, corrupt mechanisms, or improper benefits. Therefore it does not meet the corruption criteria.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Relearning how to live with wolves in Europe",
+      "url": "https://news.mongabay.com/short-article/2026/11/relearning-how-to-live-with-wolves-in-europe/"
     },
     "d5d04040527d6b170f46ef927374a3f3e250dd64d74977cefe5f75c66e156f97": {
       "api_usage": {
@@ -7776,6 +8116,91 @@
       "title": "How banking giant ICBC helped Chinese firms gain a foothold in Europe\u2019s wind market",
       "url": "https://www.icij.org/investigations/china-capital/how-banking-giant-icbc-helped-chinese-firms-gain-a-foothold-in-europes-wind-market/"
     },
+    "f75df30ac8ae0b48c7a32b133460759bb1c94517f5fd7aaa028bf2cbb295d306": {
+      "api_usage": {
+        "input_tokens": 3001,
+        "output_tokens": 376,
+        "requests": 1,
+        "total_tokens": 3377
+      },
+      "article_focus": "Promotion/fundraising for independent journalism; announcement of a Spotlight issue",
+      "article_input": {
+        "available_text_chars": 4372,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "51e7b282c332b87f9037db7e21afb890a7e39ed18951ae41b9173c20288725aa",
+        "text_chars": 4372,
+        "truncated": false
+      },
+      "author": "Global Voices Announcements",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-26T14:31:02Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article is a fundraising/announcements piece promoting Global Voices\u2019 Independent Journalism Spotlight. It does not report or analyse any allegation of abuse of entrusted power or private gain; no concrete corrupt conduct or beneficiaries are described.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3001,
+          "output_tokens": 376,
+          "requests": 1,
+          "total_tokens": 3377
+        },
+        "article_focus": "Promotion/fundraising for independent journalism; announcement of a Spotlight issue",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article is a fundraising/announcements piece promoting Global Voices\u2019 Independent Journalism Spotlight. It does not report or analyse any allegation of abuse of entrusted power or private gain; no concrete corrupt conduct or beneficiaries are described.",
+        "reasoning_effort": "low"
+      },
+      "source": "Global Voices",
+      "title": "Support Global Voices\u2019 January Spotlight: Independent journalism",
+      "url": "https://globalvoices.org/2026/11/26/support-global-voices-january-spotlight-independent-journalism/"
+    },
     "f77cb7cb0fed7a485aa5a5ad9b0740b54ef2327b4b867819f47cb6e215b8cc66": {
       "api_usage": {
         "input_tokens": 2139,
@@ -7990,6 +8415,7 @@
     "03fe4a1f14be2af2dd8caea190b0d943de172489be0592a11d8e0571b827792b",
     "0476b2d2d0e2706e296160eb4b24d8f1fa356bc6ae5e984b0f076d30e9611b0a",
     "049abc7380f4e76668ac9272c730034586e6300096ab4615c56ead8e2b783db9",
+    "0504d4aa5e10bdaee7d279731a1dc45f35c180b9ac5fefe3074ef45c3974fad7",
     "05a5449ad9837cde74f5cdc197f6081edc162ab609882989b981b5e494eef2f9",
     "05a6e702c25f95ecb7de9b839a9615716429e63413256614c6e820926cc97a0e",
     "05aeec60527815362c7676e0b50f3f4340a44274f4cbebd0a7e1342906ba0772",
@@ -8132,6 +8558,7 @@
     "570d9768184970e6b98f787920c5fa0f70ec6e93c2059d93c6e004b92d071287",
     "58360541cb8bc52dbb63cd3820311b1f047cbcc20d65e30407ef910b64b5b11b",
     "58675491d1eb8d8ef29c18613bddec2d8f0f3e1e333db6f749673f19b368d7c7",
+    "5873c4ddd44a6c17aefab617691c86873c04d71ad96385412ad407a1b0748c57",
     "595dca31bb98ceb5cc9712628f7147134cc09b7c68a56c2df55c33ee6123e110",
     "59f1b9b7c2315f224b9ef25c96ff67d0583598a0a2ee768e7915360d65614411",
     "5a3597d15643f4007a1af93f63e2e5deff8d996e18f687946c0d2b67c4438b51",
@@ -8330,6 +8757,7 @@
     "c8fe4c75e56591fa7abea595010b7ad0f0a12165b82f3941a14811aca6517fc2",
     "ca3b0c0126629d0d8f34ee258863a062b2a638ff4ecc2dbf3fe8ed90751c6c05",
     "ca73ff8adba562d46885af5e1d8128d117fb799fa287c1ae0922208f06c3792f",
+    "caa03c786a01c487f44cabd4cb8b211d1b1f05ba3546c001d6215b3646f6ad9b",
     "cbc943f9a9de0625a18d2ab6520da76ce675e7cd952b26174453b9e8312a6ca7",
     "cd2ffb662cd32b2d7e96ceb4f5f09495c671d2d1f443d746840ac058d7b82bd1",
     "cd495b1d4d7649376c63dd3d9a579ed1e3fd3c383fcea9c9e29d440922b96566",
@@ -8345,6 +8773,7 @@
     "d1d7fc834e58046616e1ee7ee593d450908e6d190da02106edd402fbe748b3cd",
     "d21e342a81baca78c2e07ceab8c0a8c5d74d626d3974a5caed5a0faf5af7b69a",
     "d3aedc238ffe003b2aa3bcdc98865cec5009bb6c2cff532b3dd445cb8702de36",
+    "d4ce781fdd36226ef26db033d8fec4ceb69e784928a9450ec2580c6785d87daf",
     "d5d04040527d6b170f46ef927374a3f3e250dd64d74977cefe5f75c66e156f97",
     "d677be0704b3638f836af29de55a739489b0a17de2c37cf9c9f09f95f810f92d",
     "d7a71cfb9e4f8fbe7963398b2a05abdc83d2a49a3139c3a564a6c36ee99aac2e",
@@ -8406,6 +8835,7 @@
     "f6cadee93a39adfe52612659565322d9af15e836d708b1130df03c1b56074b1e",
     "f6ee257376ba9db610bb90ca9a1547250f28737a7886b2bd866351473a423e38",
     "f72aaccca7fce8dbd98259f71656a219324146e806e7aa13685f25a026eb4c38",
+    "f75df30ac8ae0b48c7a32b133460759bb1c94517f5fd7aaa028bf2cbb295d306",
     "f77cb7cb0fed7a485aa5a5ad9b0740b54ef2327b4b867819f47cb6e215b8cc66",
     "f7e2f710757f6aed83caa2562ca3ee827b22edc31005e764ad7bfbac54320802",
     "f7f4a3be81defe27f822c6d26ab6359e4832b598ab041a751f39b935cf48e04f",
