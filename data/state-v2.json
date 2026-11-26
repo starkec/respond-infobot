@@ -5,90 +5,90 @@
       {
         "api_usage": {
           "input_tokens": 3970,
-          "output_tokens": 2116,
+          "output_tokens": 2829,
           "requests": 2,
-          "total_tokens": 6086
+          "total_tokens": 6799
         },
         "case": "public_kickbacks",
         "decision": "publish",
         "expected": "publish",
-        "reason": "Article reports prosecutors' allegation that a mayor abused her procurement authority to steer contracts in exchange for payments into her personal account and via a shell company; it directly alleges kickbacks and an active investigation.",
+        "reason": "Prosecutors allege the mayor, who was responsible for awarding contracts, steered public procurement to a supplier in exchange for payments into her personal account traced to a shell company she controlled. This is a direct allegation of abuse of entrusted power for private gain and the article\u2019s main focus is the corruption investigation.",
         "status": "passed",
         "verified": true
       },
       {
         "api_usage": {
           "input_tokens": 3968,
-          "output_tokens": 1975,
+          "output_tokens": 2375,
           "requests": 2,
-          "total_tokens": 5943
+          "total_tokens": 6343
         },
         "case": "private_embezzlement",
         "decision": "publish",
         "expected": "publish",
-        "reason": "Article directly reports an alleged embezzlement: the company's treasurer, entrusted with staff pension assets, is accused of secretly transferring them to his own investment firm and concealing the transfers for personal enrichment.",
+        "reason": "Investigators allege a private company's treasurer, entrusted with staff pension assets, secretly transferred those assets to his own investment company and concealed the transfers for personal enrichment; the article is focused on this alleged embezzlement.",
         "status": "passed",
         "verified": true
       },
       {
         "api_usage": {
           "input_tokens": 1854,
-          "output_tokens": 425,
+          "output_tokens": 359,
           "requests": 1,
-          "total_tokens": 2279
+          "total_tokens": 2213
         },
         "case": "foreign_disinformation",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article is about volunteers teaching media literacy to counter foreign disinformation; it explicitly reports no bribery, diverted resources, self-dealing or illicit financing. No entrusted-role abuse or private gain is alleged.",
+        "reason": "Article focuses on foreign-state disinformation and civic media-literacy volunteering; it explicitly reports no diverted resources, bribery, self-dealing or illicit financing. No abuse of an entrusted role or private gain through such abuse is alleged, so it does not meet the corruption definition.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1857,
-          "output_tokens": 437,
+          "output_tokens": 523,
           "requests": 1,
-          "total_tokens": 2294
+          "total_tokens": 2380
         },
         "case": "industrial_subsidies",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article describes state bank financing as part of industrial policy and mentions competition probes of subsidies but explicitly says there are no allegations of bribery, self-dealing or diversion; no abuse of entrusted power for private gain is alleged and corruption is not the article's main focus.",
+        "reason": "Article describes state bank financing under an industrial policy mandate and a competition probe into subsidies/preferences; it does not allege misuse of an entrusted role for private gain (no bribery, self-dealing, diversion or illicit patronage). This is competition/industrial-policy reporting, not a corruption case under the provided definition.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1862,
-          "output_tokens": 397,
+          "output_tokens": 364,
           "requests": 1,
-          "total_tokens": 2259
+          "total_tokens": 2226
         },
         "case": "harmful_business",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article reports corporate moderation failures and revenue from harmful content but does not allege abuse of an entrusted role for private gain or any corrupt mechanism; thus it is not substantively about corruption.",
+        "reason": "Article reports platform moderation failures and revenue from harmful content but explicitly states no bribery, embezzlement or misuse of delegated authority; it does not describe abuse of entrusted power for private gain.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1889,
-          "output_tokens": 745,
+          "output_tokens": 639,
           "requests": 1,
-          "total_tokens": 2634
+          "total_tokens": 2528
         },
         "case": "illustrative_anecdote",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article is primarily an advocacy commentary about funding journalism; the referenced corruption case is illustrative rather than the article's main focus, so it does not meet the substantive coverage criterion.",
+        "reason": "The article is primarily a commentary advocating funding for journalism; the mayor kickbacks are a past example only. Corruption is not the article's main informational purpose, so it should not be published as a corruption report.",
         "status": "passed",
         "verified": false
       }
     ],
     "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "prompt_delivery": [
       {
         "model": "gpt-5-mini",
@@ -492,6 +492,91 @@
       "source": "Mongabay",
       "title": "As incidents spike, Sri Lanka identifies 17 tuskers considered at high risk",
       "url": "https://news.mongabay.com/2026/11/as-incidents-spike-sri-lanka-identifies-17-tuskers-considered-at-high-risk/"
+    },
+    "0fe33d20dee219f95c54cffa247db5233d3b1f3f33c2c79a88f2f5960e0c26e4": {
+      "api_usage": {
+        "input_tokens": 5054,
+        "output_tokens": 359,
+        "requests": 1,
+        "total_tokens": 5413
+      },
+      "article_focus": "conservation_feature",
+      "article_input": {
+        "available_text_chars": 10758,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "e7aebb2356e99abd1450b026f1f64da56bf0c00c4906b28a2eee0c120b7683e1",
+        "text_chars": 10758,
+        "truncated": false
+      },
+      "author": "Ashley Yeong",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-26T04:29:07Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article is a conservation feature about community guardians protecting endangered terrapins. It describes threats like sand mining but contains no allegation or evidence of abuse of entrusted power, bribery, self-dealing, or improper private gain tied to an entrusted role.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 5054,
+          "output_tokens": 359,
+          "requests": 1,
+          "total_tokens": 5413
+        },
+        "article_focus": "conservation_feature",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article is a conservation feature about community guardians protecting endangered terrapins. It describes threats like sand mining but contains no allegation or evidence of abuse of entrusted power, bribery, self-dealing, or improper private gain tied to an entrusted role.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "The night watchmen guarding Malaysia\u2019s critically endangered river terrapins",
+      "url": "https://news.mongabay.com/2026/11/the-night-watchmen-guarding-malaysias-critically-endangered-river-terrapins/"
     },
     "117a41b85249be893ae2efcd02607c5fbac388e864ca276dbd7defc305ef98c3": {
       "api_usage": {
@@ -7869,7 +7954,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-25",
+  "last_checked_date": "2026-11-26",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -7922,6 +8007,7 @@
     "0f5c8ac6fdd5b86f068569256b61335047be2dd1874f716d28609228cc42fb00",
     "0f75511590469791aded30a5e408f04f519cbb1b81e2e83c75043c58628ff343",
     "0f97381b848f020e989af3bb68ac6b91dd7027fbbdfec103392989b937e946e1",
+    "0fe33d20dee219f95c54cffa247db5233d3b1f3f33c2c79a88f2f5960e0c26e4",
     "101573aa09b177a1f82cff3f2c62e587a839f6bb16c985ff2a91289f0d55182d",
     "10c8fc9521036b1c3a749ead05643a959e363bb7a3a9e91c752433bf836cf821",
     "10fdbfd9e020b7a28d7dca9e94e7edb50ab1703b1bafe60b77f8cd9701e4411b",
