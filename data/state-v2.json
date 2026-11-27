@@ -1488,6 +1488,91 @@
       "title": "\u2018We don\u2019t want it\u2019: First Nations reject plan to release mining waste into water source",
       "url": "https://news.mongabay.com/podcast/2026/11/we-dont-want-it-first-nations-reject-plan-to-release-mining-waste-into-water-source/"
     },
+    "224b48684b87d94500b08a0a6cfb39202ec64b8d06b2c46fa053770447100e6d": {
+      "api_usage": {
+        "input_tokens": 2606,
+        "output_tokens": 275,
+        "requests": 1,
+        "total_tokens": 2881
+      },
+      "article_focus": "Describe ecological, cultural and livelihood value of Borneo\u2019s rainforests and community conservation efforts",
+      "article_input": {
+        "available_text_chars": 2690,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "051c61e4084d1b03f5bac15e3d7034cf9d5b851932cc9bdc6ee9442b3222a588",
+        "text_chars": 2690,
+        "truncated": false
+      },
+      "author": "Izzy Sasada",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:39:04Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article describes cultural and ecological value of Borneo\u2019s rainforests and community efforts to defend them; it does not allege misuse of entrusted power or any improper private benefit. No concrete corrupt conduct or mechanism is described.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 2606,
+          "output_tokens": 275,
+          "requests": 1,
+          "total_tokens": 2881
+        },
+        "article_focus": "Describe ecological, cultural and livelihood value of Borneo\u2019s rainforests and community conservation efforts",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article describes cultural and ecological value of Borneo\u2019s rainforests and community efforts to defend them; it does not allege misuse of entrusted power or any improper private benefit. No concrete corrupt conduct or mechanism is described.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "What kind of wealth do Borneo\u2019s ancient rainforests hold?",
+      "url": "https://news.mongabay.com/short-article/2026/11/what-kind-of-wealth-do-borneos-ancient-rainforests-hold/"
+    },
     "22bb7bfae18c6894ffe909963039c961cb9a538875a1abd3c1e6237bc2ea2dca": {
       "api_usage": {
         "input_tokens": 1491,
@@ -3594,6 +3679,91 @@
       "title": "Drought reshapes livelihoods of Kenya\u2019s Daasanach pastoralists, study finds",
       "url": "https://news.mongabay.com/short-article/2026/11/drought-reshapes-livelihoods-of-kenyas-daasanach-pastoralists-study-finds/"
     },
+    "5f51b919a0168344908e4ce247ec2e745e9878f9da964684223355ecd85d1406": {
+      "api_usage": {
+        "input_tokens": 4011,
+        "output_tokens": 496,
+        "requests": 1,
+        "total_tokens": 4507
+      },
+      "article_focus": "Report on the recovery of whale populations in Patagonia and the threats they face (climate change, krill fishing, shipping, oil and gas development)",
+      "article_input": {
+        "available_text_chars": 7683,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "f3f122f80109bd854e6a8ccc4e46de581d986a89b17429478d3d94aea100c65b",
+        "text_chars": 7683,
+        "truncated": false
+      },
+      "author": "Mongabay Latam",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:38:49Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on whale recovery and environmental threats (climate change, fishing, oil development). It contains no allegation of abuse of an entrusted role or private gain, and corruption is not a main explanatory mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 4011,
+          "output_tokens": 496,
+          "requests": 1,
+          "total_tokens": 4507
+        },
+        "article_focus": "Report on the recovery of whale populations in Patagonia and the threats they face (climate change, krill fishing, shipping, oil and gas development)",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on whale recovery and environmental threats (climate change, fishing, oil development). It contains no allegation of abuse of an entrusted role or private gain, and corruption is not a main explanatory mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Whales return to Patagonia, but face new threats in Argentina",
+      "url": "https://news.mongabay.com/2026/11/whales-return-to-patagonia-but-face-new-threats-in-argentina/"
+    },
     "5f6ccdf0a7614ee50ea2368790e6031338b299a4b963d4a8de3d381d848b629b": {
       "api_usage": {
         "input_tokens": 1511,
@@ -4318,6 +4488,91 @@
       "source": "Mongabay",
       "title": "As Nepal celebrates the crow, urban sprawl and waste drive strain",
       "url": "https://news.mongabay.com/short-article/2026/11/as-nepal-celebrates-the-crow-urban-sprawl-and-waste-drive-strain/"
+    },
+    "6f64491ec6d2550ed68ce58425e2eaeca53a74342e736b412b2d92c574c78e68": {
+      "api_usage": {
+        "input_tokens": 3954,
+        "output_tokens": 379,
+        "requests": 1,
+        "total_tokens": 4333
+      },
+      "article_focus": "Report on ecological recovery of Florida Bay and how Everglades restoration efforts (CERP, infrastructure changes) and monitoring by an avian ecologist document returning wildlife and improved water flows.",
+      "article_input": {
+        "available_text_chars": 7035,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "f65dd545cd85c08bbaa95bab5d25720f33a628c4ef484bc252d8d9aa2f48030d",
+        "text_chars": 7035,
+        "truncated": false
+      },
+      "author": "Kelsey Nowakowski",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:39:00Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports ecological recovery and restoration efforts in the Everglades/Florida Bay; it does not allege or describe any abuse of entrusted power, private gain, or concrete corrupt mechanisms.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3954,
+          "output_tokens": 379,
+          "requests": 1,
+          "total_tokens": 4333
+        },
+        "article_focus": "Report on ecological recovery of Florida Bay and how Everglades restoration efforts (CERP, infrastructure changes) and monitoring by an avian ecologist document returning wildlife and improved water flows.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports ecological recovery and restoration efforts in the Everglades/Florida Bay; it does not allege or describe any abuse of entrusted power, private gain, or concrete corrupt mechanisms.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Aerial photos show recovery of Florida Bay, US, as restoration sends Everglades water",
+      "url": "https://news.mongabay.com/custom-story/2026/11/aerial-photos-show-recovery-of-florida-bay-us-as-restoration-sends-everglades-water/"
     },
     "70143b052a4b81a2d506de23b22dbc80be2ccca3155e70baf0a5d9d070d1a878": {
       "api_usage": {
@@ -5244,6 +5499,176 @@
       "title": "A year after a wastewater spill in the Philippines, communities fight to save a dying sea",
       "url": "https://news.mongabay.com/2026/11/a-year-after-a-wastewater-spill-in-the-philippines-communities-fight-to-save-a-dying-sea/"
     },
+    "8cb4f958575d5f565dcc07c6b04e179a6d5d5ef72cbc345f0b9bb40967a5e06c": {
+      "api_usage": {
+        "input_tokens": 3291,
+        "output_tokens": 616,
+        "requests": 1,
+        "total_tokens": 3907
+      },
+      "article_focus": "Reporting on a pollution incident, related lawsuit, and court delays/settlement negotiations",
+      "article_input": {
+        "available_text_chars": 5078,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "eb4f55ba45b19aa7ff8618430072092ef6ddddd2ef71567bec7f54b5c6340395",
+        "text_chars": 5078,
+        "truncated": false
+      },
+      "author": "Victoria Schneider",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:38:44Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article reports an environmental contamination incident and a related court delay/settlement negotiation. It describes a private company\u2019s actions and government participation in negotiations, but does not allege that a person or official abused an entrusted public or fiduciary role for private gain (no specific corrupt mechanism or improper benefit is identified).",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3291,
+          "output_tokens": 616,
+          "requests": 1,
+          "total_tokens": 3907
+        },
+        "article_focus": "Reporting on a pollution incident, related lawsuit, and court delays/settlement negotiations",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article reports an environmental contamination incident and a related court delay/settlement negotiation. It describes a private company\u2019s actions and government participation in negotiations, but does not allege that a person or official abused an entrusted public or fiduciary role for private gain (no specific corrupt mechanism or improper benefit is identified).",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Zambian court again delays copper miner\u2019s bid to block pollution lawsuit",
+      "url": "https://news.mongabay.com/short-article/2026/11/zambian-court-again-delays-copper-miners-bid-to-block-pollution-lawsuit/"
+    },
+    "8cda957b533a3197ae23d4a1bab914a03be28f0efc67b5fe8175f6b13e0dd01e": {
+      "api_usage": {
+        "input_tokens": 6677,
+        "output_tokens": 449,
+        "requests": 1,
+        "total_tokens": 7126
+      },
+      "article_focus": "Reporting on lead pollution, public-health impacts and community-led testing and litigation against a battery recycling plant",
+      "article_input": {
+        "available_text_chars": 16554,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "9fc36520a18a151d5d80c4d174c9b078c56324d1d12074abdd2f0c2a0a1ca500",
+        "text_chars": 16554,
+        "truncated": false
+      },
+      "author": "Elodie Toto",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:39:08Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article\u2019s main focus is environmental contamination, public health and community-led testing/litigation. It reports alleged regulatory failure and mentions endemic corruption in general terms but does not identify a specific entrusted role being abused for private gain, nor a concrete corrupt benefit or mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6677,
+          "output_tokens": 449,
+          "requests": 1,
+          "total_tokens": 7126
+        },
+        "article_focus": "Reporting on lead pollution, public-health impacts and community-led testing and litigation against a battery recycling plant",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article\u2019s main focus is environmental contamination, public health and community-led testing/litigation. It reports alleged regulatory failure and mentions endemic corruption in general terms but does not identify a specific entrusted role being abused for private gain, nor a concrete corrupt benefit or mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "In Republic of Congo, residents and a scientist take on a fight against lead pollution",
+      "url": "https://news.mongabay.com/2026/11/in-republic-of-congo-residents-and-a-scientist-take-on-a-fight-against-lead-pollution/"
+    },
     "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f": {
       "api_usage": {
         "input_tokens": 1183,
@@ -5267,6 +5692,91 @@
       "source": "Mongabay",
       "title": "California\u2019s Wolf Divide",
       "url": "https://news.mongabay.com/specials/2026/11/californias-wolf-divide/"
+    },
+    "8ec20459431eb00c86e74d95b9edef7d9b5a18c1272bebe1782f250927731c8f": {
+      "api_usage": {
+        "input_tokens": 6408,
+        "output_tokens": 308,
+        "requests": 1,
+        "total_tokens": 6716
+      },
+      "article_focus": "Report on Rohingya refugee families using agroforestry and NGO support to restore degraded landscape and grow food in Cox\u2019s Bazar camps.",
+      "article_input": {
+        "available_text_chars": 15607,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "345404475731a37580c150bff95ded432e92364d21199a3746c9726cb9c809d1",
+        "text_chars": 15607,
+        "truncated": false
+      },
+      "author": "Ata Ullah",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:39:11Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports on refugees using agroforestry to restore degraded land and food security; it does not allege misuse of an entrusted role or private gain and does not focus on corruption.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6408,
+          "output_tokens": 308,
+          "requests": 1,
+          "total_tokens": 6716
+        },
+        "article_focus": "Report on Rohingya refugee families using agroforestry and NGO support to restore degraded landscape and grow food in Cox\u2019s Bazar camps.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports on refugees using agroforestry to restore degraded land and food security; it does not allege misuse of an entrusted role or private gain and does not focus on corruption.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Refugee families use agroforestry to restore degraded landscape in Bangladesh camp",
+      "url": "https://news.mongabay.com/2026/11/refugee-families-use-agroforestry-to-restore-degraded-landscape-in-bangladesh-camp/"
     },
     "8edae59301a96cf8ef7f6335c1eb7d29e95c7df195b22b12f481364321bef8dd": {
       "api_usage": {
@@ -5530,6 +6040,91 @@
       "title": "After years of speculation, Suriname evicts Mennonites farming in the Amazon",
       "url": "https://news.mongabay.com/short-article/2026/11/after-years-of-speculation-suriname-evicts-mennonites-farming-in-the-amazon/"
     },
+    "95009299a854b4bef0f84181cf6c25261f7b6774861814d3e861595f9492a042": {
+      "api_usage": {
+        "input_tokens": 3278,
+        "output_tokens": 379,
+        "requests": 1,
+        "total_tokens": 3657
+      },
+      "article_focus": "Report on the discovery and taxonomic description of a new deep-sea fish species from a museum specimen.",
+      "article_input": {
+        "available_text_chars": 4766,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "2deb3ffb2fc8da0a7bcc22bed8f4bf4eded3bfa7f24e2868fad8adfc48a8248a",
+        "text_chars": 4766,
+        "truncated": false
+      },
+      "author": "Shanna Hanbury",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:38:52Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports the discovery and description of a new deep-sea fish species; it contains no allegations, descriptions or analysis of abuse of entrusted power or private gain. No corrupt conduct is described.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3278,
+          "output_tokens": 379,
+          "requests": 1,
+          "total_tokens": 3657
+        },
+        "article_focus": "Report on the discovery and taxonomic description of a new deep-sea fish species from a museum specimen.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports the discovery and description of a new deep-sea fish species; it contains no allegations, descriptions or analysis of abuse of entrusted power or private gain. No corrupt conduct is described.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "A tiny deep-sea fish eaten 42 years ago has now been named a new species",
+      "url": "https://news.mongabay.com/short-article/2026/11/a-tiny-deep-sea-fish-eaten-42-years-ago-has-now-been-named-a-new-species/"
+    },
     "961deab99c06c297cff017fa28265bd751c990977c96254843485a5f0e551053": {
       "api_usage": {
         "input_tokens": 1497,
@@ -5782,6 +6377,91 @@
       "source": "Global Voices",
       "title": "Justice is the infrastructure the world keeps forgetting",
       "url": "https://globalvoices.org/2026/11/11/justice-is-the-infrastructure-the-world-keeps-forgetting/"
+    },
+    "9d59e6aaf9ede17880012c76f7ae55d8b3e54d67ef0714860bc95e14481b13ed": {
+      "api_usage": {
+        "input_tokens": 4223,
+        "output_tokens": 531,
+        "requests": 1,
+        "total_tokens": 4754
+      },
+      "article_focus": "Human rights, freedom of expression and post-election justice in Tanzania; a musician's response to election violence and alleged state repression",
+      "article_input": {
+        "available_text_chars": 8407,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "391f9b9d73a6079460d69ab8b2786fe0f72ad0f29bf4a8237e21cc737e901bfd",
+        "text_chars": 8407,
+        "truncated": false
+      },
+      "author": "Zita Zage",
+      "autonomous_exclusion": true,
+      "benefit_type": "political_influence_without_corrupt_mechanism",
+      "checked_at": "2026-11-27T15:38:34Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "disinformation_or_repression",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article focuses on human-rights abuses, election violence and suppression of dissent; it documents abuse of power for political repression rather than abuse of entrusted power for private gain, so it does not meet the strict definition of corruption required for publication.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 4223,
+          "output_tokens": 531,
+          "requests": 1,
+          "total_tokens": 4754
+        },
+        "article_focus": "Human rights, freedom of expression and post-election justice in Tanzania; a musician's response to election violence and alleged state repression",
+        "benefit_type": "political_influence_without_corrupt_mechanism",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "disinformation_or_repression",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article focuses on human-rights abuses, election violence and suppression of dissent; it documents abuse of power for political repression rather than abuse of entrusted power for private gain, so it does not meet the strict definition of corruption required for publication.",
+        "reasoning_effort": "low"
+      },
+      "source": "Global Voices",
+      "title": "Who speaks for the voiceless in Tanzania?",
+      "url": "https://globalvoices.org/2026/11/27/who-speaks-for-the-voiceless-in-tanzania/"
     },
     "9dd957edcf3a8afb6036723390237f27629b73686e5f01e00a60d698ef12a446": {
       "api_usage": {
@@ -6680,6 +7360,91 @@
       "title": "In India, volunteers map riverside trees to make a case for urban conservation",
       "url": "https://news.mongabay.com/short-article/2026/11/in-india-volunteers-map-riverside-trees-to-make-a-case-for-urban-conservation/"
     },
+    "bf55f7fbfd3e7bdd8ce96d5ac997f72fe2e06a82bf6e71054f301234a6984189": {
+      "api_usage": {
+        "input_tokens": 5991,
+        "output_tokens": 388,
+        "requests": 1,
+        "total_tokens": 6379
+      },
+      "article_focus": "Report on local community activism and a candidacy to oppose a government redevelopment plan threatening an urban woodland (environmental/political story).",
+      "article_input": {
+        "available_text_chars": 13661,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "baf1322a965222658ea29990aa334211dd091ea4dd7fe039dd5fad023a515a37",
+        "text_chars": 13661,
+        "truncated": false
+      },
+      "author": "Aylin Ho",
+      "autonomous_exclusion": true,
+      "benefit_type": "ordinary_policy_or_business_benefit",
+      "checked_at": "2026-11-27T15:38:57Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "resource_or_rights_policy",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports a community and an independent candidate opposing a government urban redevelopment plan that would convert woodland to commercial/residential use. It describes policy conflict and conservation activism but does not allege abuse of entrusted power for private gain or any corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 5991,
+          "output_tokens": 388,
+          "requests": 1,
+          "total_tokens": 6379
+        },
+        "article_focus": "Report on local community activism and a candidacy to oppose a government redevelopment plan threatening an urban woodland (environmental/political story).",
+        "benefit_type": "ordinary_policy_or_business_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "resource_or_rights_policy",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports a community and an independent candidate opposing a government urban redevelopment plan that would convert woodland to commercial/residential use. It describes policy conflict and conservation activism but does not allege abuse of entrusted power for private gain or any corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "\u2018Vote for trees\u2019: Taiwan community pins hope on \u2018Forest Grandma\u2019 to save beloved woods",
+      "url": "https://news.mongabay.com/2026/11/vote-for-trees-taiwan-community-pins-hope-on-forest-grandma-to-save-beloved-woods/"
+    },
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac": {
       "api_usage": {
         "input_tokens": 6949,
@@ -6755,6 +7520,91 @@
       "source": "Mongabay",
       "title": "Wolves help wild blueberries grow, US study finds",
       "url": "https://news.mongabay.com/2026/11/wolves-help-wild-blueberries-grow-us-study-finds/"
+    },
+    "c1c8d22b77d745aa7a6e7c9490e1da2a1547b2e93fb0271bb6e45bea6662c156": {
+      "api_usage": {
+        "input_tokens": 6231,
+        "output_tokens": 313,
+        "requests": 1,
+        "total_tokens": 6544
+      },
+      "article_focus": "Profile/feature on Liberian women rangers, gender barriers, and conservation challenges in protected areas.",
+      "article_input": {
+        "available_text_chars": 14572,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "0660ea1594f49321e4d0e506c269139dc4514529d2300c9343cb6abd65779bb7",
+        "text_chars": 14572,
+        "truncated": false
+      },
+      "author": "Tina S. Mehnpaine",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T15:38:39Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article is a human-interest/conservation profile about women rangers in Liberia; it does not allege misuse of entrusted power for private gain or describe corrupt mechanisms. It focuses on gender, conservation challenges and ranger duties, not corruption.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6231,
+          "output_tokens": 313,
+          "requests": 1,
+          "total_tokens": 6544
+        },
+        "article_focus": "Profile/feature on Liberian women rangers, gender barriers, and conservation challenges in protected areas.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article is a human-interest/conservation profile about women rangers in Liberia; it does not allege misuse of entrusted power for private gain or describe corrupt mechanisms. It focuses on gender, conservation challenges and ranger duties, not corruption.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Meet the few Liberian women rangers in a race to protect wildlife and forests",
+      "url": "https://news.mongabay.com/2026/11/meet-the-few-liberian-women-rangers-in-a-race-to-protect-wildlife-and-forests/"
     },
     "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15": {
       "api_usage": {
@@ -8987,6 +9837,7 @@
     "216133e36ed70a4e58a9d56eb4d48fe8a4001f26a16ef1bf2374c7d4f0c29e15",
     "2219ada5e27154d8e835252e1cc38d316e336d17f1e62b6c234ab0e732410bcc",
     "222c22357ac865b786de3f57d214bff992f7084f63e83210e667cfc2f8336de7",
+    "224b48684b87d94500b08a0a6cfb39202ec64b8d06b2c46fa053770447100e6d",
     "22bb7bfae18c6894ffe909963039c961cb9a538875a1abd3c1e6237bc2ea2dca",
     "22bf9e388ecd4b17bac41f744204e3eae6cf438340a2713dfd33b00a7ecb1acb",
     "250b48593eb86ab206d04acafc0e70051ce5fd76ee47ec31881a195d2992e370",
@@ -9091,6 +9942,7 @@
     "5d0192b218325a03196641c44c95c113c44a91448675e98faa81c6c7d73735c2",
     "5d05aa58dec448636c5f382bdd14c50aeee5ecaab71101a1f742ffca5769ba59",
     "5e6a1b2573be0c6a1ce9630822a7af4323ff0fbc3b17983b8cc15198f8d1c472",
+    "5f51b919a0168344908e4ce247ec2e745e9878f9da964684223355ecd85d1406",
     "5f6ccdf0a7614ee50ea2368790e6031338b299a4b963d4a8de3d381d848b629b",
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801",
     "609280de9a94fda74157943c5b873b75e888b40c6fe5b78453fd5b2a275456e2",
@@ -9125,6 +9977,7 @@
     "6e51fe1ebaa3d1b67e70b34a7436bf9ba1fc1c1def11303ca3f2ad7520edfc36",
     "6e6c4d096e5f342071f6cabc7bc93b3bda1021a6bba9dc24db99ce3264018a61",
     "6e85e3ab0d6dee7e5e852b672bef2a5eff9a4b8df14d2b297c57b5ecd71ad130",
+    "6f64491ec6d2550ed68ce58425e2eaeca53a74342e736b412b2d92c574c78e68",
     "70143b052a4b81a2d506de23b22dbc80be2ccca3155e70baf0a5d9d070d1a878",
     "70d233665e7711267cb44319baad6671d5963c4b1f0320af0f5785fe1cb6862e",
     "71b5ee627a401655c28414450118be9984db1aa1d2a2803aa3ec4bf96735c59c",
@@ -9178,8 +10031,11 @@
     "8a973ac7da5d37d5b69fe6bb45c0572b333e0458d3c583e5694928eb219cdc9f",
     "8ab2e38e412fee2e269363d1cc4a0217dcc59bbe05a78441fa267ef0b66e03c4",
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
+    "8cb4f958575d5f565dcc07c6b04e179a6d5d5ef72cbc345f0b9bb40967a5e06c",
+    "8cda957b533a3197ae23d4a1bab914a03be28f0efc67b5fe8175f6b13e0dd01e",
     "8dc334d37d28c6223b93bd0893c4d5b5f11631b90410b10e9bc5e0bfb073ae1f",
     "8e996ca45f477386f8e9ab2afcf6a684147aa2607ba6c7a029ed0ff166947bcd",
+    "8ec20459431eb00c86e74d95b9edef7d9b5a18c1272bebe1782f250927731c8f",
     "8edae59301a96cf8ef7f6335c1eb7d29e95c7df195b22b12f481364321bef8dd",
     "8f23c9d7945300f1be3380d66a9400794dcab8916ee614804908dd0cdc40f2fb",
     "8fdd554b423facaf68d2038ee280f232f7eafa36ab2ad25b7274ec903553b3c8",
@@ -9189,6 +10045,7 @@
     "91addbfcf193f0f3c038ed3d765ff33c7edf190a10c1ea90e9a3e0e11beaf74c",
     "93842ee99e5b3fccdc0be32cee4325089a91a344934a37ff181f4d8a064fc700",
     "948401d17cd51c8ba62947c783afe6db9c1783c62f66cb6d203b04d601aab3d2",
+    "95009299a854b4bef0f84181cf6c25261f7b6774861814d3e861595f9492a042",
     "961deab99c06c297cff017fa28265bd751c990977c96254843485a5f0e551053",
     "966e7582248ffbc134ab07f7df0eaa8dc55afe97099364150b9119397ed3e382",
     "96b37c9b71c024dc4f04fd78a3df8eb1688a1c992db10674a33ab58ac39cb791",
@@ -9204,6 +10061,7 @@
     "9be84e6c81b114b5ff156932b1e53914da17d3670b1bb33064c93796d76c2901",
     "9cb8e8fe0d24271bca9832a934c6ea2f1bed498180a667968c652ed62e7b9e07",
     "9cbb3aced155e6ed25fad231d04e02599b2954edd4ca73917616fce70b7283fc",
+    "9d59e6aaf9ede17880012c76f7ae55d8b3e54d67ef0714860bc95e14481b13ed",
     "9dd957edcf3a8afb6036723390237f27629b73686e5f01e00a60d698ef12a446",
     "9e66b50629e3387029ecf3f7fa6f81920e62203992e39ef212f2763ed91395ee",
     "9efe7b86b4e57b072e6d2875d4a30a11e648dfa250390ff007436c6a1e2e98dd",
@@ -9260,11 +10118,13 @@
     "bee3c44f0370be6560544454cac95c0a99f28d9ccbe5c6cc68cacd9508594a9c",
     "bf2f0b47723b0cff4b9f2b83b8583ee6c29a7cd5df635f0a9252e21fc92e30d7",
     "bf2fa7ae9d1faee61acfbbb94dc97876af33c20163461b9e66555f089e101879",
+    "bf55f7fbfd3e7bdd8ce96d5ac997f72fe2e06a82bf6e71054f301234a6984189",
     "c01b678f85dbff348cda14bb32244276a8cb56859d4f993365fe39fa1bfc60ac",
     "c05343c18689f647b281d1da429fc19d7059ec791f4854391f71411515cc46e0",
     "c056fce9d2fa72315ca3a196eab9acd6df91afbcbc0b91fbc9f756a0f75758ea",
     "c10ff0220dcd5c128ecaf1e8dcfce97eb179a32ac331aadc09d7ccd2676d2379",
     "c1706af9d70156d4efb373aec00e26582e363e54c49316041570a2ab8494a920",
+    "c1c8d22b77d745aa7a6e7c9490e1da2a1547b2e93fb0271bb6e45bea6662c156",
     "c210778bbcc58c75f37d9ef4758df1e53fa458fe7ceab03503ee120c49aebaa3",
     "c2ad5f24cfa2197c80b4c7b45527527a64cdab7cb41ce16603651b6045eb3f15",
     "c2c948cf8d93531ca3c5ad99c8c61d4e88c11caf3b30aa344f8d299d087cf83d",
