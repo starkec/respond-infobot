@@ -865,6 +865,91 @@
       "title": "Study maps jaguars across the Americas to help their populations rebound",
       "url": "https://news.mongabay.com/2026/11/study-maps-jaguars-across-the-americas-to-help-their-populations-rebound/"
     },
+    "1616a9fe44f6e110a20a18d3dc0ef3cd062020dc3f3f7b811c23f97f93753f24": {
+      "api_usage": {
+        "input_tokens": 3177,
+        "output_tokens": 499,
+        "requests": 1,
+        "total_tokens": 3676
+      },
+      "article_focus": "Conservation status, range and recent sightings of jaguars, plus a report of seized illegally kept wildlife.",
+      "article_input": {
+        "available_text_chars": 4533,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "12fcdf00be7ad65452374e9aa90953014eb5270ae626851582f84ca7e659e60c",
+        "text_chars": 4533,
+        "truncated": false
+      },
+      "author": "Mongabay.com",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T23:45:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article is primarily about jaguar conservation, range and recent sightings. It mentions an animal seizure by authorities but contains no allegation or description of abuse of entrusted power for private gain, nor any specific corrupt mechanism or improper benefit.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3177,
+          "output_tokens": 499,
+          "requests": 1,
+          "total_tokens": 3676
+        },
+        "article_focus": "Conservation status, range and recent sightings of jaguars, plus a report of seized illegally kept wildlife.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article is primarily about jaguar conservation, range and recent sightings. It mentions an animal seizure by authorities but contains no allegation or description of abuse of entrusted power for private gain, nor any specific corrupt mechanism or improper benefit.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "International Jaguar Day: Big cats hold on at the edges of their range",
+      "url": "https://news.mongabay.com/short-article/2026/11/international-jaguar-day-big-cats-hold-on-at-the-edges-of-their-range/"
+    },
     "16e3c53d58d184923b8ae05d9fe18ee1ce804b240504f01e77545ef168676c7e": {
       "api_usage": {
         "input_tokens": 3342,
@@ -1737,6 +1822,91 @@
       "source": "Bellingcat",
       "title": "Inside the Secretive, Contradictory World of Campaign Ads Funded by AI Super PACs",
       "url": "https://www.bellingcat.com/news/2026/11/02/ai-super-pacs-political-advertising/"
+    },
+    "2709d7584e209fa604ced2796fc167589abc8402b491c1104ec6e0ef761ec347": {
+      "api_usage": {
+        "input_tokens": 3879,
+        "output_tokens": 333,
+        "requests": 1,
+        "total_tokens": 4212
+      },
+      "article_focus": "Report on ICJ ruling that Myanmar committed genocide against the Rohingya people and reactions",
+      "article_input": {
+        "available_text_chars": 7262,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "b4fe4897995fe5ed5a2433e834c8293bccad50b94b7a9c6c05353c5d0773acb6",
+        "text_chars": 7262,
+        "truncated": false
+      },
+      "author": "Mong Palatino",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T23:45:30Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports an ICJ ruling that Myanmar committed genocide against the Rohingya. It details human-rights violations, legal judgment, reactions and calls for accountability, but does not allege abuse of an entrusted role for private gain or any corrupt mechanism.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3879,
+          "output_tokens": 333,
+          "requests": 1,
+          "total_tokens": 4212
+        },
+        "article_focus": "Report on ICJ ruling that Myanmar committed genocide against the Rohingya people and reactions",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports an ICJ ruling that Myanmar committed genocide against the Rohingya. It details human-rights violations, legal judgment, reactions and calls for accountability, but does not allege abuse of an entrusted role for private gain or any corrupt mechanism.",
+        "reasoning_effort": "low"
+      },
+      "source": "Global Voices",
+      "title": "International Court of Justice rules Myanmar committed genocide against the Rohingya people",
+      "url": "https://globalvoices.org/2026/11/27/international-court-of-justice-rules-myanmar-committed-genocide-against-the-rohingya-people/"
     },
     "272fee4229bf2095f9f24003c975f589390b61e7e7e97f33bf4062e1af171ed9": {
       "api_usage": {
@@ -9814,6 +9984,7 @@
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
     "13d200c5fb7d8ad05478bfe99bfda4d692316bc15ba56fbfb6cbf55153d0e148",
     "1598a200ac5e8e1ad032f32338cc408bcc5de67d904098c781035708b878cbcb",
+    "1616a9fe44f6e110a20a18d3dc0ef3cd062020dc3f3f7b811c23f97f93753f24",
     "16e3c53d58d184923b8ae05d9fe18ee1ce804b240504f01e77545ef168676c7e",
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b",
     "17075e2c26cbdb9730625976ea6bfd86b4ec5a1caff5c7912437d713ba9a3a53",
@@ -9844,6 +10015,7 @@
     "252624f88b56db4d806c5090b1b5d4aeec533e8c23ae23574ff2ff99be4666fd",
     "263194541dc2a29e327157301415a626c585799c29bf57d38debb77f85f5b33e",
     "2680a9c0b7f0af78f2d0e0b284d08c1426c33687e8972c8a4c925963a49bdfc6",
+    "2709d7584e209fa604ced2796fc167589abc8402b491c1104ec6e0ef761ec347",
     "272fee4229bf2095f9f24003c975f589390b61e7e7e97f33bf4062e1af171ed9",
     "27308fbc213f504e312937c264bfcedc52dec5b1c750b03e2fcc92c2b39c8190",
     "27afd2b9f36895853c44e0768d6a61f29873c637c116f9ee68f94ae8b1173bba",
