@@ -5,90 +5,90 @@
       {
         "api_usage": {
           "input_tokens": 3970,
-          "output_tokens": 2829,
+          "output_tokens": 1629,
           "requests": 2,
-          "total_tokens": 6799
+          "total_tokens": 5599
         },
         "case": "public_kickbacks",
         "decision": "publish",
         "expected": "publish",
-        "reason": "Prosecutors allege the mayor, who was responsible for awarding contracts, steered public procurement to a supplier in exchange for payments into her personal account traced to a shell company she controlled. This is a direct allegation of abuse of entrusted power for private gain and the article\u2019s main focus is the corruption investigation.",
+        "reason": "The article's main purpose is to report a prosecutors' investigation alleging a mayor abused her procurement authority by steering contracts in exchange for payments/kickbacks to her personal account and a shell company.",
         "status": "passed",
         "verified": true
       },
       {
         "api_usage": {
           "input_tokens": 3968,
-          "output_tokens": 2375,
+          "output_tokens": 2277,
           "requests": 2,
-          "total_tokens": 6343
+          "total_tokens": 6245
         },
         "case": "private_embezzlement",
         "decision": "publish",
         "expected": "publish",
-        "reason": "Investigators allege a private company's treasurer, entrusted with staff pension assets, secretly transferred those assets to his own investment company and concealed the transfers for personal enrichment; the article is focused on this alleged embezzlement.",
+        "reason": "The article's main purpose is to report investigators' allegations that a private company treasurer, entrusted with staff pension assets, secretly transferred those assets to his own investment company (concealed via false ledger entries) for personal enrichment\u2014a clear embezzlement/diversion case.",
         "status": "passed",
         "verified": true
       },
       {
         "api_usage": {
           "input_tokens": 1854,
-          "output_tokens": 359,
+          "output_tokens": 559,
           "requests": 1,
-          "total_tokens": 2213
+          "total_tokens": 2413
         },
         "case": "foreign_disinformation",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article focuses on foreign-state disinformation and civic media-literacy volunteering; it explicitly reports no diverted resources, bribery, self-dealing or illicit financing. No abuse of an entrusted role or private gain through such abuse is alleged, so it does not meet the corruption definition.",
+        "reason": "Article is about foreign disinformation and volunteers teaching media literacy, and explicitly states there is no bribery, diverted resources, self-dealing or illicit financing. It does not allege corruption or abuse of entrusted power for private gain.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1857,
-          "output_tokens": 523,
+          "output_tokens": 560,
           "requests": 1,
-          "total_tokens": 2380
+          "total_tokens": 2417
         },
         "case": "industrial_subsidies",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article describes state bank financing under an industrial policy mandate and a competition probe into subsidies/preferences; it does not allege misuse of an entrusted role for private gain (no bribery, self-dealing, diversion or illicit patronage). This is competition/industrial-policy reporting, not a corruption case under the provided definition.",
+        "reason": "Article describes state bank support for industrial policy and competition concerns about subsidies/preferential loans; it explicitly states there are no allegations of self-dealing, kickbacks, patronage or diversion. The piece concerns industrial policy/competition, not abuse of entrusted power for private gain.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1862,
-          "output_tokens": 364,
+          "output_tokens": 410,
           "requests": 1,
-          "total_tokens": 2226
+          "total_tokens": 2272
         },
         "case": "harmful_business",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article reports platform moderation failures and revenue from harmful content but explicitly states no bribery, embezzlement or misuse of delegated authority; it does not describe abuse of entrusted power for private gain.",
+        "reason": "Article reports a platform's failure to remove harmful content and resulting harm but explicitly states there is no bribery, embezzlement, self-dealing or corrupt misuse of delegated authority; it does not allege abuse of entrusted power for private gain.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1889,
-          "output_tokens": 639,
+          "output_tokens": 856,
           "requests": 1,
-          "total_tokens": 2528
+          "total_tokens": 2745
         },
         "case": "illustrative_anecdote",
         "decision": "skip",
         "expected": "skip",
-        "reason": "The article is primarily a commentary advocating funding for journalism; the mayor kickbacks are a past example only. Corruption is not the article's main informational purpose, so it should not be published as a corruption report.",
+        "reason": "The piece is an advocacy commentary arguing for journalism funding that only uses a past mayor kickbacks conviction as an illustrative example; corruption is not the article's main subject or explanatory focus.",
         "status": "passed",
         "verified": false
       }
     ],
     "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "prompt_delivery": [
       {
         "model": "gpt-5-mini",
@@ -864,6 +864,91 @@
       "source": "Mongabay",
       "title": "Study maps jaguars across the Americas to help their populations rebound",
       "url": "https://news.mongabay.com/2026/11/study-maps-jaguars-across-the-americas-to-help-their-populations-rebound/"
+    },
+    "16e3c53d58d184923b8ae05d9fe18ee1ce804b240504f01e77545ef168676c7e": {
+      "api_usage": {
+        "input_tokens": 3342,
+        "output_tokens": 502,
+        "requests": 1,
+        "total_tokens": 3844
+      },
+      "article_focus": "Report on Sri Lanka\u2019s deployment of a military-led task force to protect rare tusker elephants and expert views on appropriate conservation measures.",
+      "article_input": {
+        "available_text_chars": 5265,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "4f5683bb515dfe6db911d7e5250d4f48e65c73141adf7a705d054a1c54923efc",
+        "text_chars": 5265,
+        "truncated": false
+      },
+      "author": "Mongabay.com",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T05:25:35Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article reports on wildlife protection and anti-poaching measures; it describes illegal poaching and law enforcement actions but contains no allegation of abuse of entrusted power for private gain or corrupt mechanisms. Thus it is not a corruption story under the defined criteria.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3342,
+          "output_tokens": 502,
+          "requests": 1,
+          "total_tokens": 3844
+        },
+        "article_focus": "Report on Sri Lanka\u2019s deployment of a military-led task force to protect rare tusker elephants and expert views on appropriate conservation measures.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article reports on wildlife protection and anti-poaching measures; it describes illegal poaching and law enforcement actions but contains no allegation of abuse of entrusted power for private gain or corrupt mechanisms. Thus it is not a corruption story under the defined criteria.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Sri Lanka deploys \u2018elephant army\u2019 to protect rare tuskers, but experts urge caution",
+      "url": "https://news.mongabay.com/short-article/2026/11/sri-lanka-deploys-elephant-army-to-protect-rare-tuskers-but-experts-urge-caution/"
     },
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": {
       "api_usage": {
@@ -6181,6 +6266,91 @@
       "title": "In Moldova, teens are learning about democracy and elections through an app",
       "url": "https://globalvoices.org/2026/11/19/in-moldova-teens-are-learning-about-democracy-and-elections-through-an-app/"
     },
+    "b2630c6c7fc2b35ce8a2fb8d4371ae6020234b077059af7be6a26265ff3627e4": {
+      "api_usage": {
+        "input_tokens": 6322,
+        "output_tokens": 585,
+        "requests": 1,
+        "total_tokens": 6907
+      },
+      "article_focus": "Debate in Nepal on future of large reservoir hydropower dams after a catastrophic flood, examining risks (GLOFs, seismic, debris), alternatives (solar, pumped storage), costs and planned projects.",
+      "article_input": {
+        "available_text_chars": 14312,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "87376668b5f8163abd585eb3f19691642f7ce2f04b62866e799d6fa9da269006",
+        "text_chars": 14312,
+        "truncated": false
+      },
+      "author": "Rudra Pangeni",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-27T05:25:30Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "other_explicit_corrupt_abuse",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article discusses policy debate over mega-dams, flood risk, engineering, costs and planned projects, but contains no allegation or evidence of entrusted-power abuse for private gain (no bribery, embezzlement, self-dealing or corrupt appointments). It is policy/technical reporting, not corruption reporting.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 6322,
+          "output_tokens": 585,
+          "requests": 1,
+          "total_tokens": 6907
+        },
+        "article_focus": "Debate in Nepal on future of large reservoir hydropower dams after a catastrophic flood, examining risks (GLOFs, seismic, debris), alternatives (solar, pumped storage), costs and planned projects.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article discusses policy debate over mega-dams, flood risk, engineering, costs and planned projects, but contains no allegation or evidence of entrusted-power abuse for private gain (no bribery, embezzlement, self-dealing or corrupt appointments). It is policy/technical reporting, not corruption reporting.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "In Nepal, experts debate future of mega-dams after August\u2019s flood",
+      "url": "https://news.mongabay.com/2026/11/in-nepal-experts-debate-future-of-mega-dams-after-augusts-flood/"
+    },
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce": {
       "api_usage": {
         "input_tokens": 6842,
@@ -6839,6 +7009,91 @@
       "source": "Mongabay",
       "title": "Spicy ping-pong balls and flaming dung keep elephants at bay in Zimbabwe",
       "url": "https://news.mongabay.com/short-article/2026/11/spicy-ping-pong-balls-and-flaming-dung-keep-elephants-at-bay-in-zimbabwe/"
+    },
+    "ca92cf1edbc805a3cb3dfac96315511f5e386aee831c62314ea30831ee4bff93": {
+      "api_usage": {
+        "input_tokens": 3343,
+        "output_tokens": 574,
+        "requests": 1,
+        "total_tokens": 3917
+      },
+      "article_focus": "Report on illegal wildlife trafficking routes and seizures linking Hong Kong and Australia",
+      "article_input": {
+        "available_text_chars": 5273,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "b2d27e684980e8472b4f7d397376c42d343408dcd0c2dae9ca7e599d5bed2435",
+        "text_chars": 5273,
+        "truncated": false
+      },
+      "author": "Mongabay.com",
+      "autonomous_exclusion": true,
+      "benefit_type": "other_explicit_corrupt_benefit",
+      "checked_at": "2026-11-27T05:25:40Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "other_explicit_corrupt_abuse",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "The article documents illegal wildlife smuggling and trafficking networks but does not allege abuse of an entrusted public or fiduciary role (e.g., officials diverting power or assets) or a corrupt mechanism (bribery, self-dealing, embezzlement) that produced private gain tied to entrusted authority. Thus it does not meet the strict corruption definition required for publication.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3343,
+          "output_tokens": 574,
+          "requests": 1,
+          "total_tokens": 3917
+        },
+        "article_focus": "Report on illegal wildlife trafficking routes and seizures linking Hong Kong and Australia",
+        "benefit_type": "other_explicit_corrupt_benefit",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "other_explicit_corrupt_abuse",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "The article documents illegal wildlife smuggling and trafficking networks but does not allege abuse of an entrusted public or fiduciary role (e.g., officials diverting power or assets) or a corrupt mechanism (bribery, self-dealing, embezzlement) that produced private gain tied to entrusted authority. Thus it does not meet the strict corruption definition required for publication.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Hong Kong becomes key link in illegal trade of Australia\u2019s native reptiles",
+      "url": "https://news.mongabay.com/short-article/2026/11/hong-kong-becomes-key-link-in-illegal-trade-of-australias-native-reptiles/"
     },
     "caa03c786a01c487f44cabd4cb8b211d1b1f05ba3546c001d6215b3646f6ad9b": {
       "api_usage": {
@@ -8642,7 +8897,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-26",
+  "last_checked_date": "2026-11-27",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
@@ -8709,6 +8964,7 @@
     "136cc7bd9dbf5bb044e5dc9ec68dce7d3d28fb90231dbc6371be98180a13ac52",
     "13d200c5fb7d8ad05478bfe99bfda4d692316bc15ba56fbfb6cbf55153d0e148",
     "1598a200ac5e8e1ad032f32338cc408bcc5de67d904098c781035708b878cbcb",
+    "16e3c53d58d184923b8ae05d9fe18ee1ce804b240504f01e77545ef168676c7e",
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b",
     "17075e2c26cbdb9730625976ea6bfd86b4ec5a1caff5c7912437d713ba9a3a53",
     "17a1c46ca13aacc2aab3de45249a36039b483be1a66427873da5831258fbfdc1",
@@ -8979,6 +9235,7 @@
     "af602226ea1fccefa3867a4e8254b132434a4c16ab17ad6d11c9b4ef0e1b2279",
     "af641c7c2570a5196954388e0bf6c05ac75ba5fc5af7d0abcee232c8fcf0d306",
     "b1857d4ba9390038c999ba18b4047d1cf6995884a66209f6f439167ba7347a64",
+    "b2630c6c7fc2b35ce8a2fb8d4371ae6020234b077059af7be6a26265ff3627e4",
     "b2a995b333e04194386fa0240cbfb5268844723642cc7aad353352083afb7ab7",
     "b3956a7cfd547bf33818603860d618c8ff00fad204feb46c0aabee2201a6b9b6",
     "b3c33c1df3848c43f5d68642469709f7b5c47fb7c50522643de74045261befce",
@@ -9021,6 +9278,7 @@
     "c8fe4c75e56591fa7abea595010b7ad0f0a12165b82f3941a14811aca6517fc2",
     "ca3b0c0126629d0d8f34ee258863a062b2a638ff4ecc2dbf3fe8ed90751c6c05",
     "ca73ff8adba562d46885af5e1d8128d117fb799fa287c1ae0922208f06c3792f",
+    "ca92cf1edbc805a3cb3dfac96315511f5e386aee831c62314ea30831ee4bff93",
     "caa03c786a01c487f44cabd4cb8b211d1b1f05ba3546c001d6215b3646f6ad9b",
     "cbc943f9a9de0625a18d2ab6520da76ce675e7cd952b26174453b9e8312a6ca7",
     "cd2ffb662cd32b2d7e96ceb4f5f09495c671d2d1f443d746840ac058d7b82bd1",
