@@ -3979,6 +3979,91 @@
       "title": "Can LLMs Supercharge Geolocations? Our Tests Show Big Improvements But Humans Remain Key",
       "url": "https://www.bellingcat.com/resources/2026/10/22/can-llms-supercharge-geolocations-our-tests-show-big-improvements-but-humans-remain-key/"
     },
+    "602e2c258b1377d6f3bc0ae81ec810b04e568d5cedfdc3c6045808e0db9456e0": {
+      "api_usage": {
+        "input_tokens": 5709,
+        "output_tokens": 345,
+        "requests": 1,
+        "total_tokens": 6054
+      },
+      "article_focus": "science communication / climate impacts (glacier extinction) and an interactive mapping tool",
+      "article_input": {
+        "available_text_chars": 12709,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "b9b1a095f075ff8d04f97a1c0b7ae61e14fe023b17e450d30258fe695e0f992e",
+        "text_chars": 12709,
+        "truncated": false
+      },
+      "author": "Abhishyant Kidangoor",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-28T14:16:05Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article is a scientific interview about glacier extinction and a public mapping tool; it does not allege misuse of entrusted power or private gain and does not focus on corruption.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 5709,
+          "output_tokens": 345,
+          "requests": 1,
+          "total_tokens": 6054
+        },
+        "article_focus": "science communication / climate impacts (glacier extinction) and an interactive mapping tool",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article is a scientific interview about glacier extinction and a public mapping tool; it does not allege misuse of entrusted power or private gain and does not focus on corruption.",
+        "reasoning_effort": "low"
+      },
+      "source": "Mongabay",
+      "title": "Will my glacier go extinct? Interview with Lander Van Tricht",
+      "url": "https://news.mongabay.com/2026/11/will-my-glacier-go-extinct-interview-with-lander-van-tricht/"
+    },
     "609280de9a94fda74157943c5b873b75e888b40c6fe5b78453fd5b2a275456e2": {
       "api_usage": {
         "input_tokens": 1489,
@@ -5527,6 +5612,91 @@
       "source": "Mongabay",
       "title": "How a feminist lens is shaping my climate reporting (commentary)",
       "url": "https://news.mongabay.com/2026/11/how-a-feminist-lens-is-shaping-my-climate-reporting-commentary/"
+    },
+    "8979a574345bd1943138e90cd6890733fbd0b75334ea6ffab3e6f2e016b10cfd": {
+      "api_usage": {
+        "input_tokens": 3428,
+        "output_tokens": 380,
+        "requests": 1,
+        "total_tokens": 3808
+      },
+      "article_focus": "first-person environmental activism / Indigenous rights advocacy",
+      "article_input": {
+        "available_text_chars": 5706,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "ab943ef6ca18af5e893807d635115785a50d69b693dc5ebd0eeb5e724bd2a495",
+        "text_chars": 5706,
+        "truncated": false
+      },
+      "author": "Dialogue Earth",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-28T14:16:01Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article is a first-person environmental/activist essay about Indigenous resistance to mining and protecting nature. It criticises state priorities broadly but provides no concrete allegations of abuse of entrusted power, specific corrupt mechanisms, or identifiable improper private gains necessary to meet the corruption criteria.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3428,
+          "output_tokens": 380,
+          "requests": 1,
+          "total_tokens": 3808
+        },
+        "article_focus": "first-person environmental activism / Indigenous rights advocacy",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article is a first-person environmental/activist essay about Indigenous resistance to mining and protecting nature. It criticises state priorities broadly but provides no concrete allegations of abuse of entrusted power, specific corrupt mechanisms, or identifiable improper private gains necessary to meet the corruption criteria.",
+        "reasoning_effort": "low"
+      },
+      "source": "Global Voices",
+      "title": "Indonesia\u2019s Mama Aleta: Don\u2019t wait for permission to protect Mother Nature",
+      "url": "https://globalvoices.org/2026/11/28/indonesias-mama-aleta-dont-wait-for-permission-to-protect-mother-nature/"
     },
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005": {
       "api_usage": {
@@ -10117,6 +10287,7 @@
     "5f51b919a0168344908e4ce247ec2e745e9878f9da964684223355ecd85d1406",
     "5f6ccdf0a7614ee50ea2368790e6031338b299a4b963d4a8de3d381d848b629b",
     "5fd896140c8247e325829daa1e7f651eb194c39271c71ad7c84be2b771686801",
+    "602e2c258b1377d6f3bc0ae81ec810b04e568d5cedfdc3c6045808e0db9456e0",
     "609280de9a94fda74157943c5b873b75e888b40c6fe5b78453fd5b2a275456e2",
     "61c7c210c3e4abc3ac6d009cef12e4fc17989ac49475c6e043b3e7805358baa4",
     "62711518d243883399b4bd8f239d33ca354e5f4e952a99e300035d2888de8adf",
@@ -10197,6 +10368,7 @@
     "88596189e1dc1e93eeec3e08daf10906895f94b10f1c0efe02954350390009df",
     "885a9aa9504595c34c5aead1556950198d2f06e6912eee1ebc01a562926b5d84",
     "88f35e7840e723dab63a91de28798ef059c7161bb5d4d076fb2e502f13fb4ebf",
+    "8979a574345bd1943138e90cd6890733fbd0b75334ea6ffab3e6f2e016b10cfd",
     "89cd6ee5fa2f48a4787459e96453f9c7b91754ebfa6a1fa71787c9edff27d005",
     "8a2ff82ae85935354d70f2e41e7f9de511d659124813bc5029b21ac0b135968b",
     "8a79b70e79b0c61f5aeaa2e1f53bf36927cf0e0c6ff59854e565000a323cf981",
