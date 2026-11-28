@@ -5815,6 +5815,91 @@
       "title": "Funding shortages threaten search for critically endangered \u2018Asian unicorn\u2019",
       "url": "https://news.mongabay.com/short-article/2026/11/funding-shortages-threaten-search-for-critically-endangered-asian-unicorn/"
     },
+    "8ad50790f9ba266f54176eb591094f66c6320a6e6d75325930e04889e8d6e625": {
+      "api_usage": {
+        "input_tokens": 3926,
+        "output_tokens": 451,
+        "requests": 1,
+        "total_tokens": 4377
+      },
+      "article_focus": "Reporting on a transnational drug-trafficking operation involving a pilot and links to the Kinahan organised crime group.",
+      "article_input": {
+        "available_text_chars": 7183,
+        "extractor": "article-body-v2",
+        "origin": "extracted article body",
+        "sha256": "41a06d7188c63b841cd083d95d488151304ceea064b826b7de53843eadfa23c7",
+        "text_chars": 7183,
+        "truncated": false
+      },
+      "author": "Financial Investigations Team",
+      "autonomous_exclusion": true,
+      "benefit_type": "not_established",
+      "checked_at": "2026-11-28T21:47:33Z",
+      "checks": {
+        "abuse_of_entrusted_power": false,
+        "private_gain": false,
+        "substantive_corruption_coverage": false
+      },
+      "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
+      "conduct_type": "no_concrete_corrupt_conduct",
+      "corruption_case": {
+        "actor": "",
+        "alleged_abuse": "",
+        "beneficiary": "",
+        "entrusted_role": "",
+        "improper_benefit": ""
+      },
+      "coverage_type": "other",
+      "criterion_evidence": {
+        "abuse_of_entrusted_power": [],
+        "private_gain": [],
+        "substantive_corruption_coverage": []
+      },
+      "decision": "skip",
+      "evidence": [],
+      "model": "gpt-5-mini",
+      "policy_hash": "c22aa91d49b61a21ef94223a424e2bfb0a4248b060c0bb171c92d46e02a3a7f6",
+      "provider": "uva",
+      "reason": "Article reports transnational drug trafficking and a pilot's involvement; it does not allege abuse of an entrusted public or fiduciary role or describe a corrupt mechanism linking misuse of entrusted power to private gain. Therefore it does not meet the corruption definition used here.",
+      "reasoning_effort": "low",
+      "selection": {
+        "api_usage": {
+          "input_tokens": 3926,
+          "output_tokens": 451,
+          "requests": 1,
+          "total_tokens": 4377
+        },
+        "article_focus": "Reporting on a transnational drug-trafficking operation involving a pilot and links to the Kinahan organised crime group.",
+        "benefit_type": "not_established",
+        "checks": {
+          "abuse_of_entrusted_power": false,
+          "private_gain": false,
+          "substantive_corruption_coverage": false
+        },
+        "conduct_type": "no_concrete_corrupt_conduct",
+        "corruption_case": {
+          "actor": "",
+          "alleged_abuse": "",
+          "beneficiary": "",
+          "entrusted_role": "",
+          "improper_benefit": ""
+        },
+        "coverage_type": "other",
+        "criterion_evidence": {
+          "abuse_of_entrusted_power": [],
+          "private_gain": [],
+          "substantive_corruption_coverage": []
+        },
+        "decision": "skip",
+        "evidence": [],
+        "model": "gpt-5-mini",
+        "reason": "Article reports transnational drug trafficking and a pilot's involvement; it does not allege abuse of an entrusted public or fiduciary role or describe a corrupt mechanism linking misuse of entrusted power to private gain. Therefore it does not meet the corruption definition used here.",
+        "reasoning_effort": "low"
+      },
+      "source": "Bellingcat",
+      "title": "Kinahan Cartel-Linked Pilot Flew Cocaine From South America to Australia in Hobby Plane, Police Say",
+      "url": "https://www.bellingcat.com/news/2026/11/28/kinahan-cartel-linked-pilot-flew-cocaine-from-south-america-to-australia-in-hobby-plane-police-say/"
+    },
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259": {
       "api_usage": {
         "input_tokens": 1542,
@@ -10374,6 +10459,7 @@
     "8a79b70e79b0c61f5aeaa2e1f53bf36927cf0e0c6ff59854e565000a323cf981",
     "8a973ac7da5d37d5b69fe6bb45c0572b333e0458d3c583e5694928eb219cdc9f",
     "8ab2e38e412fee2e269363d1cc4a0217dcc59bbe05a78441fa267ef0b66e03c4",
+    "8ad50790f9ba266f54176eb591094f66c6320a6e6d75325930e04889e8d6e625",
     "8b6f258c6717808a0612fa1fb4ef9805ed4bf734603223f0999465079ac92259",
     "8cb4f958575d5f565dcc07c6b04e179a6d5d5ef72cbc345f0b9bb40967a5e06c",
     "8cda957b533a3197ae23d4a1bab914a03be28f0efc67b5fe8175f6b13e0dd01e",
