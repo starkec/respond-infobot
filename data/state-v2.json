@@ -5,90 +5,90 @@
       {
         "api_usage": {
           "input_tokens": 3970,
-          "output_tokens": 1629,
+          "output_tokens": 2887,
           "requests": 2,
-          "total_tokens": 5599
+          "total_tokens": 6857
         },
         "case": "public_kickbacks",
         "decision": "publish",
         "expected": "publish",
-        "reason": "The article's main purpose is to report a prosecutors' investigation alleging a mayor abused her procurement authority by steering contracts in exchange for payments/kickbacks to her personal account and a shell company.",
+        "reason": "The article explicitly reports prosecutors' allegation that a mayor steered public procurement contracts in exchange for payments traced to a shell company she controlled, describing an alleged abuse of procurement authority for private financial gain.",
         "status": "passed",
         "verified": true
       },
       {
         "api_usage": {
           "input_tokens": 3968,
-          "output_tokens": 2277,
+          "output_tokens": 2456,
           "requests": 2,
-          "total_tokens": 6245
+          "total_tokens": 6424
         },
         "case": "private_embezzlement",
         "decision": "publish",
         "expected": "publish",
-        "reason": "The article's main purpose is to report investigators' allegations that a private company treasurer, entrusted with staff pension assets, secretly transferred those assets to his own investment company (concealed via false ledger entries) for personal enrichment\u2014a clear embezzlement/diversion case.",
+        "reason": "Investigators allege a private-company treasurer, entrusted with staff pension assets, secretly transferred those assets to his own investment company and concealed the transfers, diverting entrusted funds for personal enrichment. The article's main focus is this alleged embezzlement in a private institution.",
         "status": "passed",
         "verified": true
       },
       {
         "api_usage": {
           "input_tokens": 1854,
-          "output_tokens": 559,
+          "output_tokens": 425,
           "requests": 1,
-          "total_tokens": 2413
+          "total_tokens": 2279
         },
         "case": "foreign_disinformation",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article is about foreign disinformation and volunteers teaching media literacy, and explicitly states there is no bribery, diverted resources, self-dealing or illicit financing. It does not allege corruption or abuse of entrusted power for private gain.",
+        "reason": "Article is about foreign-state disinformation and volunteer media-literacy training; it explicitly states there is no bribery, diversion, self-dealing or illicit financing. No abuse of entrusted power or private gain is alleged and corruption is not the article's main focus.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1857,
-          "output_tokens": 560,
+          "output_tokens": 435,
           "requests": 1,
-          "total_tokens": 2417
+          "total_tokens": 2292
         },
         "case": "industrial_subsidies",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article describes state bank support for industrial policy and competition concerns about subsidies/preferential loans; it explicitly states there are no allegations of self-dealing, kickbacks, patronage or diversion. The piece concerns industrial policy/competition, not abuse of entrusted power for private gain.",
+        "reason": "Article describes state bank financing under an industrial policy mandate and a competition investigation into subsidies/distortion, but explicitly denies allegations of bribery, self-dealing or diversion. No abuse of an entrusted role for private gain is alleged, so it does not meet the corruption criteria.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1862,
-          "output_tokens": 410,
+          "output_tokens": 442,
           "requests": 1,
-          "total_tokens": 2272
+          "total_tokens": 2304
         },
         "case": "harmful_business",
         "decision": "skip",
         "expected": "skip",
-        "reason": "Article reports a platform's failure to remove harmful content and resulting harm but explicitly states there is no bribery, embezzlement, self-dealing or corrupt misuse of delegated authority; it does not allege abuse of entrusted power for private gain.",
+        "reason": "Article reports platform moderation failures and profits from harmful content but explicitly states no bribery, embezzlement or misuse of entrusted authority is described; it does not establish corruption elements required for publication.",
         "status": "passed",
         "verified": false
       },
       {
         "api_usage": {
           "input_tokens": 1889,
-          "output_tokens": 856,
+          "output_tokens": 503,
           "requests": 1,
-          "total_tokens": 2745
+          "total_tokens": 2392
         },
         "case": "illustrative_anecdote",
         "decision": "skip",
         "expected": "skip",
-        "reason": "The piece is an advocacy commentary arguing for journalism funding that only uses a past mayor kickbacks conviction as an illustrative example; corruption is not the article's main subject or explanatory focus.",
+        "reason": "Article is an advocacy commentary about funding journalism; corruption appears only as a past illustrative example, not the main subject or explanation.",
         "status": "passed",
         "verified": false
       }
     ],
     "classifier_id": "c021b2cb9748f70855a3a55b93872f639a33298ce106b2f115c552dd0f177781",
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "prompt_delivery": [
       {
         "model": "gpt-5-mini",
@@ -9917,7 +9917,7 @@
     "https://news.mongabay.com/feed/",
     "https://globalvoices.org/feed/"
   ],
-  "last_checked_date": "2026-11-27",
+  "last_checked_date": "2026-11-28",
   "posted": {
     "16e73a92b8a802615bd3d0ab9c516ba39414e9184fa260e4f35cae472af1f69b": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3httumewek2n3",
     "1ce0cdf4cdf5cef72f7b13cb40cfedc4e597e8dfb21e1792ba2a51b118bd0396": "at://did:plc:lzmlnzqvphebtdx34yt2tn2i/app.bsky.feed.post/3tsahynazfnrr",
